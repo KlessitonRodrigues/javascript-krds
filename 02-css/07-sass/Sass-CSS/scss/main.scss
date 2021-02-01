@@ -1,0 +1,106 @@
+// import colors variables
+@import "materialcolors";
+
+// functions declaration
+@mixin shadow {
+    box-shadow: 0 0 0.4rem $shadow;
+}
+
+@mixin bgc($color) {
+    background-color: $color;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    letter-spacing: 0.14rem;
+}
+
+.container {
+    margin-bottom: 1rem;
+    padding: 0.6rem 0.3rem;
+    // function call
+    @include shadow();
+    // references ( & )
+    &.no-padding {
+        padding: 0;
+    }
+}
+
+.header {
+    padding: 1rem;
+    margin-bottom: 0.3rem;
+    color: $white;
+    @include bgc($teal-800);
+}
+
+// hierarchy
+.box {
+    padding: 1.5rem;
+    color: $white;
+    @include bgc($blue-800);
+    .box {
+        @include bgc($pink-A700);
+        .box {
+            @include bgc($light-green-A200);
+            color: $black;
+        }
+    }
+}
+
+// conditional (if)
+@mixin contextualBtn($status) {
+    @if $status == "success" {
+        @include bgc($green-600);
+    } @else if $status == "danger" {
+        @include bgc($red-900);
+        color: $white;
+    } @else {
+        @include bgc($blue-800);
+    }
+}
+
+button {
+    outline: none;
+    padding: 0.6rem;
+    min-width: 75px;
+    min-height: 40px;
+    border-radius: 6px;
+    letter-spacing: 0.12rem;
+    border: 1px solid $border-black;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: $white;
+    @include contextualBtn("");
+    @include shadow();
+    &:active {
+        transform: scale(0.95, 0.95);
+        transition: 0.1s;
+    }
+}
+
+.btn-success {
+    @include contextualBtn("success");
+}
+.btn-danger {
+    @include contextualBtn("danger");
+}
+
+// loop (each)
+
+// loop (for from to)
+@for $colorsArray from 0 to 2 {
+    .color-1 {
+        @include bgc(#{$colorsArray});
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 1rem 0.6rem;
+        margin: 1% 10%;
+    }
+}

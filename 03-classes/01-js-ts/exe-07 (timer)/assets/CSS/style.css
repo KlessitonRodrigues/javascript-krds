@@ -1,0 +1,95 @@
+@import "materialcolors.slim.min.css";
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gray-900);
+    font-family: 'roboto', 'Helvetica Neue', 'Helvetica';
+    font-size: 1.6em;
+    font-weight: 300;
+    letter-spacing: .01em;
+    line-height: 1.6;
+}
+
+button {
+    margin: .2rem;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    border: 1px solid var(--border-black);
+    background-color: var(--blue-900);
+    color: var(--gray-100);
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: .15rem;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--blue-700);
+    outline: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+.container {
+    margin-bottom: 1rem;
+    padding: .8rem;
+}
+
+/*  CLOCK  */
+
+.clock {
+    text-align: center;
+}
+
+.clock-timer {
+    color: var(--blue-gray-300);
+    font-size: 2.8rem;
+    display: inline-block;
+}
+
+.clock-timer-ms {
+    display: inline-block;
+    font-size: 1rem;
+    min-width: 2.5rem;
+}
+
+.clock-btn-group {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.clock-btn-start {
+    background-color: var(--teal-700)
+}
+
+/*  PARTIAL-TIME  */
+
+.partial-time {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--gray-500);
+}
+
+@media(min-width: 40rem) {
+    /*  CLOCK  */
+    .clock-timer {
+        font-size: 6rem;
+    }
+    .clock-timer-ms {
+        font-size: 2rem;
+    }
+    .clock-btn-group {
+        justify-content: center;
+        flex-direction: row;
+    }
+    /*  PARTIAL-TIME*/
+    .partial-time {
+        font-size: 2.5rem;
+    }
+}

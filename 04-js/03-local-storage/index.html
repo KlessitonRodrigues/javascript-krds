@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="main.js" defer="true"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header nowrap-items flex-baseline">
+            <h1>Local Storage</h1>
+            <h6>and Session Storage</h6>
+        </div>
+    </header>
+    <main> 
+        <Section>
+            <div class="form-section flex-items container">
+                <form id="form" action="" method="" class="col-s12-m7-l6">
+                    <input id="titleField" type="text" placeholder="Title">
+                    <textarea id="textField" cols="40" rows="4" placeholder="Some text..."></textarea>
+                    <div class="flex-items flex-start">
+                        <div class="container">
+                            <input type="radio" id="localStorage" value="local" name="btn-radio" checked>
+                            <label for="localStorage">Local Storage</label>
+                        </div>
+                        <div class="container">
+                            <input type="radio" id="sectionStorage" value="session" name="btn-radio">
+                            <label for="sectionStorage">Session Storage</label>
+                        </div>
+                    </div>
+                    <button class="btn-save" type="submit">Save</button>
+                    <button class="btn-clear" type="button">Clear</button>
+                </form>
+            </div>
+        </Section>
+        <section>
+            <div class="cards-section flex-items container">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

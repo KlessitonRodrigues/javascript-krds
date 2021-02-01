@@ -1,0 +1,150 @@
+body {
+    font-family: sans-serif;
+    background-color: #DDD;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin: 2rem;
+}
+
+/*  drop-shadow  */
+
+.img-drop-shadow img:nth-child(1) {
+    filter: drop-shadow(50px 0px 8px #11F);
+}
+
+.img-drop-shadow img:nth-child(2) {
+    filter: drop-shadow(0px -30px 1px #c41);
+}
+
+.img-drop-shadow img:nth-child(3) {
+    filter: drop-shadow(0px 0px 25px #1F4);
+}
+
+/*  blur  */
+
+.img-blur img:nth-child(1) {
+    filter: blur(1px);
+}
+
+.img-blur img:nth-child(2) {
+    filter: blur(4px);
+}
+
+.img-blur img:nth-child(3) {
+    filter: blur(10px);
+}
+
+/*  britghtness  */
+
+.img-brightness img:nth-child(1) {
+    filter: brightness(1.75);
+}
+
+.img-brightness img:nth-child(2) {
+    filter: brightness(.5);
+}
+
+.img-brightness img:nth-child(3) {
+    filter: brightness(.0);
+}
+
+/*  contranst  */
+
+.img-contrast img:nth-child(1) {
+    filter: contrast(3);
+}
+
+.img-contrast img:nth-child(2) {
+    filter: contrast(.5);
+}
+
+.img-contrast img:nth-child(3) {
+    filter: contrast(0);
+}
+
+/*  grayscale  */
+
+.img-grayscale img:nth-child(1) {
+    filter: grayscale(1);
+}
+
+.img-grayscale img:nth-child(2) {
+    filter: grayscale(.5);
+}
+
+.img-grayscale img:nth-child(3) {
+    filter: grayscale(0);
+}
+
+/*  hue-rotate  */
+
+.img-hue-rotate img:nth-child(1) {
+    filter: hue-rotate(90deg);
+}
+
+.img-hue-rotate img:nth-child(2) {
+    filter: hue-rotate(180deg);
+}
+
+.img-hue-rotate img:nth-child(3) {
+    filter: hue-rotate(270deg);
+}
+
+/*  invert  */
+
+.img-invert img:nth-child(1) {
+    filter: invert(.3);
+}
+
+.img-invert img:nth-child(2) {
+    filter: invert(.5);
+}
+
+.img-invert img:nth-child(3) {
+    filter: invert(1);
+}
+
+/*  opacity  */
+
+.img-opacity img:nth-child(1) {
+    filter: opacity(1);
+}
+
+.img-opacity img:nth-child(2) {
+    filter: opacity(.5);
+}
+
+.img-opacity img:nth-child(3) {
+    filter: opacity(.1);
+}
+
+/*  saturate  */
+
+.img-saturate img:nth-child(1) {
+    filter: saturate(0);
+}
+
+.img-saturate img:nth-child(2) {
+    filter: saturate(5);
+}
+
+.img-saturate img:nth-child(3) {
+    filter: saturate(10);
+}
+
+/*  sepia  */
+
+.img-sepia img:nth-child(1) {
+    filter: sepia(.2);
+}
+
+.img-sepia img:nth-child(2) {
+    filter: sepia(.5);
+}
+
+.img-sepia img:nth-child(3) {
+    filter: sepia(1);
+}

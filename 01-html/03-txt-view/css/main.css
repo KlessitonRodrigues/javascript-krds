@@ -1,0 +1,370 @@
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0.4rem 0.8rem;
+  font-weight: normal;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.nowrap-items {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.flex-items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-btw {
+  justify-content: space-between;
+}
+
+.flex-evl {
+  justify-content: space-evenly;
+}
+
+.flex-baseline {
+  align-items: baseline;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-fix {
+  clear: both;
+  overflow: hidden;
+}
+
+/* small breakpoint */
+@media (max-width: 767.9px) {
+  html {
+    font-size: 14px;
+  }
+
+  [class*=-s1] {
+    width: 7.33%;
+  }
+
+  [class*=-s2] {
+    width: 15.66%;
+  }
+
+  [class*=-s3] {
+    width: 24%;
+  }
+
+  [class*=-s4] {
+    width: 32.33%;
+  }
+
+  [class*=-s5] {
+    width: 40.66%;
+  }
+
+  [class*=-s6] {
+    width: 49%;
+  }
+
+  [class*=-s7] {
+    width: 57.33%;
+  }
+
+  [class*=-s8] {
+    width: 65.66%;
+  }
+
+  [class*=-s9] {
+    width: 74%;
+  }
+
+  [class*=-s10] {
+    width: 82.33%;
+  }
+
+  [class*=-s11] {
+    width: 90.66%;
+  }
+
+  [class*=-s12] {
+    width: 99%;
+  }
+
+  [class*=-s-max] {
+    width: max-content;
+  }
+
+  [class*=-s-min] {
+    width: min-content;
+  }
+
+  [class*=-s-fit] {
+    width: fit-content;
+  }
+}
+/* medium breakpoint */
+@media (min-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  [class*=-m1] {
+    width: 7.33%;
+  }
+
+  [class*=-m2] {
+    width: 15.66%;
+  }
+
+  [class*=-m3] {
+    width: 24%;
+  }
+
+  [class*=-m4] {
+    width: 32.33%;
+  }
+
+  [class*=-m5] {
+    width: 40.66%;
+  }
+
+  [class*=-m6] {
+    width: 49%;
+  }
+
+  [class*=-m7] {
+    width: 57.33%;
+  }
+
+  [class*=-m8] {
+    width: 65.66%;
+  }
+
+  [class*=-m9] {
+    width: 74%;
+  }
+
+  [class*=-m10] {
+    width: 82.33%;
+  }
+
+  [class*=-m11] {
+    width: 90.66%;
+  }
+
+  [class*=-m12] {
+    width: 99%;
+  }
+
+  [class*=-m-max] {
+    width: max-content;
+  }
+
+  [class*=-m-min] {
+    width: min-content;
+  }
+
+  [class*=-m-fit] {
+    width: fit-content;
+  }
+}
+/* large breakpoint */
+@media (min-width: 1280px) {
+  html {
+    font-size: 16px;
+  }
+
+  [class*=-l1] {
+    width: 7.33%;
+  }
+
+  [class*=-l2] {
+    width: 15.66%;
+  }
+
+  [class*=-l3] {
+    width: 24%;
+  }
+
+  [class*=-l4] {
+    width: 32.33%;
+  }
+
+  [class*=-l5] {
+    width: 40.66%;
+  }
+
+  [class*=-l6] {
+    width: 49%;
+  }
+
+  [class*=-l7] {
+    width: 57.33%;
+  }
+
+  [class*=-l8] {
+    width: 65.66%;
+  }
+
+  [class*=-l9] {
+    width: 74%;
+  }
+
+  [class*=-l10] {
+    width: 82.33%;
+  }
+
+  [class*=-l11] {
+    width: 90.66%;
+  }
+
+  [class*=-l12] {
+    width: 99%;
+  }
+
+  [class*=-l-max] {
+    width: max-content;
+  }
+
+  [class*=-l-min] {
+    width: min-content;
+  }
+
+  [class*=-l-fit] {
+    width: fit-content;
+  }
+}
+.container {
+  padding: 0.8rem 1.2rem;
+  border-radius: 3px;
+}
+
+[class*=col-] {
+  margin: 0.8rem 0.5%;
+}
+
+.cols-nomargin [class*=col-] {
+  margin: 0.8rem 0;
+  width: "+1%";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1;
+}
+
+a,
+a:focus {
+  color: unset;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input:not([type=checkbox]),
+textarea {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #0003;
+  resize: vertical;
+}
+
+button {
+  min-width: 70px;
+  min-height: 35px;
+  border: 2px solid #000A;
+  letter-spacing: 2.5px;
+}
+
+input,
+button,
+textarea {
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  background-color: #FFF;
+  box-shadow: 0 0 5px 2px #2225;
+}
+
+input:hover,
+input:focus,
+button:hover {
+  border-color: #28F;
+  box-shadow: 0 0 3px 0 #28F;
+}
+
+button:active {
+  transition: 0.04s;
+  transform: scale(0.98);
+  translate: 0 1%;
+}
+
+body {
+  background-color: #CFD8DC;
+}
+
+.header {
+  background-color: #1976D2;
+  color: #FFF;
+}
+
+input[type=file] {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=main.css.map */

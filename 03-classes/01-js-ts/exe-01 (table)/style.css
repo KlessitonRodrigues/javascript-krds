@@ -1,0 +1,121 @@
+ /* Geral
+---------------------------*/
+
+ * {
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+ }
+
+ body {
+     background-color: rgb(255, 255, 255);
+     font-family: sans-serif;
+     color: rgb(0, 0, 0, .8);
+     font-size: 14pt;
+ }
+
+ section div {
+     width: 49%;
+     margin: 30px auto;
+ }
+
+ input, button {
+     border: 1px solid rgba(0, 0, 0, .2);
+     box-shadow: 2px 2px 4px rgb(0, 0, 0, .1);
+ }
+
+ input:hover {
+     border: 1px solid rgb(92, 4, 255);
+ }
+
+ input:focus {
+     border: 5px solid rgb(92, 4, 255);
+ }
+
+ /* Formulario
+---------------------------*/
+
+ .cls-form div {
+     display: block;
+     display: flex;
+     flex-flow: column;
+     float: left;
+ }
+
+ .cls-form div form {
+     max-width: 450px;
+     margin: 0 auto;
+ }
+
+ .cls-form div input {
+     width: 100%;
+     height: 40px;
+     margin: 4px auto;
+     border: 1px solid rgba(0, 0, 0, .3);
+     border-radius: 8px;
+     padding: 4px 8px;
+ }
+
+ .cls-form div input:hover, .cls-form div input:focus {
+     border: 2px solid rgb(92, 4, 255, 0.5)
+ }
+
+ .cls-form div button {
+     width: 80px;
+     margin: 10px auto;
+     padding: 10px 20px;
+     background-color: #fff;
+     border-radius: 6px;
+     font-weight: bold;
+ }
+
+ .cls-form div button:hover {
+     border: 2px solid rgb(92, 4, 255, 0.5);
+ }
+
+ /* list
+---------------------------*/
+
+ .cls-list div {
+     display: block;
+     float: right;
+     height: 400px;
+     width: 500px;
+     overflow: auto;
+     margin-right: 80px;
+     border-radius: 4px;
+     padding: 10px;
+ }
+
+ .cls-list div table {
+     width: 100%;
+     border-collapse: collapse;
+     table-layout: fixed;
+ }
+
+ .cls div table thead tr {
+     border: 1px solid rgba(255, 0, 0, 1);
+ }
+
+ .cls-list div table tr td {
+     text-align: center;
+     padding: 12px 0;
+     border: 1px solid rgba(0, 0, 0, 0.1);
+     border-left: hidden;
+     border-right: hidden;
+     word-wrap: break-word;
+ }
+
+ .cls-list div table tbody tr:first-of-type {
+     border-top: hidden;
+ }
+
+ .cls-list div table tbody tr:hover {
+     background-color: rgba(92, 4, 255, 0.1);
+ }
+
+ /* Geral
+---------------------------*/
+
+ /* Geral
+---------------------------*/

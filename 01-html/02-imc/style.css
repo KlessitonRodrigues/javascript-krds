@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0px;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(0, 106, 164), rgb(55, 202, 255));
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, .8);
+}
+
+section {
+    width: 100%;
+}
+
+button {
+    max-width: 80px;
+    height: 40px;
+    word-wrap: break-word;
+}
+
+input {
+    width: 200px;
+}
+
+button, input {
+    margin: 15px 0;
+    display: block;
+    border: solid 2px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 8px 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+}
+
+button:hover, input:hover, input:focus {
+    border-color: rgb(85, 0, 255);
+}
+
+table {
+    table-layout: fixed;
+}
+
+table td {
+    padding: 5px;
+}
+
+.container {
+    margin: 10px auto 20px auto;
+    max-width: 70%;
+    background-color: #fff;
+    padding: 20px 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
+    border-radius: 6px;
+}
+
+.container * {
+    width: 100%;
+}
+
+/***       HEADER        ***/
+
+header {
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+/***       IMC-CALC      ***/
+
+.imc-calc {
+    margin: 0px auto;
+}
+
+.imc-calc h2 {
+    margin-bottom: 20px;
+}
+
+/***       IMC-TABLE      ***/
+
+.table-imc table {
+    table-layout: fixed;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+
+.table-imc table td {
+    padding-bottom: 5px;
+}
+
+/***       IMC-RESULT         ***/
+
+.imc-result-p {
+    background-color: rgb(0, 87, 0);
+    color: #fff;
+    font-weight: 500;
+}
+
+.imc-result-n {
+    background-color: rgb(87, 0, 0);
+    color: #fff;
+    font-weight: 500;
+}

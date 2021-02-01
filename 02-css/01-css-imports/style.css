@@ -1,0 +1,69 @@
+@import "colos_and_grid.css";
+body {
+    background-color: var(--blue-gray-500);
+}
+
+.header {
+    color: #FFF;
+    background-color: var(--blue-gray-700);
+}
+
+.header-menu {
+    background-color: var(--blue-gray-50);
+}
+
+.header-menu li {
+    line-height: 3rem;
+}
+
+.header-menu li a {
+    color: var(--gray-800);
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: .06rem;
+}
+
+.header-menu li a:hover {
+    color: var(--blue-A700);
+}
+
+.container {
+    color: #000;
+    background-color: var(--blue-gray-50);
+}
+
+.box-1{
+    background-color: var(--teal-500);
+    color: #FFF;
+}
+.box-2{
+    background-color: var(--blue-A700);
+    color: #FFF;
+}
+.box-3{
+    background-color: var(--green-A700);
+    color: #FFF;
+}
+.box-4{
+    background-color: var(--red-A700);
+    color: #FFF;
+}
+.box-5{
+    background-color: var(--yellow-A700);
+}
+.box-6{
+    background-color: var(--purple-A700);
+}
+
+@media(min-width:767.9px) {
+    .header-menu-btn {
+        display: none;
+    }
+    .header-menu ol {
+        text-align: center;
+        display: inherit;
+    }
+    .header-menu li {
+        line-height: 1.2rem;
+    }
+}

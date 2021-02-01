@@ -1,0 +1,25 @@
+@import"colors.grid.css";
+.header {
+    background-color: var(--teal-800);
+    color: #FFF;
+    margin-bottom: 1.5rem;
+}
+
+.calc {
+    background-color: var(--blue-gray-50);
+}
+
+.calc-display {
+    height: 45px;
+    background-color: #FFF;
+    padding: .3rem .5rem;
+    margin-bottom: .5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.calc-btn{
+    background-color: var(--blue-800);
+    color: #FFF;
+}

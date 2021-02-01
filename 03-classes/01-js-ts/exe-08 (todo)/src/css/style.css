@@ -1,0 +1,92 @@
+@import "./materialcolors.slim.min.css";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blue-gray-700);
+}
+
+input[type=text] {
+    font-size: 1rem;
+    display: inline-block;
+    border: 1px solid var(--border-black);
+    padding: .6rem;
+    border-radius: 3px;
+    width: 100%;
+    box-shadow: .1rem .1rem .2rem var(--shadow);
+    color: var(--gray-700);
+}
+
+input:hover, input:focus {
+    outline: 0;
+    border: 1px solid var(--blue-300);
+}
+
+button {
+    background-color: var(--blue-900);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: .04rem;
+    font-weight: bold;
+    margin: .5rem 0;
+    padding: .6rem;
+    border: 2px solid var(--border-black);
+    border-radius: 4px;
+    box-shadow: .1rem .1rem .2rem var(--shadow);
+}
+
+button:hover {
+    background-color: var(--blue-700);
+}
+
+.container {
+    background-color: var(--white);
+    margin-bottom: 1rem;
+    padding: 1.2rem .7rem;
+}
+
+/*  ADD-TODO  */
+
+.add-todo {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+/*  SHOW-TODO  */
+
+.show-todo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.todo {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.todo.done {
+    background-color: var(--blue-gray-900);
+}
+
+.todo.done .todo-text {
+    background-color: var(--blue-gray-100);
+    border: 2px solid var(--border-black);
+}
+
+.todo-text {
+    margin-top: .5rem;
+    border: 2px solid var(--border-black);
+    padding: .6rem;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+/*  MEDIA-QUERIE */
+
+@media(min-width: 40rem) {}

@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Helvetica;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+/*   APPS and LOGIN */
+
+.apps-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative;
+}
+.apps-gmail,
+.apps-images {
+    margin-right: 1.3rem;
+    font-size: 0.8rem;
+}
+.apps-gmail a,
+.apps-images a {
+    color: #222;
+}
+.apps-btn-iframe {
+    position: absolute;
+    display: none;
+}
+.apps-login-btn {
+    min-width: 6rem;
+    padding: 0.5rem;
+    padding-top: 0.42rem;
+    background-color: #4080E6;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/*   SEARCH   */
+.search-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 6.1rem;
+    text-align: center;
+}
+.search-bar {
+    width: 450px;
+    margin-top: 1.3rem;
+}
+.search-bar input {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0.8rem;
+    outline: none;
+    border: 1px solid #ddd;
+}
+.search-bar input:focus{
+    box-shadow: 0 1px 4px #CACACA;
+}
+.search-buttons {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.search-buttons button {
+    margin: 0 3px;
+    background-color: #f8f8f8;
+    color: #444;
+    padding: 0.6rem 1.1rem;
+    outline: none;
+    border: none;
+    font-size: 0.86rem;
+    border-radius: 3px;
+}
+.search-buttons button:hover {
+    box-shadow: 0 0 2px 0 #555;
+}
+.search-info {
+    font-size: 0.8rem;
+}
+.search-info a {
+}
+
+/* FOOTER */
+.footer {
+    background-color: #f1f1f1;
+    bottom: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.footer-country {
+    width: 100%;
+    color: #777;
+    padding: 0.65rem 2rem;
+    border: 1px solid #ddd;
+}
+.footer-info {
+    width: 100%;
+    padding: 0.65rem 2rem;
+    padding-right: 0.4rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.footer-info ul li {
+    display: inline-flex;
+    margin-right: 1.3rem;
+}
+.footer-info ul li a {
+    color: #777;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 800px) {
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-info ul {
+        padding: .3rem 0;
+    }
+}
