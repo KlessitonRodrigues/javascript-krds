@@ -4,18 +4,21 @@
     const cpf = cpfToArray(cpfStr)
 
     // verify repeted numbers (ex: 111.111.111-11)
-    const validation1 =
-    cpf.every((value, i , arr) => arr[++i] ? value === arr[i]: true)
-    if(validation1) return false
+    const isAllSame = cpf.every((value, i , arr) => {
+      return arr[++i] === undefined ? true : value === arr[i]
+    })
+    if(isAllSame) return false
 
-    let validation2 = [...cpf];
-    validation2.reverse().splice(0,2)
-    validation2 = validation2.reduce((stack, value, i) => {
+    // verify first validator digit
+    let validDigit1 = [...cpf];
+    validDigit1.reverse().splice(0, 2)
+    validDigit1 = validDigit1.reduce((stack, value, i) => {
       return stack + (Number(value) * (i + 2))
     },0)
-    validation2 = (validation2 * 10) % 11
-    validation2 = validation2 === 10 ? 0 : validation2
+    validDigit1 = (validDigit1 * 10) % 11
+    validDigit1 = validDigit1 === 10 ? 0 : validation2
 
+    // verify secound validator digit
     let validation3 = [...cpf]
     validation3.reverse().shift()
     validation3 = validation3.reduce((stack, value, i) => {
