@@ -1,11 +1,12 @@
 import React from "react"
 
 const Card = props => {
-const CardStyle = {
-  backgroundColor: props.color
-}
+  const CardStyle = {
+    backgroundColor: props.color
+  }
+  
   return (
-    <div className="card col-l4-m6-s11">
+    <div className={"card col-" + props.cols} >
       <h3 className="title" style={CardStyle}>
         { props.title }
       </h3>

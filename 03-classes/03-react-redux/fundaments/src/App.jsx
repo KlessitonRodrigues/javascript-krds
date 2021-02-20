@@ -14,19 +14,31 @@ const App = () => (
     <div id="app">
       <CardList>
 
-        <Card title="Número Aleatório" color="#16B">
+        <Card
+          title="Número Aleatório" color="#16B"
+          cols="l5-m5-s11"
+          >
           <Random max="10" min="1" />
         </Card>
 
-        <Card title="React (Children.map) (cloneElement)" color="#481">
-          <AParent parentSay="I am a Father" childSay="I am a Child">
+        <Card
+          title="React (Children.map)" color="#481"
+          cols="l5-m5-s11"
+          >
+          <AParent
+            parentSay="I am a Father"
+            childSay="I am a Child"
+            >
             <AChild />
             <AChild />
             <AChild />
           </AParent>
         </Card>
 
-        <Card title="List items" color="#63B">
+        <Card
+          title="List Items (key)" color="#63B"
+          cols="l10-m10-s11"
+          >
           <List />
         </Card>
 
