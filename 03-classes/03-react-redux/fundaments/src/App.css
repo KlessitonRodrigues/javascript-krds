@@ -10,7 +10,30 @@ body{
   line-height: 1.8rem;
 }
 
-.card-list{
+input[type="text"]{
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #AAA;
+  padding: .5rem .5rem;
+}
+
+input:focus{
+  outline: none;
+}
+
+button{
+  font-family: sans-serif;
+  margin: .5rem 0;
+  padding: .5rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  background-color: #81A;
+  color: #FFF;
+  font-weight: bold;
+  outline: none;
+  box-shadow: none;
+  border-radius: 4px;
+  border: none;
 }
 
 .card{
@@ -36,6 +59,30 @@ body{
   padding: .5rem 1rem;
 }
 
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+table th{
+  text-align: left;
+  padding: .3rem .5rem;
+}
+
+table td{
+  padding: .1rem .5rem;
+}
+
+table thead {
+  border-bottom: solid 2px #A00;
+}
+
+table tbody tr {
+  border-top: 1px solid #DDD;
+}
+
 .flex-items{
   display: flex;
   flex-flow: row wrap;
@@ -43,7 +90,7 @@ body{
   align-items: stretch;
 }
 
-.items-start{
+.flex-start{
   justify-content: flex-start;
 }
 

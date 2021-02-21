@@ -4,6 +4,10 @@ import CardList from "./Layout/CardList"
 import AParent from "./ParentAndChild/AParent"
 import AChild from "./ParentAndChild/AChild"
 import List from "./MapItems/List"
+import FruitsTable from "./Table/FruitsTable"
+import If from "./Conditional/If"
+import Ternary from "./Conditional/Ternary"
+import State from "./State/State"
 
 const Components =
   { Random,
@@ -11,6 +15,10 @@ const Components =
     CardList,
     AParent,
     AChild,
-    List }
+    List,
+    FruitsTable,
+    If,
+    Ternary,
+    State }
 
 export default Components
