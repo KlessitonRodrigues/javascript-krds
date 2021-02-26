@@ -13,10 +13,10 @@ const State = () => {
 
   return (
     <div className="flex-items flex-start">
-      <div className="col-l6-m12-s12">
+      <div className="l-6 m-12 s-12">
         <InputState setName={setName} />
       </div>
-      <div className="col-l6-m12-s12">
+      <div className="l-6 m-12 s-12">
         <div>
           Fisrt Name: <b><span id="firstName">{firstName}</span></b>
         </div>

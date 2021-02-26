@@ -5,7 +5,7 @@ const List = () => {
 
   const ListElemennts = listItems.map((item, i) => {
     return (
-      <li className="col-l3-m4-s6" key={item.id}>
+      <li className="l-3 m-4 s-6" key={item.id}>
         <b>{item.name}</b> : {item.description}
       </li>
     )

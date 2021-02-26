@@ -4,9 +4,9 @@ const Card = props => {
   const CardStyle = {
     backgroundColor: props.color
   }
-  
+
   return (
-    <div className={"card col-" + props.cols} >
+    <div className={"card " + props.cols} >
       <h3 className="title" style={CardStyle}>
         { props.title }
       </h3>

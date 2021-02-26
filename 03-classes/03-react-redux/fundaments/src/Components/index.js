@@ -8,6 +8,8 @@ import FruitsTable from "./Table/FruitsTable"
 import If from "./Conditional/If"
 import Ternary from "./Conditional/Ternary"
 import State from "./State/State"
+import ControlledInput from "./ControlledComponents/ControlledInput"
+import Count from "./Count/Count"
 
 const Components =
   { Random,
@@ -19,6 +21,8 @@ const Components =
     FruitsTable,
     If,
     Ternary,
-    State }
+    State,
+    ControlledInput,
+    Count }
 
 export default Components
