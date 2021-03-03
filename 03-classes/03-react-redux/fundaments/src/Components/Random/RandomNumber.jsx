@@ -9,8 +9,8 @@ const Random = props => {
 
   return (
     <div>
-       Número máximo: {max} <br/>
-       Número mínimo: {min} <br/>
+      Número máximo: {max} <br />
+      Número mínimo: {min} <br />
       <span> Número Aleatório: {random} </span>
     </div>
   )

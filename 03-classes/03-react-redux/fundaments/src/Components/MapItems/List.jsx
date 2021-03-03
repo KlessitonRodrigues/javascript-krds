@@ -12,8 +12,8 @@ const List = () => {
   })
 
   return (
-    <ul className="flex-items flex-start" style={{listStyle:"none"}}>
-      { ListElemennts }
+    <ul className="flex-items flex-start" style={{ listStyle: "none" }}>
+      { ListElemennts}
     </ul>
   )
 }

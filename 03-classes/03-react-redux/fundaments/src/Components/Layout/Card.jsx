@@ -8,10 +8,10 @@ const Card = props => {
   return (
     <div className={"card " + props.cols} >
       <h3 className="title" style={CardStyle}>
-        { props.title }
+        {props.title}
       </h3>
       <div className="body">
-        { props.children }
+        {props.children}
       </div>
     </div>
   )

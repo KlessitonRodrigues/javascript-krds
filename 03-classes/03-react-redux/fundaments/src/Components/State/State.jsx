@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import InputState from "./InputState"
 
 const State = () => {
@@ -6,9 +6,9 @@ const State = () => {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
 
-  function setName(fisrtName, lastName){
-      setFirstName(fisrtName)
-      setLastName(lastName)
+  function setName(fisrtName, lastName) {
+    setFirstName(fisrtName)
+    setLastName(lastName)
   }
 
   return (

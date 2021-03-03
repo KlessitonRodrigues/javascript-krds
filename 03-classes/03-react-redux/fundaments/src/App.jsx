@@ -14,102 +14,102 @@ const {
   Ternary,
   State,
   ControlledInput,
-  Count } = Components
+  Count,
+  CountFragmented } = Components
 
 const App = () => (
-    <div id="app">
-      <CardList>
+  <div id="app">
+    <CardList>
 
-        <Card
-          title="Número Aleatório"
-          color="#16B"
-          cols="l-5 m-5 s-11"
-          >
-          <Random max="10" min="1" />
-        </Card>
+      <Card
+        title="Número Aleatório"
+        color="#16B"
+        cols="l-5 m-5 s-11"
+      >
+        <Random max="10" min="1" />
+      </Card>
 
-        <Card
-          title="React (Children.map)"
-          color="#481"
-          cols="l-5 m-5 s-11"
-          >
-            <AParent
-              parentSay="I am a Father"
-              childSay="I am a Child"
-              >
-              <AChild />
-              <AChild />
-              <AChild />
-            </AParent>
-        </Card>
+      <Card
+        title="React (Children.map)"
+        color="#481"
+        cols="l-5 m-5 s-11"
+      >
+        <AParent
+          parentSay="I am a Father"
+          childSay="I am a Child"
+        >
+          <AChild />
+          <AChild />
+          <AChild />
+        </AParent>
+      </Card>
 
-        <Card
-          title="List Items (key)"
-          color="#63B"
-          cols="l-10 m-10 s-11"
-          >
-          <List />
-        </Card>
+      <Card
+        title="List Items (key)"
+        color="#63B"
+        cols="l-10 m-10 s-11"
+      >
+        <List />
+      </Card>
 
-        <Card
-          title="Fruits (Table)"
-          color="#C33"
-          cols="l-5 m-5 s-11"
-          >
-          <FruitsTable />
-        </Card>
+      <Card
+        title="Fruits (Table)"
+        color="#C33"
+        cols="l-5 m-5 s-11"
+      >
+        <FruitsTable />
+      </Card>
 
-        <Card
-          title="Conditional"
-          color="#2A9"
-          cols="l-5 m-5 s-11">
-          <If test={true}>
-            <span> hello world! </span>
-          </If>
+      <Card
+        title="Conditional"
+        color="#2A9"
+        cols="l-5 m-5 s-11">
+        <If test={true}>
+          <span> hello world! </span>
+        </If>
 
-          <hr/>
+        <hr />
 
-          <Ternary
-            test={false}
-            />
-        </Card>
+        <Ternary
+          test={false}
+        />
+      </Card>
 
-        <Card
-          title="State (useState)"
-          color="#444"
-          cols="l-5 m-5 s-11"
-          >
-            <State />
-        </Card>
+      <Card
+        title="State (useState)"
+        color="#444"
+        cols="l-5 m-5 s-11"
+      >
+        <State />
+      </Card>
 
-        <Card
-          title="Controlled input"
-          color="#A66"
-          cols="l-5 m-5 s-11"
-          >
-            <ControlledInput />
-        </Card>
+      <Card
+        title="Controlled input"
+        color="#A66"
+        cols="l-5 m-5 s-11"
+      >
+        <ControlledInput />
+      </Card>
 
-        <Card
-          title="Count"
-          color="#A92"
-          cols="l-5 m-5 s-11"
-          >
-            <Count />
-        </Card>
+      <Card
+        title="Count"
+        color="#A92"
+        cols="l-5 m-5 s-11"
+      >
+        <Count />
+      </Card>
+
+      <Card
+        title="Count Fragmented"
+        color="#808"
+        cols="l-5 m-5 s-11"
+      >
+        <CountFragmented />
+      </Card>
 
 
-
-
-
-
-
-
-
-
-
-      </CardList>
-    </div>
+    </CardList>
+  </div>
 )
 
 export default App

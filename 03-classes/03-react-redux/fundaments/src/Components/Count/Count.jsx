@@ -1,22 +1,27 @@
 import React from "react"
 
-
 class Count extends React.Component {
 
   state = {
-      count: 0,
+    count: 0,
+    interval: 1
   }
 
-  incrementCount = (e) => {
+  setIntervalCount = e => {
     this.setState({
-      count: this.state.count + 1
-
+      interval: e.target.value
     })
   }
 
-  decrementCount = (e) => {
+  incrementCount = e => {
     this.setState({
-      count: this.state.count - 1
+      count: this.state.count + Number(this.state.interval)
+    })
+  }
+
+  decrementCount = e => {
+    this.setState({
+      count: this.state.count - Number(this.state.interval)
     })
   }
 
@@ -28,8 +33,9 @@ class Count extends React.Component {
         </span>
         <input
           type="number"
-          value="1"
-          />
+          value={this.state.interval}
+          onChange={this.setIntervalCount}
+        />
         <button onClick={this.incrementCount}>+</button>
         <button onClick={this.decrementCount}>-</button>
       </div>

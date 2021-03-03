@@ -1,9 +1,9 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 
 const ControlledInput = () => {
   const [email, setEmail] = useState("")
 
-  function getInputValue(e){
+  function getInputValue(e) {
     setEmail(e.target.value)
   }
 
