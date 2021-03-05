@@ -15,7 +15,8 @@ const {
   State,
   ControlledInput,
   Count,
-  CountFragmented } = Components
+  CountFragmented,
+  Mega } = Components
 
 const App = () => (
   <div id="app">
@@ -107,7 +108,14 @@ const App = () => (
         <CountFragmented />
       </Card>
 
-
+      <Card
+        title="Mega Numbers"
+        color="#631"
+        cols="l-5 m-5 s-11"
+      >
+        <Mega />
+      </Card>
+      
     </CardList>
   </div>
 )

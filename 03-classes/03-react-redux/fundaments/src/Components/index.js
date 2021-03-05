@@ -11,6 +11,7 @@ import State from "./State/State"
 import ControlledInput from "./ControlledComponents/ControlledInput"
 import Count from "./Count/Count"
 import CountFragmented from "./CountFragmented/Count"
+import Mega from "./Mega/Mega"
 
 const Components = {
   Random,
@@ -25,7 +26,8 @@ const Components = {
   State,
   ControlledInput,
   Count,
-  CountFragmented
+  CountFragmented,
+  Mega
 }
 
 export default Components
