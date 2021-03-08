@@ -110,7 +110,7 @@ const App = () => (
 
       <Card
         title="Mega Numbers"
-        color="#631"
+        color="#630"
         cols="l-5 m-5 s-11"
       >
         <Mega />
