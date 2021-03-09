@@ -1,7 +1,11 @@
-import Body from "./layout/Body"
+import Calc from "./layout/Calc"
+import Display from "./display/Display"
+import Button from "./button/Button"
 
 const Components = {
-    Body
+    Calc,
+    Display,
+    Button
 }
 
 export default Components

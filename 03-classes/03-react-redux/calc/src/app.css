@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "RobotoMono";
+    src: url("./fonts/RobotoMono-Thin.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,23 +11,90 @@
 
 body {
     background-color: #202020;
-    color: #FFF;
     font-size: 13px;
+    font-family: RobotoMono;
+}
+
+button {
+    background-color: #FFF;
+    padding: .6rem 1rem;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
 }
 
 .calc-body {
-    background-color: #FFF;
-    width: 250px;
-    height: 400px;
+    width: 20rem;
+    height: 30rem;
     margin: 1rem auto;
+    border-radius: 5px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 4.5rem 2.6rem auto;
 }
 
-/*  small-screen  */
+.calc-body .calc-display {
+    background-color: #FFF;
+    color: #811;
+    text-align: right;
+    font-size: 2.1rem;
+    font-weight: bold;
+    letter-spacing: .25rem;
+    grid-column: span 4;
+    padding-right: .5rem;
+    word-wrap: break-word;
+}
+
+.calc-body .calc-display:nth-child(1) {
+    padding-top: 1.8rem;
+}
+
+.calc-body .calc-display:nth-child(2) {
+    border-bottom: 1px solid #CCC;
+    font-size: 1.8rem;
+    color: #26D;
+}
+
+.calc-body .calc-btn {
+    transition: background-color .03s;
+    background-color: #FAFAFA;
+}
+
+.calc-body .calc-btn:active {
+    background-color: #C0C0C0;
+}
+
+.calc-body .calc-btn:nth-child(3) {
+    grid-column: span 3;
+    text-align: left;
+    border-bottom: 1px solid #CCC;
+}
+
+.calc-body .calc-btn:nth-child(19) {
+    color: #C42;
+    font-weight: bold;
+}
+
+.calc-body .calc-btn:nth-child(16) {
+    grid-row: span 2;
+}
+
+.calc-body .calc-btn:nth-child(4), .calc-body .calc-btn:nth-child(8), .calc-body .calc-btn:nth-child(12), .calc-body .calc-btn:nth-child(16) {
+    border-left: 1px solid #CCC;
+    font-size: 1.4rem;
+}
+
+/*  lg-mobile  */
 
 @media(max-width: 767px) {
     html {
         font-size: 14px;
     }
+    /*  sm-mobile  */
     @media(max-width: 379px) {
         html {
             font-size: 13px;
@@ -30,7 +102,7 @@ body {
     }
 }
 
-/*  medium-screen  */
+/*  tablet  */
 
 @media(min-width: 768px) {
     @media(max-width: 1023.9px) {
@@ -40,12 +112,16 @@ body {
     }
 }
 
-/*  large-screen  */
+/*  sm-desktop  */
 
 @media(min-width: 1024px) {
     html {
         font-size: 15.5px;
     }
+    .calc-body .calc-btn:hover {
+        background-color: #DDD;
+    }
+    /*  lg-desktop  */
     @media(min-width: 1280px) {
         html {
             font-size: 16px;
