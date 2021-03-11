@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Components from "./Component/index"
+import Components from "./Components/index"
 import "./app.css"
 
 const {

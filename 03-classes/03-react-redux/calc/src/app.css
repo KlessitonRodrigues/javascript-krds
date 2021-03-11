@@ -37,7 +37,7 @@ button {
     grid-template-rows: 4.5rem 2.6rem auto;
 }
 
-.calc-body .calc-display {
+.calc-display {
     background-color: #FFF;
     color: #811;
     text-align: right;
@@ -49,7 +49,7 @@ button {
     word-wrap: break-word;
 }
 
-.calc-body .calc-display:nth-child(1) {
+.calc-body .calc-display:first-child {
     padding-top: 1.8rem;
 }
 
@@ -59,22 +59,22 @@ button {
     color: #26D;
 }
 
-.calc-body .calc-btn {
+.calc-btn {
     transition: background-color .03s;
     background-color: #FAFAFA;
 }
 
-.calc-body .calc-btn:active {
+.calc-btn:active {
     background-color: #C0C0C0;
 }
 
-.calc-body .calc-btn:nth-child(3) {
+.calc-btn.btn-clear {
     grid-column: span 3;
     text-align: left;
     border-bottom: 1px solid #CCC;
 }
 
-.calc-body .calc-btn:nth-child(19) {
+.calc-btn.btn-delete {
     color: #C42;
     font-weight: bold;
 }
@@ -83,7 +83,7 @@ button {
     grid-row: span 2;
 }
 
-.calc-body .calc-btn:nth-child(4), .calc-body .calc-btn:nth-child(8), .calc-body .calc-btn:nth-child(12), .calc-body .calc-btn:nth-child(16) {
+.calc-btn:nth-child(4), .calc-btn:nth-child(8), .calc-btn:nth-child(12), .calc-btn:nth-child(16) {
     border-left: 1px solid #CCC;
     font-size: 1.4rem;
 }
