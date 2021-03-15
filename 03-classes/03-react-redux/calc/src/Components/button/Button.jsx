@@ -15,7 +15,10 @@ let Button = props => {
     }
 
     return (
-        <button className={"calc-btn" + btnType}>
+        <button
+            className={"calc-btn" + btnType}
+            onClick={() => props.calc.getButton(props.label)}
+        >
             {props.label}
         </button>
     )

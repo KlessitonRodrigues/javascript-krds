@@ -1,9 +1,9 @@
 import React from "react"
 
-const Calc = props => (
+const Body = props => (
     <div className="calc-body">
         {props.children}
     </div>
 )
 
-export default Calc
+export default Body

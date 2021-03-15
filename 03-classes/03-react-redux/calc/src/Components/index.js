@@ -1,9 +1,9 @@
-import Calc from "./layout/Calc"
+import Body from "./layout/Calc"
 import Display from "./display/Display"
 import Button from "./button/Button"
 
 const Components = {
-    Calc,
+    Body,
     Display,
     Button
 }

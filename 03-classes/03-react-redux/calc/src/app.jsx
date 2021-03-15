@@ -1,9 +1,11 @@
 import React, { Component } from "react"
 import Components from "./Components/index"
+import calc from "./script/calc.js"
 import "./app.css"
 
+
 const {
-    Calc,
+    Body,
     Display,
     Button } = Components
 
@@ -11,27 +13,27 @@ export default class App extends Component {
 
     render() {
         return (
-            <Calc>
-                <Display value="123456789012" />
-                <Display value="=123" />
-                <Button label="AC" />
-                <Button label="/" />
-                <Button label="7" />
-                <Button label="8" />
-                <Button label="9" />
-                <Button label="x" />
-                <Button label="4" />
-                <Button label="5" />
-                <Button label="6" />
-                <Button label="-" />
-                <Button label="1" />
-                <Button label="2" />
-                <Button label="3" />
-                <Button label="+" />
-                <Button label="." />
-                <Button label="0" />
-                <Button label="Del" />
-            </Calc>
+            <Body>
+                <Display calc={calc} />
+                <Display calc={calc} />
+                <Button label="AC" calc={calc}/>
+                <Button label="/" calc={calc}/>
+                <Button label="7" calc={calc}/>
+                <Button label="8" calc={calc}/>
+                <Button label="9" calc={calc}/>
+                <Button label="x" calc={calc}/>
+                <Button label="4" calc={calc}/>
+                <Button label="5" calc={calc}/>
+                <Button label="6" calc={calc}/>
+                <Button label="-" calc={calc}/>
+                <Button label="1" calc={calc}/>
+                <Button label="2" calc={calc}/>
+                <Button label="3" calc={calc}/>
+                <Button label="+" calc={calc}/>
+                <Button label="." calc={calc}/>
+                <Button label="0" calc={calc}/>
+                <Button label="Del" calc={calc}/>
+            </Body>
         )
     }
 }
