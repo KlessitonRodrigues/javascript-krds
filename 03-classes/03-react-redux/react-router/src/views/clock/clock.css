@@ -1,0 +1,28 @@
+.clock {
+    width: 20rem;
+    height: 12rem;
+    padding: 1rem;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(15, 15, 15);
+    border-radius: 30px;
+    color: #8708fd;
+    user-select: none;
+}
+
+.clock .hour {
+    font-size: 6rem;
+    text-align: center;
+}
+
+.clock .minute {
+    font-size: 6em;
+}
+
+.clock .second {
+    font-size: 1.5rem;
+    padding: .4rem;
+}

@@ -2,16 +2,16 @@ import React, { useState } from "react"
 
 const Display = props => {
     const [display, setDisplay] = useState("")
-    const calc = props.calc
 
-    calc.setDisplay === null ?
-        calc.setDisplay = setDisplay :
-        calc.setResult = setDisplay
+    props.type === "operation" ?
+        props.calc.setOpeDisplay = setDisplay :
+        props.calc.setResDisplay = setDisplay
 
     return (
-        <div className="calc-display">
+        <div className={"calc-display " + props.type}>
             {display}
-        </div>)
+        </div>
+    )
 }
 
 export default Display

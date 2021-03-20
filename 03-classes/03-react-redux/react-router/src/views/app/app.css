@@ -1,0 +1,31 @@
+.app {
+    display: grid;
+    grid-template-columns: 6.2rem auto;
+}
+
+.app>aside {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #3b16a0, #9300a0);
+}
+
+.app>aside>ul {
+    list-style: none;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.app>aside>ul>li {
+    padding: 1rem 1rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .1s;
+}
+
+.app>aside>ul>li:hover {
+    background-color: #797979;
+}
+
+.app>aside>ul>li:active {
+    background-color: #666666;
+}

@@ -27,9 +27,9 @@ button {
 }
 
 .calc-body {
-    width: 20rem;
-    height: 30rem;
-    margin: 1rem auto;
+    width: 22rem;
+    height: 34rem;
+    margin: .5rem auto;
     border-radius: 5px;
     overflow: hidden;
     display: grid;
@@ -49,11 +49,11 @@ button {
     word-wrap: break-word;
 }
 
-.calc-body .calc-display:first-child {
+.calc-display.operation {
     padding-top: 1.6rem;
 }
 
-.calc-body .calc-display:nth-child(2) {
+.calc-display.result {
     border-bottom: 1px solid #CCC;
     font-size: 1.8rem;
     color: #26D;
