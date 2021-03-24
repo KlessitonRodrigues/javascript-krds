@@ -34,19 +34,25 @@ a {
 .page {
     padding: 1rem;
     text-align: center;
+    height: 100vh;
 }
 
-.home {
+.page.home {
     background-color: #fff5b7;
-    height: 100vh;
 }
 
-.about {
+.page.about {
     background-color: #dbccff;
-    height: 100vh;
 }
 
-.users {
+.page.users {
     background-color: #bbf8ce;
-    height: 100vh;
+}
+
+.page.param-01 {
+    background-color: #cad1fa;
+}
+
+.page.param-02 {
+    background-color: #daffdc;
 }

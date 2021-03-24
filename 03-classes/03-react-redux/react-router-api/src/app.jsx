@@ -4,7 +4,8 @@ import {
     BrowserRouter as Router,
     Link,
     Switch,
-    Route
+    Route,
+    useParams
 } from "react-router-dom"
 
 const App = () => (
@@ -20,6 +21,12 @@ const App = () => (
                 <li>
                     <Link to="/users">USER</Link>
                 </li>
+                <li>
+                    <Link to="/param/01">PARAM 01</Link>
+                </li>
+                <li>
+                    <Link to="/param/02">PARAM 02</Link>
+                </li>
             </ul>
 
             <div>
@@ -30,6 +37,10 @@ const App = () => (
 
                     <Route path="/users">
                         <Users />
+                    </Route>
+
+                    <Route path="/param/:id">
+                        <Param />
                     </Route>
 
                     <Route path="/">
@@ -58,5 +69,14 @@ const Users = () => (
         <h1>USERS LIST</h1>
     </div>
 )
+
+const Param = () => {
+    const { id } = useParams()
+    return (
+        <div className={"page param-" + id}>
+            <h2>Param {id}</h2>
+        </div>
+    )
+}
 
 export default App
