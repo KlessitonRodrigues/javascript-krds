@@ -1,0 +1,58 @@
+React Hooks
+
+#58 - useState
+-> const [num, setNum] useState(0)
+-> adiciona uma estado a um componente
+
+#60 - useEffect
+-> useEffect(EffectCallback, DependencyList)
+-> execulta uma callback quando um valor na "DependencyList" é 
+alterado
+
+# 63 - useRef
+-> useRef.current 
+-> retornar o mesmo objeto como referencia a cada rederização
+-> não dispara uma nova renderização quando alterado
+
+# 64 - useRef
+-> propriedade (ref) do componente
+
+    const inputRef = useRef(null)
+    <input  ref={inputRef} /> 
+    
+-> inputRef.current === (Elemento "input" )
+
+#65 - ?? DESAFIO
+
+66 - UseMemo
+-> useMeno(callback, dependencyList)
+retorna um valor memorizado
+
+-> useEffect / useMemo
+
+useEffect(() => {
+   setResult( sum(n1, n2))
+},  [n1, n2])
+
+const result = useMeno(() => sum(n1,  n2), [n1, n2])
+
+67 - useCallback / React.memo
+
+-> React.memo (useMeno)
+pode ser usado para evitar a rederização repetida de componentes estáticos
+
+-> useCallback 
+retorna sempre a mesma referência a função passada por
+parâmetro
+
+const [Count, useCount] = useState(0)
+
+const inc = useCallback(function (delta)){
+    setCount(current => current + delta)
+}, [setCount])
+
+
+
+
+
+
