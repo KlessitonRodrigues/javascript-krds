@@ -36,7 +36,7 @@ useEffect(() => {
 
 const result = useMeno(() => sum(n1,  n2), [n1, n2])
 
-67 - useCallback / React.memo
+#67 - useCallback / React.memo
 
 -> React.memo (useMeno)
 pode ser usado para evitar a rederização repetida de componentes estáticos
@@ -45,14 +45,54 @@ pode ser usado para evitar a rederização repetida de componentes estáticos
 retorna sempre a mesma referência a função passada por
 parâmetro
 
-const [Count, useCount] = useState(0)
+const [Count, setCount] = useState(0)
 
 const inc = useCallback(function (delta)){
     setCount(current => current + delta)
 }, [setCount])
 
 
+#68 - Context API 
+utilizado para compartilhar informações entre componentes de
+forma direta, sem a necessidade de percorrer a árvore de 
+componentes.
+
+#69 - React.useContext()
+/DataContext.js
+
+    export const data =  {
+        number: 123,
+        text: "Context API" 
+    }
+
+    export default DataContext
+
+/App.jsx
+
+    import DataContext, {data} from "DataContext.js"
+    
+    const [state, setState] = React.useState(data)
+    return (
+        <DataContext.Provider value={ {state, setState } }
+            "Components"
+        </DataContext.Provider>
+    )
+ 
+ /UseContext.jsx
+ 
+    import DataContext, {data} from "DataContext.js"
+ 
+     const {state, setState} = React.useContext(DataContext)
+     
+    function addNumber(delta) {
+        setState({
+            ...state,
+            number: state.number + delta
+        })
+    }
+ 
+#70 - React.useContext
 
 
-
+ 
 
