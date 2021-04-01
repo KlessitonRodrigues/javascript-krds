@@ -1,6 +1,9 @@
 import AsideNav from "./layout/AsideNav/AsideNav"
+import Content from "./layout/Content/Content"
+
 const components = {
-    AsideNav
+    AsideNav,
+    Content
 }
 
 export default components

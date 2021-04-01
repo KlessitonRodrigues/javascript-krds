@@ -1,0 +1,18 @@
+.use-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F0F0F0;
+    height: 100vh;
+    width: 100%;
+}
+
+.num {}
+
+.num-inc {
+    background-color: var(--primary-variant);
+}
+
+.num-dec {
+    background-color: var(--secondary-variant);
+}

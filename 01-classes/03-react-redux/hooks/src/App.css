@@ -1,0 +1,57 @@
+:root {
+    /* blue-800 */
+    --primary: #1565C0;
+    /* blue-400 */
+    --primary-variant: #42A5F5;
+    /* red-400 */
+    --secondary: #EF5350;
+    /* red-800 */
+    --secondary-variant: #C62828;
+    --box-shadow: 0 0 3px 1px #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button {
+    padding: .3rem;
+    min-width: 3rem;
+    margin: .2rem;
+    outline: none;
+    border: none;
+    background-color: #666;
+    border-radius: 4px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.app {
+    display: flex;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+}

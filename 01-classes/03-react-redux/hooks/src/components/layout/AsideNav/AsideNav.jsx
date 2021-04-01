@@ -1,18 +1,18 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import "./AsideNav.css"
 
 const AsideNav = () => (
     <aside className="aside-nav">
         <span className="nav-title">
-            <Link to="/">React Hook</Link>
+            <NavLink exact to="/">React Hook</NavLink>
         </span>
         <ul>
-            <li><Link to="/use-state">useState</Link></li>
-            <li><Link to="/use-effect">useEffect</Link></li>
-            <li><Link to="/use-ref">useRef</Link></li>
-            <li><Link to="/use-memo">useMemo</Link></li>
-            <li><Link to="/use-callback">useCallback</Link></li>
+            <li><NavLink to="/use-state">useState</NavLink></li>
+            <li><NavLink to="/use-effect">useEffect</NavLink></li>
+            <li><NavLink to="/use-ref">useRef</NavLink></li>
+            <li><NavLink to="/use-memo">useMemo</NavLink></li>
+            <li><NavLink to="/use-callback">useCallback</NavLink></li>
         </ul>
         <span className="nav-arrow">
             &gt;
