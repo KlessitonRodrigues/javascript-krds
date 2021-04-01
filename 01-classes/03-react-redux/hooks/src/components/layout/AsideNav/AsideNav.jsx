@@ -5,7 +5,7 @@ import "./AsideNav.css"
 const AsideNav = () => (
     <aside className="aside-nav">
         <span className="nav-title">
-            <NavLink exact to="/">React Hook</NavLink>
+            <NavLink exact to="/home">React Hook</NavLink>
         </span>
         <ul>
             <li><NavLink to="/use-state">useState</NavLink></li>

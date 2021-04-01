@@ -6,8 +6,10 @@ const UseState = () => {
     return (
         <div className="use-state">
             <span className="num">0</span>
-            <button className="num-inc">+</button>
-            <button className="num-dec">-</button>
+            <div>
+                <button className="num-inc">+</button>
+                <button className="num-dec">-</button>
+            </div>
         </div>
     )
 }

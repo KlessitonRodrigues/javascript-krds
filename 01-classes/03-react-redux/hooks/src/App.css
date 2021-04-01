@@ -1,13 +1,13 @@
 :root {
     /* blue-800 */
     --primary: #1565C0;
-    /* blue-400 */
-    --primary-variant: #42A5F5;
-    /* red-400 */
-    --secondary: #EF5350;
+    /* blue-A200 */
+    --primary-variant: #448AFF;
     /* red-800 */
-    --secondary-variant: #C62828;
-    --box-shadow: 0 0 3px 1px #222;
+    --secondary: #C62828;
+    /* red-A700 */
+    --secondary-variant: #D50000;
+    --shadow: 0 0 3px #555;
 }
 
 * {
@@ -34,8 +34,8 @@ li {
 }
 
 button {
-    padding: .3rem;
-    min-width: 3rem;
+    padding: .4rem;
+    min-width: 3.5rem;
     margin: .2rem;
     outline: none;
     border: none;
@@ -47,6 +47,10 @@ button {
     cursor: pointer;
 }
 
+button:hover{
+    box-shadow: var(--shadow);
+}
+
 .app {
     display: flex;
 }
@@ -54,4 +58,29 @@ button {
 .page {
     width: 100%;
     height: 100vh;
+}
+
+@media(max-width:767px) {
+    html {
+        font-size: 14px;
+    }
+    @media(max-width: 380px) {
+        html {
+            font-size: 13px;
+        }
+    }
+}
+
+@media(min-width:768px) {
+    @media(max-width: 1023px) {
+        html {
+            font-size: 15px;
+        }
+    }
+}
+
+@media(min-width:1024px) {
+    html {
+        font-size: 16px;
+    }
 }

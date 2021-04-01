@@ -1,9 +1,11 @@
 import AsideNav from "./layout/AsideNav/AsideNav"
 import Content from "./layout/Content/Content"
+import Card from "./layout/Card/Card" 
 
-const components = {
+const Components = {
     AsideNav,
-    Content
+    Content,
+    Card
 }
 
-export default components
+export default Components

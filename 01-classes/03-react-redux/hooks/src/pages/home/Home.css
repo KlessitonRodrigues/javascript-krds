@@ -1,0 +1,12 @@
+.home h1 {
+    text-align: center;
+    color: var(--primary);
+    padding: 1rem;
+    font-family: monospace;
+}
+
+.home .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #F0F0F0;
+    justify-content: space-evenly;
     height: 100vh;
     width: 100%;
 }
 
-.num {}
+.num {
+    font-size: 25rem;
+    color: var(--primary);
+}
 
 .num-inc {
     background-color: var(--primary-variant);

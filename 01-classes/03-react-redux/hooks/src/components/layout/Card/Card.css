@@ -1,0 +1,20 @@
+.card {
+    margin: .5rem;
+    width: 20rem;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    font-family: monospace;
+}
+
+.card>.title {
+    background-color: var(--secondary);
+    padding: .4rem;
+    color: #FFF;
+    text-align: center;
+}
+
+.card>.content {
+    padding: .5rem;
+    font-weight: bold;
+}
