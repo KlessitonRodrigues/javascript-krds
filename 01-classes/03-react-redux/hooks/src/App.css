@@ -7,7 +7,11 @@
     --secondary: #C62828;
     /* red-A700 */
     --secondary-variant: #D50000;
-    --shadow: 0 0 3px #555;
+    --shadow: 0 0 3px #444;
+    --background: #FFF;
+    --surface: #FFF;
+    --onBackground: #FFF;
+    --onSurface: #FFF;
 }
 
 * {
@@ -17,7 +21,7 @@
 }
 
 body {
-    background-color: #FFF;
+    background-color: var(--background);
     font-family: sans-serif;
 }
 
@@ -34,21 +38,23 @@ li {
 }
 
 button {
-    padding: .4rem;
-    min-width: 3.5rem;
+    padding: .4rem .6rem;
+    min-width: 4rem;
     margin: .2rem;
     outline: none;
     border: none;
     background-color: #666;
+    box-shadow: var(--shadow);
     border-radius: 4px;
     color: #FFF;
     font-weight: bold;
     font-size: 1.2rem;
     cursor: pointer;
+    user-select: none;
 }
 
-button:hover{
-    box-shadow: var(--shadow);
+button:active {
+    transform: scale(0.95, 0.95);
 }
 
 .app {

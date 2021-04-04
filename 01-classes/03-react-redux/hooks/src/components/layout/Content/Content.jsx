@@ -4,7 +4,8 @@ import Pages from "../../../pages/index"
 
 const {
     Home,
-    UseState } = Pages
+    UseState,
+    UseEffect } = Pages
 
 const Content = () => (
     <Switch>
@@ -13,6 +14,9 @@ const Content = () => (
         </Route>
         <Route path="/home">
             <Home />
+        </Route>
+        <Route path="/use-effect">
+            <UseEffect />
         </Route>
     </Switch>
 )

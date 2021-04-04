@@ -5,12 +5,13 @@
     overflow: hidden;
     box-shadow: var(--shadow);
     font-family: monospace;
+    background-color: var(--surface);
 }
 
 .card>.title {
     background-color: var(--secondary);
     padding: .4rem;
-    color: #FFF;
+    color: var(--onSurface);
     text-align: center;
 }
 

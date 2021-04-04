@@ -4,7 +4,7 @@
     position: fixed;
     padding-top: 2rem;
     background-color: var(--primary);
-    color: #FFF;
+    color: var(--text);
     box-shadow: var(--shadow)
 }
 
@@ -12,16 +12,17 @@
     font-size: 1.3rem;
     padding-left: .5rem;
     font-weight: bold;
+    color: var(--onSurface);
 }
 
 .aside-nav>ul>li {
-    padding: 1.3rem .5rem;
     letter-spacing: .11rem;
-    border-bottom: 1px solid #AAA;
+    padding: 1rem .5rem;
+    border-bottom: 1px solid #999;
 }
 
-.aside-nav>ul>li:not(.active) {
-    color: #CCC;
+.aside-nav>ul>li>a:not(.active) {
+    color: #BBB;
 }
 
 .aside-nav>ul>li>a.active {
@@ -33,6 +34,7 @@
     right: 3px;
     bottom: 50%;
     font-size: 1.4rem;
+    color: var(--onSurface);
 }
 
 @media(max-width:767.9px) {
@@ -53,7 +55,7 @@
 
 @media(min-width:768px) {
     .page {
-        margin-left: 150px;
+        padding-left: 150px;
     }
     .aside-nav>.nav-arrow {
         visibility: hidden

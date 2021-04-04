@@ -1,0 +1,19 @@
+.use-effect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100%;
+}
+
+.use-effect>.num-status {
+    width: 100%;
+    text-align: center;
+    font-size: 6rem;
+    color: var(--secondary);
+}
+
+.use-effect>.num {
+    font-size: 16rem;
+}
