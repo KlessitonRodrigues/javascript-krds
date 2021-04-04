@@ -5,18 +5,26 @@ import Pages from "../../../pages/index"
 const {
     Home,
     UseState,
-    UseEffect } = Pages
+    UseEffect,
+    UseRef,
+    UseMemo } = Pages
 
 const Content = () => (
     <Switch>
         <Route path="/use-state">
             <UseState />
         </Route>
-        <Route path="/home">
-            <Home />
-        </Route>
         <Route path="/use-effect">
             <UseEffect />
+        </Route>
+        <Route path="/use-ref">
+            <UseRef />
+        </Route>
+        <Route path="/use-memo">
+            <UseMemo />
+        </Route>
+        <Route path="/">
+            <Home />
         </Route>
     </Switch>
 )

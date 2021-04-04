@@ -6,12 +6,13 @@ const UseEffect = () => {
     const [numStatus, setNumStatus] = useState("")
 
     useEffect(() => {
-        if (num === 0) return setNumStatus("")
+        if (num === 0) return setNumStatus("impar/par")
 
         num % 2 === 0
             ? setNumStatus("par")
             : setNumStatus("impar")
     }, [num])
+
     return (
         <div className="page use-effect">
             <span className="num-status">{numStatus}</span>
