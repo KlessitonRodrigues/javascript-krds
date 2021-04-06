@@ -1,0 +1,10 @@
+.render-count{
+    padding: 2rem;
+    font-size: 1.2rem;
+    background-color: var(--secondary);
+    color: var(--onSurface);
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 6px;
+}

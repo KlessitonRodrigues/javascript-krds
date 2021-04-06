@@ -7,7 +7,7 @@
     --secondary: #C62828;
     /* red-A700 */
     --secondary-variant: #D50000;
-    --shadow: 0 0 3px #444;
+    --shadow: 0 0 3px #333;
     --background: #FFF;
     --surface: #FFF;
     --onBackground: #FFF;
@@ -37,6 +37,10 @@ li {
     font-weight: bold;
 }
 
+hr {
+    margin: .5rem 0;
+}
+
 button {
     padding: .4rem .6rem;
     min-width: 4rem;
@@ -57,7 +61,7 @@ button:active {
     transform: scale(0.95, 0.95);
 }
 
-input[type="text"] {
+input[type="text"], input[type="number"] {
     width: 100%;
     padding: .5rem;
     margin: .5rem 0;
@@ -70,7 +74,7 @@ input[type="text"] {
 }
 
 input:focus {
-    box-shadow: var(--shadow);
+    border: 1px solid var(--secondary-variant);
 }
 
 .app {

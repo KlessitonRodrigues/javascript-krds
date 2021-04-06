@@ -7,7 +7,8 @@ const {
     UseState,
     UseEffect,
     UseRef,
-    UseMemo } = Pages
+    UseMemo,
+    UseCallback } = Pages
 
 const Content = () => (
     <Switch>
@@ -22,6 +23,9 @@ const Content = () => (
         </Route>
         <Route path="/use-memo">
             <UseMemo />
+        </Route>
+        <Route path="/use-callback">
+            < UseCallback />
         </Route>
         <Route path="/">
             <Home />

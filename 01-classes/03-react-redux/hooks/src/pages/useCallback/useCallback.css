@@ -1,0 +1,7 @@
+.use-callback .render {
+    padding: 2rem;
+    background-color: var(--primary);
+    color: var(--onSurface);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
