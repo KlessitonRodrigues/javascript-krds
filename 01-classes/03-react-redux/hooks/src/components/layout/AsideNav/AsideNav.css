@@ -31,7 +31,7 @@
 
 .aside-nav>.nav-arrow {
     position: absolute;
-    right: 3px;
+    right: 2px;
     bottom: 50%;
     font-size: 1.4rem;
     color: var(--onSurface);
@@ -55,7 +55,7 @@
 
 @media(min-width:768px) {
     .page {
-        padding-left: 150px;
+        margin-left: 150px;
     }
     .aside-nav>.nav-arrow {
         visibility: hidden

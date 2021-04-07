@@ -6,6 +6,7 @@ const UseState = () => {
 
     return (
         <div className="page use-state">
+            <h2>useState(initialValue)</h2>
             <span className="num">{num}</span>
             <div>
                 <button

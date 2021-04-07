@@ -1,7 +1,7 @@
 .use-memo {
     display: flex;
     flex-flow: column wrap;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .use-memo .result {

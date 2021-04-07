@@ -15,6 +15,7 @@ const UseEffect = () => {
 
     return (
         <div className="page use-effect">
+            <h2>useCallback(fn, denpList)</h2>
             <span className="num-status">{numStatus}</span>
             <span className="num">{num}</span>
             <div>

@@ -2,18 +2,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     height: 100vh;
     width: 100%;
 }
 
-.use-effect>.num-status {
+.use-effect h2 {
+    padding-bottom: 8rem;
+}
+
+.use-effect .num-status {
     width: 100%;
     text-align: center;
-    font-size: 6rem;
+    font-size: 4rem;
     color: var(--secondary);
 }
 
-.use-effect>.num {
+.use-effect .num {
     font-size: 16rem;
 }

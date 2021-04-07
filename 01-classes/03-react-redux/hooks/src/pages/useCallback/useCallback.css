@@ -1,7 +1,31 @@
+.use-callback{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .use-callback .render {
-    padding: 2rem;
+    margin: 1rem 0;
+    padding: 1.5rem;
     background-color: var(--primary);
     color: var(--onSurface);
     font-size: 1.2rem;
-    font-weight: bold;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+}
+
+.use-callback .input-text{
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background-color: var(--primary);
+    color: var(--onSurface);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.use-callback .buttons button {
+    background-color: var(--primary-variant);
 }

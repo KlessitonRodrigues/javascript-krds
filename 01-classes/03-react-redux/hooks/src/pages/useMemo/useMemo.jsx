@@ -17,10 +17,15 @@ const UseMemo = () => {
     const [n2, setN2] = useState(0)
     const [n3, setN3] = useState(0)
 
-    const result = useMemo(() => sum(n1, n2), [n1, n2])
+    const result = useMemo(() => {
+        if (n1 || n2)
+            return sum(n1, n2)
+    }, [n1, n2])
 
     return (
         <div className="page use-memo">
+            <h2>useMemo(fn, denpList)</h2>
+
             <h3>wait...</h3>
             <input
                 type="number" value={n1}

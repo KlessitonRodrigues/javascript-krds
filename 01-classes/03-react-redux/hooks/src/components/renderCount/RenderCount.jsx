@@ -5,11 +5,17 @@ const RenderCount = props => {
     const countRef = useRef(0)
     countRef.current = countRef.current + 1
 
+    console.log(props);
+
     return (
         <div className="render-count">
-            Child Render Count: {countRef.current}
+            Child Render: <b>{countRef.current}</b>
             <hr />
-            Parent Count: {"null" && props.count}
+            <b>input:</b>
+            <input
+                type="text"
+                onChange={e => props.setInput(e.target.value)
+                } />
         </div>
     )
 }
