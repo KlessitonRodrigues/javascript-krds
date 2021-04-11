@@ -1,0 +1,20 @@
+.use-context>.post {
+    width: 29rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+}
+
+.use-context>.post>.post-header {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+    font-size: 1.2rem;
+    color: var(--secondary);
+}
+
+.use-context>.post>.post-content {
+    font-family: serif;
+    font-size: 1.1rem;
+}

@@ -4,6 +4,8 @@ import UseEffect from "./useEffect/useEffect"
 import UseRef from "./useRef/useRef"
 import UseMemo from "./useMemo/useMemo"
 import UseCallback from "./useCallback/useCallback"
+import UseContext from "./useContext/useContext"
+import UseReducer from "./useReducer/useReducer"
 
 const Pages = {
     Home,
@@ -11,9 +13,9 @@ const Pages = {
     UseEffect,
     UseRef,
     UseMemo,
-    UseCallback
+    UseCallback,
+    UseContext,
+    UseReducer
 }
 
 export default Pages
-
-

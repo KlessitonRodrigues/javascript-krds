@@ -1,6 +1,6 @@
 .card {
     margin: .5rem;
-    width: 20rem;
+    width: 23rem;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -16,6 +16,6 @@
 }
 
 .card>.content {
-    padding: .5rem;
+    padding: .8rem;
     font-weight: bold;
 }

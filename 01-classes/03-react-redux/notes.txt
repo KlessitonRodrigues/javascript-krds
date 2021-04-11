@@ -91,8 +91,121 @@ componentes.
         })
     }
  
-#70 - React.useContext
+#70 - React.useContext( )
+
+#71 - React.useReducer( ) 
+
+// estado inicial da aplicação
+const  initialState = {
+    cart: [],
+    products: [],
+    use: null,
+    number: 0
+}
+
+// controlando o objeto "action"
+function reducer(state, action){
+
+    switch(action.type){
+    
+        case "number_add2":
+            return {...state, number: state.number + 2}
+            
+        default:
+            return state
+    }
+}
+
+const [state, dispatch] = useReduce(reduce, initialState)
+
+<button onClick={( ) => dispatch({ type:  "numberAdd2"  })} >
+    +2
+</button> 
+
+#72 - Desafio ???
+
+#73 - Desafio ???
+
+#74 -.useReducer( )
+
+#75 - CUSTOM HOOK
+
+ /hooks/useCounter.js
+export const useCounter = (initialValue = 100) => {
+    const [count, setCount] = useState(initialValue)
+    
+    function inc( ) {
+        set count(count + 1)
+    }
+
+    function dec() {
+        setCount(count - 1)
+    }
+    return [count, inc, dec ]
+}
 
 
+/hooks/useCustom.jsx
+
+const [count, inc, dec] = useCounter()
  
+#76 CUSTOM HOOK #2
+
+/hooks/useFetch.js
+
+export const useFetch = (url, method = "get") => {
+    const [response, setResponse] = useState({ 
+        data: null,
+        loading: true   
+     })
+     
+     useEffect(function (){
+        fetch(url, { method })
+            .then(resp => resp.json())
+            .then(json => setResponse({
+                data: json,
+                loading: false
+            }))
+     }, [url, method])
+     
+     return response
+}
+
+/useCustom.jsx
+
+const url = "http://files. ... .json"
+const response = useFetch(url)
+
+function showState(state){
+    return states.map(state => (
+    <li key={state.nome}>
+        {state.nome } - {state.sigla}
+    </li>
+    )
+}
+
+return (
+    ...
+    <ul>
+        {response.data ? showState() : false}
+    </ul>
+)
+
+
+#77 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

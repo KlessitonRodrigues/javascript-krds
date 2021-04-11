@@ -24,7 +24,7 @@ const Home = () => (
                 <MyContext.Provider> mais próximo acima do componente de 
                 chamada na árvore."/>
             <Card
-                title="useReduce()"
+                title="useReducer()"
                 content="Uma alternativa para useState. Aceita um 
                 'reduce' do tipo (state, action) => newState e retorna o 
                 estado atual, junto com um método 'dispatch'." />
