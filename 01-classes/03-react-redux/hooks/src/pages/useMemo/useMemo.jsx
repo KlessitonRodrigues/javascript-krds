@@ -18,8 +18,7 @@ const UseMemo = () => {
     const [n3, setN3] = useState(0)
 
     const result = useMemo(() => {
-        if (n1 || n2)
-            return sum(n1, n2)
+        if (n1 || n2) return sum(n1, n2)
     }, [n1, n2])
 
     return (

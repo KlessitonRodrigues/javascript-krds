@@ -1,4 +1,4 @@
-.use-callback{
+.use-callback {
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
@@ -16,9 +16,9 @@
     border-radius: 4px;
 }
 
-.use-callback .input-text{
+.use-callback .input-text {
     margin: 1rem 0;
-    padding: 1.5rem;
+    padding: 1.3rem;
     background-color: var(--primary);
     color: var(--onSurface);
     border-radius: 4px;
@@ -26,6 +26,10 @@
     text-align: center;
 }
 
-.use-callback .buttons button {
+.use-callback .buttons :nth-child(1) {
     background-color: var(--primary-variant);
+}
+
+.use-callback .buttons :nth-child(2) {
+    background-color: var(--secondary-variant);
 }

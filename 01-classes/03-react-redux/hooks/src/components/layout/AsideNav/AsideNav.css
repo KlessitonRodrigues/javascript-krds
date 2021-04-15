@@ -2,7 +2,6 @@
     height: 100vh;
     width: 150px;
     position: fixed;
-    padding-top: 2rem;
     background-color: var(--primary);
     color: var(--text);
     box-shadow: var(--shadow)
@@ -10,23 +9,30 @@
 
 .aside-nav>.nav-title {
     font-size: 1.3rem;
-    padding-left: .5rem;
     font-weight: bold;
     color: var(--onSurface);
 }
 
-.aside-nav>ul>li {
+.aside-nav>.nav-title>a {
+    padding: 2rem .5rem 0rem;
+}
+
+.aside-nav>ul li {
     letter-spacing: .11rem;
-    padding: 1rem .5rem;
     border-bottom: 1px solid #999;
 }
 
+.aside-nav>ul>li>a {
+    display: block;
+    padding: 1.5rem .5rem 1rem;
+}
+
 .aside-nav>ul>li>a:not(.active) {
-    color: #BBB;
+    color: #AAA;
 }
 
 .aside-nav>ul>li>a.active {
-    color: #FFF;
+    color: var(--onSurface);
 }
 
 .aside-nav>.nav-arrow {

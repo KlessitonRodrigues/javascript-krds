@@ -1,0 +1,19 @@
+.use-reducer button{
+    background-color: var(--secondary);
+}
+.use-reducer>.address {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: var(--primary);
+    color: var(--onSurface);
+    box-shadow: var(--shadow);
+}
+
+.use-reducer>.address>div:not(:first-of-type) {
+    padding-top: 1rem;
+}
