@@ -6,6 +6,7 @@ import UseMemo from "./useMemo/useMemo"
 import UseCallback from "./useCallback/useCallback"
 import UseContext from "./useContext/useContext"
 import UseReducer from "./useReducer/useReducer"
+import UseCustom from "./useCustom/useCustom"
 
 const Pages = {
     Home,
@@ -15,7 +16,8 @@ const Pages = {
     UseMemo,
     UseCallback,
     UseContext,
-    UseReducer
+    UseReducer,
+    UseCustom
 }
 
 export default Pages

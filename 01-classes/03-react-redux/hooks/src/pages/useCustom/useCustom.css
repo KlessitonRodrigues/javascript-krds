@@ -1,0 +1,8 @@
+.use-custom .counter {
+    font-size: 14rem;
+    color: var(--primary);
+}
+
+.use-custom button {
+    background-color: var(--secondary);
+}

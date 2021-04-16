@@ -10,7 +10,7 @@ const UseCallback = () => {
     const [inputText, setInputText] = useState("")
 
     const getInput = value => setInputText(value)
-    const memoGetInput = React.useCallback(getInput, [0])
+    const memoGetInput = React.useCallback(getInput, [])
 
     return (
         <div className="page use-callback">
