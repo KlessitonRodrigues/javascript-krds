@@ -4,27 +4,19 @@ export default props => (
     <nav className="navbar navbar-inverse">
         <div className="container">
             <div className="navbar-header">
-                <button
-                    type="button"
-                    className="navbar-toggle"
-                    data-toggle="collapse"
-                    data-target="#mainNav">
-                    <span className="icon-bar" />
-                    <span className="icon-bar" />
-                    <span className="icon-bar" />
-                </button>
-                <span className="fa fa-trash"></span>
+                <a href="#/todo" className="navbar-brand">
+                    <i className="fa fa-calendar-check-o" />
+                    <b> TodoApp</b>
+                </a>
             </div>
-            <div className="collapse navbar-collapse" id="mainNav">
-                <ul className="nav navbar-nav">
-                    <li className="active">
-                        <a href="#">Todo</a>
-                    </li>
-                    <li>
-                        <a href="#">Sobre</a>
-                    </li>
-                </ul>
-            </div>
+            <ul className="nav navbar-nav">
+                <li>
+                    <a href="#/todo">Todo</a>
+                </li>
+                <li>
+                    <a href="#/about">Sobre</a>
+                </li>
+            </ul>
         </div>
     </nav>
 )
