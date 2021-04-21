@@ -1,19 +1,23 @@
 import React from "react"
 import IconButton from "../template/iconButton"
 
+function formatTodoDate(todo) {
+    return new Date(todo.createAt)
+        .toLocaleTimeString("pt-BR",
+            { hour12: true, hour: "2-digit", minute: "2-digit" })
+}
+
 export default props => {
+
     const TodoList = props.list && props.list.map(todo =>
         <tr
             key={todo._id}
             id={todo.id}
             className={todo.done ? "success" : ""}>
-            <td className="todo-description">
-                {todo.description}
-            </td>
-            <td>
-                {todo.createAt}
-            </td>
-            <td className="btn-group">
+            <td className="table-description">
+                {todo.description}</td>
+            <td className="table-time">{formatTodoDate(todo)}</td>
+            <td className="table-actions btn-group">
                 <IconButton
                     onClick={() => props.markAsDone(todo)}
                     style="success"
@@ -27,9 +31,8 @@ export default props => {
                 <IconButton
                     onClick={() => props.handleRemove(todo)}
                     style="danger"
-                    icon="trash-o" />
-            </td>
-        </tr>
+                    icon="trash-o"
+                    hide={!todo.done} /></td></tr>
     )
 
     return (
@@ -37,12 +40,8 @@ export default props => {
             <thead>
                 <tr>
                     <th>Descrição</th>
-                    <th>Data</th>
-                </tr>
-            </thead>
-            <tbody>
-                {TodoList}
-            </tbody>
+                    <th>Hora</th></tr></thead>
+            <tbody>{TodoList}</tbody>
         </table>
     )
 }

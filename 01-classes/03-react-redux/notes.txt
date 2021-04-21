@@ -1,30 +1,33 @@
-React Hooks
+REACT HOOKS
 
-#58 - useState
+#58 - USESTATE
+
 -> const [num, setNum] useState(0)
 -> adiciona uma estado a um componente
 
-#60 - useEffect
+#60 - USEFFECT
+
 -> useEffect(EffectCallback, DependencyList)
 -> execulta uma callback quando um valor na "DependencyList" é 
 alterado
 
-# 63 - useRef
+# 63 - USEREF
+
 -> useRef.current 
 -> retornar o mesmo objeto como referencia a cada rederização
 -> não dispara uma nova renderização quando alterado
 
-# 64 - useRef
+# 64 - USEREF
+
 -> propriedade (ref) do componente
 
     const inputRef = useRef(null)
     <input  ref={inputRef} /> 
-    
+   
 -> inputRef.current === (Elemento "input" )
 
-#65 - ?? DESAFIO
+66 - USEMEMO
 
-66 - UseMemo
 -> useMeno(callback, dependencyList)
 retorna um valor memorizado
 
@@ -36,10 +39,11 @@ useEffect(() => {
 
 const result = useMeno(() => sum(n1,  n2), [n1, n2])
 
-#67 - useCallback / React.memo
+#67 - USECALLBACK / REACT.MEMO
 
 -> React.memo (useMeno)
-pode ser usado para evitar a rederização repetida de componentes estáticos
+pode ser usado para evitar a rederização 
+repetida de componentes estáticos
 
 -> useCallback 
 retorna sempre a mesma referência a função passada por
@@ -51,13 +55,14 @@ const inc = useCallback(function (delta)){
     setCount(current => current + delta)
 }, [setCount])
 
+#68 - CONTEXT API 
 
-#68 - Context API 
 utilizado para compartilhar informações entre componentes de
 forma direta, sem a necessidade de percorrer a árvore de 
 componentes.
 
-#69 - React.useContext()
+#69 - REACT.USECONTEXT()
+
 /DataContext.js
 
     export const data =  {
@@ -91,8 +96,6 @@ componentes.
         })
     }
  
-#70 - React.useContext( )
-
 #71 - React.useReducer( ) 
 
 // estado inicial da aplicação
@@ -122,11 +125,7 @@ const [state, dispatch] = useReduce(reduce, initialState)
     +2
 </button> 
 
-#72 - Desafio ???
-
-#73 - Desafio ???
-
-#74 -.useReducer( )
+#74 -.USEREDUCER( )
 
 #75 - CUSTOM HOOK
 
@@ -192,7 +191,65 @@ return (
 )
 
 
-#77 
+
+REDUX
+
+#110 - FUNDAMENTOS DO REDUX
+
+ACTION
+Um objeto gerado pela ACTIONCREATOR, ao qual
+será dispachado para os REDUCERS, após ser submetido
+ou não a middlewares.
+
+-> É um objeto
+-> Possui o atributo obrigatório { type }
+-> pode ter dados associados ao { payload }
+
+{
+    type: "ACTION_TYPE",
+    payload: { /* data */ }
+}
+
+ACTIONCREATOR
+É um processo lógico que resultará em uma objeto
+do tipo ACTION
+
+-> É uma função
+-> Retorna uma ACTION
+-> É sempre Síncrona (porém a ACTION pode conter
+"promisses", que será tratada por middlewares)
+
+function doSomething(){
+    /* DO */
+    return {
+        type: "ACTION_TYPE"
+        payload: { /* Data */ }
+    }
+}
+
+REDUCERS
+São funções puras, associadas a cada atributo do
+STATE, ao qual são responsáveis por determinar
+quais devem ser alterados, com base no ACTION TYPE,
+para a criação de um novo STATE.
+
+-> São Funções Puras
+-> Cada uma altera um atributo
+-> Evento de ACTION irá passar por todos
+
+{
+    ATTR_1: function(curretATTR_1, action){
+        return newATTR_1
+    },
+    ATTR_2: function(curretATTR_2, action){
+        return newATTR_2
+    } 
+}
+
+STATE
+Um Objeto { KEY: VALUE }
+
+
 
 
 
