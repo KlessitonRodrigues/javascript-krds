@@ -9,10 +9,10 @@ const useCustom = () => {
             <h2>Custom Hooks</h2>
             <span className="counter">{couter}</span>
             <div>
-                <button className="inc" onClick={() => inc(2)}
-                >inc</button>
-                <button className="dec" onClick={() => dec(2)}
-                >dec</button>
+                <button onClick={() => inc(2)}
+                >+ 2</button>
+                <button onClick={() => dec(2)}
+                >- 2</button>
             </div>
         </div>
     )

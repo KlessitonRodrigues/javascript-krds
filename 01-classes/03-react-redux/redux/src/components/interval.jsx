@@ -1,4 +1,6 @@
 import React from "react"
+import { connect } from "react-redux"
+import { alterMin, alterMax } from "../store/actions/numbers"
 
 const Interval = props => (
     <div className="card card-interval">
@@ -9,13 +11,37 @@ const Interval = props => (
             <label> min
                 <input
                     type="number"
-                    placeholder="0" /></label>
+                    value={props.min}
+                    placeholder="0"
+                    onChange={e =>
+                        props.setMin(+e.target.value)} /></label>
 
             <label> max
                 <input
                     type="number"
-                    placeholder="0" /></label></div>
+                    value={props.max}
+                    placeholder="0"
+                    onChange={e =>
+                        props.setMax(+e.target.value)} /></label>
+        </div>
     </div>
 )
 
-export default Interval
+const mapStateToProps = state => ({
+    min: state.numbers.min,
+    max: state.numbers.max
+})
+
+const mapDispatchToProps = dispatch => ({
+    setMin(min) {
+        // ACTION CREATOR => ACTION
+        dispatch(alterMin(min))
+    },
+    setMax(max) {
+        dispatch(alterMax(max))
+    }
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps)(Interval)

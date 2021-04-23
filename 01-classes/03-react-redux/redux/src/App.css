@@ -28,7 +28,6 @@ body {
 label {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
   color: var(--primary);
   margin-bottom: 1rem;
   user-select: none;
@@ -51,13 +50,26 @@ input {
   flex-wrap: wrap;
 }
 
+@keyframes slide {
+  from {
+    transform: translateX(-45px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .card {
-  min-width: 16rem;
+  min-width: 14rem;
   box-shadow: var(--low-shadow);
   margin: .5rem;
   border-radius: 5px;
   overflow: hidden;
   text-align: center;
+  animation: slide;
+  animation-duration: .3s;
 }
 
 .card-title {

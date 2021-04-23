@@ -9,7 +9,7 @@ function App() {
       <div>
         <Card type="soma" />
         <Card type="media" />
-        <Card type="random" />
+        <Card type="aleatório" />
       </div>
     </div>
   );

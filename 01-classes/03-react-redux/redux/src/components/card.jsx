@@ -1,4 +1,5 @@
 import React from "react"
+import { connect } from "react-redux"
 
 const Card = props => {
     const min = Number(props.min) || 0
@@ -6,9 +7,9 @@ const Card = props => {
     const type = props.type
 
     function operation() {
-        if (type === "media") return min + max / 2
+        if (type === "media") return (min + max) / 2
         if (type === "soma") return min + max
-        if (type === "random") {
+        if (type === "aleatório") {
             const random = Math.random() * (max - min) + min
             return Math.round(random)
         }
@@ -16,11 +17,15 @@ const Card = props => {
 
     return (
         <div className={"card card-" + type}>
-            <div className="card-title">
-                <h3>{type}</h3></div>
-            <div className="card-body">
-                {operation()}</div>
+            <div className="card-title"><h3>{type}</h3></div>
+            <div className="card-body">{operation()}</div>
         </div>
     )
 }
-export default Card
+
+const mapStateToProps = state => ({
+    min: state.numbers.min,
+    max: state.numbers.max
+})
+
+export default connect(mapStateToProps)(Card)
