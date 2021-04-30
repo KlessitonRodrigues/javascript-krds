@@ -1,0 +1,423 @@
+#89 - REVISANDO OBJETOS
+-> objetos literais
+pessoa = {
+    nome: "meria",
+    sobrenome: "ferreira"
+ }
+
+-> acessar valores
+pessoa.nome / pessoa["nome"]
+pessoa.sobrenome / pessoa["sobrenome"]
+
+-> deletar propriedades
+delete pessoa.sobrenome
+
+-> "for in" em objeto (keys)
+for(key in pessoa) {
+
+}
+
+-> "for in" em objeto (values)
+for(key in pessoa){
+    pessoa[key]
+}
+
+-> Factory / Constructor
+// Factory function
+function criaPessoa(name, lastName){
+    return {
+        name,
+        lastName,
+
+        // get
+        get name(){ this.name }
+
+        // set
+        set name(name){ this.name = name }
+
+        // method
+        fullName(){ 
+            return `${this.name} ${this.lastName}` 
+        }
+    }
+}
+
+// Constructor function
+function Pessoa(name, lastName){
+    this.name = name
+    this.lastName = lastName
+    
+    this.fullName = function(){
+        /* ... */
+    }
+}
+
+-> Constructor + Object.freeze()
+
+function Pessoa(name, lastName){
+    this.name = name
+    this.lastName = lastName
+
+    Object.freeze(this)
+}
+
+
+
+#90 - DEFINE PROPERTY / DEFINE PROPERTIES
+// Object.defineProperty()
+function Produto(name, value){
+    this.value = value
+
+    Object.defineProperty(this, "name", {
+        enumerable: true,   // visível?
+        value: name,        // valor/function
+        writtable: true,    // alterável?
+        configurable: false // re-configurável
+    })
+}
+
+// Object.defineProperties()
+function Produto(name, value){
+
+    Object.defineProperty(this, {
+        nome: { ...properties },
+        value: { ...properties }
+    })
+}
+
+
+
+#91 - CONSTRUCTOR FUNCTIONS - GETTERS / SETTERS
+function Produto(name, value){
+    this.name = name
+
+    Object.defineProperty(this, "value", {
+        enumerable: true,
+        get: function(){
+            return value
+        },
+        set: function(num){
+            if(typeof num !== "number") 
+                throw new TypeError("")
+            value = num
+        }
+    })
+}
+
+
+
+#92 - OBJECT
+-> Object.assing(target, obj1, obj2 ...)
+Unir ou copiar um objeto
+
+Object.assing({}, obj1, obj2)
+
+-> Object.keys(obj)
+retorna as "keys" do objeto em um array
+
+-> Object.values(obj)
+retorn as "values" do objeto em um array
+
+-> Object.entries(obj)
+retorna um array com sub-arrays
+
+[[key, value], [key, value], [key, value]]
+
+-> Object.getOwnPropertyDescriptor(obj, key)
+retorna as propriedades de descrição de uma "key"
+
+
+
+#93 - PROTOTYPES
+métodos e atributos percentes ao prototype da
+CLASSE/CONSTRUCTOR serão repasadas por referência
+ao __proto__ das INSTÂNCIAS
+
+CLASS.prototype === INSTANCE.__proto__
+
+
+
+#94 - PROTOTYPES
+-> OBJECT.SETPROTOTYPEOF()
+// atribui um protótipo a um objeto
+
+const objA = {a: "objA"}
+const objB = {b: "objB"}
+
+Object.setPrototypeOf(objB, objA)
+
+objB.a -> "objA"
+
+-> OBJECT.GETPROTOTYPEOF()
+// retorna o protótipo de um objecto
+
+
+
+#94 - HERANÇA + PROTOTYPE
+function ConstructorA (prop1, prop2){
+    this.prop1 = prop1
+    this.prop2 = prop2
+}
+
+function ConstructorAB(prop1, prop2, prop3){
+    ConstructorA.call(this, prop1, prop2)
+    this.prop3 = prop3
+}
+
+// Atribuindo ao proto de ConstructorAB o seu próprio
+// constructor e o proto de ConstructorA
+
+ConstructorAB.prototype = Object.create(ConstructorA.prototype)
+ConstructorAB.prototype.construtor = ConstructorAB
+
+
+
+#100 - FACTORY FUNCTION + PROTOYPE
+function createObj(){
+    const createObjPrototype = {
+        methodA: function(){ }
+
+        methodB: function(){ }
+
+        methodC: function(){ }
+    }
+    return Object.create(createObjPrototype, {
+        propA: {enumerable: true, value: "propB" },
+        propB: {enumerable: true, value: "propB"}
+    })
+}
+
+-> mixin
+
+const methodA = {
+    methodA: function(){ }
+}
+
+const methodB = {
+    methodB: function(){ }
+}
+
+const methodC = {
+    methodC: function(){ }
+}
+
+const createObjPrototype = Object.assing(
+    {}, methodA, methodB, methodC)
+
+function createObj(){
+    return Object.create(createObjPrototype, {
+        propA: {enumerable: true, value: "propA",
+        propB: {enumerable: true, value: "propB"}
+    })
+}
+
+
+
+#101 - OBJECT MAP()
+Permite criar um mapa simples do tipo chave/valor
+
+sendo "chave" de map não restriginda a Strings e Symbols
+
+const myMap = new Map()
+
+-> SET
+myMap.set(key, value)
+
+-> GET
+myMap.get(key)
+
+-> SIZE
+myMap.size
+
+
+
+#102 - CLASSE
+class ClassObj {
+    cosntructor(propA, propB){
+        this.propA = propA
+        this.propB = propB
+    }
+
+    method(){
+
+    }
+}
+
+
+
+#103 - CLASSE - GET/SET
+class ClassObj {
+    cosntructor(propA, propB){
+        this.propA = propA
+        this.propB = propB
+    }
+
+    get propA(){
+        return this.propA
+    }
+
+    set propA(value){
+        this.propA = value
+    }
+}
+
+
+
+#104 - CLASSE - HERANÇA
+class ClassObjFather {
+    
+    cosntructor(propA, propB){
+        this.propA = propA
+        this.propB = propB
+    }
+
+    method(){
+
+    }
+}
+
+
+class ClassObjChild extends ClassObjFather {
+    
+    constructor(propA, propB, propC){
+        super(propA, propB)
+
+        this.propC = propC
+    }
+}
+
+
+
+#105 - CLASS - STATIC METHOD
+
+class ClassObj {
+
+    method(){
+
+    }
+
+    static staticMethod(){
+
+    }
+}
+
+// call the static method
+ClassObj.staticMethod()
+
+// call the instance method
+obj1 = new ClassObj()
+
+obj1.method()
+
+obj1.staticMethod() -> Erro: not defined
+
+
+
+#108 - PROMISE
+
+function asyncFunc (){
+
+    return new Promise(
+        (resolve, reject) => {
+
+            // when fail
+            reject("Error")
+
+            // when success
+            resolve("OK")
+
+    })
+}
+
+asyncFunc()
+    .then(response => {
+        console.log(response)
+
+        // return a new Async Function
+        // the result is passed to next THEN
+        return asyncFunc()
+    })
+    .then(response => {
+        console.log(response)
+    })
+    .catch(error => {
+        console.log(error)
+    })
+    .finally(){
+
+    }
+
+
+
+#109 - PROMISE - STATIC METHODS
+
+const asyncFunc = () => new Promise(resolve => resolve("OK"))
+
+const arrayOfPromises = [
+    asyncFunc(), 
+    asyncFunc(), 
+    asyncFunc()
+]
+
+
+-> Promise.all( )
+-> recebe e retorna um array de Promises resolvidas
+
+Promise.all(arrayOfPromises)
+    .then(resp => {
+        console.log(resp[0], resp[1], resp[2])
+    })
+
+
+-> Promise.race()
+-> retorna somente a primeira que resolver
+
+Promise.race(arrayOfPromises)
+    .then(resp => {
+        console.log(resp)
+    })
+
+
+-> Promise.resolve()
+-> retorna uma Promise resolvida
+
+const asyncFunc = () => {
+    const isDone = true
+
+    if(isDone) return Promise.resolve("OK, without wait")
+    
+    return new Promise(resolve => 
+        resolve("OK, after wait"))
+}
+
+asyncFunc()
+    .then(res => console.log(res))
+
+
+-> Promise.reject()
+-> retorna uma promesa rejeitada
+
+const asyncFunc = () => {
+    const isDone = false
+
+    if(isDone) return new Promise(resolve => 
+        resolve("OK, after wait"))
+    
+    return Promise.resolve("Error, without wait")
+}
+
+asyncFunc()
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+
+
+
+#110 - ASYNC / WAIT
+
+const asyncFunc = () => new Promise(resolve => resolve("OK"))
+
+
+
+
+
+
