@@ -414,10 +414,18 @@ asyncFunc()
 
 #110 - ASYNC / WAIT
 
-const asyncFunc = () => new Promise(resolve => resolve("OK"))
+const promiseFunc = () => new Promise(resolve => resolve("OK"))
+
+async function asyncFunc (){
+    try{
+        const promiseResult = await promiseFunc()
+        return promiseResult
+    } catch(e){
+        console.log(e)
+    }
+}
 
 
-
-
+#101 - XMLHttpRequest 
 
 
