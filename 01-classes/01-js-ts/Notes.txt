@@ -426,6 +426,119 @@ async function asyncFunc (){
 }
 
 
-#101 - XMLHttpRequest 
+
+#117 - ES6 - MODULES - IMPORT/EXPORT
+
+import/export
+-> file1.js
+    const A = 10
+    const B = "10"
+    const C = num => num + 1
+
+    export {A, B, C}
+
+-> file2.js
+    import {A, B, C} from "./file1"
+
+
+alias - export 
+-> file1.js
+    const A = 10
+    export {A as numberA}
+
+-> file2.js
+    import {numberA} from "./file1"
+
+
+alias - import
+-> file1.js
+    const A = 10
+    export {A}
+
+-> file2.js
+    import {A as numberA} from "./file1"
+
+
+direct export
+-> file1.js
+    export const A = 10
+
+-> file2.js
+    import {A} from "./file1"
+
+
+import all
+-> file1.js
+    export const A = 10
+    export const B = 0
+
+-> file2.js
+    import * as numbers from "./file1"
+
+    const A = numbers.A
+    const B = numbers.B
+
+
+export function as DEFAULT
+-> file1.js
+    export default function sum(a, b){
+        return a + b
+    }
+
+-> file2.js
+    import sum from "./file1"
+
+
+export default variable/function
+-> file1.js
+    const A = 10
+    const B = 0
+
+    export {A as default, B}
+
+-> file2.js
+    import numberA, {B} from "./file1"
+
+
+
+#123 - NODE - MODULE OBJECT
+
+-> Export
+
+-> file1.js
+    module.exports === exports === this // true ???
+
+    module.exports.key = variable
+    exports.key = variable
+    this.key = variable
+
+
+// override module.exports
+
+const a = "A"
+const b = "B"
+const c = "C"
+
+module.export = {
+    a, b, c
+}
+
+-> Import
+
+-> file2.js
+    const moduleFile1 = require("./file1")
+
+    const variable = require("./file1").key
+
+    const {key} = require("./file1")
+
+
+
+
+
+
+
+
+
 
 

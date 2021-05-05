@@ -1,0 +1,82 @@
+body {
+    font-family: sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: .5rem 0;
+    color: #444;
+    font-weight: bold;
+    user-select: none;
+    font-size: 1.1rem;
+}
+
+label:hover {
+    color: #74A;
+}
+
+input[type="text"], input[type="number"] {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #74A;
+    width: 100%;
+    padding: .3rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input[type="checkbox"] {
+    margin-right: .2rem;
+}
+
+button {
+    min-width: 4rem;
+    padding: .3rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    background-color: #DDD;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    margin: .5rem 0;
+}
+
+button:hover {
+    background-color: #DBC;
+}
+
+button:active {
+    transform: scale(.95, .95);
+}
+
+h1 {
+    color: #444;
+}
+
+.line {
+    height: 2px;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(to right, #d12bfa,#4613ff, #00f7ff);
+}
+
+.checkbox-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password {
+    margin: 2rem 0;
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: #EEE;
+    border-radius: 5px;
+}

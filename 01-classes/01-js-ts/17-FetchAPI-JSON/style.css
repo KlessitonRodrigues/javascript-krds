@@ -1,0 +1,14 @@
+body{
+    font-family: sans-serif;
+}
+
+table{
+    width: 100%;
+    max-width: 700px;
+    background-color: #EEE;
+    padding: 1rem;
+}
+
+table td{
+    padding: .4rem 0;
+}

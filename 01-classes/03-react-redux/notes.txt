@@ -11,13 +11,13 @@ REACT HOOKS
 -> execulta uma callback quando um valor na "DependencyList" é 
 alterado
 
-# 63 - USEREF
+#63 - USEREF
 
 -> useRef.current 
 -> retornar o mesmo objeto como referencia a cada rederização
 -> não dispara uma nova renderização quando alterado
 
-# 64 - USEREF
+#64 - USEREF
 
 -> propriedade (ref) do componente
 
@@ -26,7 +26,7 @@ alterado
    
 -> inputRef.current === (Elemento "input" )
 
-66 - USEMEMO
+#66 - USEMEMO
 
 -> useMeno(callback, dependencyList)
 retorna um valor memorizado
