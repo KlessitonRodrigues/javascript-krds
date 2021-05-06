@@ -534,6 +534,104 @@ module.export = {
 
 
 
+#124 - NODE - PATH - __DIRNAME / __FILENAME
+
+-> __filename
+retorna o caminho do arquivo atual, apartir da raiz 
+do sistema.
+
+-> __dirname
+retorna o caminho do diretório atual, apartir da raiz
+do sistema
+
+-> path
+resolve o caminho de diretório, em caso de conflito entre
+sistemas operacionais.
+
+    const path = require("path")
+
+    path.resolve(__dirname, "..", "..", "folder", "file.js")
+
+
+
+#125 - NODE - NPM
+
+-> semantic version
+1.          2.          3
+^- Major    ^- Minor    ^- Patch
+
+-> versionamento
+
+// " ^ " séra permitido atualizar o (Minor e Patch)
+"express":"^4.15.0" 
+
+// " ~ " séra permitido atualizar o (Patch)
+
+-> npm
+npm i // instalar packages
+
+npm i express@3.x // instalar versão 3 mais recente
+
+npm uninstall // remover packages
+
+npm update // atualiza os packages
+
+npm ls // lista de packages
+
+npm ls --depth=0 // packages do úsuario
+
+npm outdated // packages desatualizados
+
+
+
+#127 - NODE - FS (FileSystem)
+
+-> fs.readdir(path)
+retorna os arquivos/diretótios encontrados
+
+-> fs.stat(path)
+retorna informações sobre o arquivo/diretório
+
+
+#128 - NODE - FS - JSON
+
+-> fs.writeFile(path, text, {flag, encode})
+// realiza a escrita em um arquivo
+
+flag: w - re-write / a - append
+
+-> fs.readFile(path, encode)
+// realiza a leitura de um arquivo
+
+
+-> JSON Stringfy/Parse
+
+JSON.stringfy(obj) // retorna um obj json
+
+JSON.parse(jsonObj) // retorna um obj javascript
+
+
+#129 - NODE - EXPRESS
+
+CRUD:   CREATE  READ  UPDATE  DELETE
+HTTTP:  POST    GET   POST    DELETE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
