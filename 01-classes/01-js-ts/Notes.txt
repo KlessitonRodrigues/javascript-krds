@@ -593,6 +593,7 @@ retorna os arquivos/diretótios encontrados
 retorna informações sobre o arquivo/diretório
 
 
+
 #128 - NODE - FS - JSON
 
 -> fs.writeFile(path, text, {flag, encode})
@@ -611,32 +612,75 @@ JSON.stringfy(obj) // retorna um obj json
 JSON.parse(jsonObj) // retorna um obj javascript
 
 
+
 #129 - NODE - EXPRESS
 
 CRUD:   CREATE  READ  UPDATE  DELETE
-HTTTP:  POST    GET   POST    DELETE
+HTTTP:  POST    GET   PUT    DELETE
 
 
 
+#131 - NODE - EXPRESS
+
+-> req.params
+?: opcional
+
+URL: http:// ex.com/profile/32
+GET: http:// ex.com/profile/:userId?
+
+req.params.userId
+
+
+-> req.query
+URL: http:// ex.com/?key1=value1&key2=value2
+GET: http:// ex.com/
+
+req.query -> {key1: value1, ke2: value2}
+
+
+-> req.body
+express: app.use(express.urlencoded(extended: true))
+
+POST: <input name="nameField" /> 
+
+req.body.nameField
 
 
 
+#136 - NODE - EXPRESS - MIDDLEWARES
+
+-> route middleware
+const middleware = (req, res, next) => {
+    console.log("intercept by middleware")    
+    next()
+}
+
+app.get("/", middleware, (req, res) => {
+    resp.send("end")
+})
+
+
+-> global middleware
+const middleware = (req, res, next) => {
+    console.log("intercept by middleware")    
+    next()
+}
+
+app.use(middleware)
+
+
+-> requisition session
+const alterSession(req, res, next){
+    req.session = {id: 01}
+    next()
+}
+
+app.get("/", alterSession, (req, res) => {
+    console.log( req.session.id )
+})
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#
 
 
