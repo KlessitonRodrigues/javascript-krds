@@ -1,0 +1,108 @@
+ADONIS JS
+Um framework altamente focado na ergonomia,
+estabilidade e confiança do desenvolvidor. 
+
+Adonis é um dos frameworks web NodeJS mais rápidos.
+
+
+EXPRESS
+Provê os meios de se criar servidores web de uma forma muito
+simples, parém, poderosa.
+
+Têm uma pegada minimalissta, não opinada, focada nas funções
+essenciais se um servidor, que são a chave do sucesso.
+
+
+FASTFY
+Um framework altamente focado em prover a melhor experiência
+ao desenvolvedor, com o mínino de gargalos na performance
+e uma poderosa arquitetura de extensões (plugins).
+
+
+GATSBY
+Um gerador de sites estáticos baseado em React, gerido com
+GraphQL e com um ecossitema de plugins e templates.
+
+
+HAPI
+Um rico framework para construção de aplicações e serviços
+que habilitam desenvolvedores a focar na escrita das lógicas
+de aplicação reutilizáveis em vez de perder tempo montando
+a infraestrutura.
+
+
+KOA
+É mantido pelo time por trás do EXPRESS.
+
+Pretende ser ainda menor e simples, construido sob muitos anos
+de conhecimento. O novo projeto nasceu da necessidade de criar
+mudanças incompatíveis sem romper com a cominidade existemte.
+
+
+LOOPBACK.IO
+Faz com que seja fácil constriuir aplicações modernas que
+requerem integrações complexas.
+
+
+METEOR
+Um framework full-stack que permite criar aplicações
+javascript com uma abordagem isomófica, compartilhando
+código entre cliente e servidor.
+
+É uma ferramenta generalista que tenta fornecer tudo, que agora
+integra com bibliotacas como React, Vue, e Angular.
+
+Também pode ser utilizado para criar aplicativos mobile.
+
+
+NEST JS
+Um framework Node JS progressivo baseado em Typescript para 
+construção de aplicações de nível empresarial eficientes,
+confiáveis e escaláveis.
+
+
+
+NEXT.JS
+Framework React que fronace a melhor experiência de
+desenvolvimento, com todos os recursos que você precisa
+para produção: rederização híbrida entre servidor (SSR)
+e estáticos, suporte ao TypeScript, bundle otimizado,
+rotas, pre-fetching, e mais.
+
+
+
+NX
+Um conjunto de ferramentas para desenvolvimento full-stack
+em monorepo, utilizando Nest.JS, React, Angula, e mais! 
+
+Nx ajuda a escalar seu desenvolvimento de um time
+construindo uma aplicação para múltiplos times colaborando
+em múltiplas aplicações!
+
+
+
+SAPPER
+Sapper é um framework para construção de aplicações web 
+de todos os tamanhos, com uma bela experiência de 
+desenvolvimeno e rotiamento flexíxel baseado em filesystems
+Oferece SSR e mais.
+
+
+
+SOCKET.IO
+Um motor de comunicações em tempo real para construir
+aplicações em rede.
+
+
+
+STRAPI
+Srapi é um CMS flexível, open-source e independente, que 
+fornece aos desenvolvedores a liberdade de escolher seus 
+frameworks e ferramentas favoritos, enquanto também
+permite que editores administrem e distribuam seus 
+conteúdos de maneira fácil.
+
+Por fazer o painel administrativo uma API extensível atravéz
+de um sistema de plugins, o Strapi permite que as maiores
+empresas do mundo acelerem a entrga de conteúdo enquanto 
+constroem belas experiências digitais.

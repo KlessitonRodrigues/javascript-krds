@@ -615,8 +615,8 @@ JSON.parse(jsonObj) // retorna um obj javascript
 
 #129 - NODE - EXPRESS
 
-CRUD:   CREATE  READ  UPDATE  DELETE
-HTTTP:  POST    GET   PUT    DELETE
+CRUD:  CREATE  READ  UPDATE DELETE
+HTTP:  POST    GET   PUT    DELETE
 
 
 
@@ -681,6 +681,73 @@ app.get("/", alterSession, (req, res) => {
 
 
 
-#
+#139
+
+npm: dotenv (criar variáveis de ambiente)
 
 
+
+#141 - EXPRESS - SESSION - FLASH MESSAGES
+npm: express-session connect-mongo connect-flash
+
+-> server.js
+
+    const session = require("express-session")
+    const mongoStore = require("connect-mongo")
+    const flash = require("connect-flash")
+
+    const sessionOptions = {
+        secret: "anyfjisjfijsurfuisnfunun",
+        store: mongoStore.create(
+            {mongoUrl: process.env.CONNECTIONSTRING}
+        ),
+        resave: false,
+        saveUninitialized: false,
+        cookie: {
+            mazAge: 1000 * 60 * 60 * 24 * 7,
+            httpOnly: true
+        }}
+
+    app.use(sessionOptions)
+    app.use(flash())
+
+
+    app.get("/", (req, res) => {
+        
+        req.flash("message")
+
+        req.session.user = {name: "userName"}
+    })
+
+
+
+#142 - EXPRESS - EJS
+
+-> variáveis globais
+app.use((req, res, next) => {
+    res.locals.user = {name: "userName"}
+    next()
+})
+
+-> variáveis por rota
+app.get("/", (req, res) => {
+    res.locals.user = {name: "userName"}
+})
+
+-> variáveis por render
+app.get("/", (req, res) => {
+    res.render("file", {
+        user: "userName"
+    })
+})
+
+-> EJS
+<%   %> - JavaScript
+<%=  %> - exibir
+<%-  %> - interpretar HTML
+<%#  %> - comentário
+<%- include("path") %> - importar ejs
+
+
+
+# 

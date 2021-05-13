@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-
-<body>
-    <h1>HELLO</h1>
-</body>
-
-</html>
+<%- include("./includes/head") %>
+    <header class="flex al-baseline">
+        <%- title %>
+            <p>
+                <%= text %>
+            </p>
+    </header>
+    <main>
+        <div class="flex container">
+            <ul>
+                <% for(item of data){ %>
+                    <li>
+                        <%= item %>
+                    </li>
+                    <%}%>
+            </ul>
+        </div>
+    </main>
+    <%- include("./includes/footer") %>

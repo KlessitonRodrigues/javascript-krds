@@ -1,0 +1,15 @@
+@import "../../node_modules/sass-base-style/sass/main.scss";
+
+body {
+    background-color: $gray-200;
+}
+
+header {
+    background-color: $blue-700;
+}
+header h1 {
+    color: $white;
+}
+header p {
+    color: $white;
+}

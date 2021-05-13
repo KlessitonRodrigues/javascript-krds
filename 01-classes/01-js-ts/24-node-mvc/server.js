@@ -5,6 +5,7 @@ const pathResolve = require("path").resolve
 const app = express()
 
 app.use(express.urlencoded({ extended: true }))
+app.use(express.static(pathResolve(__dirname, "public")))
 app.use(routes)
 
 app.set("views", pathResolve(__dirname, "src", "views"))

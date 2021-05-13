@@ -1,0 +1,91 @@
+CLIENT-SIDE STORAGE
+
+Mordern Web browser suppport a number of ways for web
+sites to store data on the user's computer - with the
+user permission - the retrieve it when necessary.
+
+This lets you persist data for long-term storage, save
+sites or documents for offline use, retain user-spefic
+settings for your site, and more.
+
+
+
+OLD SCHOOL: COOKIES
+
+The concept of client-side storage has been around for
+long time. Since the early days of the web, sites have
+used cookies to store information to personalize user
+experience on websites.
+
+They're the earliest form of client-side storage 
+commonly used on the web.
+
+
+
+NEW SCHOOL: WEB STORAGE AND INDEXED DB
+
+-> The Web Storage API provides a very simple syntax for 
+storing and retrieving smaller, data items consisting
+of a name and a corresponding value.
+
+This is useful when you just need to store some simple 
+data, like the user's name, whether they are logged in, 
+what color to use for the background of the screen, etc.
+
+-> The IndexedDB API provides the browser with a complete
+database system for storing complex data. This can be used
+for things from complete sets of customer records to even
+complex data types like audio or videos files.
+
+
+
+THE FUTURE: CACHE API
+Some modern browsers support the new Cache API. This API is 
+designed for storing HTTP responses to specific requests,
+and is very useful for doing things like storing website
+assets offline so the site can subsequently be used without
+a network connection.
+
+Cache is usually used in combination with the Service Worker
+API. although it doesn't have to be.
+
+
+
+STORING SIMPLE DATA - WEB STORAGE
+The Web Storage API is very easy to use - you store simple 
+name/value pairs of data (limited to strings, numbers, etc)
+and retrieve these values when needed.
+
+-> All of web storage data is contained within two 
+object-like structures inside the browser: sessionStorage
+and localStorage.
+
+The first one persists data for as long as the browser is
+open (the data is lost when the browser is closed) and the 
+second one persists data even after the browser is closed
+and opened again.
+
+Storage.setItem()
+Storage.getItem()
+Storage.removeItem()
+
+
+
+STORING COMPLEX DATA - INDEXEDDB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LINK: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage

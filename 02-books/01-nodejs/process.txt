@@ -1,0 +1,77 @@
+PROCESS
+
+O módulo nativo process provê um método prático que permite
+você, programaticamente, sair de um programa Node.js:
+process.exit().
+
+Quando o node.js execulta essas linha, o processo é forçado
+a terminar imediatamente.
+
+Isso significa que qualquer callback pendente, qualquer
+request de rede sendo enviada, qualquer acesso ao filesystem,
+ou processos de escrita no stdout ou stderr - tudo será 
+finalizado do imediato degraciadamente.
+
+Se isso está bem para você. basta passar um inteiro que 
+sinalize o código de saída para o sistema operacional:
+
+process.exit(1)
+
+Por padrão, o código de saída é 0, que significa sucesso.
+
+Códigos de saída diferentes tem significados diferentes,
+que você pode querer utilizar no seu sistema para se 
+comunicar com outros programas.
+
+Você também pode definir a propriedade process.exitCode como:
+process.exitCode = 1
+
+e quando o programa for encerrado posteriormentem, o NODE.js
+retomará esse código de saída.
+
+Um programa irá sair graciosamente quando todos os processos
+estiverem completos
+
+Se você chamar pprocess.exit(), qualquer requisição 
+corrente/ pendente será abortada. isso não é legal.
+
+Nesse caso, você precisa enviar ao comando um sinal de 
+SIGTERM, e lidar com o processo desse sinal:
+
+NOTE: process não requer importação, está disponivel
+automaticamente.
+
+const express = require ( 'express' )
+const app = express ( )
+app . get ( '/' , ( req , res ) => {
+res . send ( 'Hi!' )
+} )
+const server = app . listen ( 3000 , ( ) => 
+console . log ( 'Server ready')
+
+process.on("SIGTERM", () => {
+    server.close(() => 
+        console.log("Process terminated")
+    )
+})
+
+
+Sinais são um sistema de intercumunicaçãp POSIX:
+uma notificação emviada para um processo com o 
+objetivo de notificar que um evento ocorreu.
+
+-> SIGKILL é o sinal que diz ao processo para que finalize
+imediatamentee. e agirá idealmente como o process.exit().
+
+-> SIGTERM é o sinal que diz ao processo que termine 
+graciosamente. É o sinal que é enviado por gerenciadores
+de processo como upstart ou supervisord e muitos outros.
+
+Você pode enviar esse sinal por dentro da aplicação, em 
+outra função:
+
+process.kill(process.pid, "SIGTERM")
+
+ou de outro programa NODE.js em execução, ou qualquer outra
+aplicação rodando em seu sitema que saiba o PID do processo 
+que você deseja finalizar.
