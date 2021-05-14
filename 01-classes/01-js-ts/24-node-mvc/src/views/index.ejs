@@ -1,19 +1,14 @@
 <%- include("./includes/head") %>
-    <header class="flex al-baseline">
-        <%- title %>
-            <p>
-                <%= text %>
-            </p>
-    </header>
-    <main>
-        <div class="flex container">
-            <ul>
-                <% for(item of data){ %>
-                    <li>
-                        <%= item %>
-                    </li>
-                    <%}%>
-            </ul>
-        </div>
-    </main>
-    <%- include("./includes/footer") %>
+    <%- include("./includes/header")%>
+        <main>
+            <div>
+                <ul class="flex container h-start">
+                    <% for(item of data){ %>
+                        <li>
+                            <%= item %>
+                        </li>
+                        <%}%>
+                </ul>
+            </div>
+        </main>
+        <%- include("./includes/footer") %>

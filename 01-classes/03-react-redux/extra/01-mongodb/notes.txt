@@ -1,0 +1,23 @@
+#1 VISÂO GERAL
+
+-> NOSQL (Não Relacional)
+CHAVE / VALOR   (REDIS)
+DOCUMENTOS      (MONGO)
+GRAFO
+COLUNA          (BIGTABLE, CASANDRA)
+
+-> MongoDB
+Sem Esquema
+Orientado a Documento (JSON)
+Facilidade no Escalonamento Horizontal (Clusters)
+
+
+#2 COMANDOS BÁSICOS
+
+-> CLI
+$ show dbs                  (exibir DBs locais)
+$ use                       (utilizar um DB)
+$ db                        (mostra o banco atual)
+$ db.createCollection()    (criar uma coleção no DB atual)
+$ show collections          (exibe coleções do DB atual)
+$ 

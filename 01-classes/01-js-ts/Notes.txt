@@ -206,7 +206,7 @@ const createObjPrototype = Object.assing(
 
 function createObj(){
     return Object.create(createObjPrototype, {
-        propA: {enumerable: true, value: "propA",
+        propA: {enumerable: true, value: "propA"},
         propB: {enumerable: true, value: "propB"}
     })
 }
@@ -750,4 +750,8 @@ app.get("/", (req, res) => {
 
 
 
-# 
+#144 - EXPRESS
+npm:
+helmet - express segurity middleware
+csurf - origin form validator middleware
+

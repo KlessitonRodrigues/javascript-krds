@@ -1,7 +1,7 @@
 exports.homePage = (req, res) => {
     res.render("index.ejs", {
-        title: "<h1>Titulo</h1>",
-        text: "lorem ipsum sit ament dollor",
+        title: "HomePage",
+        text: "<small>lorem ipsum sit ament dollor</small>",
         data: ["A", "B", "C", "D", "E"]
     })
 }

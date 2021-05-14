@@ -1,15 +1,18 @@
-@import "../../node_modules/sass-base-style/sass/main.scss";
+@import "../../node_modules/sass-base-style/sass/main";
 
 body {
-    background-color: $gray-200;
+    background-color: $gray-100;
 }
 
 header {
-    background-color: $blue-700;
+    background-color: $purple-800;
+    color: #FFF;
 }
-header h1 {
-    color: $white;
+
+header a{
+    margin-right: 2rem;
 }
-header p {
-    color: $white;
+
+header a:hover{
+    color: $cyan-100
 }
