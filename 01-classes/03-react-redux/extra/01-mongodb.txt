@@ -1,0 +1,110 @@
+#1 VISÂO GERAL
+-> NOSQL (Não Relacional)
+CHAVE / VALOR   (REDIS)
+DOCUMENTOS      (MONGO)
+GRAFO
+COLUNA          (BIGTABLE, CASANDRA)
+
+SQL                 NOSQL
+Tables              Collections
+Register/ Row       Document
+
+-> MongoDB
+Sem Esquema
+Orientado a Documento (JSON)
+Facilidade no Escalonamento Horizontal (Clusters)
+
+
+
+#2 COMANDOS BÁSICOS
+-> CLI
+$ show dbs                  (exibir DBs locais)
+$ use                       (utilizar um DB)
+$ db                        (mostra o banco atual)
+$ db.createCollection()     (criar uma coleção no DB atual)
+$ show collections          (exibe coleções do DB atual)
+$ db.COLLECTION_NAME.drop() (remove uma colletion)
+
+
+
+#3 INSERÇÕES
+-> CLI
+(insere dados em uma coleção)
+$ db.COLLECTION_NAME.insert({name: "jan/17", month: 1, year: 2017})
+
+(insere ou atualiza dados de uma coleção)
+$ db.COLLECION_NAME.save({name: "fev/17", month: 2, year: 2017})
+
+
+
+#4 CONSULTAS
+-> CLI
+(retorna todos os documentos de uma coleção)
+$ db.COLLECTION_NAME.find()
+
+(retorna todos os documentos de uma coleção, com indentação)
+$ db.COLLECTION_NAME.find().pretty()
+
+(retorna o primeiro documento)
+$ db.COLLECTION_NAME.findOne()
+
+(retorna o primeiro documento filtrado)
+$ db.COLLECTION_NAME.findOne({month: 2})
+
+(retorna um resultado filtrado por operação lógica)
+$ db.COLLECTION_NAME.find( { $or:[{ month: 1}, { month: 2}]})
+
+(retorna um resultado filtrado por chave)
+$ db.COLLETION_NAME.find({ month: { $exists: true }})
+
+(retorna os registros pulando a 1ª posição)
+$ db.COLLECTION_NAME.find({year: 2017}).skip(1)
+
+(retorna os registros limitando a uma posição)
+$ db.COLLECTION_NAME.find({year: 2017}).limit(1)
+
+(retorna somente uma propriedade dos registros filtrados)
+$ db.COLLETION_NAME.find({year: {$exists: true}}, {_id=0, name: 1})
+
+
+
+#5 AGREGAÇÂO
+$project: projeta um conjunto de dados especificados 
+para a operação seguinte
+
+$group: agrupa os dados projetados de acordo com a 
+expresão expecificada.
+
+-> CLI
+(agregação do projeto my-money)
+$ db.billingcycles.aggregate([{
+... $project: {credit:{$sum: "$credits.value"}, debt:{$sum: "$debts.value"}}
+... },{
+... $group: {_id: null, credit: $sum:{$credit}, debt:{$sum: "$debt"}}
+}])
+
+
+
+#6 ATUALIZAÇÂO
+-> CLI
+(manipula os valores selecionados por id/filtro)
+$ db.COLLECTION_NAME.update({
+... $and:[{month: 1},{year: 2017}], 
+... $set:{credits: [{name: "Sálario", value: 5000}]} 
+... })
+
+
+
+#7 CONTADOR E REMOÇÔES
+-> CLI
+(retorna o número de documentos)
+$ db.COLLECTION_NAME.count()
+
+(remove os documentos selecionados)
+$ db.COLLECTION_NAME.remove({month: 2})
+
+(remove os documentos selecionados, limitado a 1)
+$ db.COLLECTION_NAME.remove({year: 2017}, 1)
+
+(remove a bd por completo)
+$db.dropDatabase()

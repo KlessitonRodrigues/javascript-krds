@@ -65,19 +65,96 @@ open (the data is lost when the browser is closed) and the
 second one persists data even after the browser is closed
 and opened again.
 
+Storage: localStorege, sessionStorage
 Storage.setItem()
 Storage.getItem()
 Storage.removeItem()
 
 
 
-STORING COMPLEX DATA - INDEXEDDB
+STORING COMPLEX DATA - INDEXED DB
+The indexedDB API (sometimes abbreviated IDB) is a complete 
+database system available in the browser in which you can 
+store complex related data. the types of which aren't limited
+to simple values like strings and numbers. You can store 
+videos, images, and pretty much anything else in an indexedDB 
+instance.
+
+However, this does come at a cost: IndexedDB is much more 
+complex to use that the Web Store API.
 
 
+-> Database initial set up
+
+    let db;
+    let request = window.indexedDB.open("notes_db", 1)
+
+this line create a request to open version 1 of a database
+called notes_db. if this doesn't already exist, it will be 
+created.
+
+you will seen this request pattern used very often throughout
+indexed DB. Database operations take time.
+
+you don't want to hang the browser while you wait for the 
+results, so database operations are asynchronous.
+
+To handle this in indexedDB, you create a request object. You
+then use event handlers to run code when the request completes, 
+fails, etc.
+
+NOTE: 
+The version is important, if you want to upgrade your
+database (for example, by changing the table structure), you
+have to run your code with an incresed version number.
+
+on error handler signifies that the database didn't open
+successfully
+
+    request.onerror = () => {
+        console.log("database failed to open")
+    }
+
+onsuccess handler signifies that the database opened 
+successfully
+
+    request.onsuccess = () => {
+        console.log("Database opened successfully")
+
+        db = request.result
+    }
+
+Finally, we'll add probably the most important event handler
+for setting up the database: request.onupgradeneeded.
+
+This handler runs if the database has not already been set up,
+or if the databasse is opened with a bigger version number than 
+the existing stored database (when performming an upgrade).
+
+    // Setup the database tables if this has not already been 
+    // done
+    request.onupgradeneeded = e => {
+
+        // Grab a references to the opened databse
+        let db = e.target.result
+
+        // Create an objectStore
+        let objectStore = db.createObjectStore("notes_os", 
+        { keyPath: "id", autoIncrement: true }
+        )
+
+        // Define what data items the objectStore will contain
+        objectStore.createIndex("title", "title", { unique: false })
+        objectStore.createIndex("body", "body", { unique: false })
+    }
 
 
+This is where we define the schema (structure) of our database;
+that is, the set of columns (of fields) it conteins.
 
-
+Here we first grab a reference to the existing database from
+the result property of the event target (e.target.result),
+which
 
 
 

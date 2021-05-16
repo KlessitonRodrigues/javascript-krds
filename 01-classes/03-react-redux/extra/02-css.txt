@@ -1,0 +1,19 @@
+#1 FLEX BOX x GRID LAYOUT
+-> flex box: unidirecional
+-> grid layout: bidirecional
+
+#2 FLEX BOX
+
+-> Flex container (conteiner flexível)
+-> flex items (items flexíveis)
+
+-> main axis (eixo principal)
+    main start
+    main end
+    main size
+-> cross axis (eixo cruzado)
+    cross start
+    cross end
+    cross size
+
+# 
