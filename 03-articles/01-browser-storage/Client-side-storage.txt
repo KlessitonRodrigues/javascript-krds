@@ -150,11 +150,26 @@ the existing stored database (when performming an upgrade).
 
 
 This is where we define the schema (structure) of our database;
-that is, the set of columns (of fields) it conteins.
+that is, the set of columns (of fields) it contains.
 
 Here we first grab a reference to the existing database from
 the result property of the event target (e.target.result),
-which
+which is the request object. This is equivalent to the line
+db = request.result; inside the onsuccess handler, but we need o do
+this separately here because the onupgradeneeded handler (if needed)
+will run before the onsuccess handler, meaning that the db value 
+wouldn't be availabe if we didn't do this.
+
+We then use IDBDatabase.createObjectStore() to create a new object
+store inside our opened database called note_os.
+
+This is equivalent to a single table in a conversional database system.
+
+We also create two other indexes (fields) using the 
+IDBObjectStore.createIndex() method: title (which will contain a title 
+for each note), and body (which will contain the body text of the note).
+
+
 
 
 

@@ -2,8 +2,9 @@
 -> flex box: unidirecional
 -> grid layout: bidirecional
 
-#2 FLEX BOX
 
+
+#2 FLEX BOX
 -> Flex container (conteiner flexível)
 -> flex items (items flexíveis)
 
@@ -16,4 +17,104 @@
     cross end
     cross size
 
-# 
+
+
+#3 JUSTIFY/ALIGN
+justify-content
+align-items
+align-content
+
+
+
+#4 GROW/SHRINK
+flex-grow
+flex-shrink
+
+
+
+#5 FLEX BASIS
+flex-basis
+flex (grow shrink basis)
+
+
+
+#6 GRID
+display: grid;
+
+grid-template-columns / grid-template-rows
+
+(número e tamanho das colunas)
+grid-template-columns: 50% 50%;
+
+(repetir valores)
+grid-template-columns: repeat(4, 8,33% 8,33% 8,33%)
+
+grid-templete-columns: repeat(11, 8,33%) 8,33%;
+
+(definir valor máximo e mínimo)
+grid-templete-columns: min(100px) max(200px);
+
+(fragment)
+grid-template-columns: 20% 30% 1fr;
+grid-template-columns: 3fr 6fr 3fr;
+
+
+(começo e fim de uma celula)
+grid-column-[start/end]: / grid-row-[start/end]:
+
+grid-column-start: 2;
+grid-column-end: 4;
+
+grid-column: 2 / 4;
+grid-row: 2 / 4;
+
+(celula span)
+grid-column-end: span 2;
+
+(profundidade da celula)
+z-index: -1;
+
+
+
+#7 GRID
+(adicionar nomes as linhas)
+grid-template-columns: [start-line] 1fr [line-2] 1fr [line-3] 1fr [end-line];
+
+(começo e fim por nome da linha)
+grid-column-start: line-2;
+grid-column-end: end-line;
+
+(manipula a área ocupada)
+grid-area: "row-start"/"colunm-start"/"row-end"/"column-end"
+
+grid-area: 1 / line-3 / span 3 / end-line
+
+(espaço entre colunas e linhas)
+grid-column-gap: 20px;
+grid-row-gap: 10px;
+
+grip-gap: 20px 10px;
+
+
+
+#8 GRID
+
+(configurando áreas de um grid)
+
+header{ grid-area: header;}
+nav{ grid-area: nav;}
+main{ grid-area: content;}
+footer{ grid-area: footer;}
+
+body{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    
+    /* 2 x 3 */
+    grid-template-areas:
+    "header header"
+    "nav content"
+    "footer footer";
+}
