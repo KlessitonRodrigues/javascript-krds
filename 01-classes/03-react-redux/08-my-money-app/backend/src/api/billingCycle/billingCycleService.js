@@ -1,4 +1,5 @@
 const billingCycle = require("./billingCycle")
+const errorHandler = require("../common/errorHandler")
 
 billingCycle.methods(["get", "post", "put", "delete"])
 billingCycle.updateOptions({ new: true, runValidators: true })
@@ -10,6 +11,10 @@ billingCycle.route("count", (req, res, next) => {
             : res.json({ value })
     })
 })
+
+billingCycle
+    .after("push", errorHandler)
+    .after("put", errorHandler)
 
 billingCycle.route("summary", (req, res, next) => {
     billingCycle.aggregate([{
