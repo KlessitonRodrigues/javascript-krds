@@ -13,5 +13,5 @@ export default props => (
             <Routes />
         </div>
         <Footer />
-        </div>
+    </div>
 )
