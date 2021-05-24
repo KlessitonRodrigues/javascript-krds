@@ -1,19 +1,20 @@
 import React, { Component } from "react"
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
-import { changeTab } from "./tabAction.js"
+import { selectTab } from "./tabAction.js"
 
 class tabHeader extends Component {
     render() {
-        const isActive = this.props.selectedTab === this.props.target
+        const { currentTab, hiddenTabs, target } = this.props
+        if (hiddenTabs[target]) return false
 
         return (
-            <li className={isActive ? "active" : ""}>
+            <li className={currentTab === target ? "active" : ""}>
                 <a href="javascript:;"
                     data-toggle="tab"
-                    data-target={this.props.target}
+                    data-target={target}
                     onClick={() =>
-                        this.props.changeTab(this.props.target)}>
+                        this.props.selectTab(target)}>
                     <i className={`fa fa-${this.props.icon}`} />
                     {" " + this.props.label}
                 </a>
@@ -23,11 +24,12 @@ class tabHeader extends Component {
 }
 
 const mapStateToProps = state => ({
-    selectedTab: state.selectedTab
+    currentTab: state.tabs.currentTab,
+    hiddenTabs: state.tabs.hidden
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    changeTab
+    selectTab
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(tabHeader)

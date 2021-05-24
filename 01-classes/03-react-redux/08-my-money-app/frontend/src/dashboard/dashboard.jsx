@@ -15,8 +15,8 @@ class Dashboard extends Component {
     }
 
     render() {
-        const { credit, debit } = this.props.summary
-
+        const { credit, debt } = this.props.summary
+        console.log(this.props.summary);
         return (
             <div>
                 <ContentHeader title="Dashboard" small="v1.0" />
@@ -32,13 +32,13 @@ class Dashboard extends Component {
                             cols="12 4"
                             color="red"
                             icon="credit-card"
-                            value={`R$ ${debit}`}
+                            value={`R$ ${debt}`}
                             text="Total de Débitos" />
                         <ValueBox
                             cols="12 4"
                             color="blue"
                             icon="money"
-                            value={`R$ ${credit - debit}`}
+                            value={`R$ ${credit - debt}`}
                             text="Valor Consolidado" />
                     </Row>
                 </Content>

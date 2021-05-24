@@ -45,5 +45,6 @@ module.exports = {
                 loader: "file"
             }
         ]
-    }
+    },
+    devTool: "source-map"
 }
