@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
 
-import { create } from "./billingCycleAction"
+import { create, update, remove } from "./billingCycleAction"
 import { selectTab, hideTabs } from "../common/tab/tabAction"
 import ContentHeader from "../common/template/contentHeader"
 import Content from "../common/template/content"
@@ -21,6 +21,8 @@ class billingCycles extends Component {
         this.props.hideTabs({
             tabUpdate: true,
             tabDelete: true,
+            tabList: false,
+            tabCreate: false
         })
     }
 
@@ -54,13 +56,22 @@ class billingCycles extends Component {
                                 <List />
                             </TabContent>
                             <TabContent id="tabCreate">
-                                <Form onSubmit={this.props.create} />
+                                <Form
+                                    onSubmit={this.props.create}
+                                    btnLabel="Incluir"
+                                    btnColor="primary" />
                             </TabContent>
                             <TabContent id="tabUpdate">
-                                <h1>Update</h1>
+                                <Form onSubmit={this.props.update}
+                                    btnLabel="Editar"
+                                    btnColor="warning" />
                             </TabContent>
                             <TabContent id="tabDelete">
-                                <h1>Delete</h1>
+                                <Form
+                                    onSubmit={this.props.remove}
+                                    readOnly={true}
+                                    btnLabel="Excluir"
+                                    btnColor="danger" />
                             </TabContent>
                         </TabsContent>
                     </Tabs>
@@ -70,10 +81,8 @@ class billingCycles extends Component {
     }
 }
 
-const mapStateToProps = state => ({})
-
 const mapDispatchToProps = dispatch => bindActionCreators({
-    selectTab, hideTabs, create
+    selectTab, hideTabs, create, update, remove
 }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(billingCycles)
+export default connect(null, mapDispatchToProps)(billingCycles)
