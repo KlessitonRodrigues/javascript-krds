@@ -1,3 +1,7 @@
-.form-button {
-    margin-right: 10px;
+.form-btn {
+    margin-right: 3px;
+}
+
+.table-actions{
+    width: 20rem;
 }

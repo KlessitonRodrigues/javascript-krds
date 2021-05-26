@@ -17,18 +17,16 @@ class List extends Component {
                 <td>{bc.month}</td>
                 <td>{bc.year}</td>
                 <td>
-                    <div className="btn-group">
-                        <button
-                            className="btn btn-primary"
-                            onClick={() => this.props.showUpdate(bc)}>
-                            <i className="fa fa-pencil" />
-                        </button>
-                        <button
-                            className="btn btn-danger"
-                            onClick={() => this.props.showDelete(bc)}>
-                            <i className="fa fa-trash" />
-                        </button>
-                    </div>
+                    <button
+                        className="btn btn-primary form-btn"
+                        onClick={() => this.props.showUpdate(bc)}>
+                        <i className="fa fa-pencil" />
+                    </button>
+                    <button
+                        className="btn btn-danger"
+                        onClick={() => this.props.showDelete(bc)}>
+                        <i className="fa fa-trash" />
+                    </button>
                 </td>
             </tr>
         ))
@@ -42,7 +40,7 @@ class List extends Component {
                         <th>Nome</th>
                         <th>Mês</th>
                         <th>Ano</th>
-                        <th>Ações</th>
+                        <th className="table-actions">Ações</th>
                     </tr>
                 </thead>
                 <tbody>

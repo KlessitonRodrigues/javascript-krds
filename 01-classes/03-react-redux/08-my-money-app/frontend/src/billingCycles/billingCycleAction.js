@@ -3,7 +3,7 @@ import { toastr } from "react-redux-toastr"
 import { selectTab, hideTabs } from "../common/tab/tabAction"
 import { reset as formReset, initialize } from "redux-form"
 
-const formInitialState = {}
+const formInitialState = { credits: [{}] }
 const URL = "http://localhost:3003/api"
 
 export function getList() {
@@ -16,7 +16,6 @@ export function getList() {
 
 export function create(data) {
     return submit(data, "post")
-    /* e.response.data.errors.forEach(err => toastr.erro("Erro", err)*/
 }
 
 export function update(data) {
@@ -38,7 +37,7 @@ function submit(data, method) {
                 dispatch(init())
             })
             .catch(e => toastr.error("Erro",
-                "Os dados do formulário estão inválida"))
+                "Verifique os dados do formulário"))
     }
 }
 
