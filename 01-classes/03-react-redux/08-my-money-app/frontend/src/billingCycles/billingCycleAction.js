@@ -1,9 +1,9 @@
 import axios from "axios"
 import { toastr } from "react-redux-toastr"
 import { selectTab, hideTabs } from "../common/tab/tabAction"
-import { reset as formReset, initialize } from "redux-form"
+import { initialize } from "redux-form"
 
-const formInitialState = { credits: [{}] }
+const formInitialState = { credits: [{}], debts: [{}] }
 const URL = "http://localhost:3003/api"
 
 export function getList() {
