@@ -1,0 +1,8 @@
+01. DEFINITION OF DONE
+- Requisitos para que se possa definir uma 
+fucionalidade como pronta.
+
+-> 1. Código Revisado
+-> 2. Passou nos Testes
+-> 3. Versionado
+-> 4. Homologado pelo P.O.

@@ -1,0 +1,12 @@
+01. BURNDOWN CHART (gráfico de burndown)
+- realizado pelo P.O.
+- controlar de forma gráfica como as funcionalidades
+estão sendo desenvolvidas dentro do ciclo da sprint.
+
+-> Na Prática
+- O número total de pontos da planning poker é somado
+e dividido pelo período da sprint
+
+- A cada funcionalidade desenvolvida, por ordem de 
+prioridade, sua pontuação é subtraida do total como o
+objetivo de que se chegue a zero até o final da sprinnt.

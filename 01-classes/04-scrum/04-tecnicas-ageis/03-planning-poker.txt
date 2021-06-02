@@ -1,0 +1,21 @@
+01. PLANNING POKER
+- Técnica gamificada para estimativas de prazo
+de desenvolvimento
+
+-> utilizando a sequência de Fibonacci
+- (0, 1, 1, 2, 3, 5, 8, 13, 21 ..)
+- alencar as prioridade ao prazo das atividades por pontos
+
+-> Na prática
+- Cada desenvolvedor da a sua pontuação
+
+- Em caso de pontuações aproximadas a equipe
+chega a um consenso dentre os valores selecionados.
+
+- Em caso de variações, aqueles que apresentaram um 
+valor cima ou abaixo da media irão expor seus 
+argumentos para tal decisão.
+
+- Se o argumento apresentado for valido uma nova 
+rodada é realizada, caso contrário, este desenvolvedor
+ira rever a sua nota.

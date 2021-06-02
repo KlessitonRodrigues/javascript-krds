@@ -1,0 +1,35 @@
+01. USER STORIES
+- uma maneira mais humana de visualisar uma funcionalidade
+
+-> como (Quem?)
+-> eu quero (O quê?)
+-> para (por quê?)
+
+EX:
+- Consultar Estoque
+Como um vendedor, gostaria de consultar o estoque de um
+determinado produto para oferecer a um cliente.
+
+- Acopanhamento de Vendas
+Como um diretor, gostaria de obter o volume de vendas
+do mês para acompanhar o atingimento de metas.
+
+- Lista de Opções de Planos
+Como um cliente, eu gostaria de visualizar os planos
+existentes para decidir qual plano eu devo comprar.
+
+02. FRAGMENTAÇÃO DE USER STORIES
+- fragmentar funcionalidades complexas em pequenas
+histórias de usuário
+
+-> Cadastrar Alunos
+- Como funcionário, eu quero listar todos os alunos,
+para saber se minha base de alunos aumentou.
+
+- Como funcionário, eu quero procurar um determinado
+aluno por nome ou número da matrícula, para editar
+seus dados pessoais.
+
+- Como administrador, eu quero desativar um aluno, 
+após dois meses de atraso, para controlar quais
+alunos ativos eu possuo.

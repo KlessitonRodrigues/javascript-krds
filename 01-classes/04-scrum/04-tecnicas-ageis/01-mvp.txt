@@ -1,0 +1,13 @@
+01. MVP (Minimum Viable Product)
+
+-> Minimum
+- Base mais rudimentar e simples da solução
+
+-> Viable
+- Suficiente para os primeiros usuários
+
+-> Product
+- Algo tangível que os clientes podem tocar ou sentir
+
+- A cada sprint deve ser entregue algo viável para 
+o cliente

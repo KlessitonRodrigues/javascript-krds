@@ -1,0 +1,28 @@
+01. KABAN BOARD (TASK BOARD)
+- Quadro de progresso de atividades 
+
+- KANBAN Simples
+To Do -> Doing -> Done
+
+- KANBAN Scrum
+-> Backlog
+   -> Design
+      -> Desenvolvimento 
+         -> Testes
+            -> Deploy
+               -> Pronto
+
+- KANBAN Scrum (fazendo/ pronto)
+-> Backlog
+   -> Design (Fazendo -> Pronto)
+      -> Desenvolvimento (Fazendo -> Pronto)
+         -> Testes (Fazendo -> Pronto)
+            -> Deploy
+               -> Pronto
+
+- KANBAN card
+-> Indentificador
+-> Resumo
+-> Prazo
+-> Responsável
+-> Flag (indica prioridade)
