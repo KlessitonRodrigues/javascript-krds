@@ -104,5 +104,5 @@ conteúdos de maneira fácil.
 
 Por fazer o painel administrativo uma API extensível atravéz
 de um sistema de plugins, o Strapi permite que as maiores
-empresas do mundo acelerem a entrga de conteúdo enquanto 
+empresas do mundo acelerem a entrega de conteúdo enquanto 
 constroem belas experiências digitais.

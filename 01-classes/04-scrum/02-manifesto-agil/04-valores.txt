@@ -1,0 +1,22 @@
+01. VALORES DO MANIFESTO ÁGIL
+-> INDÍVIDUOS E INTERAÇÕES MAIS DO QUE PROCESSOS E
+FERRAMENTAS
+Priorizar a comunicação pessoal para gerenciar o
+projeto e utilizar ferramentas de gerenciamento
+de projeto apenas como um complemento.
+
+-> SOFTWARE EM FUNCIONAMENTO MAIS DO QUE DOCUMENTAÇÃO
+ABRANGENTE
+Não é do interesse do cliente saber se o software
+está bem documentado, seu interesse real é a evolução
+e andamento do produto.
+
+-> COLABORAÇÃO COM O CLIENTE MAIS DO QUE NEGOCIAÇÃO
+DE CONTRATOS.
+Priorizar a aproximação e satisfação do cliente
+para torná-lo mais favorável a suguestões.
+
+-> RESPONDER A MUDANÇAS MAIS DO QUE SEGUIR UM PLANO
+Dá prioriade a encontrar os motivos de uma mudança e
+como abordá-la, ou invés, de seguir as cegas um plano
+pré estabelecido.

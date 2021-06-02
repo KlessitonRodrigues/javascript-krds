@@ -1,0 +1,18 @@
+01. DAILY-SCRUM (Daily-meeting/ Daily-sprint)
+
+Sprint -> Daily-scrum
+
+- Inspeção, Transparência e Adaptação
+- TIME-BOXED (apenas 15 minutos)
+- Dev Team e Scrum Master
+- mesmo local e horário diariamente
+- de preferência em pé.
+
+-> Questão 1:
+- O que foi realizado desde a última reunião diária?
+
+-> Questão 2:
+- O que vai ser realizado antes da próxima reunião diária?
+
+-> Questão 3:
+- Quais os obstáculos estão em seu caminho?

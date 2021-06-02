@@ -1,0 +1,20 @@
+01. FALHAS NA TRIADE
+- Custo
+- Prazo
+- Qualidade
+
+02. CUSTO
+Por não haver uma estratégia bem definida de gerenciamento
+de projeto de software, ás vezes o custo para entregar
+dentro do prazo mais rápido ou dentro do prazo estabelecido
+aumenta esponecialmente. 
+
+03. PRAZO
+Principal fator de falha de um projeto, raros projetos
+são entregues dentro do prazo.
+
+04. QUALIDADE
+Fator mais comum, a falha do projeto na qualidade ocorrente
+da tentativa de manter a entrega dentro do prazo e dentro
+do custo aceitável.
+Acaretando em uma péssima experiência para o usuário.

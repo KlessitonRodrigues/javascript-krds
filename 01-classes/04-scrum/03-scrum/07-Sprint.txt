@@ -1,0 +1,29 @@
+01. SPRINT
+
+Sprint Backlog -> Sprint
+
+-> TIME-BOXED
+- de 1 até no máximo 4 semanas
+
+-> Iterativa
+- Repetição das sprints se dá até entrega do 
+protuto final
+
+-> Incremental
+- A cada iteração sempre há uma nova adição ao
+produto
+
+-> MVP
+- Produto Mínimo Viável
+
+
+02. PROCESSO ITERATIVO E INCREMENTAL
+
+Dev-Team -> Sprint 1
+              |
+        Retrospective -> Sprint 2
+                           |
+                     Retrospective -> Sprint 3 
+                                        |
+                                  Retrospective ->
+

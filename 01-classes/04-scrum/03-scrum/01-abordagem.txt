@@ -1,0 +1,51 @@
+01. O QUE O SCRUM ABORDA
+-> Mudanças
+- flexibilidade a mudanças
+
+-> Fracassos
+- Fracasse rápido para ter a solução mais rápido
+- Não desperdiçar tempo lapidando coisas que poderão
+ser descartadas no futuro
+
+-> Respostas
+- Descubra novas maneiras de gerar o produto
+
+-> Planejamento
+- Não adivinhe, planeje!
+
+-> Desempenho
+- Avaliação periodica da equipe
+
+-> Transcedência
+- Focar na entrega e no cliente
+- Focar sempre na experiência do usuário
+
+-> Autonomia
+- Liberdade nas funções dos envolvidos
+
+-> Multifuncional
+- A diversidade de Skills da equipe
+
+-> Quantidade
+- Equipes pequenas trabalham mais rápido
+- Equipes maiores tendem a ter problemas de 
+comunicação
+
+-> Tempo
+- Cerimônias timeboxed
+
+-> Entregas
+- Fazer pela metade não é fazer
+- funcionalidades incompletas não agregam
+ao cliente.
+
+-> Reuniões
+- Reuniões desnecessárias são um cancer para 
+o projeto
+
+
+
+
+
+
+

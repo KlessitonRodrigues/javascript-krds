@@ -1,0 +1,31 @@
+01. PADRÕES DO MANISFESTO ÁGIL
+-> Foco na Satisfação do Cliente
+Entender quais são as necessiades e desejos do cliente,
+para poder focar na SATISFAÇÂO a APROXIMAÇÂO com o 
+cliente.
+
+-> Entregas Rápidas
+Uma vez que o cliente está arcando com os custos do 
+projeto, ficar a espera de um retorno do seu 
+investimento pode gerar insatisfação de sua parte, 
+pois, ele não tem uma visão da evolução do projeto.
+
+-> Ritmo Constante
+Evitar os problemas de falta de engajamento da equipe,
+pois é comum um projeto ser iniciado com engajamento
+máximo e ir perdendo ritmo apartir de certo ponto.
+
+-> Tirar Vantagem das Mudanças
+No modelo tradicional realizar mudanças era um 
+processo extremante trabalhoso, pois só se era
+percebida a necessidade de uma mudança quando já 
+existia toda uma cadeia de funcionaliades que 
+dependiam umas das outras.
+
+Com o Ciclo de Entregas e possível administrar as
+mudanças antes de uma implementação final.
+
+Pessoal
+-> Total Integração Entre as Pessoas Envolvidas.
+-> Quebra de Autoritarismo.
+-> Prioridade na Comunicação Pessoal.

@@ -1,0 +1,16 @@
+01. CICLO DE VIDA SCRUM
+
+Stakeholders <-> Product Owner -> Product Backlog
+                    |
+    Dev Team <-> Sprint Planning
+                    |
+                 Sprint Backlog
+                    |
+                 Sprint -> Daily Scrum <-> Scrum Master/ Dev Team
+                    |
+                    |-^
+                 Incremento
+                    |
+                 Sprint Review
+                    |
+                 Sprint Restrospective

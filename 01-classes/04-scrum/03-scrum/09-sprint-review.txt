@@ -1,0 +1,12 @@
+01. SPRINT REVIEW
+
+Sprint -> Incremento -> Sprint Review <--> Product Owner
+
+Product Owner <--> Stakeholders
+
+- TIME-BOXED: 4/3/2/1 hora(s) (propocional ao tempo da sprint)
+- Dev Team apresenta o incremento ao P.O (e/ou Stakeholders).
+- O P.O. verifica se o produtos estar de acordo com a 
+lista da requisitos e as expectativas do cliente.
+
+- O P.O. apresenta o incremento aos Stakeholders

@@ -1,0 +1,16 @@
+01. HISTÓRIA DO MANISFESTO ÁGIL
+-> Quando?
+surgiu em FEV de 2021 
+-> Onde?
+(Utah, USA)
+-> Quem?
+em uma reunião com os principais nomes do setor 
+de software.
+-> Motivo?
+insatisfação com os fracassos nos modelos de entrega
+de software
+
+02. MODELO TRADICIONAL OU CASCATA (WATERFALL)
+Muitos projetos da época que se utilizavam do modelo 
+tradicional tinha problemas em atender a triade de 
+escopo de gerenciamento (Custo, Tempo, Qualidade).

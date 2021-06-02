@@ -1,0 +1,9 @@
+01. CÓDIGO SEM TESTE
+É comum uma lógica mau implementada ou propícia a falhas
+passe despercebida aos olhos do desenvolvedor, e que
+futuramente ocasione falha no projeto.
+
+Com isso, se torna necessário a refatoração do código,
+e uma vez que já realizado a estimaiva de prazo final
+(deadline), o surgimento de uma nova demanda não prevista
+gera problemas ao ciclo do projeto.

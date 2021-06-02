@@ -1,0 +1,98 @@
+01. O universo do design digital
+-> Experiência do usúario (UX)
+- trabalha maximizar a experiência do usuário
+- é se colocar no lugar do usuário
+- entender como o usuário interage com o sistema
+- realizar testes de usabilidades
+
+-> Arquitetura da Informação (AI)
+- transforma o conhecimento adquirido da UX em 
+protoripos e conceitos de interface.
+- realiza a projeção de wireframes.
+
+-> Interface do usuário (UI)
+- Realiza o design final com base em protótipos
+e wireframes
+
+02. Briefing
+Um conjunto de ideias que permitem ao designer
+compreender e mensurar um projeto
+
+-> Empresa/ Cliente
+- Entender o universo, mercado, situação em que 
+se situa essa(e) Empresa/ Cliente
+
+-> Projeto
+- Conhecer a relação/ motivo entre o problema e 
+a solução adotada
+
+-> Usuário Final
+- Conhecer qual é a público alvo do projeto, 
+tipo Cultural, idioma, etc.
+
+-> Prazo e orçamento
+- Conhecer a relação entre expectativas e 
+limites do projeto.
+
+-> Palavras Chaves
+- serve como orientação do que se espera para
+o produto.
+EX: 
+Divertido - Intuitivo - Fácil - Uso de Imagens
+Informativo - Alto Contraste - Colorido - Interattivo
+
+03. Sitemap
+- fluxo de interação com o layout
+
+04. Wireframe
+- comprir metas
+- Feedback e Agilidade
+-> Baixa Fidelidade
+-> Alta Fidelidade
+
+05. Heuríticas de Nielsen
+-> 1. visibilidade do status do sistema
+- mostrar para o usuário onde ele se encontra e para onde
+ele pode ir.
+
+-> 2. Compactibilidade entre o sistema e o mundo real
+- trazer referências do mundo real para a interface
+- utilizar formas de comunicação universal
+EX: 
+(lixeira = deletar algo)
+(setas = locomoção)
+(lupa = buscar algo)
+
+-> 3. Controle e liberdade para o usuário
+- Sempre dar saídas alternativas para as ações do usuário,
+ou seja, em caso de uma ação acidental deve-se permitir 
+ao usuário desfazer a ação recente.
+
+-> 4. Consistência e Padronização
+- manter a consistencia dos elementos, fonts, layouts
+para dar mais intuitividade para o usuário ao interagir
+com a interface.
+
+-> 5. Prevenção de Erros
+- instruir o usuário em caso de erros ou ações sem
+o devido retorno.
+
+por exemplo, se não foi encomtrado nenhum elemento referênte 
+a uma busca, informar que nada foi encontrado e instruir-lo 
+a verificar erros ortográficos e buscar novamente.
+
+-> 6. Reconhecimento ao invéz de memorização
+- utilizar padrões para elementos em comum na interface.
+
+-> 7. Eficiência e flexibilidade de uso
+- a interface de ser intuitiva para usuários desde os
+mais leigos aos mais experiêntes.
+
+-> 8. Estética e Design minimalista
+- interface mais limpa e objetiva possivél
+
+-> 9. Reconhecimento de erros
+- Mostrar para o usuário quando acontece uma erro,
+por que deste erro, e como ele pode resolve-lo.
+
+-> 10. Ajuda e Documentação

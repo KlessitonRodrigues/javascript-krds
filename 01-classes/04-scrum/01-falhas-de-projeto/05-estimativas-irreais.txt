@@ -1,0 +1,5 @@
+01. ESTIMATIVAS IRREAIS
+Ocorre devido a falta de maturidade para avaliar
+e mensurar o tempo que será gasto no desenvolvimento
+do projeto. Ou um estimativa de tempo realizada sem
+o consentimento a equipe de desenvolvimento.

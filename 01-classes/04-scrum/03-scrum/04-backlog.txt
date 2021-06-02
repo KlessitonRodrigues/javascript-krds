@@ -1,0 +1,30 @@
+01. PRODUCT BACKLOG
+- Resultado de uma série de reuniões com o
+stakeholders para levantamento dos requisitos
+
+Stakeholders <--> Product Owner* -> Product Backlog
+
+* Em caso de requisitos técnicos o Product Owner
+pode pedir auxílio para o Dev Team, principalmente
+a especialistas em (prótotipo, UX)
+
+- Quando?
+Após a reunião de levantamento com os stakeholders
+- Quem?
+P.O. (mas pode haver colaborações)
+- Como?
+Levantar features (definindo valor de entrega a cada uma)
+- Motivo?
+Mensurar as necessidades no cliente e gerar a visão 
+do produto
+
+02. PRODUCT BACKLOG PRIORIZADO
+-> Product Backlog Refinement
+- estabelecer uma lista de features do sistema
+- análisar e julgar quais destas features são
+auto dependentes
+- análisar quais são as dependencias de uma 
+determinada feature
+- alencar de forma prioritaria as features mais
+importantes para o cliente ou que sejam 
+pré-requisitos de outras features.

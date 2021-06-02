@@ -1,0 +1,99 @@
+01. QUEM É O PRODUCT OWNER (P.O.)?
+->  Dono do Projeto
+->  A ponte entre:
+- Scrum master / Equipe de Desenvolvimento
+- Stakeholders (pessoas que vão utilizar o produto)
+
+- Stakeholders <-- Product Owner --> Eq. Desenv.
+
+-> Conhecimento do Negócio
+- Profundo Conhecimento do Negócio
+- Conhece as espectativas do cliente
+
+-> Autoridade
+- Autoridade sobre o que é necessário ao produto
+
+-> Habilidade com pessoas
+- boa capacidade de comunicação
+
+-> Responsabilidade
+- de asegurar a qualidade do produto final
+
+02. RESPONSABILIDADE DO P.O.
+-> Definir critérios de aceitação
+- evitar as espectativas do usuário em 
+um produto utopico
+
+-> Participação no Planejamento
+- definição de Prazo/Entregas/Possibilidades
+
+-> Colaborar com a equipe de Desenvolvimento
+- fornecer informações detalhadas de como esse
+produto pode ser desenvolvido
+
+-> Colaborar com o restante da empresa
+- fornecer relatórios de custos/prazos
+
+-> Grooming do Product Backlog
+- Refinamento dos requisitos realizados pelo cliente
+
+03. RESPONSABILIDADE DO SCRUM MASTER
+-> Coach
+- aplicar e orientar a equipe sobre as requisições do
+scrum de forma efetiva
+
+-> Líder servidor
+- o scrum master não é chefe
+- colabora com a equipe
+
+-> Autoridade no processo
+- por que conhece todos os processos evolutivos do scrum
+
+-> Escudo contra interferência
+- mantém a moral da equipe em alta
+- protege a equipe de problemas corporativos
+- protege a equipe de problemas com o cliente 
+não relacionados ao projeto
+
+-> Removedor de Impediemento
+- colaborar na solução de problemas que imterrompam o 
+desenvolvimento contínuo do projeto
+
+-> Agente de mudança
+- mantém o time atualizado quanto as práticas mais
+atuais e efetivas de gerenciamento de projeto
+
+04. O QUE O SCRUM MASTER NÃO É?
+- Não é chefe
+- Não é Gerente de projeto
+- Não delega tarefa
+- Não diz como deve ser feito (exceto quanto ao scrum)
+- Não força o time
+
+05. DEV TEAM E SCRUM TEAM
+--> Dev Team
+-> Tamanho específico (geralmente entre 3 a 7)
+- evitar dificuldade de comunicação
+- evitar dificuldade de tomada de dicisão
+
+-> Multifuncional
+- Ao menos uma pessoa que seja hábel em cada área
+do desenvolvimento (back, front, testes, UX, etc..)
+
+-> Auto-Organizado
+- Ter liberdade para se organzar e definir o seu
+fluxo de trabalho
+- não existe um chefe
+
+-> Comunicação
+- ter comunicação diária
+- para manter a transparência de necessidades
+e dificuldades de cada menbro da equipe
+
+--> Scrum Team
+- Product Owner
+- Scrum Master
+- Scrum Dev Team
+
+
+

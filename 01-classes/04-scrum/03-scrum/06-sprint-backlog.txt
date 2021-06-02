@@ -1,0 +1,11 @@
+01. SPRINT BACKLOG (Artefato)
+
+Sprint Planning -> Spring Backlog
+
+- lista de requisitos e funcionalidades ligada ao story*
+
+story: lista das funcionalidades de forma 
+detalhada (passo a passo) e priorizada, com 
+estimativas de prazo para desenvolvimento.
+
+
