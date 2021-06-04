@@ -1,0 +1,94 @@
+ORDINAL NUMBERS
+
+Os ordinal numbers (números ordinais) são números utilizados
+para indicar ordem ou hierarquia relativamente a uma sequência.
+
+No inglês, a formação dos números ordinais é diferente da 
+formação dos ordinais em português: APENAS O ÚLTIMO NÚMERO É 
+ESCRITO SOB FORMA ORDINAL.
+
+todos os outros números são utilizados sob a forma de números 
+cardinais em inglês.
+
+EX:
+--> 23rd - twenty-third
+--> 135th - a/one hundred thirty-fifth
+--> 1.234th - a/one thousand two hundred thirty-four
+
+Num     Abrev       Escrita
+1       1st         first
+2       2nd         second
+3       3rd         third
+4       4th         fourth
+5       5th         fifth
+6       6th         sixth
+7       7th         seventh
+8       8th         eighth
+9       9th         ninth
+10      10th        tenth
+11      11th        eleventh
+12      12th        twelfth
+13      13th        thirteenth
+14      14th        fourteenth
+15      15th        fifteenth
+16      16th        sixteenth
+17      17th        seventeenth
+18      18th        eighteenth
+19      19th        nineteenth
+20      20th        twentiefh
+21      21th        twety-first
+22      22th        twety-second
+23      23th        twety-third
+30      30th        thirtieth
+40      40th        fortieth
+50      50th        fiftieth
+60      60th        sixtieth
+100     100th       one hundredth
+1000    1000th      one thousandth
+
+
+
+1. FORMA ABREVIADA DOS ORDINAIS
+para escrever os números ordinais em inglês sob a forma
+abreviada, são utilizadas as últimas duas letras das 
+respectivas formas dos números ordinais por extenso
+
+EX:
+--> 42nd - forty-seco(nd)
+--> 56th - fitty-six(th)
+--> 83td - eighty-thi(rd)
+
+OBS: na forma abreviada, as duas últimas letras também podem
+ser escritas de forma elevada.
+
+NÚMEROS ORDINAIS NAS DATAS
+Os números ordinais em inglês também são utilizados para 
+escrever datas.
+
+EX:
+
+Inglês americano
+03/15/1982 - March 15th, 1982 
+(March, fifteenth, nineteen eighty-two)
+
+Inglês britânico
+15/03/1982 - The 15th of March, 1982
+(The fifteenth of March, nineteen eighty-two)
+
+
+
+2. ORDINAIS EM HIERARQUIAS
+Quando a representação gráfica de título hieráquico utiliza
+número romanos, a forma por extenso e a leitura são feitas 
+coma utilização de números ordinais.
+
+EX: 
+--> Queen Elizabeth II - Queen Elizabeth the Second
+(Rainha Elizabeth Segunda)
+
+--> King Henry VIII - King Henry the Eighth
+(Rei Henrique Oitavo)
+
+--> Dom Pedro I - Dom Pedro the First
+(Dom Pedro Primeiro)
+

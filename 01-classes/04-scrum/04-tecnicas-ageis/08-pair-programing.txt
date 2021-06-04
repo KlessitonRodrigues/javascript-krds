@@ -1,0 +1,17 @@
+01. PAIR PROGRAMING
+- duas pessoas desenvolvem em um único 
+computador, para evitar distrações
+casuais
+
+-> Especificidade
+- quando o par é especialista na mesma área
+- mais produtividade
+
+-> Senioridade
+- quando o ambos são "senior"
+- agrega velocidade a tarefas complexas
+
+-> Apredizado
+- colocar uma pessoas com menos experiência
+com uma mais experiênte.
+- acelera o aprendizado

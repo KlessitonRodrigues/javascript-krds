@@ -1,0 +1,12 @@
+01. QUADRO DE DEPENDÊNCIAS
+- forma de se entender de forma visual quais são
+as dependências de cada user story a ser desenvolvidade
+para entender-se quais devem ser desenvolvidadas primeiro
+
+- um quadro com 4 vertices (ou mais) onde cada uma representa
+uma categoria (back, front, UX, DB)
+
+- para indicar denpendência, uma tarefa que dependa somente UX
+ficara diretamente sob o vétice de UX, quanto a uma tarefa que
+dependa de UX e front-end ficara sob a linha que conecta os 
+vétices.
