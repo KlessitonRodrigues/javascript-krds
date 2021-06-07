@@ -1,5 +1,7 @@
 @import "./loginForm"
+@import "./acountForm"
 @import "./homePage"
+@import "./searchAcount"
 
 *
     box-sizing: border-box
@@ -16,20 +18,30 @@ body
 hr
     border: none
     margin: .5rem 0
-    border-top: 1px solid #CCC
+    border-top: 1px solid #E0E0E0
 
 button
     cursor: pointer
+    font-weight: bold
+    border-radius: 6px
+    font-size: 1rem
 
 a
     text-decoration: none
     font-size: .9rem
-    color: #1877f2
+    color: #1162cc
     &:hover
         text-decoration: underline
 
+input
+    border-radius: 6px
+    border: 1px solid #CCC
+
+h1,h2,h3,h4,h5,h6
+    color: #333
+
 .cover
-    background-color: #BBBA
+    background-color: #FFFD
     position: fixed
     left: 0
     top: 0
@@ -38,11 +50,14 @@ a
 
 .frame
     background-color: #FFF
-    width: 25rem
-    height: 30rem
+    width: 26rem
+    height: 32rem
     position: fixed
-    left: calc(50% - 12.5rem)
-    top: calc(50% - 15rem)
+    left: calc(50% - 13rem)
+    top: calc(55% - 16rem)
     box-shadow: 0 5px 10px #CCC
     border-radius: .5rem
     padding: 1rem
+
+.flex
+    display: flex

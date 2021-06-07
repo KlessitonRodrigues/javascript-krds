@@ -1,0 +1,51 @@
+.search.page
+    header
+        display: flex
+        justify-content: space-between
+        background-color: #FFF
+        padding: 0 .75rem 0 .25rem
+        box-shadow: 0 0 10px #CCC
+        a img
+            width: 150px
+        form
+            display: flex
+            align-items: center
+            button
+                background-color: #1877f2
+                color: #FFF
+    main
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 60vh
+        padding: .25rem
+        form
+            padding: 1rem
+            border-radius: 8px
+            background-color: #FFF
+            box-shadow: 0 4px 10px #BBB
+            h2
+                margin: 0
+            span
+                display: block
+                margin: 1rem 0
+            input
+                width: 100%
+            hr
+                margin: 1rem 0
+    input
+        padding: .75rem
+        font-size: 1rem
+    button
+        border: none
+        padding: .75rem 1rem
+
+@media ( max-width: 768px)
+    .search.page
+        header
+            form
+                input
+                    display: none
+                a
+                    display: none
+    
