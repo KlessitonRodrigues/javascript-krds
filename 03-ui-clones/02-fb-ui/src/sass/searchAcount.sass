@@ -3,16 +3,20 @@
         display: flex
         justify-content: space-between
         background-color: #FFF
-        padding: 0 .75rem 0 .25rem
+        padding: 0 .75rem 0 .25rem 
         box-shadow: 0 0 10px #CCC
         a img
             width: 150px
         form
             display: flex
             align-items: center
+            input
+                margin-right: .5rem
             button
                 background-color: #1877f2
                 color: #FFF
+                margin-right: .5rem
+
     main
         display: flex
         justify-content: center
@@ -20,7 +24,7 @@
         height: 60vh
         padding: .25rem
         form
-            padding: 1rem
+            padding: 1.25rem 1rem
             border-radius: 8px
             background-color: #FFF
             box-shadow: 0 4px 10px #BBB
@@ -32,13 +36,23 @@
             input
                 width: 100%
             hr
-                margin: 1rem 0
+                margin: 1.25rem 0
+            button 
+                padding-top: .5rem
+                padding-bottom: .5rem
+            .btn-group
+                text-align: right
+                .btn-search
+                    background-color: #1877f2
+                    color: #FFF
     input
         padding: .75rem
         font-size: 1rem
     button
         border: none
         padding: .75rem 1rem
+    footer
+        padding-top: 13rem
 
 @media ( max-width: 768px)
     .search.page
@@ -46,6 +60,5 @@
             form
                 input
                     display: none
-                a
+                a.link
                     display: none
-    

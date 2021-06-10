@@ -27,7 +27,6 @@ export default () => (
                 </div>
             </main>
         </div>
-        <Link to="/login">LOGIN FOCUS</Link>
         <Footer />
     </div>
 )

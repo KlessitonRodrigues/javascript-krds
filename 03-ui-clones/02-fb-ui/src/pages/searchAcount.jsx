@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
+import Footer from "../components/footer"
+
 export default () => (
     <div className="search page">
         <header>
@@ -13,8 +15,10 @@ export default () => (
             <form>
                 <input type="text" placeholder="Email ou telefone" />
                 <input type="text" placeholder="Senha" />
-                <button>Entar</button>
-                <a>Esqueceu a conta?</a>
+                <button>
+                    <Link to="/login">Entrar</Link>
+                </button>
+                <Link className="link" to="/login/identify">Esqueceu a conta?</Link>
             </form>
         </header>
         <main>
@@ -27,9 +31,16 @@ export default () => (
                 </span>
                 <input type="text" placeholder="Número de celular" />
                 <hr />
-                <button>Cancelar</button>
-                <button>Pesquisar</button>
+                <div className="btn-group">
+                    <button>
+                        <Link to="/login">Cancelar</Link>
+                    </button>
+                    <button to="#" className="btn-search">
+                        <Link to="#">Pesquisar</Link>
+                    </button>
+                </div>
             </form>
         </main>
+        <Footer />
     </div>
 )

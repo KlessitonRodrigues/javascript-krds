@@ -2,7 +2,7 @@ import React from "react"
 
 export default () => (
     <footer>
-        Português (Brasil) <a>English (US)</a>
+        Português (Brasil) <a className="link">English (US)</a>
         <hr />
         <div className="options-links">
             Cadastre-se Entrar Messenger Facebook LiteWatch Pessoas
@@ -15,6 +15,6 @@ export default () => (
             Termos Ajuda Configurações
     </div>
         <hr />
-    Facebook 2021
+        Facebook 2021
     </footer>
 )

@@ -1,0 +1,63 @@
+01. Cardinal numbers (números cardinais)
+
+0 (zero)
+1 (one)
+2 (two)
+3 (three)
+4 (four)
+5 (five)
+6 (six)
+7 (seven)
+8 (eigth)
+9 (nine)
+10 (ten)
+11 (eleven)
+12 (twelve)
+13 (thirteen)
+14 (fourteen)
+15 (fifteen)
+16 (sixteen)
+17 (seventeen)
+18 (eighteen)
+19 (nineteen)
+20 (twety)
+21 (twety-one)
+22 (twety-two)
+30 (thirty)
+33 (thirty-three)
+40 (forty)
+50 (fifty)
+60 (sixty)
+70 (seventy)
+80 (eighty)
+90 (ninety)
+100 (a/one hundred)
+113 (a/one hundred "and" thirteen)
+200 (two hundred)
+300 (three hundred)
+400 (four hundred)
+500 (five hundred)
+515 (five hundred "and" fiteen)
+600 (six hundred)
+661 (six hundred "and" sixty-one)
+700 (seven hundred)
+800 (eight hundred)
+900 (nine hundred)
+1000 (a/one thousand)
+1003 (a/one thousand "and" three)
+2000 (two thousand)
+
+
+OBS:
+
+- O número 100 pode ser dito de duas formas:
+a hundred ou one hundred.
+
+- O uso da conjução "and" para ligar unidades, 
+centenas e milhares é opcional.
+
+EX:
+145 - a hundred and forty-five / a hundred forty-five
+
+1234 - a thousand and two hundred and thirty-four /
+a thousand two hundred and thirty-four

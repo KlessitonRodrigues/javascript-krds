@@ -39,6 +39,7 @@ export default ({ display, setDisplay }) => (
         <div className="frame" >
             <form className="acount-form">
                 <button
+                    type="button"
                     className="close-btn"
                     onClick={() => setDisplay(false)}>&times;</button>
                 <h1>Cadastre-se</h1>
@@ -79,10 +80,11 @@ export default ({ display, setDisplay }) => (
                 </div>
                 <span className="politics">
                     Ao clicar em Cadastre-se, você concorda
-                    com nossos <a>Termos</a>, <a>Política de Dados</a>
-                    e <a>Política de Cookies</a>. Você poderá receber
-                    notificações por SMS e cancelar isso quando
-                    quiser.
+                    com nossos <a className="link" to="#">Termos</a>, 
+                    <a className="link" to="#">Política de Dados</a>
+                    e <a className="link" to="#">Política de Cookies</a>. 
+                    Você poderá receber notificações por SMS 
+                    e cancelar isso quando quiser.
                 </span>
                 <div className="submit-btn-container">
                     <button>Cadastre-se</button>

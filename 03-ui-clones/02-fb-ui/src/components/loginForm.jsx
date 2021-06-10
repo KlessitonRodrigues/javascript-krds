@@ -12,14 +12,16 @@ export default props => {
                 <input type="text" placeholder="Email ou Telefone" />
                 <input type="password" placeholder="Senha" />
                 <button type="button" className="sigin">Entrar</button>
-                <Link to="/login/identify">Esqueceu a senha?</Link>
+                <Link to="/login/identify" className="link">
+                    Esqueceu a senha?
+                </Link>
                 <hr />
                 <button
                     type="button"
                     className="sigup"
                     onClick={() => setShowAcountForm(!showAcountForm)}>
                     Criar nova conta
-            </button>
+                </button>
             </form>
             <AcountForm
                 display={showAcountForm}
