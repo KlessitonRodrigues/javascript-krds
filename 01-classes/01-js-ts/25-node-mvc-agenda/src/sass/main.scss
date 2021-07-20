@@ -6,13 +6,70 @@ body {
 
 header {
     background-color: $purple-800;
-    color: #FFF;
+    box-shadow: 0 2px 4px 0 #333;
+    color: #eee;
+    padding-left: 2rem;
 }
 
-header a{
-    margin-right: 2rem;
+.cover {
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 8rem;
+    overflow: hidden;
+    background-image: linear-gradient(to right, $purple-600, $purple-800);
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    i {
+        font-size:8rem;
+    }
+    h1 {
+        font-size: 4rem;
+        padding-bottom: 6rem;
+    }
+    a {
+        font-size: 2rem;
+        &:hover {
+            color: #ccc;
+        }
+    }
 }
 
-header a:hover{
-    color: $gray-400
+.login {
+    background-color: $blue-gray-50;
+    color: #444;
+    box-shadow: 0 1px 4px #2224;
+    border-radius: 0.75rem;
+    padding: 2rem 1.5rem;
+    margin: 4rem auto 0;
+    max-width: 24rem;
+    .email {
+        margin-bottom: 2rem;
+    }
+    .btns {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    a {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1rem;
+        margin: 1.5rem 0;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    button {
+        background-color: $blue-gray-500;
+        color: #ddd;
+    }
+}
+
+button {
+    margin-left: 1rem;
+    padding: 0.75rem 1rem;
 }

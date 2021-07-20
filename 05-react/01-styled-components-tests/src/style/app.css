@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body{
+    font-family: sans-serif;
+    word-wrap: break-word;
+    background-color: #F8F2F4;
+    color: #333;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
