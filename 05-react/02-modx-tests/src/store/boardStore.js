@@ -1,30 +1,30 @@
-import { makeAutoObservable, observable, action, computed } from "mobx"
+import { makeAutoObservable, observable, action, computed } from "mobx";
 
 class dashboardStore {
-    counters = {
-        counter1: 0,
-        counter2: 1,
-        counter3: 4
-    }
+  counters = {
+    counter1: 1,
+    counter2: 2,
+    counter3: 3,
+  };
 
-    constructor() {
-        makeAutoObservable(this, {
-            counters: observable,
-            incCounter: action,
-            decCounter: action,
-            sum: computed
-        })
-    }
+  constructor() {
+    makeAutoObservable(this, {
+      counters: observable,
+      incCounter: action,
+      decCounter: action,
+      sum: computed,
+    });
+  }
 
-    incCounter = number =>
-        this.counters["counter" + number]++
-        
-    decCounter = number =>
-        this.counters["counter" + number]--
+  incCounter = (number) => this.counters["counter" + number]++;
 
-    get sum() {
-        return this.counter1 + this.counter2 + this.counter3
-    }
+  decCounter = (number) => this.counters["counter" + number]--;
+
+  get sum() {
+    return (
+      this.counters.counter1 + this.counters.counter2 + this.counters.counter3
+    );
+  }
 }
 
-export default new dashboardStore()
+export default new dashboardStore();

@@ -1,7 +1,7 @@
 const theme = {
-    primary: "#fff",
-    secondary: "#444",
-    radius: ".5rem"
-}
+  primary: "#fff",
+  secondary: "#444",
+  radius: ".5rem",
+};
 
-export default theme
+export default theme;
