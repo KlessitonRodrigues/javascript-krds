@@ -3,12 +3,12 @@ const express = require("express")
 const homeController = require("./controllers/homeController")
 const loginController = require("./controllers/loginController")
 
-const route = express.Router()
+const routes = express.Router()
 
 // home routes
-route.get("/", homeController.index)
+routes.get("/", homeController.index)
 
 // login routes
-route.get("/login", loginController.index)
+routes.get("/login", loginController.index)
 
-module.exports = route
+module.exports = app => app.use(routes)

@@ -1,40 +1,43 @@
-import React, { useRef } from "react"
-import Style from "styled-components"
-import { observer, inject } from "mobx-react"
+import React from "react"
+import styled from "styled-components"
+import { observer } from "mobx-react"
 
-import dashboardStore from "../store/dashboardStore"
 import Counter from "./counter"
+import boardStore from "../store/boardStore"
 
 // Style
-const Container = Style.div`
-    width: fit-content;
+const Container = styled.div`
     background-color: ${props => props.theme.secondary};
-    color: #eee;
-    text-align: center;
-    padding: .5rem;
-    padding-top: 1rem;
-    margin: .5rem;
     border-radius: ${props => props.theme.radius};
+    padding: 1rem;
+    color: #DDD;
+    text-align: center;
 `
 
-const Row = Style.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+const Row = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: .5rem auto;
+    @media(min-width: 768px){
+        flex-direction: row;
+        justify-content: center;
+    }
 `
 
 // Component
 const Dashboard = () => {
+    const { counters } = boardStore
     return (
         <Container>
-            <h2>Dashboard</h2>
+            <h1>Dashboard</h1>
             <Row>
-                <Counter value={1} />
-                <Counter value={1} />
-                <Counter value={1} />
+                <Counter value={counters.counter1} />
+                <Counter value={counters.counter2} />
+                <Counter value={counters.counter3} />
             </Row>
         </Container>
     )
 }
 
-export default inject("dashboardStore")(observer(Dashboard))
+export default observer(Dashboard)

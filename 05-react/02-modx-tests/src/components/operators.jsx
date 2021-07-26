@@ -1,9 +1,9 @@
 import React from "react"
-import Style from "styled-components"
+import styled from "styled-components"
 
-// Style
-const Button = Style.button`
-    padding: .25rem .5rem;
+// style
+const Button = styled.button`
+    padding: .5rem 2rem;
     min-width: 3.5rem;
     margin: .5rem .25rem;
     border-radius: .25rem;
@@ -12,17 +12,21 @@ const Button = Style.button`
     font-size: 1.2rem;
     font-weight: bold;
     border: none;
+    cursor: pointer;
+    &.red{
+        background-color: #b91b1b;
+    }
 `
 
-// Component
+// component
 const Operators = props => (
     <div>
         <Button
-            onClick={() => props.inc++}>
+            onClick={props.plusClick}>
             +
         </Button>
-        <Button
-            onClick={() => props.dec--}>
+        <Button className="red"
+            onClick={props.minusClick}>
             -
         </Button>
     </div>

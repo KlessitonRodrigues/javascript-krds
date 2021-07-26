@@ -1,0 +1,5 @@
+#250 TYPESCRIPT
+Script-mode - only a script
+Modules-mode - scripts in modules format
+
+

@@ -1,4 +1,4 @@
 module.exports.index = (req, res) => {
-    console.log(req.csurfToken)
+    res.locals.csrfToken = req.csrfToken()
     res.render("login")
 }

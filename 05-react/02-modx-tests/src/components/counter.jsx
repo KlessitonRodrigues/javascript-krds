@@ -1,8 +1,8 @@
 import React, { useRef } from "react"
-import Style from "styled-components"
+import styled from "styled-components"
 
 // Style
-const Container = Style.div`
+const Container = styled.div`
     width: 10rem;
     height: 14rem;
     margin: 1rem;
@@ -17,10 +17,10 @@ const Container = Style.div`
     }
 `
 
-const Number = Style.div`
-    font-size: 8rem;
+const Number = styled.div`
+    font-size: 6rem;
     font-family: sans-serif;
-    margin-bottom: 1rem;
+    margin: 1.5rem 0;
 `
 
 // Component
@@ -33,7 +33,7 @@ const Counter = props => {
             <Number>
                 {props.value}
             </Number>
-            render:{renderCount.current}
+            rendered:{renderCount.current}
         </Container>
     )
 }

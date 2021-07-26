@@ -1,7 +1,7 @@
 <%- include("./includes/head") %>
     <%- include("./includes/header")%>
         <main>
-            <form class="login" action="/login/register" method="post">
+            <form class="login" action="/login/register" method="POST">
                 <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                 <label class="email">
                     Email
