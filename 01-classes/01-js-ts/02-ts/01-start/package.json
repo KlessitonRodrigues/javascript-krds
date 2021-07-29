@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "clear && npx ts-node --files -T ./index.ts"
+    "start": "clear && npx ts-node --files -T ./src/index.ts"
   },
   "devDependencies": {
     "@types/node": "^16.4.3",

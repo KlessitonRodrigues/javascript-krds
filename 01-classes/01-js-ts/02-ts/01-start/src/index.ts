@@ -1,1 +1,2 @@
-const test = require('./test');
+import './types/any';
+import './types/void';
