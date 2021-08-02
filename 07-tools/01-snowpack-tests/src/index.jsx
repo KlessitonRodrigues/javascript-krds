@@ -1,6 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
-const App = <h1>Hello World!</h1>
+import App from "./app";
+import "./style/index.sass"
 
-ReactDOM.render(<App />, document.querySelector('#root'))
+ReactDOM.render(<App />,document.querySelector("#root"));
