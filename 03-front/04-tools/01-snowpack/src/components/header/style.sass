@@ -1,0 +1,26 @@
+@use '../../style/theme' as *
+
+.header
+    background-color: $surface
+    color: $onSurface
+    font-weight: bold
+    padding: 1rem 3rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    ul
+        list-style-type: none
+        li
+            display: inline-block
+            margin-left: 1rem
+            border: 3px solid #0000
+            font-size: 1.25rem
+            transition: border 1s
+            cursor: pointer
+        &:hover li
+            color: #444E
+            transition: border .5s
+        & li:hover
+            color: #000
+            border-bottom: 3px solid #222
+            transition: .3s

@@ -23,6 +23,6 @@ const user1: User = {
   age: 20,
 };
 
-setUserColor(user1, 'black');
+setUserColor(user1, 'magenta');
 
 export default 1;

@@ -1,0 +1,13 @@
+FLAGS
+/g      all mathed elements
+/i      insentitive case
+
+()      groups
+|       OR
+
+IN STRINGS
+str.match()     to find an expression
+str.replace()   to replace an expression by another string
+str.search()    the start index of expression
+str.split()     to split the string by an expression
+str.match()     return an interable object
