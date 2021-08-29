@@ -3,18 +3,8 @@ Shining with all his might:
 He did his very best to make
 The billows smooth and bright -
 And this was odd, because it was
-The middle of the night.
+The middle of the night.`;
 
-The moon was shining sulkily,
-Because she thought the sun
-Had got no business to be there
-After the day was done -
-"It's very rude of him," she said,
-"To come and spoil the fun."
+export const cpfs = `023.899.433-02sfergd3213 789.858.232-29!@#s123737.322.232-18`;
 
-The sea was wet as wet could be,
-The sands were dry as dry.
-You could not see a cloud, because
-No cloud was in the sky:
-No birds were flying overhead -
-There were no birds to fly.`;
+export const IPs = `0.0.0.0fse192.168.0.1a12d15.90.112.32dawd255.255.255.255`;

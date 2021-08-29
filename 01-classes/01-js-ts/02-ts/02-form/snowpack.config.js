@@ -4,7 +4,7 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    dist: { url: '/', static: true },
+    'src/static': { url: '/', static: true },
     src: '/assets',
   },
   mode: 'development',

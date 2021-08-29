@@ -1,1 +1,5 @@
-import './flags'
+import "./flags"
+import "./string"
+import "./quantifies"
+import "./cpfs"
+import "./ips"

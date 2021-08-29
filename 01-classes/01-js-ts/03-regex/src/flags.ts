@@ -1,7 +1,10 @@
 import { text } from "./text";
 
-console.log(/sun/.test(text)); // => true
+const sun = /sun/.test(text); // => true
 
-console.log(/SUN/.test(text)); // => false
+const SUN = /SUN/.test(text); // => false
 
-console.log(/SUN/i.test(text)); // => false
+const SUNi = /SUN/i.test(text); // => true
+
+console.log("FLAGS.ts");
+console.log(sun, SUN, SUNi);

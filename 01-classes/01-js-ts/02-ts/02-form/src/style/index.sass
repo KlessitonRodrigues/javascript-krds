@@ -23,7 +23,7 @@ html
   background-color: $surface
   color: $onSurface
   padding: 1.5rem
-  margin: 1rem
+  margin: 3rem 0 1rem
   border-radius: $radius
   width: 24rem
   text-align: center
@@ -51,13 +51,14 @@ html
   font-size: 1.3rem
   color: #444
   text-align: left
+  position: relative
   &:not(:last-child)
     margin-bottom: 1.5rem
   input
     display: flex
     font-size: 1.1rem
     flex-direction: columns
-    margin-bottom: .5rem
+    margin-bottom: 1.5rem
     width: 100%
     padding: .5rem
     border-radius: $radius
@@ -65,3 +66,9 @@ html
     border-image-slice: 1
     border-width: 0 0 3px 0
     background-color: transparent
+  span
+    position: absolute
+    bottom: -1.5rem
+    right: 0
+    font-size: .8rem
+    color: $error

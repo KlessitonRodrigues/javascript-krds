@@ -1,13 +1,49 @@
 FLAGS
 /g      all mathed elements
 /i      insentitive case
+/m      multiline
+\w      [a-zA-Z0-9_]
 
-()      groups
+()      group
+(?: )   group without reference
+$1, \1  group reference
 |       OR
+\       scape
+.       any Char
+^       NOT/ START WITH
+$       END WITH
+.*,.*?  dot all
+\s, \S  space, not space
 
 IN STRINGS
 str.match()     to find an expression
 str.replace()   to replace an expression by another string
 str.search()    the start index of expression
 str.split()     to split the string by an expression
-str.match()     return an interable object
+
+QUANTIFIES
+*       0 ou n
++       1 ou n
+?       0 ou 1
+{3}
+{0, 10} {min, max}
+{3, }   {min, }
+{, 5}   {, max}
+
+GREEDY / NO-GRREDY
++       to get the maximum match
++?      to get the minimum match
+
+CONJUNCTS
+[abc]   to find 'a' or 'b' or 'c'
+[abc]+  to find 'abc'
+[a-c]   to find a range
+[\u00A0-\u00BA]     to find a special characters range
+
+LOOKS
+(?= )   Positive lookahead
+(?! )   Negative lookahead
+(?<= )  Positive lookbehinde
+(?<! )  Negative lookbehinde
+
+[Á-ú]   

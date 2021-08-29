@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TS Form Validation</title>
+  </head>
+  <body>
+    <form id="login-form">
+      <h2>LOGIN</h2>
+      <div class="input-field">
+        <label>
+          Usuário
+          <input
+            name="name"
+            id="ipt-name"
+            type="text"
+            placeholder="nome completo"
+          />
+          <span class="error-msg"></span>
+        </label>
+      </div>
+
+      <div class="input-field">
+        <label>
+          Email
+          <input
+            name="email"
+            id="ipt-email"
+            type="text"
+            placeholder="email@exemplo.com"
+          />
+          <span class="error-msg"></span>
+        </label>
+      </div>
+
+      <div class="input-field">
+        <label>
+          Senha
+          <input
+            name="password"
+            id="ipt-password"
+            type="text"
+            placeholder="minimo 8 caracteres"
+          />
+          <span class="error-msg"></span>
+        </label>
+      </div>
+
+      <div class="input-field">
+        <label>
+          Repetir Senha
+          <input
+            name="password-check"
+            id="ipt-password-check"
+            type="text"
+            placeholder="digite a senha novamente"
+          />
+          <span class="error-msg"></span>
+        </label>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <script src="./assets/index.js" type="module" defer></script>
+  </body>
+</html>
