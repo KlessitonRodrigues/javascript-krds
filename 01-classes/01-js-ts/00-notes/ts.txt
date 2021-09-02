@@ -2,4 +2,27 @@
 Script-mode - only a script
 Modules-mode - scripts in modules format
 
+#278 TYPESCRIPT - OOP
+- Abstraction
+- encapsulation
+- inheritance
+- polymorphism
 
+#282 OOP 
+yworks.com - web site to diagrams
+
+#283 OOP - SUPER
+
+#284 OOP - PROTECTED
+private = only allow access in the creator class
+protected = allow access in sub classes  and creator 
+
+#285 OOP - GETTER & SETTER
+
+#286 OOP - STATIC
+- factory method
+
+#287 OOP - SINGLETON/ PRIVATE CONSTRUCTOR
+- only one instance of a class
+
+#289 OOP - ABSTRACT

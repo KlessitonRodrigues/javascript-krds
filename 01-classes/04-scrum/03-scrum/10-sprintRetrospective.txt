@@ -1,0 +1,5 @@
+01. SPRINT RESTROSPECTIVE
+- revisão do PROCESSO de criação do produto
+- tem como objetivo apontar falhas e problemas
+durante o cliclo de desenvolvimento.
+- propor melhorias para o próximo ciclo.
