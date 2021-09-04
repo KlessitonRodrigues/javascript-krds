@@ -1,0 +1,66 @@
+01. AUTO ORGANIZADO
+- sem gerente/chefe de projeto
+- o time tem liberdade para escolher como 
+será a abordagem de construção do software.
+
+- ocasionalmente se elege um "lider ténico" 
+para ser referência na tamada de decisões.
+
+02. COMUNICAÇÃO FREQUENTE
+- Para que não seje necessário realizar reuniões 
+para reporte de estado.
+
+- Evitar refatoração no código devido a conflitos
+de visão do projeto.
+
+03. COMUNICAÇÃO TRANSPARENTE
+- Como não a figura de um gerente de projetos para
+espercionar o progresso individual, é necessário
+transparência nas atividades realizadas.
+
+- Qualquer posibilidade de riscos ou problemas ao 
+projeto deve ser devidademnete reportado.
+
+04. TAMANHO CERTO
+- scrum (3 - 9) pessoas
+- comum (5 - 7) pessoas
+
+05. FOCADO E COMPROMETIDO
+- Buscar estratégias para manter a motivação da 
+equipe em alta do começo ao fim do projeto.
+
+06. ENTROSAMENTO
+- Quando existe um conhecimento mútuo das 
+habilidades e dificuldades de cada um, o
+desenvolvimento do projeto se distribuir de 
+forma natural de acordo com a especificidade
+de cada um.
+
+07. RITMO SUSTENTÁVEL
+- A interação de Sprints visa manter a ritmo do 
+projeto por meio de pequenos ciclos, entraga 
+contínua, e feedback constante.
+
+08. ATITUDE MOSQUETEIRA
+"Um por todos, todos por um."
+
+09. T-SHAPED
+- O balanço entre profissionais generalistas 
+(horizontais) e especialistas (verticais).
+
+10. MULTI-FUNCIONAL
+- Balanço entre profissionais para cada área
+do projeto (front, back, tests, UX, etc..)
+
+11. EVOLUÇÃO ÁGIL
+
+-> 01. Entregas constantes em ciclos curtos
+    |-> 02. Priorização do R.O.I. (Return Over Investment)
+        |-> 03. Aproximação da Liderança
+            |-> 04. Melhoria nas decisões
+                |-> 05. Melhoria Contínua
+                    |-> 06. Aumento da Confiança
+                        |-> 07. Maior Colaboração
+                            |-> 08. Menor Rotatividade
+                                |-> 09. Aprendizado Rápido
+                                    |-> 10. Maior Produtividade

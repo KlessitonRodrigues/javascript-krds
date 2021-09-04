@@ -1,4 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
 body {
-    background-color: #444;
-    color           : #AAA;
+  background-color: #000;
+  color: #bbb;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #555;
+  padding: 1rem;
+
+  h1::after {
+    padding-left: 1rem;
+    content: "CSS";
+    opacity: .2;
+    transition: .5s opacity;
+  }
+
+  h1:hover {
+    &::after {
+        opacity: 1;
+    }
+  }
+}
+
+.ball{
+    background-image: linear-gradient(135deg, rgb(11, 81, 161) 40%, rgb(2, 22, 43));
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    box-shadow: 0 0 140px 10px #FFF;
+    transition: 3s margin;
 }

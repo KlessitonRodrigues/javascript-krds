@@ -1,7 +1,0 @@
-01. AUTO ORGANIZADO
-- sem gerente/chefe de projeto
-- o time tem liberdade para escolher como 
-será a abordagem de construção do software.
-
-- ocasionalmente se elege um "lider ténico" 
-para ser referência na tamada de decisões.

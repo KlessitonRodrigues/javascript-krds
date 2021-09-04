@@ -1,0 +1,41 @@
+01. DEVTEAM NO PRODUCT BACKLOG
+-> PROTÓTIPAÇÃO: 
+- contribui para uma visão mais refinada
+dos requisitos e fucionalidades levantadas pelo P.O.
+
+02. DEVTEAM NA SPRINT PLANNING
+-> SPRINT GOAL: 
+- uma meta para a sprint, ela descreve o
+que o time deve alcançar durante a sprint.
+- uma visão resumida do que o cliente precisa na sprint.
+- limita o escopo de funcionalidades a serem escolhidas
+para a sprint.
+- Dá dinamismo a sprint planning.
+
+EX:
+- Implementar um carrinho de compras básico, incluindo
+adicionar, atualizar e remover quantidades.
+- Desenvolver o cadastro de clientes, podendo criar mais
+de uma conta.
+
+-> CONDUTA
+- evitar entra em detalhes técnicos (nada de código).
+- não tente prever todos os cenários de erros.
+
+03. DEVTEAM NA SPRINT
+- liberdade de escolha de processos desde que não quebre
+o scrum.
+- não espere nenhum outro papel motivar a equipem 
+motivem-se a si mesmo.
+- cultura do líder técnico e as decisões por especialidades
+
+04. DEVTEAM NA DAILY SCRUM
+- não se reporta o foi realizado no dia anterior e no 
+seguinte para o Scrum master, mas sim para o resto do time.
+
+- local e horário bem definidos para a realizar daily scrum
+
+- reportar com clareza as atividades realizadas no dia
+anterior e os impedimentos.
+
+- não discultir problemas ou dificuldades durante a daily scrum

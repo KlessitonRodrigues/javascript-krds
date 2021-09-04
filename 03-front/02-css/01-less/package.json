@@ -1,19 +1,27 @@
 {
-  "devDependencies": {
-    "less": "^4.1.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "snowpack": "^3.8.8",
-    "snowpack-plugin-less": "^1.0.7"
-  },
-  "name": "01-less-css-tests",
+  "name": "01-less",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "src/server.js",
   "scripts": {
-    "start": "snowpack dev"
+    "start": "webpack server",
+    "build": "webpack build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "devDependencies": {
+    "@webpack-cli/generators": "^2.3.0",
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "less": "^4.1.1",
+    "less-loader": "^10.0.1",
+    "prettier": "^2.3.2",
+    "style-loader": "^3.2.1",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.2",
+    "webpack": "^5.51.2",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.0"
+  }
 }

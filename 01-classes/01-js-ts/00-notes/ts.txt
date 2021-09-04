@@ -25,4 +25,10 @@ protected = allow access in sub classes  and creator
 #287 OOP - SINGLETON/ PRIVATE CONSTRUCTOR
 - only one instance of a class
 
-#289 OOP - ABSTRACT
+#288 OOP - ABSTRACT
+
+#289 OOP - ASSOCIATION
+
+#290 OOP - DEPENDENCY INVERSION
+
+#291 OOP - AGGREGATION
