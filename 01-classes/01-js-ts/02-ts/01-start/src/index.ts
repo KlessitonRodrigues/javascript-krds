@@ -1,24 +1,40 @@
-const space = () => console.log('\n');
+const space = (file: string) => console.log(`\n---> ${file.toUpperCase()}`);
 
-import './types/any';
-space();
+space('void');
 import './types/void';
-space();
 
+space('array');
 import './types/array';
-space();
 
+space('functions');
 import './types/functions';
-space();
 
-import './oop/singleton';
-space();
+space('thisAsType');
+import './types/thisAsType';
 
-import './oop/abstract';
-space();
+space('overload');
+import './types/overload';
 
-import './oop/association';
-space();
+space('generics');
+import './types/generic';
 
-import './oop/aggregation';
-space();
+space('generics - intersection');
+import './types/generics-intersection';
+
+space('singleton');
+import './OOP/singleton';
+
+space('abstract');
+import './OOP/abstract';
+
+space('association');
+import './OOP/association';
+
+space('aggregation');
+import './OOP/aggregation';
+
+space('composition');
+import './OOP/composition';
+
+space('optional chain');
+import './features/optionalChain';

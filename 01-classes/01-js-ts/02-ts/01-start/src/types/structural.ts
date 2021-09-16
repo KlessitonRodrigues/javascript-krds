@@ -15,6 +15,6 @@ const employer1: Employer = {
 };
 const formLogin: User = { name: 'lorem', password: 123 };
 
-// TypeScript don't compare types only rules
+// TypeScript don't check the Instance only the structure
 login(user1, formLogin);
 login(employer1, formLogin);

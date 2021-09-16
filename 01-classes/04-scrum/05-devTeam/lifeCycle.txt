@@ -39,3 +39,15 @@ seguinte para o Scrum master, mas sim para o resto do time.
 anterior e os impedimentos.
 
 - não discultir problemas ou dificuldades durante a daily scrum
+
+05. DEVTEAM NA SPRINT REVIEW
+- não apenas entregar, mas apresentar o incremento.
+
+- crie um ambiente de feedback com o cliente.
+
+06. DEVTEAM NA SPRINT RETROSPECTIVE
+- Mapeamento do processo sob a ótica do Scrum Master.
+
+- Mapeamento do processo sob a ótica do Desenvolvedor.
+
+- Evite externar insatisfações pessoais neste momento.
