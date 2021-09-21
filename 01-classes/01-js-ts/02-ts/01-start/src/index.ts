@@ -38,3 +38,21 @@ import './OOP/composition';
 
 space('optional chain');
 import './features/optionalChain';
+
+space('decorator - class');
+import './decorator/decorator';
+
+space('decorator - factory');
+import './decorator/factory';
+
+space('decorator - Composition');
+import './decorator/composition';
+
+space('decorator - Method');
+import './decorator/method';
+
+space('decorator - Parameters');
+import './decorator/param';
+
+space('decorator - Property');
+import './decorator/properties';
