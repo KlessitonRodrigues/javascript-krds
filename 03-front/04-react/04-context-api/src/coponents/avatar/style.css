@@ -1,0 +1,34 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  width: 15rem;
+  height: 6rem;
+  background-color: #e9e9e9;
+  color: #333;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.avatar .__image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.avatar .__info {
+  margin-left: 0.5rem;
+}
+
+.avatar .__info .__field-name {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 8rem;
+  height: 1.5rem;
+  overflow: hidden;
+}
+
+.avatar .__info .__field-id {
+  font-size: 0.9rem;
+}
