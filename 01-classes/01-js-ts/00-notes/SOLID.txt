@@ -1,0 +1,8 @@
+#1 SOLID
+S - Single Resposability Principle
+O - Open/Closed Principle
+L - Liscov Substitution Principle
+I - Interface Segregation Principle
+D - Dependency Inversion Principle
+
+#2

@@ -1,10 +1,10 @@
 import React from "react";
 
-import Avatar from "./coponents/avatar/index"
+import Home from "./pages/home/index";
 
 const App = () => (
   <div className="App">
-    <Avatar />
+    <Home />
   </div>
 );
 
