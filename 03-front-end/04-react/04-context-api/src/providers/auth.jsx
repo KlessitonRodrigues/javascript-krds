@@ -2,7 +2,7 @@ import React from "react";
 
 export const AuthContext = React.createContext({});
 
-const authProvider = (props) => {
+const AuthProvider = (props) => {
   const user = {
     name: "Test User",
     id: 23,
@@ -13,4 +13,4 @@ const authProvider = (props) => {
   );
 };
 
-export default authProvider;
+export default AuthProvider;

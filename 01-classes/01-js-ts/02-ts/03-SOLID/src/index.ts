@@ -1,3 +1,6 @@
-const b = "fsef";
+const space = () => console.log("\n\n")
 
-console.log(b)
+import "./SRP/without/shopCart"
+space()
+
+import "./SRP/with/main"

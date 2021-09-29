@@ -12,6 +12,13 @@ body {
   color: #fff;
 }
 
+@media (min-width: 1024px) {
+  body {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+}
+
 img {
   width: 100%;
 }

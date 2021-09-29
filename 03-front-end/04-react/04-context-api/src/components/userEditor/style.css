@@ -1,0 +1,48 @@
+.user-editor {
+  background-color: #0004;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 3rem;
+}
+
+.user-editor.--show-false{
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.user-editor .__content {
+  background-color: #fff;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.user-editor .__close-btn {
+  display: block;
+  text-align: right;
+  font-size: 2.2rem;
+  color: #333;
+  line-height: 0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.user-editor .__send-btn {
+  display: block;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: monospace;
+  background-color: #bbd7ee;
+  color: #222;
+  box-shadow: 0 2px 4px 0 #3339;
+  border-radius: 6px;
+  padding: 0.5rem 2rem;
+  width: fit-content;
+  cursor: pointer;
+}
