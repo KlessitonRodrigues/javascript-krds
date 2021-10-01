@@ -1,6 +1,13 @@
-const space = () => console.log("\n\n")
+const title = (title: string) => console.log(`\n\n${title}\n\n`)
 
-import "./SRP/without/shopCart"
-space()
+title("SRP - without")
+import "./1-SRP/without/shopCart"
 
-import "./SRP/with/main"
+title("SRP - with")
+import "./1-SRP/with/main"
+
+title("OCP")
+import "./2-OCP/main"
+
+title("LSP")
+import "./3-LSP/main"

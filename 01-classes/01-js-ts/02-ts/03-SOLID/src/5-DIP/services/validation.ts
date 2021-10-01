@@ -1,4 +1,4 @@
-import { ValidationInterface } from "../entities/interfaces/validation";
+import { ValidationInterface } from "../classes/interfaces/validation";
 
 export class Validation {
   success(): ValidationInterface {

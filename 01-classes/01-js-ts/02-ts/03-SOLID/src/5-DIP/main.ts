@@ -1,5 +1,5 @@
-import { ShopCart } from "./entities/shopCart";
-import { ManagerCart } from "./entities/manageCart.ts";
+import { ShopCart } from "./classes/shopCart";
+import { ManagerCart } from "./classes/manageCart.ts";
 import { Database } from "./services/database";
 import { Validation } from "./services/validation";
 

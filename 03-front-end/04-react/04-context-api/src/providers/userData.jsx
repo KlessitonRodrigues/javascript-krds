@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export const UserData = React.createContext({});
 
-const UserDataProvider = ({ children }) => {
+export const UserDataProvider = ({ children }) => {
   const [userData, setUserData] = useState(undefined);
 
   setUserData({
@@ -20,4 +20,3 @@ const UserDataProvider = ({ children }) => {
   );
 };
 
-export default UserDataProvider;

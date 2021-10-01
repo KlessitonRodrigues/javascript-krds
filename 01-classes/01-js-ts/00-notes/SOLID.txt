@@ -1,8 +1,36 @@
-#1 SOLID
+01. SOLID
+
 S - Single Resposability Principle
 O - Open/Closed Principle
 L - Liscov Substitution Principle
 I - Interface Segregation Principle
 D - Dependency Inversion Principle
 
-#2
+02. SRP
+
+only one responsibility by class
+
+03. OCP
+
+open for extensions and closed for modifications
+
+04. LSP
+
+a subclass can be overwritten by another subclass, once both 
+have the same base class
+
+05. ISP
+
+interfaces or abstractions never need to enforce classes to
+implements useless properties/methods
+
+06. DIP
+
+classes implements and requires abtrations instead of 
+concrete classes
+
+how much more is abstracted, 
+more is in high level (interface)
+
+how much more is specified, 
+more is in low level (class with methods)

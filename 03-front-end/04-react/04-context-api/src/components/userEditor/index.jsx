@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import TextInput from "../../templates/textInput/index";
+import { UserData } from "../../providers/userData";
 
 import "./style.css";
 
 const UserEditor = (props) => {
+  const userData = useContext(UserData);
+
   const [show, setShow] = useState(props.show || false);
   const [formData, setFormData] = useState({
     fullName: "",
     age: 0,
     country: "",
   });
+
+  console.log(userData);
 
   return (
     <div className={`user-editor --show-${show}`}>

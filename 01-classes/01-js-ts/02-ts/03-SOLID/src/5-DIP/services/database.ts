@@ -1,4 +1,4 @@
-import { ShopCart } from "../entities/shopCart";
+import { ShopCart } from "../classes/shopCart";
 
 export class Database {
   storeCartOnDB(shopCart: ShopCart): void {
