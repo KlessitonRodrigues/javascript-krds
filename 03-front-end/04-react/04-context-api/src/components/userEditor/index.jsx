@@ -1,32 +1,38 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import TextInput from "../../templates/textInput/index";
-import { UserData } from "../../providers/userData";
+import FloatRight from "../../templates/floatRight/index";
+import { UserDataContext } from "../../providers/userData";
 
 import "./style.css";
 
-const UserEditor = (props) => {
-  const userData = useContext(UserData);
+/** @type { UserEditor } */
+const UserEditor = ({ showState }) => {
+  const [userData, setUserData] = useContext(UserDataContext);
+  const [formData, setFormData] = useState(userData);
 
-  const [show, setShow] = useState(props.show || false);
-  const [formData, setFormData] = useState({
-    fullName: "",
-    age: 0,
-    country: "",
-  });
+  const handleSaveBtn = () => {
+    setUserData(formData);
+    showState.setShow(false);
+  };
 
-  console.log(userData);
+  useEffect(() => setFormData(userData), [userData]);
 
   return (
-    <div className={`user-editor --show-${show}`}>
-      <div className="__content">
-        <span className="__close-btn" onClick={() => setShow(!show)}>
-          &times;
-        </span>
+    <div className={`user-editor --show-${showState.show}`}>
+      <div className="ue__content">
+        <FloatRight>
+          <span
+            className="ue__close-btn"
+            onClick={() => showState.setShow(!showState.show)}
+          >
+            &times;
+          </span>
+        </FloatRight>
         <TextInput
-          label="Full name"
-          value={formData.fullName}
-          onChange={(value) => setFormData({ ...formData, fullName: value })}
+          label="name"
+          value={formData.name}
+          onChange={(value) => setFormData({ ...formData, name: value })}
         />
         <TextInput
           label="age"
@@ -39,10 +45,17 @@ const UserEditor = (props) => {
           value={formData.country}
           onChange={(value) => setFormData({ ...formData, country: value })}
         />
-        <span className="__send-btn">Save</span>
+        <span className="ue__send-btn" onClick={() => handleSaveBtn()}>
+          Save
+        </span>
       </div>
     </div>
   );
 };
 
 export default UserEditor;
+
+/** @typedef {( props: {
+ * showState: {show: boolean, setShow: function}
+ * }) => JSX.Element } UserEditor
+ */

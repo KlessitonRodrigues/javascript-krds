@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
 
-import { AuthContext } from "../../providers/auth";
+import { UserDataContext } from "../../providers/userData";
 import "./style.css";
 
 const Avatar = () => {
-  const user = useContext(AuthContext);
+  const [userData] = useContext(UserDataContext);
   return (
-    <div className="avatar">
-      <div className="__image">
-        <img src={user.url} alt="user" />
+    <div className="avatar-panel">
+      <div className="ap__image">
+        <img src={userData.url} alt="user" />
       </div>
-      <div className="__info">
-        <span className="__field-name">{user.name}</span>
-        <span className="__field-id">ID {user.id}</span>
+      <div className="ap__info">
+        <span className="ap__field-name">{userData.name}</span>
+        <span className="ap__field-country">{userData.country}</span>
       </div>
     </div>
   );

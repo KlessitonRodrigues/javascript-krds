@@ -1,4 +1,4 @@
-.avatar {
+.avatar-panel {
   display: flex;
   align-items: center;
   width: 15rem;
@@ -10,17 +10,17 @@
   padding: 0.5rem;
 }
 
-.avatar .__image {
+.avatar-panel .ap__image {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
 }
 
-.avatar .__info {
+.avatar-panel .ap__info {
   margin-left: 0.5rem;
 }
 
-.avatar .__info .__field-name {
+.avatar-panel .ap__field-name {
   display: block;
   font-size: 1.2rem;
   font-weight: bold;
@@ -29,6 +29,6 @@
   overflow: hidden;
 }
 
-.avatar .__info .__field-id {
+.avatar-panel .ap__field-id {
   font-size: 0.9rem;
 }

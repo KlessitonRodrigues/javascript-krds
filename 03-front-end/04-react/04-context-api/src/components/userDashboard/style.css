@@ -1,8 +1,24 @@
-.user-dashboard{
-    background-color: #DDD;
-    color: #222;
-    font-weight: bold;
-    padding: 1rem;
-    border-radius: 12px;
-    margin: 0 1rem;
+.user-dashboard {
+  position: relative;
+  background-color: #ddd;
+  color: #222;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 12px;
+  margin: 0 1rem;
+}
+.user-dashboard .ud__row {
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+.user-dashboard .ud__label {
+  margin-right: 1rem;
+}
+.user-dashboard .ud__edit-btn {
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: #222c;
+  color: #fff;
+  cursor: pointer;
 }
