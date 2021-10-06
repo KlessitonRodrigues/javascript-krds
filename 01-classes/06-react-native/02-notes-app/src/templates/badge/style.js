@@ -6,8 +6,9 @@ export const styles = StyleSheet.create({
     borderRadius: 8,
     paddingTop: 4,
     paddingBottom: 4,
-    paddingRight: 16,
-    paddingLeft: 16,
+    paddingRight: 8,
+    paddingLeft: 8,
+    marginRight: 4,
   },
   text: {
     color: "#FFF",

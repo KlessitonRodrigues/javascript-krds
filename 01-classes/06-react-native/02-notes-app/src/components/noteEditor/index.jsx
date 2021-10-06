@@ -1,16 +1,16 @@
 import React, { useContext, useState } from "react";
 import { View, TextInput } from "react-native";
 
-import SquareButton from "../../templates/squareButton/index";
+import RoundedButton from "../../templates/roundedButton/index";
 import { NotesContext } from "../../providers/notes";
 import { styles } from "./style";
 
 const NoteEditor = () => {
-  const { editorIndex, notes } = useContext(NotesContext);
-  const [editorNote, setEditorNote] = useState(notes[editorIndex]);
+  const [notes, setNotes] = useContext(NotesContext);
+  const [editorNote, setEditorNote] = useState(notes.store[notes.editorIndex]);
 
   const handleAddBtn = () => {
-    console.warn(editorNote);
+    console.warn();
   };
 
   return (
@@ -21,12 +21,12 @@ const NoteEditor = () => {
         value={editorNote.text}
         onChangeText={(text) => setEditorNote({ ...editorNote, text })}
       />
-      <SquareButton
+      <RoundedButton
         text="+"
         style={{ bottom: 16, right: 16 }}
         onChange={handleAddBtn}
       />
-      <SquareButton text="-" style={{ bottom: 16, right: 72 }} />
+      <RoundedButton text="-" style={{ bottom: 16, right: 72 }} />
     </View>
   );
 };
