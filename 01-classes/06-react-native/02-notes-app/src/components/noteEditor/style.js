@@ -2,23 +2,27 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#f0f0f0",
     borderRadius: 12,
     marginTop: 10,
     marginBottom: 10,
-    height: "75%",
     overflow: "hidden",
+    flex: 1,
+  },
+  title: {
+    color: "#DDD",
+    backgroundColor: "#243C56",
+    padding: 16,
+    paddingBottom: 8,
+    fontSize: 24,
+    fontWeight: "bold",
   },
   text: {
+    flex: 1,
     color: "#333",
-    height: "100%",
-    width: "100%",
+    backgroundColor: "#fff",
+    padding: 8,
     textAlignVertical: "top",
     fontSize: 22,
     fontWeight: "bold",
-    padding: 15,
-    borderWidth: 1,
-    borderColor: "#444",
-    borderRadius: 12,
   },
 });

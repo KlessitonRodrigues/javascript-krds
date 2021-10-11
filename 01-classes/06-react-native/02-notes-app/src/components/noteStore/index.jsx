@@ -2,20 +2,26 @@ import React, { useContext } from "react";
 import { ScrollView } from "react-native";
 
 import Note from "../../templates/note/index";
-import { NotesContext } from "../../providers/notes";
+import { NotesContext } from "../../providers/notesStore";
 import { styles } from "./style";
 
 const NoteStore = () => {
-  const [notes, setNotes] = useContext(NotesContext);
-  const mapNotes = notes.store.map(({ index, text, date }) => (
-    <Note key={index} badge={index + 1} text={text} date={date} />
-  ));
+  const [notesState, notesDispatch] = useContext(NotesContext);
+
+  function mapNotes() {
+    if (notesState.notes.length === 0) return false;
+    return notesState.notes.map(
+      ({ title = "", text = ""}, index) => (
+        <Note key={index} badge={index + 1} text={text} title={title} />
+      )
+    );
+  }
 
   return (
     <ScrollView style={styles.container} horizontal>
-      {mapNotes}
+      {mapNotes()}
     </ScrollView>
   );
 };
 
-export default NoteStore;
+export default React.memo(NoteStore);

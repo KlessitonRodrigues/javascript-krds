@@ -7,8 +7,8 @@ export const styles = StyleSheet.create({
     alignItems: "flex-start",
     backgroundColor: "#FFF",
     borderRadius: 12,
-    fontWeight: "bold",
     padding: 8,
+    marginRight: 8,
   },
   header: {
     display: "flex",
@@ -16,14 +16,14 @@ export const styles = StyleSheet.create({
     alignItems: "flex-end",
     marginBottom: 8,
   },
-  noteText: {
-    color: "#222",
-    fontSize: 18,
-    width: 250,
-  },
-  noteDate: {
+  noteTitle: {
     color: "#444",
-    fontSize: 16,
+    fontSize: 22,
     fontWeight: "bold",
+  },
+  noteText: {
+    color: "#333",
+    fontSize: 16,
+    width: 250,
   },
 });

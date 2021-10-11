@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#2E68C7BB",
+    backgroundColor: "#205B99",
     borderRadius: 8,
     paddingTop: 4,
     paddingBottom: 4,

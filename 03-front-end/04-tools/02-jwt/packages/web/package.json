@@ -1,11 +1,10 @@
 {
-  "name": "03-style-lint",
+  "name": "@02-jwt/web",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "snowpack dev",
-    "stylelint": "stylelint '**/*.sass'"
+    "dev": "snowpack dev"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
@@ -14,9 +13,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "snowpack": "^3.8.8",
-    "snowpack-plugin-sass": "^1.0.2",
-    "stylelint": "^13.13.1",
-    "stylelint-config-sass-guidelines": "^8.0.0",
-    "stylelint-config-standard": "^22.0.0"
+    "snowpack-plugin-sass": "^1.0.2"
   }
 }

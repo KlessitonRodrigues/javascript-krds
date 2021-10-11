@@ -5,11 +5,11 @@ import Badge from "../badge/index";
 import { styles } from "./style";
 
 /** @type { Note } */
-const Note = ({ badge = "..", text = "..", date = ".." }) => (
+const Note = ({ badge = "..", text = "..", title = ".." }) => (
   <View style={styles.note}>
     <View style={styles.header}>
       <Badge>{badge}</Badge>
-      <Text style={styles.noteDate}>{date}</Text>
+      <Text style={styles.noteTitle}>{title}</Text>
     </View>
     <Text style={styles.noteText}>{text.substring(0, 90)}</Text>
   </View>

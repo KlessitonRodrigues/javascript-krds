@@ -4,8 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/index.js",
-    "dev": "nodemon --watch 'src/' --exec 'clear && ts-node src/index.ts' -e ts",
     "build": "tsc",
     "test": "jest",
     "test:silent": "jest --watchAll --silent --noStackTrace "
