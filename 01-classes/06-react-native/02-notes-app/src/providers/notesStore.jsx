@@ -2,18 +2,23 @@ import React, { useReducer } from "react";
 
 const INITIAL_STATE = {
   onEditor: 0,
-  notes: [
-    { title: "TEST", text: "TEST TEXT" },
-    { title: "TEST", text: "TEST TEXT" },
-  ],
+  notes: [],
 };
 
 function notesReducer(state, action) {
+  const { onEditor, notes } = state;
+
   switch (action.type) {
     case "ADD_NOTE":
-      const notes = state.notes;
       notes.push(action.payload);
       return { ...state, notes };
+
+    case "REMOVE_NOTE":
+      notes.splice(onEditor, 1);
+      return { ...state, notes };
+
+    default:
+      return state;
   }
 }
 

@@ -12,7 +12,7 @@ export class Database implements DatabaseInterface {
     if (shopCart.products.length <= 0)
       return this.validation.error(`cart is empty!`);
     return this.validation.success(
-      `Saved ${shopCart.products.map((prod) => " " + prod.name)}`
+      `Saved:${shopCart.products.map((prod) =>  " " + prod.name)}`
     );
   }
 }
