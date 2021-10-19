@@ -7,6 +7,7 @@
     "dev": "snowpack dev"
   },
   "devDependencies": {
+    "axios": "^0.23.0",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-react": "^7.26.1",

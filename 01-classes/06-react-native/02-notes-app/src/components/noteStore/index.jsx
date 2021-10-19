@@ -5,22 +5,28 @@ import Note from "../../templates/note/index";
 import { NotesContext } from "../../providers/notesStore";
 import { styles } from "./style";
 
-const NoteStore = () => {
-  const [notesState, notesDispatch] = useContext(NotesContext);
-  const haveNotes = notesState.notes.length > 0;
+function mapNotes(onEditor, notes, newAction) {
+  if (!notes.length) return false;
 
-  function mapNotes() {
-    if (haveNotes) {
-      return notesState.notes.map(({ title = "", text = "" }, index) => (
-        <Note key={index} badge={index + 1} text={text} title={title} />
-      ));
-    }
-    return false;
-  }
+  return notes.map(({ title, text }, index) => (
+    <Note
+      key={index}
+      badge={index + 1}
+      text={text}
+      title={title}
+      isActive={index === onEditor}
+      onPress={() => newAction("CHANGE_ONEDITOR", index)}
+    />
+  ));
+}
+
+const NoteStore = () => {
+  const [state, newAction] = useContext(NotesContext);
+  const { onEditor, notes } = state;
 
   return (
-    <ScrollView style={styles.container(haveNotes)} horizontal>
-      {mapNotes()}
+    <ScrollView style={styles.container(notes.length)} horizontal>
+      {mapNotes(onEditor, notes, newAction)}
     </ScrollView>
   );
 };

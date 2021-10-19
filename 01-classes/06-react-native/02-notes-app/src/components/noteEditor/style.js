@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   title: {
     color: "#DDD",
     backgroundColor: "#243C56",
-    padding: 16,
+    padding: 12,
     paddingBottom: 8,
     fontSize: 24,
     fontWeight: "bold",
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     color: "#333",
     backgroundColor: "#fff",
-    padding: 8,
+    padding: 12,
     textAlignVertical: "top",
     fontSize: 22,
     fontWeight: "bold",
