@@ -1,10 +1,10 @@
-import React, { useReducer } from "react";
+import React, { useContext } from "react";
 
+import { TimerContext } from "../../providers/timer";
 import { Container, Timer } from "./styles";
-import { initialState, reducer } from "./store";
 
 const Promodoro = (): JSX.Element => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  // const [] = useContext(TimerContext)
 
   return (
     <Container>

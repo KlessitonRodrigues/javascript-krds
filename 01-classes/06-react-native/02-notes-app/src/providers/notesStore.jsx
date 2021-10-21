@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useCallback, useReducer } from "react";
 
 const INITIAL_STATE = {
   onEditor: -1,
@@ -6,7 +6,8 @@ const INITIAL_STATE = {
 };
 
 function notesReducer(state, action) {
-  let { onEditor, notes } = state;
+  const notes = Array.of(state.notes);
+  let onEditor = state.onEditor;
 
   switch (action.type) {
     case "ADD_NOTE":
@@ -36,7 +37,11 @@ export const NotesContext = React.createContext();
 
 export const NotesProvider = ({ children }) => {
   const [state, dispatch] = useReducer(notesReducer, INITIAL_STATE);
-  const newAction = (type = "", payload = {}) => dispatch({ type, payload });
+  const newAction = useCallback(
+    (type, payload = {}) => dispatch({ type, payload }),
+    [dispatch]
+  );
+
   return (
     <NotesContext.Provider value={[state, newAction, dispatch]}>
       {children}

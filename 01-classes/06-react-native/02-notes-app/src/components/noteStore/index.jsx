@@ -5,6 +5,14 @@ import Note from "../../templates/note/index";
 import { NotesContext } from "../../providers/notesStore";
 import { styles } from "./style";
 
+async function updateStorage(notesStore) {
+  await AsyncStorage.setItem("notesStore", notesStore);
+}
+
+async function getStorage() {
+  return await AsyncStorage.getItem("notesStore");
+}
+
 function mapNotes(onEditor, notes, newAction) {
   if (!notes.length) return false;
 

@@ -14,8 +14,6 @@ Sem Esquema
 Orientado a Documento (JSON)
 Facilidade no Escalonamento Horizontal (Clusters)
 
-
-
 #2 COMANDOS BÁSICOS
 -> CLI
 $ show dbs                  (exibir DBs locais)
@@ -25,8 +23,6 @@ $ db.createCollection()     (criar uma coleção no DB atual)
 $ show collections          (exibe coleções do DB atual)
 $ db.COLLECTION_NAME.drop() (remove uma colletion)
 
-
-
 #3 INSERÇÕES
 -> CLI
 (insere dados em uma coleção)
@@ -34,8 +30,6 @@ $ db.COLLECTION_NAME.insert({name: "jan/17", month: 1, year: 2017})
 
 (insere ou atualiza dados de uma coleção)
 $ db.COLLECION_NAME.save({name: "fev/17", month: 2, year: 2017})
-
-
 
 #4 CONSULTAS
 -> CLI
@@ -66,8 +60,6 @@ $ db.COLLECTION_NAME.find({year: 2017}).limit(1)
 (retorna somente uma propriedade dos registros filtrados)
 $ db.COLLETION_NAME.find({year: {$exists: true}}, {_id=0, name: 1})
 
-
-
 #5 AGREGAÇÂO
 $project: projeta um conjunto de dados especificados 
 para a operação seguinte
@@ -83,8 +75,6 @@ $ db.billingcycles.aggregate([{
 ... $group: {_id: null, credit: $sum:{$credit}, debt:{$sum: "$debt"}}
 }])
 
-
-
 #6 ATUALIZAÇÂO
 -> CLI
 (manipula os valores selecionados por id/filtro)
@@ -92,8 +82,6 @@ $ db.COLLECTION_NAME.update({
 ... $and:[{month: 1},{year: 2017}], 
 ... $set:{credits: [{name: "Sálario", value: 5000}]} 
 ... })
-
-
 
 #7 CONTADOR E REMOÇÔES
 -> CLI

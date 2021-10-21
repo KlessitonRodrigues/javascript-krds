@@ -1,8 +1,11 @@
 import Promodoro from "../../components/promodoro/index";
+import { TimerProvider } from "../../providers/timer";
 
 const Home = () => (
   <div>
-    <Promodoro />
+    <TimerProvider>
+      <Promodoro />
+    </TimerProvider>
   </div>
 );
 

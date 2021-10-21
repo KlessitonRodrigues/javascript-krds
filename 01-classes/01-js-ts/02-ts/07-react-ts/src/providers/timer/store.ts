@@ -4,13 +4,13 @@ type Timer = {
   ss: number;
 };
 
-type State = {
+export type State = {
   counter: number;
   timer: Timer;
   preSets: number[];
 };
 
-type Action = {
+export type Action = {
   type: string;
   payload: unknown;
 };
@@ -42,6 +42,3 @@ function secondsToTime(sec: number): Timer {
   timer.ss = (sec % 3600) % 60;
   return timer;
 }
-
-// export const newAction = (dispatch: Function, type: string, payload: unknown) =>
-//  dispatch({ type, payload });
