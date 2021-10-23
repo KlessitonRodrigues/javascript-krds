@@ -3,5 +3,5 @@ module.exports.get = function (req, res) {
 };
 
 module.exports.post = function (req, res) {
-  res.send("POST Ok");
+  res.send(req.body);
 };
