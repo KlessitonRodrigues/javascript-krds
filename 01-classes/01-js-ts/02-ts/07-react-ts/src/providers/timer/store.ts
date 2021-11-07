@@ -1,7 +1,7 @@
 type Timer = {
-  hh: number;
-  mm: number;
-  ss: number;
+  hh: string;
+  mm: string;
+  ss: string;
 };
 
 export type State = {
@@ -10,35 +10,45 @@ export type State = {
   preSets: number[];
 };
 
-export type Action = {
-  type: string;
-  payload: unknown;
-};
+export type Action =
+  | { type: "COUNTER_INC" }
+  | { type: "COUNTER_RESET" }
+  | { type: "ADD_PRESET"; payload: Timer };
 
 export const initialState: State = {
   counter: 0,
-  timer: { hh: 0, mm: 0, ss: 0 },
+  timer: { hh: "00", mm: "00", ss: "00" },
   preSets: [10000, 30000, 60000],
 };
 
 export function reducer(state: State, action: Action) {
-  let { counter, timer } = state;
+  let { counter, timer } = Object.assign({}, state);
 
   switch (action.type) {
-    case "INCREMENT":
-      counter += 1;
+    case "COUNTER_INC":
+      counter = Number(counter) + 1;
       timer = secondsToTime(counter);
       return { ...state, counter, timer };
+
+    case "COUNTER_RESET":
+      counter = -1;
+      return { ...initialState, counter };
 
     default:
       return state;
   }
 }
 
-function secondsToTime(sec: number): Timer {
-  const timer: Timer = { hh: 0, mm: 0, ss: 0 };
-  timer.hh = sec / 3600;
-  timer.mm = (sec % 3600) / 60;
-  timer.ss = (sec % 3600) % 60;
-  return timer;
+function secondsToTime(count: number): Timer {
+  const hh = Math.floor(count / 3600);
+  const mm = Math.floor((count % 3600) / 60);
+  const ss = Math.floor((count % 3600) % 60);
+
+  const leftZero = (v: number) => (v < 10 ? "0" + v : "" + v);
+
+  return {
+    hh: leftZero(hh),
+    mm: leftZero(mm),
+    ss: leftZero(ss),
+  };
 }

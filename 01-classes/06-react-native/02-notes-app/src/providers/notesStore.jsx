@@ -6,7 +6,7 @@ const INITIAL_STATE = {
 };
 
 function notesReducer(state, action) {
-  const notes = Array.of(state.notes);
+  const notes = state.notes;
   let onEditor = state.onEditor;
 
   switch (action.type) {
