@@ -1,15 +1,17 @@
 import React from 'react'
-import styled from 'styled-components'
+
+import { Container, Title, Content } from './styled'
 
 type Props = {
-  children
+  title: string
+  children: React.ReactNode
 }
 
-const Container = styled.div`
-  background-color: #222;
-  padding: 0.5rem;
-`
-
-const Panel = ({ children }: Props) => <Container>{children}</Container>
+const Panel = ({ children, title }: Props) => (
+  <Container>
+    <Title>{title}</Title>
+    <Content>{children}</Content>
+  </Container>
+)
 
 export default Panel

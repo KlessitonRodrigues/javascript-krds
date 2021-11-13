@@ -1,0 +1,15 @@
+@use "../../style/theme" as *
+
+.manager-page
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+    background-color: $surface
+    .mp__row
+        position: relative
+
+    @media ( min-width: $medium)
+        padding-top: 7vh
+        .mp__row
+            display: grid
+            grid-template-columns: 20vw 80vw

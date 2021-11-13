@@ -1,0 +1,50 @@
+@use "../../style/theme" as *
+
+.client-board
+    background-color: $surface
+    color: $onSurface
+    border-radius: $radius
+    box-shadow: $low-shadow
+    padding: 1rem 1rem .5rem
+    margin-bottom: .5rem
+    position: relative
+    .cb__board
+        display: grid
+    .cb__name
+        font-weight: bold
+    .cb__status
+        color: $primary
+    .cb__info
+        margin: .5rem 0
+        font-size: 1rem
+        display: grid
+    .cb__expanded
+        height: 0
+        overflow: hidden
+        transition: height .4s
+        &.--active-true
+            height: 20rem
+            visibility: visible
+            padding-top: .5rem
+    .icon-arrow
+        position: absolute
+        top: .5rem
+        right: 1rem
+        background-image: url("../../assets/icons/expand.svg")
+        transition: .5s
+        &.--active-true
+            transform: rotate(180deg)
+    .icon-edit
+        background-image: url("../../assets/icons/edit.svg")
+
+    @media( min-width: $medium)
+        font-size: 1.2rem
+        .cb__board
+            grid-template-columns: 3fr 2fr
+        .icon-arrow
+            top: 0
+        .cb__expanded
+            display: grid
+            grid-template-columns: 3fr 2fr 3fr 1fr
+            &.--active-true
+                height: 10rem

@@ -1,0 +1,80 @@
+@use "../../style/theme" as *
+
+.home-page
+    .first-section
+        background-color: $primary
+        padding: 7rem 0
+        .fs__box
+            background-color: $surface
+            color: $onBackground
+            border-radius: $radius
+            padding: 1.5rem
+            margin: 0 1.5rem
+            max-width: 28rem
+        .fs__box-title
+            color: $primary
+            text-align: center
+        .fs__box-btn
+            text-align: center
+        .text-and-icon
+            margin-bottom: 2rem
+            .icon
+                margin-right: 1rem
+        .icon-bike
+            background-image: url("../../assets/img/bike.png")
+        .icon-watch
+            background-image: url("../../assets/img/watch.png")
+        .icon-belt
+            background-image: url("../../assets/img/belt.png")
+        .icon-arm
+            background-image: url("../../assets/img/arm.png")
+    .second-section
+        background-color: $background
+        color: $onBackground
+        padding-bottom: 2rem
+        .ss__title
+            font-size: 2.2rem
+            text-align: center
+            padding: 2rem 0 1rem
+    .third-section
+        background-color: $primary
+        color: $onPrimary
+        text-align: center
+        padding-bottom: 2rem
+        .ts__title
+            font-size: 2.2rem
+            text-align: center
+            padding: 2rem 0 1rem
+
+    @media ( min-width: $small)
+        .first-section
+            .fs__box
+                margin: 0 auto
+
+    @media ( min-width: $medium)
+        .first-section
+            background-image: url("../../assets/img/background1.jpg")
+            background-color: $background
+            background-repeat: no-repeat
+            background-size: 100vw
+            padding-top: 6.5rem
+            height: 100vh
+        .second-section
+            .ss_services-box
+                display: grid
+                grid-template-columns: 1fr 1fr
+                max-width: 64rem
+                margin: 0 auto
+        .third-section
+            .ts__plans-box
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr
+                max-width: 64rem
+                margin: 0 auto
+            .ts__section
+                margin-bottom: 1rem
+
+    @media( min-width: $large)
+        .first-section
+            .fs__box
+                margin-left: calc(50% + 4rem)

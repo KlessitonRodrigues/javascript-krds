@@ -1,9 +1,6 @@
-import React from "react";
+import React from 'react'
 import Button from './components/button'
 
-const App = () => <div>
+const App = () => <Button />
 
-    <Button />
-</div>;
-
-export default App;
+export default App

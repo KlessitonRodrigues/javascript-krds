@@ -1,0 +1,30 @@
+@use "../../style/theme" as *
+
+.client-form
+    background-color: $background
+    color: $onBackground
+    border-radius: $radius
+    padding: 2rem
+    width: 24rem
+    .cf__title
+        text-align: center
+        font-weight: lighter
+    .cf__subtitle
+        font-size: 1.4rem
+        margin: 0
+        margin-bottom: .5rem
+    .cf__grid
+        display: grid
+        grid-template-columns: 1f
+        padding-top: 1rem
+    .cf__button-box
+        text-align: center
+    @media ( min-width: $medium )
+        width: 50vw
+        .cf__info
+            padding-right: 1rem
+            border-right: 1px solid $primary
+        .cf__plans
+            padding-left: 1rem
+        .cf__grid
+            grid-template-columns: 1fr 1fr

@@ -1,0 +1,40 @@
+@use "../../style/theme" as *
+
+.service-card
+    background-color: $surface
+    color: $onSurface
+    box-shadow: $low-shadow
+    border-radius: $radius
+    display: block
+    margin: 1rem auto
+    padding: 1rem
+    max-width: 24rem
+    .sc__title
+        font-size: 1.2rem
+        font-weight: bold
+        text-align: center
+        text-transform: uppercase
+    .sc__img
+        display: inline-block
+        border-radius: $radius
+        width: 6rem
+    .sc__content
+        display: inline-block
+        width: 16rem
+        padding-left: 2rem
+        vertical-align: top
+        font-weight: bold
+    @media (min-width: $medium )
+        max-width: 38rem
+        margin: 1rem
+        padding: 0
+        .sc__title, .sc__content
+            float: right
+            width: 19rem
+            padding-right: 1rem
+        .sc__title
+            padding-top: 1rem
+        .sc__img
+            float: left
+            width: 10rem
+            border-radius: 0

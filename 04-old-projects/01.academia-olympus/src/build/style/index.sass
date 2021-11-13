@@ -1,0 +1,81 @@
+@use "theme" as *
+@use "fonts"
+@use "keyframes"
+
+*
+    margin: 0
+    padding: 0
+    outline: none
+    box-sizing: border-box
+
+body
+    font-family: overpass, sans-serif
+    background-color: $background
+    color: $onBackground
+
+html
+    @media( max-width: $x-medium - 1)
+        font-size: 15px
+        @media( max-width: $x-small)
+            font-size: 14.5px
+            @media ( max-width: $xx-small )
+                font-size: 13px
+    @media( min-width: $x-medium)
+        font-size: 15px
+    @media( min-width: $large)
+        font-size: 16px
+
+h1,h2,h3
+    font-family: overpass
+    font-weight: bold
+
+a
+    text-decoration: none
+    cursor: pointer
+    &:hover
+        color: $primary
+
+section
+    overflow: hidden
+
+hr
+    border: none
+    border-bottom: 2px solid $primary
+    margin: .25rem 0 1.5rem
+b
+    color: #222
+
+.icon
+    min-width: 2.5rem
+    width: 2.5rem
+    min-height: 2.5rem
+    height: 2.5rem
+    background-size: contain
+    background-repeat: no-repeat
+    background-color: transparent
+    overflow: hidden
+    cursor: pointer
+    @media ( min-width: $medium)
+        min-width: 2.75rem
+        min-height: 2.75rem
+
+.icon.sm
+    min-width: 1.5rem
+    width: 1.5rem
+    min-height: 1.5rem
+    height: 1.5rem
+    @media ( min-width: $medium )
+        min-width: 1.75rem
+        width: 1.75rem
+        min-height: 1.75rem
+        height: 1.75rem
+
+.scroll-bar
+    &::-webkit-scrollbar
+        width: 6px
+    &::-webkit-scrollbar-track
+        background: #3333
+        border-radius: $radius
+    &::-webkit-scrollbar-thumb
+        background: $secondary
+        width: 20px

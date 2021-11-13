@@ -1,0 +1,34 @@
+@use "../../style/theme" as *
+
+.overlay-tool
+    display: none
+    &.--active-false
+        width: 0
+        height: 0
+    &.--active-true
+        display: block
+        .ot__cover
+            position: fixed
+            z-index: 9
+            top: 0
+            left: 0
+            width: 100vw
+            height: 100vh
+            background-color: #000C
+        .ot__content
+            border-radius: $radius
+            position: fixed
+            z-index: 10
+            top: 5vh
+            left: 50vw
+            max-height: 85%
+            padding-right: 2%
+            transform: translateX(-48%)
+            overflow-x: auto
+            overflow-y: scroll
+            @media (max-width: $medium - 1)
+                animation: overlay-sm .4s ease-out
+            @media (min-width: $medium)
+                animation: overlay-md .4s ease-out
+                transform: translate(-50%, -50%)
+                top: 50vh

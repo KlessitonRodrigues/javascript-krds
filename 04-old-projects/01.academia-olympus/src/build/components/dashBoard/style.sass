@@ -1,0 +1,18 @@
+@use "../../style/theme" as *
+
+.client-dashboard
+    background-color: $background
+    height: 100vh
+    padding: 1rem .5rem 1rem 1rem
+    .cd__client-list
+        padding-right: .5rem
+        margin-top: 1.5rem
+        height: 76vh
+        overflow-y: scroll
+        overflow-x: hidden
+    @media (max-width: $medium - 1)
+        .cd__button-box
+            padding-left: 3rem
+    @media (min-width: $medium)
+        padding-top: 3.25rem
+        height: 92.5vh

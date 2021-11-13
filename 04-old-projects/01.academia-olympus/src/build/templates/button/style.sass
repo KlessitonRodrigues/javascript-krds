@@ -1,0 +1,16 @@
+@use "../../style/theme" as *
+
+.default-btn
+    background-color: $secondary
+    color: $onSecondary
+    border-radius: $radius
+    box-shadow: $low-shadow
+    cursor: pointer
+    min-width: 12rem
+    padding: .75rem 1rem
+    border: none
+    font-size: 1.2rem
+    font-weight: bold
+    transition: box-shadow .4s
+    &:hover
+        box-shadow: $medium-shadow

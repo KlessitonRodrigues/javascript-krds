@@ -1,0 +1,20 @@
+@use "../../style/theme" as *
+
+.login-form
+    background-color: $surface
+    color: $onSurface
+    border-radius: $radius
+    padding: 1.5rem
+    text-align: center
+    width: 24rem
+    height: 28.5rem
+    .lf__title
+        font-size: 2.8rem
+        font-weight: lighter
+        margin-bottom: 4rem
+    .lf__forget
+        display: block
+        margin: 2rem
+        font-size: 1.2rem
+    @media ( min-width: $medium )
+        width: 26rem
