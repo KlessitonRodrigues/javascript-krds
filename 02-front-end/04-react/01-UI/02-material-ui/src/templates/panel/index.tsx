@@ -1,17 +1,22 @@
 import React from 'react'
-
-import { Container, Title, Content } from './styled'
+import Paper from '@material-ui/core/Paper'
+import Box from '@material-ui/core/Box'
+import Text from '@material-ui/core/Typography'
 
 type Props = {
-  title: string
   children: React.ReactNode
+  title: string
 }
 
 const Panel = ({ children, title }: Props) => (
-  <Container>
-    <Title>{title}</Title>
-    <Content>{children}</Content>
-  </Container>
+  <Paper>
+    <Box p={2} mb={3}>
+      <Text fontSize={18} fontWeight="bold" mb={1}>
+        {title}
+      </Text>
+      <Box>{children}</Box>
+    </Box>
+  </Paper>
 )
 
 export default Panel

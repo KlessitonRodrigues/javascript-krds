@@ -4,14 +4,14 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    src: "/js",
-    public: { static: true, url: "/" },
+    src: '/js',
+    public: { static: true, url: '/' },
   },
   plugins: [
     /* ... */
   ],
   packageOptions: {
-    /* ... */
+    knownEntrypoints: ['react-is', '@material-ui/core/utils'],
   },
   devOptions: {
     /* ... */
@@ -19,4 +19,4 @@ module.exports = {
   buildOptions: {
     /* ... */
   },
-};
+}
