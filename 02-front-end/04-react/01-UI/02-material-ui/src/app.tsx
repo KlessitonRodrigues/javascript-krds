@@ -6,6 +6,9 @@ import ButtonGpUI from './components/btnGp'
 import CheckUI from './components/checkUI'
 import CheckNestUI from './components/checkNestUI'
 import FabUI from './components/fabUI'
+import RadioGroupUI from './components/radioGroupUI'
+import RatingUI from './components/ratingUI'
+import SliderUI from './components/sliderUI'
 
 const App = () => (
   <div>
@@ -14,6 +17,9 @@ const App = () => (
     <CheckUI />
     <CheckNestUI />
     <FabUI />
+    <RadioGroupUI />
+    <RatingUI />
+    <SliderUI />
   </div>
 )
 

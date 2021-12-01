@@ -11,7 +11,7 @@ module.exports = {
     /* ... */
   ],
   packageOptions: {
-    knownEntrypoints: ['react-is', '@material-ui/core/utils'],
+    knownEntrypoints: ['react-is', '@material-ui/core/utils', '@material-ui/unstyled/ModalUnstyled'],
   },
   devOptions: {
     /* ... */

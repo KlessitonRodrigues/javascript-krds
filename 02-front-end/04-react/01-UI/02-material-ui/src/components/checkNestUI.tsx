@@ -54,7 +54,6 @@ const CheckNestUI = () => {
                 isAllChecked
                   ? setOpts([false, false, false])
                   : setOpts([true, true, true])
-
               }
             />
           }
