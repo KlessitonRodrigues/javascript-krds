@@ -7,9 +7,8 @@ import Panel from '../templates/panel'
 
 const SliderUI = () => (
   <Panel title="Slider">
-    <Stack>
+    <Stack direction="row">
       <VolumeDown />
-      <Slider aria-label="volume" />
       <VolumeUp />
     </Stack>
   </Panel>

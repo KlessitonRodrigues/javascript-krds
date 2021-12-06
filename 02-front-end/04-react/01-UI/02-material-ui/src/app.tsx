@@ -9,6 +9,8 @@ import FabUI from './components/fabUI'
 import RadioGroupUI from './components/radioGroupUI'
 import RatingUI from './components/ratingUI'
 import SliderUI from './components/sliderUI'
+import SwitchUI from './components/switch'
+import TextFieldUI from './components/textField'
 
 const App = () => (
   <div>
@@ -20,6 +22,8 @@ const App = () => (
     <RadioGroupUI />
     <RatingUI />
     <SliderUI />
+    <SwitchUI />
+    <TextFieldUI />
   </div>
 )
 
