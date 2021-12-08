@@ -1,0 +1,14 @@
+{
+  "name": "02-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      ""
+    ]
+  },
+  "license": "MIT"
+}
