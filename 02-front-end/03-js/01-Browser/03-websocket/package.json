@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/ws": "^8.2.2",
     "@webpack-cli/generators": "^2.4.1",
     "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.5.1",
@@ -24,6 +25,7 @@
     "serve": "webpack serve"
   },
   "dependencies": {
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "ws": "^8.3.0"
   }
 }

@@ -1,9 +1,10 @@
-const websoket = new WebSocket("ws://localhost:3001");
+const websocket = new WebSocket('ws://localhost:3003')
 
-websoket.onopen = (ev: Event) => {
-  websoket.send("test msg");
-};
+// @ts-ignore
+websocket.onopen = (ws: WebSocket, ev: Event): any => {
+  websocket.send('test msg')
+}
 
-websoket.onmessage = (ev: MessageEvent) => {
-  console.log(ev.data);
-};
+websocket.onmessage = (ev: MessageEvent) => {
+  console.log(ev.data)
+}

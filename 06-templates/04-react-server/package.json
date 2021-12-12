@@ -27,7 +27,7 @@
   },
   "description": "My webpack project",
   "scripts": {
-    "prestart": "webpack --mode=production --node-env=production",
+    "postinstall": "webpack --mode=production --node-env=production",
     "start": "node ./server.js",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",

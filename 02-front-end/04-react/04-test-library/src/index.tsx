@@ -5,4 +5,4 @@ import App from './app'
 
 const root = document.getElementById('root') as HTMLDivElement
 
-ReactDOM.hydrate(<App />, root)
+ReactDOM.render(<App />, root)
