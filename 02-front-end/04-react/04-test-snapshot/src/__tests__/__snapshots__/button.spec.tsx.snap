@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button test Should render correctly  1`] = `
+<button
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#888",
+      "borderRadius": "4px",
+      "fontFamily": "monospace",
+      "fontSize": "20px",
+      "fontWeight": "bold",
+      "padding": "0 0.5rem",
+    }
+  }
+>
+  test
+</button>
+`;

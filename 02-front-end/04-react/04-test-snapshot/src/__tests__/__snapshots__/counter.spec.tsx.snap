@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button test Should render correctly  1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#333",
+      "borderRadius": "8px",
+      "fontFamily": "sans-serif",
+      "padding": "1rem",
+      "textAlign": "center",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "color": "#AAA",
+        "fontSize": "8rem",
+      }
+    }
+  >
+    0
+  </div>
+  <div>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#888",
+          "borderRadius": "4px",
+          "fontFamily": "monospace",
+          "fontSize": "20px",
+          "fontWeight": "bold",
+          "padding": "0 0.5rem",
+        }
+      }
+    >
+      Inc
+    </button>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#888",
+          "borderRadius": "4px",
+          "fontFamily": "monospace",
+          "fontSize": "20px",
+          "fontWeight": "bold",
+          "padding": "0 0.5rem",
+        }
+      }
+    >
+      Dec
+    </button>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#888",
+          "borderRadius": "4px",
+          "fontFamily": "monospace",
+          "fontSize": "20px",
+          "fontWeight": "bold",
+          "padding": "0 0.5rem",
+        }
+      }
+    >
+      Reset
+    </button>
+  </div>
+</div>
+`;

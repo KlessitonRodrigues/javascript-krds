@@ -1,14 +1,21 @@
 {
-  "name": "",
+  "name": "react-snapshot",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.3",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
+    "@types/react-test-renderer": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",
     "@webpack-cli/generators": "^2.4.1",
+    "babel-jest": "^27.4.4",
     "eslint": "^8.4.1",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.3",
@@ -16,9 +23,11 @@
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.27.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.4",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.2",
     "webpack": "^5.65.0",
@@ -33,7 +42,8 @@
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "test": "jest"
   },
   "dependencies": {}
 }

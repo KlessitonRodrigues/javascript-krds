@@ -1,0 +1,34 @@
+CREATE DATABASE <DB>
+USE <DB>
+
+CREATE TABLE <TABLE> (
+    <col_1> SMALLINT PRIMARY KEY,
+    <col_2> VARCHAR(50),
+    CONSTRAINT <fk_col> FOREIGN KEY (<col_1>)
+    REFERENCES <TABLE>(<col_1>)
+)
+
+INSERT INTO <TABLE> (<col_1>,<col_2>)
+VALUES (<value_1>, <values_2>)
+
+SELECT <col> FROM <TABLE>
+SELECT <col_1>,<col_2> FROM <TABLE>
+SELECT * FROM <TABLE>
+
+SELECT <col> FROM <TABLE>
+WHERE <col> = <value>
+
+UPDATE <TABLE> SET <col>
+WHERE <col> = <value>
+
+DELETE FROM <TABLE>
+WHERE <col> = <value>
+
+SELECT <col_1>, <col_2> FROM <TABLE_1>
+INNER JOIN <TABLE_2>
+ON <TABLE_1>.<col_2> = <TABLE_2>.<col_2>
+
+SELECT <col> FROM <TABLE>
+ORDER BY <col>
+
+TRUNCATE TABLE <TABLE>
