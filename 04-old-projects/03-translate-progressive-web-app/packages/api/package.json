@@ -1,0 +1,22 @@
+{
+  "name": "@translate-progressive-web-app/api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch 'src/' --exec 'clear && ts-node src/index.ts -T -D' -e ts",
+    "build": "tsc ./src/index.ts --outDir ./dist/ --esModuleInterop"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}

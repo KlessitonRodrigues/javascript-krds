@@ -1,27 +1,36 @@
-import React, { useState, PropsWithChildren } from 'react'
+import {
+  useState,
+  PropsWithChildren,
+  Dispatch,
+  createContext,
+  SetStateAction
+} from 'react'
 import { ThemeProvider } from 'styled-components'
 
-import { GlobalStyle } from './global'
-import { defaultTheme, darkTheme } from './theme'
+import GlobalStyle from './global'
+import * as themes from './theme'
+import { createPreset, ThemeWithPreset } from './presetCSS'
 
-type ThemesTypes = 'light' | 'dark'
+declare module 'styled-components' {
+  export interface DefaultTheme extends ThemeWithPreset {}
+}
 
-export const StyleContext = React.createContext<[ThemesTypes, React.Dispatch<React.SetStateAction<ThemesTypes>>]>([
-  'light',
-  () => {}
-])
+type ThemeContext = [
+  themes.ColorTypes,
+  Dispatch<SetStateAction<themes.ColorTypes>>
+]
+export const StyleContext = createContext<ThemeContext>(['light', () => {}])
 
 const StyleProvider = (props: PropsWithChildren<{}>) => {
-  const themeType = useState<ThemesTypes>('light')
+  const themeType = useState<themes.ColorTypes>('light')
+
   return (
-    <>
-      <StyleContext.Provider value={themeType}>
-        <ThemeProvider theme={themeType[0] === 'light' ? defaultTheme : darkTheme}>
-          <GlobalStyle />
-          {props.children}
-        </ThemeProvider>
-      </StyleContext.Provider>
-    </>
+    <StyleContext.Provider value={themeType}>
+      <ThemeProvider theme={createPreset(themes.colors[themeType[0]])}>
+        <GlobalStyle />
+        {props.children}
+      </ThemeProvider>
+    </StyleContext.Provider>
   )
 }
 

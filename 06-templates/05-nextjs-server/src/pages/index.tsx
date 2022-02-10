@@ -7,8 +7,6 @@ export default Home
 
 export const Container = styled.div`
   margin: auto 0.5rem;
-  height: 100%;
-  width: 100%;
   @media (min-width: ${(p) => p.theme.screens.lg}) {
     margin: auto;
     max-width: 80rem;

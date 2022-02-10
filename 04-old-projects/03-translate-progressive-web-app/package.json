@@ -1,0 +1,23 @@
+{
+  "name": "translate-progressive-web-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev:web": "yarn workspace @translate-progressive-web-app/web dev",
+    "dev:api": "yarn workspace @translate-progressive-web-app/api dev",
+    "build:api": "yarn workspace @translate-progressive-web-app/api build",
+    "start:api": "yarn workspace @translate-progressive-web-app/api start"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/dotenv"
+    ]
+  },
+  "repository": "https://github.com/KlessitonRodrigues/translate-progressive-web-app.git",
+  "author": "klessitonrds <klessitom@gmail.com>",
+  "license": "MIT"
+}

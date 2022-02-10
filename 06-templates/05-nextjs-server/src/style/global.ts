@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +10,8 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
     font-family: 'Roboto';
-    background-color: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.fontColor};
+    background-color: ${({ theme }) => theme.color.background};
+    color: ${({ theme }) => theme.color.fontColor};
     width: 100%;
     height: 100%;
     transition: 0.3s background-color;
@@ -45,3 +45,5 @@ body {
     }
 }
 `
+
+export default GlobalStyle
