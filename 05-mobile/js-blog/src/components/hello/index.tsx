@@ -2,7 +2,7 @@ import { Box, Text, HStack, VStack, Pressable, Image } from "native-base";
 
 export default function Hello() {
   return (
-    <Box bg="cyan.500" py={3} px={6} rounded="md">
+    <Box bg="cyan.600" py={3} px={6} rounded="md">
       <HStack>
         <Box>
           <VStack>

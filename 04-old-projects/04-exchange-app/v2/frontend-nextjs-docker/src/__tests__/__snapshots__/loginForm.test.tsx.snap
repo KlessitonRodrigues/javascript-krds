@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm Component Should match with the previous snapshot 1`] = `
+<div
+  className="sc-dkPtRN jngKKC"
+>
+  <h1
+    className="sc-hKwDye gkvLJB"
+  />
+  <form
+    className="sc-eCImPb dtbBTV"
+  >
+    <span
+      className="sc-kDTinF cxNxed"
+    >
+      <div
+        className="sc-gsDKAQ gvEsYY"
+        onClick={[Function]}
+      >
+        <Britain.svg />
+        EN
+      </div>
+    </span>
+    <h2
+      className="sc-jRQBWg ekNuTk"
+    >
+      Login
+    </h2>
+    <span
+      className="sc-jrQzAO eRFCWQ"
+    >
+      
+    </span>
+    <label
+      className="sc-gKclnd eMtMUi"
+    >
+      <input
+        className="sc-bdvvtL hEEjYL"
+        onChange={[Function]}
+        style={
+          Object {
+            "color": "#1B62CC",
+            "fontSize": "1.5rem",
+            "paddingTop": "0.5rem",
+          }
+        }
+        value=""
+      />
+    </label>
+    <label
+      className="sc-gKclnd eMtMUi"
+    >
+      <input
+        className="sc-bdvvtL hEEjYL"
+        onChange={[Function]}
+        style={
+          Object {
+            "color": "#1B62CC",
+            "fontSize": "1.5rem",
+            "paddingTop": "0.5rem",
+          }
+        }
+        type="password"
+        value=""
+      />
+    </label>
+    <div
+      className="sc-furwcr LjklX"
+    >
+      <button
+        className="sc-iCfMLu hvycKJ"
+        onClick={[Function]}
+        type="button"
+      />
+      <span
+        className="sc-pVTFL bLNBJH"
+        onClick={[Function]}
+      />
+    </div>
+  </form>
+</div>
+`;

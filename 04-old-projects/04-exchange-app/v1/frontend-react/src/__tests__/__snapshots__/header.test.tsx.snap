@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component Should match with the previous snapshot 1`] = `
+<div
+  className="sc-bdvvtL eTqDrF"
+>
+  Test
+  <div
+    className="sc-gsDKAQ fjusvG"
+  >
+    
+    <Customer.svg
+      style={
+        Object {
+          "marginLeft": "0.25rem",
+        }
+      }
+    />
+  </div>
+</div>
+`;

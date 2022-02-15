@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Component Should match with the previous snapshot 1`] = `
+<div
+  className="sc-bdvvtL brExKV"
+>
+  <div
+    className="sc-gsDKAQ kjzfBS scroll"
+  >
+    <span
+      className="sc-dkPtRN deWUNs"
+    >
+      <Search.svg
+        style={
+          Object {
+            "marginRight": "0.5rem",
+          }
+        }
+      />
+      <input
+        className="sc-gKclnd jQnUWk"
+        onChange={[Function]}
+        placeholder="Search..."
+        style={
+          Object {
+            "color": "#fff",
+            "fontSize": "2rem",
+          }
+        }
+        value=""
+      />
+      <span
+        className="sc-jRQBWg jkuJrv"
+        onClick={[Function]}
+      >
+        ×
+      </span>
+    </span>
+    <div
+      className="sc-hKwDye ksXgoh"
+    />
+  </div>
+</div>
+`;

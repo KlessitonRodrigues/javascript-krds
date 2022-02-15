@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Exchanger Component Should match with the previous snapshot 1`] = `
+<div
+  className="sc-gsDKAQ ighJet"
+>
+  <div
+    className="sc-dkPtRN hUHoQA"
+  >
+    <div
+      className="sc-dkPtRN hUHoQA"
+    >
+      <Scales.svg />
+      <span
+        className="sc-eCImPb eiwXzD"
+      >
+        1000.00
+      </span>
+      <span
+        className="sc-jRQBWg gaTosb"
+      >
+        USD
+      </span>
+    </div>
+    <div
+      className="sc-dkPtRN hUHoQA"
+    >
+      <Dollar.svg />
+      <span
+        className="sc-eCImPb eiwXzD"
+      >
+        0.00
+      </span>
+      <span
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+          }
+        }
+      >
+        <span
+          className="sc-hKwDye ceBpVd"
+        >
+          <Updates.svg />
+        </span>
+         
+        <small />
+      </span>
+    </div>
+  </div>
+  <div
+    className="sc-dkPtRN hUHoQA"
+  >
+    <input
+      className="sc-bdvvtL hEEjYL"
+      onChange={[Function]}
+      value="0.00"
+    />
+    <span
+      className="sc-jRQBWg gaTosb"
+    >
+      GBP
+    </span>
+  </div>
+</div>
+`;

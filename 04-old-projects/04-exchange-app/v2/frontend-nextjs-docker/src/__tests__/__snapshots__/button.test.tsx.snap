@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component Should match with the previous snapshot 1`] = `
+<button
+  className="sc-bdvvtL jeWgfx"
+  disabled={false}
+  onClick={[Function]}
+  style={Object {}}
+>
+  <div
+    className="sc-dkPtRN eXJbIO"
+  >
+    <span />
+  </div>
+  <span
+    className="sc-gsDKAQ iMZhkO"
+  >
+    test
+  </span>
+  <div
+    className="sc-dkPtRN eXJbIO"
+  >
+    <span />
+  </div>
+</button>
+`;

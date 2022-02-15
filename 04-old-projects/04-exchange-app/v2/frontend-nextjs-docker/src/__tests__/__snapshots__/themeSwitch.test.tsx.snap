@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Component Should match with the previous snapshot 1`] = `
+<div
+  className="sc-bdvvtL gZQLA-d"
+  onClick={[Function]}
+>
+  <span
+    className="sc-gsDKAQ gMzAtT"
+  >
+    <Sun.svg
+      style={
+        Object {
+          "color": "#fff",
+          "marginRight": "0.5rem",
+        }
+      }
+    />
+    light
+  </span>
+</div>
+`;

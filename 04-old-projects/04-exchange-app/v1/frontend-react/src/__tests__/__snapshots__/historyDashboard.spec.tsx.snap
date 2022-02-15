@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HistoryDashboard Component Should match with the previous snapshot 1`] = `
+<div
+  className="sc-furwcr uFKId"
+>
+  <div
+    className="sc-bdvvtL dJxWtc"
+  >
+    <h2
+      className="sc-gsDKAQ kXQwEB"
+    >
+      Latest Exchanges
+    </h2>
+    <div
+      className="sc-pVTFL dlXxPr scroll"
+    />
+  </div>
+</div>
+`;

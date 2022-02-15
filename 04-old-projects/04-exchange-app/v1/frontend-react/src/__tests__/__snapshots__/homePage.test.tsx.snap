@@ -1,0 +1,339 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage Component Should match with the previous snapshot 1`] = `
+<div
+  className="sc-jcFjpl cGtQQt"
+>
+  <div
+    className="sc-ezbkAF irghjg"
+  >
+    <h2
+      className="sc-bYoBSM iIFXnL"
+    >
+      Currency Exchanger
+    </h2>
+    <form
+      className="sc-kLwhqv fxfKaA"
+    >
+      <h2
+        className="sc-ikJyIC lfYAIg"
+      >
+        Login
+      </h2>
+      <span
+        className="sc-cidDSM hXrZLJ"
+      >
+        
+      </span>
+      <label
+        className="sc-jJoQJp guekcf"
+      >
+        Email
+        <input
+          className="sc-bqiRlB kRjhpe"
+          onChange={[Function]}
+          style={
+            Object {
+              "color": "#1B62CC",
+              "fontSize": "1.5rem",
+            }
+          }
+          value=""
+        />
+      </label>
+      <label
+        className="sc-jJoQJp guekcf"
+      >
+        Password
+        <input
+          className="sc-bqiRlB kRjhpe"
+          onChange={[Function]}
+          style={
+            Object {
+              "color": "#1B62CC",
+              "fontSize": "1.5rem",
+            }
+          }
+          type="password"
+          value=""
+        />
+      </label>
+      <div
+        className="sc-gWXbKe hIkAM"
+      >
+        <button
+          className="sc-hiCibw iZHnDH"
+          onClick={[Function]}
+          type="button"
+        >
+          Login
+        </button>
+        <span
+          className="sc-cCcXHH fjpCOo"
+          onClick={[Function]}
+        >
+          Create a new account?
+        </span>
+      </div>
+    </form>
+  </div>
+  <div
+    className="sc-bdvvtL eTqDrF"
+  >
+    Currency Converter
+    <div
+      className="sc-gsDKAQ fjusvG"
+    >
+      
+      <Customer.svg
+        style={
+          Object {
+            "marginLeft": "0.25rem",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="sc-caiLqq fAMYNm"
+  >
+    <div
+      className="sc-bBHxTw"
+    >
+      <div
+        className="sc-dkPtRN gyjuix"
+      >
+        <h2
+          className="sc-hKwDye eIxkvq"
+        >
+          Value to Exchange
+        </h2>
+        <div
+          className="sc-iwjdpV bIYITR"
+        >
+          <span
+            className="sc-cxpSdN jMzceS"
+          >
+            From
+          </span>
+          <button
+            className="sc-iqseJM kGYGqI"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "minWidth": "6rem",
+              }
+            }
+          >
+            <div
+              className="sc-egiyK kQXLdc"
+            >
+              <Cash.svg />
+            </div>
+            <span
+              className="sc-crHmcD eFeJyO"
+            >
+              GBP
+            </span>
+            <div
+              className="sc-egiyK kQXLdc"
+            >
+              <SortDown.svg />
+            </div>
+          </button>
+          <div
+            className="sc-llYSUQ kuIKgZ"
+          >
+            <input
+              className="sc-bqiRlB kRjhpe"
+              onChange={[Function]}
+              placeholder="0"
+              style={
+                Object {
+                  "fontSize": "2rem",
+                  "marginLeft": "0.5rem",
+                }
+              }
+              type="number"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          className="sc-iwjdpV bIYITR"
+        >
+          <span
+            className="sc-cxpSdN jMzceS"
+          >
+            To
+          </span>
+          <button
+            className="sc-iqseJM kGYGqI"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "minWidth": "6rem",
+              }
+            }
+          >
+            <div
+              className="sc-egiyK kQXLdc"
+            >
+              <Cash.svg />
+            </div>
+            <span
+              className="sc-crHmcD eFeJyO"
+            >
+              USD
+            </span>
+            <div
+              className="sc-egiyK kQXLdc"
+            >
+              <SortDown.svg />
+            </div>
+          </button>
+          <button
+            className="sc-iqseJM ihuwFB"
+            disabled={true}
+            onClick={[Function]}
+            style={
+              Object {
+                "marginLeft": "1rem",
+              }
+            }
+          >
+            <div
+              className="sc-egiyK kQXLdc"
+            >
+              <Exchange.svg />
+            </div>
+            <span
+              className="sc-crHmcD eFeJyO"
+            >
+              Add
+            </span>
+            <div
+              className="sc-egiyK kQXLdc"
+            >
+              
+            </div>
+          </button>
+          <button
+            className="sc-iqseJM kGYGqI"
+            disabled={false}
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <div
+              className="sc-egiyK kQXLdc"
+            >
+              <Invert.svg />
+            </div>
+            <span
+              className="sc-crHmcD eFeJyO"
+            >
+              Invert
+            </span>
+            <div
+              className="sc-egiyK kQXLdc"
+            >
+              
+            </div>
+          </button>
+          <button
+            className="sc-iqseJM ihuwFB"
+            disabled={true}
+            onClick={[Function]}
+            style={Object {}}
+          >
+            <div
+              className="sc-egiyK kQXLdc"
+            >
+              <Broom.svg />
+            </div>
+            <span
+              className="sc-crHmcD eFeJyO"
+            >
+              Clear
+            </span>
+            <div
+              className="sc-egiyK kQXLdc"
+            >
+              
+            </div>
+          </button>
+        </div>
+        <hr
+          className="sc-giYglK bjkAHN"
+        />
+        <h2
+          className="sc-hKwDye eIxkvq"
+        >
+          Auto Currency Exchangers
+        </h2>
+        <div
+          className="sc-iJKOTD hYDoA-d scroll"
+        />
+      </div>
+      <div
+        className="sc-ieecCq eyyDMw"
+      >
+        <div
+          className="sc-dJjYzT bOOJRu scroll"
+        >
+          <span
+            className="sc-hGPBjI ildFnJ"
+          >
+            <Search.svg
+              style={
+                Object {
+                  "marginRight": "0.5rem",
+                }
+              }
+            />
+            <input
+              className="sc-bqiRlB kRjhpe"
+              onChange={[Function]}
+              placeholder="Search..."
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": "2rem",
+                }
+              }
+              value=""
+            />
+            <span
+              className="sc-fKVqWL eybPWd"
+              onClick={[Function]}
+            >
+              ×
+            </span>
+          </span>
+          <div
+            className="sc-dlVxhl gFJfCr"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-jrQzAO jDayZv"
+    >
+      <div
+        className="sc-dkPtRN gyjuix"
+      >
+        <h2
+          className="sc-hKwDye eIxkvq"
+        >
+          Latest Exchanges
+        </h2>
+        <div
+          className="sc-kDTinF dTYGTt scroll"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm Component Should match with the previous snapshot 1`] = `
+<div
+  className="sc-gsDKAQ iydNAy"
+>
+  <h2
+    className="sc-dkPtRN eHeIJk"
+  >
+    Currency Exchanger
+  </h2>
+  <form
+    className="sc-hKwDye hQSHUH"
+  >
+    <h2
+      className="sc-eCImPb JUYUn"
+    >
+      Login
+    </h2>
+    <span
+      className="sc-pVTFL fhcwMd"
+    >
+      
+    </span>
+    <label
+      className="sc-jRQBWg dYzVoQ"
+    >
+      Email
+      <input
+        className="sc-bdvvtL eHwOmO"
+        onChange={[Function]}
+        style={
+          Object {
+            "color": "#1B62CC",
+            "fontSize": "1.5rem",
+          }
+        }
+        value=""
+      />
+    </label>
+    <label
+      className="sc-jRQBWg dYzVoQ"
+    >
+      Password
+      <input
+        className="sc-bdvvtL eHwOmO"
+        onChange={[Function]}
+        style={
+          Object {
+            "color": "#1B62CC",
+            "fontSize": "1.5rem",
+          }
+        }
+        type="password"
+        value=""
+      />
+    </label>
+    <div
+      className="sc-iCfMLu kpzhGc"
+    >
+      <button
+        className="sc-gKclnd fwFgok"
+        onClick={[Function]}
+        type="button"
+      >
+        Login
+      </button>
+      <span
+        className="sc-furwcr kriUWY"
+        onClick={[Function]}
+      >
+        Create a new account?
+      </span>
+    </div>
+  </form>
+</div>
+`;

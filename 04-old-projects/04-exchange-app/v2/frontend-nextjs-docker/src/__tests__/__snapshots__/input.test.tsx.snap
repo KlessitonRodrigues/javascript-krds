@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Component Should match with the previous snapshot 1`] = `
+<input
+  className="sc-bdvvtL hEEjYL"
+  onChange={[Function]}
+  placeholder="test"
+  type="text"
+  value="test"
+/>
+`;

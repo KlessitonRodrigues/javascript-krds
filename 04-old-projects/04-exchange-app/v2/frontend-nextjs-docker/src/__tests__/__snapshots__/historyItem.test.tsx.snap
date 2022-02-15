@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HistoryItem Component Should match with the previous snapshot 1`] = `
+<div
+  className="sc-bdvvtL iGAeMh"
+>
+  <span
+    className="sc-gsDKAQ hZPLvz"
+  >
+    Dec 20, 7:34 PM
+  </span>
+  <div
+    className="sc-dkPtRN fMdzfj"
+  >
+    <Withdrawal.svg />
+    <span
+      className="sc-hKwDye cpUiEk"
+    >
+      GBP
+      <span>
+        1000.00
+      </span>
+    </span>
+    <span
+      className="sc-eCImPb ibNRDl"
+    >
+      <span
+        className="sc-jRQBWg dYNDJa"
+      >
+        <Dollar.svg />
+        1.30
+      </span>
+      <RightArrow.svg />
+    </span>
+    <span
+      className="sc-hKwDye cpUiEk"
+    >
+      USD
+      <span>
+        1300.00
+      </span>
+    </span>
+    <Deposit.svg />
+  </div>
+</div>
+`;

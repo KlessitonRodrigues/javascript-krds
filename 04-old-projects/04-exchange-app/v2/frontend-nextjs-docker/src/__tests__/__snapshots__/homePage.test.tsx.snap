@@ -1,0 +1,382 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage Component Should match with the previous snapshot 1`] = `
+<div
+  className="sc-bBHHxi kKJmsb"
+>
+  <div
+    className="sc-cCcXHH hdLpVe"
+  >
+    <h1
+      className="sc-cidDSM bmNGdJ"
+    />
+    <form
+      className="sc-jcFjpl kpesII"
+    >
+      <span
+        className="sc-dPiLbb gUqpVS"
+      >
+        <div
+          className="sc-jRQBWg csyqto"
+          onClick={[Function]}
+        >
+          <Britain.svg />
+          EN
+        </div>
+      </span>
+      <h2
+        className="sc-caiLqq hMsZDE"
+      >
+        Login
+      </h2>
+      <span
+        className="sc-jObWnj cmeYMR"
+      >
+        
+      </span>
+      <label
+        className="sc-iUKqMP bCLTYA"
+      >
+        <input
+          className="sc-ieecCq kUWJal"
+          onChange={[Function]}
+          style={
+            Object {
+              "color": "#1B62CC",
+              "fontSize": "1.5rem",
+              "paddingTop": "0.5rem",
+            }
+          }
+          value=""
+        />
+      </label>
+      <label
+        className="sc-iUKqMP bCLTYA"
+      >
+        <input
+          className="sc-ieecCq kUWJal"
+          onChange={[Function]}
+          style={
+            Object {
+              "color": "#1B62CC",
+              "fontSize": "1.5rem",
+              "paddingTop": "0.5rem",
+            }
+          }
+          type="password"
+          value=""
+        />
+      </label>
+      <div
+        className="sc-efQSVx iVAtqv"
+      >
+        <button
+          className="sc-iAKWXU pPWIQ"
+          onClick={[Function]}
+          type="button"
+        />
+        <span
+          className="sc-cTAqQK jOkiGi"
+          onClick={[Function]}
+        />
+      </div>
+    </form>
+  </div>
+  <div
+    className="sc-bdvvtL bDqImH"
+  >
+    <h1
+      className="sc-gsDKAQ fOCafK"
+    />
+    <div
+      className="sc-eCImPb hnsuOl"
+    >
+      <div
+        className="sc-dkPtRN jWiBgH"
+      >
+        <Customer.svg
+          style={
+            Object {
+              "marginRight": "0.5rem",
+            }
+          }
+        />
+        
+      </div>
+      <div
+        className="sc-hKwDye grShSB"
+      >
+        <div
+          className="sc-gKclnd fjSjqC"
+          onClick={[Function]}
+        >
+          <span
+            className="sc-iCfMLu eNflII"
+          >
+            <Sun.svg
+              style={
+                Object {
+                  "color": "#fff",
+                  "marginRight": "0.5rem",
+                }
+              }
+            />
+            light
+          </span>
+        </div>
+        <div
+          className="sc-jRQBWg csyqto"
+          onClick={[Function]}
+        >
+          <Britain.svg />
+          EN
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-cNKqjZ aurLK"
+  >
+    <div
+      className="sc-ezbkAF"
+    >
+      <div
+        className="sc-furwcr eMByHZ"
+      >
+        <h2
+          className="sc-pVTFL geZiqa"
+        >
+          
+        </h2>
+        <div
+          className="sc-bYoBSM czdxYz"
+        >
+          <span
+            className="sc-ikJyIC gOygMD"
+          />
+          <button
+            className="sc-fotOHu joKHOn"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "fontWeight": "bold",
+                "minWidth": "6rem",
+              }
+            }
+          >
+            <div
+              className="sc-bkkeKt dNHsLR"
+            >
+              <Cash.svg />
+            </div>
+            <span
+              className="sc-fFeiMQ ihsnTh"
+            >
+              GBP
+            </span>
+            <div
+              className="sc-bkkeKt dNHsLR"
+            >
+              <SortDown.svg />
+            </div>
+          </button>
+          <div
+            className="sc-jJoQJp gozXvn"
+          >
+            <input
+              className="sc-ieecCq kUWJal"
+              onChange={[Function]}
+              placeholder="0"
+              style={
+                Object {
+                  "fontSize": "2rem",
+                  "marginLeft": "0.5rem",
+                }
+              }
+              type="number"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          className="sc-kLwhqv ijiji"
+        >
+          <span
+            className="sc-ikJyIC gOygMD"
+          />
+          <button
+            className="sc-fotOHu joKHOn"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "fontWeight": "bold",
+                "marginRight": "1rem",
+                "minWidth": "6rem",
+              }
+            }
+          >
+            <div
+              className="sc-bkkeKt dNHsLR"
+            >
+              <Cash.svg />
+            </div>
+            <span
+              className="sc-fFeiMQ ihsnTh"
+            >
+              USD
+            </span>
+            <div
+              className="sc-bkkeKt dNHsLR"
+            >
+              <SortDown.svg />
+            </div>
+          </button>
+          <div
+            className="sc-bYoBSM czdxYz"
+          >
+            <button
+              className="sc-fotOHu iHzGhm"
+              disabled={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "0rem",
+                }
+              }
+            >
+              <div
+                className="sc-bkkeKt dNHsLR"
+              >
+                <Exchange.svg />
+              </div>
+              <span
+                className="sc-fFeiMQ ihsnTh"
+              >
+                
+              </span>
+              <div
+                className="sc-bkkeKt dNHsLR"
+              >
+                
+              </div>
+            </button>
+            <button
+              className="sc-fotOHu joKHOn"
+              disabled={false}
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <div
+                className="sc-bkkeKt dNHsLR"
+              >
+                <Invert.svg />
+              </div>
+              <span
+                className="sc-fFeiMQ ihsnTh"
+              >
+                
+              </span>
+              <div
+                className="sc-bkkeKt dNHsLR"
+              >
+                
+              </div>
+            </button>
+            <button
+              className="sc-fotOHu iHzGhm"
+              disabled={true}
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <div
+                className="sc-bkkeKt dNHsLR"
+              >
+                <Broom.svg />
+              </div>
+              <span
+                className="sc-fFeiMQ ihsnTh"
+              >
+                
+              </span>
+              <div
+                className="sc-bkkeKt dNHsLR"
+              >
+                
+              </div>
+            </button>
+          </div>
+        </div>
+        <hr
+          className="sc-gWXbKe dJibPj"
+        />
+        <h2
+          className="sc-pVTFL geZiqa"
+        >
+          
+        </h2>
+        <div
+          className="sc-hiCibw fuxJgD scroll"
+        />
+      </div>
+      <div
+        className="sc-bBHxTw bINYXR"
+      >
+        <div
+          className="sc-iwjdpV cIcEPr scroll"
+        >
+          <span
+            className="sc-cxpSdN eMqeKl"
+          >
+            <Search.svg
+              style={
+                Object {
+                  "marginRight": "0.5rem",
+                }
+              }
+            />
+            <input
+              className="sc-ieecCq kUWJal"
+              onChange={[Function]}
+              placeholder="Search..."
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": "2rem",
+                }
+              }
+              value=""
+            />
+            <span
+              className="sc-giYglK eDDCeL"
+              onClick={[Function]}
+            >
+              ×
+            </span>
+          </span>
+          <div
+            className="sc-llYSUQ dwlhZX"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-ksdxgE eAEAMs"
+    >
+      <div
+        className="sc-furwcr eMByHZ"
+      >
+        <h2
+          className="sc-pVTFL geZiqa"
+        >
+          
+        </h2>
+        <div
+          className="sc-hBUSln hpbDhN scroll"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

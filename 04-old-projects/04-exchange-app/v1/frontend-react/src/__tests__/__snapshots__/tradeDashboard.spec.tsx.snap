@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TradeDashboard Component Should match with the previous snapshot 1`] = `
+<div
+  className="sc-hBUSln"
+>
+  <div
+    className="sc-hKwDye gKCaJq"
+  >
+    <h2
+      className="sc-eCImPb hccQUq"
+    >
+      Value to Exchange
+    </h2>
+    <div
+      className="sc-fotOHu fTXeeM"
+    >
+      <span
+        className="sc-fFeiMQ mhjtY"
+      >
+        From
+      </span>
+      <button
+        className="sc-bdvvtL jxWcQT"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "6rem",
+          }
+        }
+      >
+        <div
+          className="sc-dkPtRN eXJbIO"
+        >
+          <Cash.svg />
+        </div>
+        <span
+          className="sc-gsDKAQ iMZhkO"
+        >
+          GBP
+        </span>
+        <div
+          className="sc-dkPtRN eXJbIO"
+        >
+          <SortDown.svg />
+        </div>
+      </button>
+      <div
+        className="sc-bkkeKt bqEIv"
+      >
+        <input
+          className="sc-jRQBWg hXWtEv"
+          onChange={[Function]}
+          placeholder="0"
+          style={
+            Object {
+              "fontSize": "2rem",
+              "marginLeft": "0.5rem",
+            }
+          }
+          type="number"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="sc-fotOHu fTXeeM"
+    >
+      <span
+        className="sc-fFeiMQ mhjtY"
+      >
+        To
+      </span>
+      <button
+        className="sc-bdvvtL jxWcQT"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "6rem",
+          }
+        }
+      >
+        <div
+          className="sc-dkPtRN eXJbIO"
+        >
+          <Cash.svg />
+        </div>
+        <span
+          className="sc-gsDKAQ iMZhkO"
+        >
+          USD
+        </span>
+        <div
+          className="sc-dkPtRN eXJbIO"
+        >
+          <SortDown.svg />
+        </div>
+      </button>
+      <button
+        className="sc-bdvvtL glGMrC"
+        disabled={true}
+        onClick={[Function]}
+        style={
+          Object {
+            "marginLeft": "1rem",
+          }
+        }
+      >
+        <div
+          className="sc-dkPtRN eXJbIO"
+        >
+          <Exchange.svg />
+        </div>
+        <span
+          className="sc-gsDKAQ iMZhkO"
+        >
+          Add
+        </span>
+        <div
+          className="sc-dkPtRN eXJbIO"
+        >
+          
+        </div>
+      </button>
+      <button
+        className="sc-bdvvtL jxWcQT"
+        disabled={false}
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <div
+          className="sc-dkPtRN eXJbIO"
+        >
+          <Invert.svg />
+        </div>
+        <span
+          className="sc-gsDKAQ iMZhkO"
+        >
+          Invert
+        </span>
+        <div
+          className="sc-dkPtRN eXJbIO"
+        >
+          
+        </div>
+      </button>
+      <button
+        className="sc-bdvvtL glGMrC"
+        disabled={true}
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <div
+          className="sc-dkPtRN eXJbIO"
+        >
+          <Broom.svg />
+        </div>
+        <span
+          className="sc-gsDKAQ iMZhkO"
+        >
+          Clear
+        </span>
+        <div
+          className="sc-dkPtRN eXJbIO"
+        >
+          
+        </div>
+      </button>
+    </div>
+    <hr
+      className="sc-dJjYzT fXzVvR"
+    />
+    <h2
+      className="sc-eCImPb hccQUq"
+    >
+      Auto Currency Exchangers
+    </h2>
+    <div
+      className="sc-ieecCq jDXiye scroll"
+    />
+  </div>
+  <div
+    className="sc-kDTinF jyVYYu"
+  >
+    <div
+      className="sc-iqseJM ggtoLw scroll"
+    >
+      <span
+        className="sc-crHmcD fHTobM"
+      >
+        <Search.svg
+          style={
+            Object {
+              "marginRight": "0.5rem",
+            }
+          }
+        />
+        <input
+          className="sc-jRQBWg hXWtEv"
+          onChange={[Function]}
+          placeholder="Search..."
+          style={
+            Object {
+              "color": "#fff",
+              "fontSize": "2rem",
+            }
+          }
+          value=""
+        />
+        <span
+          className="sc-ksdxgE kmdhTW"
+          onClick={[Function]}
+        >
+          ×
+        </span>
+      </span>
+      <div
+        className="sc-egiyK hCALoI"
+      />
+    </div>
+  </div>
+</div>
+`;

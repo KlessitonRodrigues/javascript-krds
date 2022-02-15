@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component Should match with the previous snapshot 1`] = `
+<div
+  className="sc-bdvvtL bDqImH"
+>
+  <h1
+    className="sc-gsDKAQ fOCafK"
+  />
+  <div
+    className="sc-eCImPb hnsuOl"
+  >
+    <div
+      className="sc-dkPtRN jWiBgH"
+    >
+      <Customer.svg
+        style={
+          Object {
+            "marginRight": "0.5rem",
+          }
+        }
+      />
+      
+    </div>
+    <div
+      className="sc-hKwDye grShSB"
+    >
+      <div
+        className="sc-gKclnd fjSjqC"
+        onClick={[Function]}
+      >
+        <span
+          className="sc-iCfMLu eNflII"
+        >
+          <Sun.svg
+            style={
+              Object {
+                "color": "#fff",
+                "marginRight": "0.5rem",
+              }
+            }
+          />
+          light
+        </span>
+      </div>
+      <div
+        className="sc-jRQBWg csyqto"
+        onClick={[Function]}
+      >
+        <Britain.svg />
+        EN
+      </div>
+    </div>
+  </div>
+</div>
+`;
