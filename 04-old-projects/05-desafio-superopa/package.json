@@ -1,0 +1,21 @@
+{
+  "name": "desafio-superopa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "api:start": "yarn workspace @desafio-superopa/api start",
+    "api:build": "yarn workspace @desafio-superopa/api build",
+    "api:dev": "yarn workspace @desafio-superopa/api dev",
+    "api:test": "yarn workspace @desafio-superopa/api test",
+    "web:dev": "yarn workspace @desafio-superopa/web dev"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "repository": "https://github.com/KlessitonRodrigues/desafio-superopa.git",
+  "author": "klessitonrds <klessitom@gmail.com>",
+  "license": "MIT"
+}
