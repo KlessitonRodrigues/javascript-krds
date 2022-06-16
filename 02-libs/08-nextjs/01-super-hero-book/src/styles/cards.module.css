@@ -1,0 +1,21 @@
+.container {
+  border: 1px solid #4443;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+.toolbar {
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.minicard {
+  border: 1px solid #4444;
+  border-radius: 0.5rem;
+}
+
+.minicardContent {
+  padding: 0.5rem;
+}

@@ -1,0 +1,35 @@
+html,
+body {
+  color: #444;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  text-align: center;
+  padding: 0.5rem 0.5rem 0.25rem;
+  font-family: "monospace";
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  border: 1px solid #4444;
+  box-shadow: 1px 1px 1px 1px #4442;
+  user-select: none;
+  cursor: pointer;
+  margin-right: 0.25rem;
+}
+
+button:hover {
+  border: 1px solid #4448;
+}
