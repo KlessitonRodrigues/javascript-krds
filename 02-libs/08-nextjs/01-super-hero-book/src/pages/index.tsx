@@ -1,11 +1,17 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 
 import styles from "@styles/homePage.module.css";
 import Header from "../components/header";
 import Cards from "../components/cards";
+import { getStaticHeroData } from "src/data/static/heroData";
+import { HeroContext } from "src/hooks/useContext";
 
-const Home: NextPage = () => {
+type Props = {
+  heroes: HeroData[];
+};
+
+const Home: NextPage<Props> = ({ heroes }: Props) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -15,11 +21,19 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Header />
-        <Cards />
+        <HeroContext.Provider value={{ heroes }}>
+          <Cards />
+        </HeroContext.Provider>
       </main>
       <footer></footer>
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps<Props> = async () => ({
+  props: {
+    heroes: await getStaticHeroData(),
+  },
+});
 
 export default Home;

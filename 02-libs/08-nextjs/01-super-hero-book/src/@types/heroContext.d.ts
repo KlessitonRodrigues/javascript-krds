@@ -1,0 +1,3 @@
+type HeroContext = {
+  heroes: HeroData[];
+};

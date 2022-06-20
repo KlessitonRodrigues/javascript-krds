@@ -14,8 +14,57 @@
 .minicard {
   border: 1px solid #4444;
   border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 1px 1px 3px 1px #4442;
+  cursor: pointer;
+}
+
+.minicard:hover {
+  box-shadow: 1px 3px 6px 1px #4444;
+  transition: 0.3s;
 }
 
 .minicardContent {
+  text-align: center;
   padding: 0.5rem;
+  font-size: 0.9rem;
+  max-width: 250px;
+}
+
+.minicardContentName {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.minicardContentTags {
+  margin: 0.5rem 0;
+  font-family: monospace;
+  font-size: 0.75rem;
+}
+
+.minicardContentPowerStatus {
+  color: #55d;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  margin: 0.5rem auto;
+}
+
+.minicardContentOverhall {
+  display: flex;
+  flex-direction: column;
+  color: #55d;
+  font-weight: bold;
+}
+
+.minicardContentOverhall span {
+  font-size: 2rem;
+}
+
+.cardsGrid {
+  display: grid;
+  justify-items: center;
 }

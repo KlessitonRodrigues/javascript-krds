@@ -1,12 +1,19 @@
 import styles from "@styles/cards.module.css";
+import { useHeroContext } from "src/hooks/useContext";
 import Minicard from "./minicard";
 import Toolbar from "./toolbar";
 
-const Cards = () => (
-  <div className={styles.container}>
-    <Toolbar />
-    <Minicard />
-  </div>
-);
+const Cards = () => {
+  const { heroes } = useHeroContext();
+
+  return (
+    <div className={styles.container}>
+      <Toolbar />
+      <div className={styles.cardsGrid}>
+        <Minicard hero={heroes[0]} />
+      </div>
+    </div>
+  );
+};
 
 export default Cards;
