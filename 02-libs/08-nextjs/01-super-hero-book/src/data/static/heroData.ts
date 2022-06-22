@@ -1,6 +1,4 @@
 export const getStaticHeroData = async () => {
-  console.log("HERODATA");
-
   return [
     {
       id: 1,

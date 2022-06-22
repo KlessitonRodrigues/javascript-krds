@@ -17,11 +17,12 @@
   overflow: hidden;
   box-shadow: 1px 1px 3px 1px #4442;
   cursor: pointer;
+  margin-bottom: 0.5rem;
 }
 
 .minicard:hover {
   box-shadow: 1px 3px 6px 1px #4444;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .minicardContent {
@@ -67,4 +68,16 @@
 .cardsGrid {
   display: grid;
   justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 380px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 720px) {
+  .cardsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

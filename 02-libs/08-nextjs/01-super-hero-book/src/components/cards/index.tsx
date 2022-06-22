@@ -11,6 +11,9 @@ const Cards = () => {
       <Toolbar />
       <div className={styles.cardsGrid}>
         <Minicard hero={heroes[0]} />
+        <Minicard hero={heroes[0]} />
+        <Minicard hero={heroes[0]} />
+        <Minicard hero={heroes[0]} />
       </div>
     </div>
   );
