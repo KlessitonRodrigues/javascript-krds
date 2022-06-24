@@ -4,7 +4,7 @@ import Head from "next/head";
 import styles from "@styles/homePage.module.css";
 import Header from "../components/header";
 import Cards from "../components/cards";
-import { getStaticHeroData } from "src/data/static/heroData";
+import { getStaticHeroes } from "src/data/getStaticData/heroes";
 import { HeroContext } from "src/hooks/useContext";
 
 type Props = {

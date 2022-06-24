@@ -1,4 +1,4 @@
-export const getStaticHeroData = async () => {
+export const getStaticHeroes = async () => {
   return [
     {
       id: 1,
