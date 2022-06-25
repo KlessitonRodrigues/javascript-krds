@@ -10,6 +10,7 @@ export class App {
         this.app = Express();
         this.port = port;
         this.middlewares();
+        this.routes()
         this.app.listen(this.port, () => console.log("port", this.port));
     }
 

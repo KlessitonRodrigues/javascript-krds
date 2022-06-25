@@ -14,9 +14,9 @@ const Minicard = ({ hero }: Props) => {
         <Image
           alt="hero image"
           src={hero.images.md}
-          width="48"
-          height="48"
-          layout="responsive"
+          width="250"
+          height="250"
+          layout="intrinsic"
         />
       </div>
       <div className={styles.minicardContent}>

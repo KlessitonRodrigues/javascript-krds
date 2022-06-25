@@ -7,7 +7,7 @@ const Toolbar = () => (
     <div>
       <RoudedButton label="start" onClick={() => {}} />
       <RoudedButton label="end" onClick={() => {}} />
-      <RoudedButton label="reload" onClick={() => {}} />
+      <RoudedButton label="show" onClick={() => {}} />
     </div>
     <RoudedButton label="next" onClick={() => {}} />
   </div>

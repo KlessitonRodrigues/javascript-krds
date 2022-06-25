@@ -4,8 +4,8 @@ import Head from "next/head";
 import styles from "@styles/homePage.module.css";
 import Header from "../components/header";
 import Cards from "../components/cards";
-import { getStaticHeroes } from "src/data/getStaticData/heroes";
-import { HeroContext } from "src/hooks/useContext";
+import { HeroContext } from "src/hooks/useHeroContext";
+import api from "../data/api";
 
 type Props = {
   heroes: HeroData[];
@@ -32,7 +32,7 @@ const Home: NextPage<Props> = ({ heroes }: Props) => {
 
 export const getStaticProps: GetStaticProps<Props> = async () => ({
   props: {
-    heroes: await getStaticHeroData(),
+    heroes: await api.heroesApi.getAllHeroes(),
   },
 });
 

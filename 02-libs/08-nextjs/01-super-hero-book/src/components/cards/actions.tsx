@@ -11,3 +11,18 @@ export const calculateOverhall = (hero: HeroData) => {
 
   return overhall.toFixed(0);
 };
+
+export const pagination = (heroes: HeroData[], page = 0, pageSize = 16) => {
+  const heroesOnPage = heroes.slice(
+    page * pageSize,
+    page * pageSize + pageSize
+  );
+
+  return {
+    heroes,
+    total: heroes.length,
+    heroesOnPage,
+    page,
+    pageSize,
+  };
+};
