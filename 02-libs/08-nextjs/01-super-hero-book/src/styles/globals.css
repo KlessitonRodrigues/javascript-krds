@@ -23,13 +23,15 @@ button {
   text-transform: uppercase;
   border-radius: 0.25rem;
   background-color: transparent;
-  border: 1px solid #4444;
+  border: 1px solid #2222;
   box-shadow: 1px 1px 1px 1px #4442;
   user-select: none;
   cursor: pointer;
   margin-right: 0.25rem;
+  font-size: 1rem;
 }
 
 button:hover {
-  border: 1px solid #4448;
+  border: 1px solid #55d4;
+  color: #55d;
 }

@@ -12,7 +12,15 @@ const Cards = () => {
 
   return (
     <div className={styles.container}>
-      <Toolbar />
+      <Toolbar
+        onNext={() => setPage(actions.pagination(heroes, page.page + 1))}
+        onPrev={() => setPage(actions.pagination(heroes, page.page - 1))}
+        onStart={() => setPage(actions.pagination(heroes, 0))}
+        onEnd={() =>
+          setPage(actions.pagination(heroes, page.total / page.pageSize - 1))
+        }
+        itemsPerPage={page.pageSize}
+      />
       <div className={styles.cardsGrid}>
         {page.heroesOnPage.map((hero) => (
           <Minicard key={hero.id} hero={hero} />

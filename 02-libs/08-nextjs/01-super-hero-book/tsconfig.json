@@ -20,7 +20,7 @@
       "@components/*": ["./src/components/*"],
       "@templates/*": ["./src/templates/*"]
     },
-    "types": ["./src/@types/", "node_modules/@types/"]
+    "types": ["src/@types/", "node_modules/@types/"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
