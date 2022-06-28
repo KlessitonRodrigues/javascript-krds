@@ -6,6 +6,7 @@ type Props = {
   onStart?: () => void;
   onEnd?: () => void;
   onNext?: () => void;
+  onPageSize?: () => void;
   itemsPerPage?: number;
 };
 
@@ -19,7 +20,7 @@ const Toolbar = (props: Props) => (
       <RoudedButton label="end" onClick={props.onEnd || fc} />
       <RoudedButton
         label={"show " + props.itemsPerPage}
-        onClick={() => {}}
+        onClick={props.onPageSize || fc}
       />
     </div>
     <RoudedButton label="next" onClick={props.onNext || fc} />

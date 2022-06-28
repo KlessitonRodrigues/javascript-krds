@@ -19,6 +19,15 @@ const Cards = () => {
         onEnd={() =>
           setPage(actions.pagination(heroes, page.total / page.pageSize - 1))
         }
+        onPageSize={() =>
+          setPage(
+            actions.pagination(
+              heroes,
+              page.pageSize,
+              actions.pageSizeToggle(page.pageSize, [20, 40, 60])
+            )
+          )
+        }
         itemsPerPage={page.pageSize}
       />
       <div className={styles.cardsGrid}>

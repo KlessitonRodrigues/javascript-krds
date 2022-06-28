@@ -1,9 +1,9 @@
 import { Router } from "express";
 
+import homeController from "../controllers/home";
+
 const homeRouter = Router();
 
-homeRouter.get("/", (req, res) => {
-    res.send("Everything Ok");
-});
+homeRouter.get("/", homeController.index);
 
 export default homeRouter;
