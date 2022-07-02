@@ -11,6 +11,20 @@
   justify-content: space-between;
 }
 
+.fixedToolbar {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 97%;
+  padding: 1.5rem 0 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(#fffe, #fffa);
+  backdrop-filter: blur(30px);
+  transition: 0.2s;
+}
+
 .minicard {
   border: 1px solid #4444;
   border-radius: 0.5rem;

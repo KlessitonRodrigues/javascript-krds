@@ -11,7 +11,7 @@ const Cards = () => {
   const [page, setPage] = useState(actions.pagination(heroes));
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="cards-grid">
       <Toolbar
         onNext={() => setPage(actions.pagination(heroes, page.page + 1))}
         onPrev={() => setPage(actions.pagination(heroes, page.page - 1))}
