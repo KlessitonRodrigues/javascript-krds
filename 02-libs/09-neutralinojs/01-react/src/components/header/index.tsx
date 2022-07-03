@@ -1,11 +1,9 @@
-import { Box, Paper, Typography } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
 
 const Header = () => (
-  <Paper elevation={3}>
-    <Box p={2} bgcolor="primary.500" color="text.primary">
-      <Typography variant="h1">Title</Typography>
-    </Box>
-  </Paper>
+  <Box p={2} bgcolor="primary.600" color="text.primary" margin={0}>
+    <Typography variant="h1">Desktop App</Typography>
+  </Box>
 );
 
 export default Header;
