@@ -38,7 +38,7 @@
       "minHeight": 200,
       "fullScreen": false,
       "alwaysOnTop": false,
-      "icon": "build/resources/icons/appIcon.png",
+      "icon": "/build/resources/icons/appIcon.png",
       "enableInspector": true,
       "borderless": false,
       "maximize": false,
@@ -55,7 +55,7 @@
       ]
     },
     "cloud": {
-      "url": "build/resources/#cloud",
+      "url": "/build/resources/#cloud",
       "nativeAllowList": [
         "app.*"
       ]
@@ -72,9 +72,9 @@
   },
   "cli": {
     "binaryName": "build",
-    "resourcesPath": "build/resources/",
-    "extensionsPath": "build/extensions/",
-    "clientLibrary": "build/neutralino.js",
+    "resourcesPath": "/build/resources/",
+    "extensionsPath": "/build/extensions/",
+    "clientLibrary": "/build/neutralino.js",
     "binaryVersion": "4.6.0",
     "clientVersion": "3.5.0"
   }

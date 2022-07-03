@@ -1,18 +1,23 @@
 import { ThemeProvider } from "@material-ui/core";
 
-import Hearder from "./components/header";
-import Body from "./components/body";
-import View from "./components/view";
+import Hearder from "./components/Header";
+import Body from "./components/Body";
+import View from "./components/View";
 import theme from "./theme";
+import Navigation from "./components/Navigation";
+import { GlobalProvider } from "./hooks/useGlobalContext";
 
 const App = () => (
   <>
-    <ThemeProvider theme={theme}>
-      <View>
-        <Hearder />
-        <Body>TEST</Body>
-      </View>
-    </ThemeProvider>
+    <GlobalProvider>
+      <ThemeProvider theme={theme}>
+        <View>
+          <Hearder />
+          <Navigation />
+          <Body>TEST</Body>
+        </View>
+      </ThemeProvider>
+    </GlobalProvider>
   </>
 );
 
