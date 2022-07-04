@@ -2,7 +2,8 @@ import Hearder from "./components/Header";
 import Body from "./components/Body";
 import View from "./components/View";
 import Navigation from "./components/Navigation";
-import Settings from "./components/Settings"
+import Settings from "./components/Settings";
+import Router from "./pages";
 import { GlobalProvider } from "./hooks/useGlobalContext";
 
 const App = () => (
@@ -11,7 +12,9 @@ const App = () => (
       <Hearder />
       <Navigation />
       <Settings />
-      <Body>TEST</Body>
+      <Body>
+        <Router />
+      </Body>
     </View>
   </GlobalProvider>
 );

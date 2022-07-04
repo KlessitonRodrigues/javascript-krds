@@ -1,6 +1,7 @@
 import { CSSProperties } from "react";
-import { Box, Breadcrumbs, IconButton, Link, Tooltip } from "@material-ui/core";
-import { BsBrightnessHigh, BsChevronRight, BsGear, BsX } from "react-icons/bs";
+import { Box, Breadcrumbs, IconButton, Tooltip } from "@material-ui/core";
+import { BsBrightnessHigh, BsGear, BsX } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 import useGlobalContext from "../../hooks/useGlobalContext";
 import If from "../Templates/If";
@@ -23,11 +24,7 @@ const Navigation = () => {
 
   return (
     <Box style={flexBetweenStyle}>
-      <Breadcrumbs separator="-">
-        <Link>Home</Link>
-        <Link>Today</Link>
-        <Link color="inherit">Finances</Link>
-      </Breadcrumbs>
+      <Breadcrumbs separator="-"></Breadcrumbs>
 
       <div>
         <Tooltip title="theme">
