@@ -1,39 +1,38 @@
 import { ThemeOptions } from "@material-ui/core";
-import { blue } from "@material-ui/core/colors";
 
-export const overrides: ThemeOptions["overrides"] = {
-  MuiContainer: {
-    root: { padding: "0.5rem" },
-  },
-  MuiLink: {
-    root: {
-      color: blue["700"],
+type Overrides = (
+  palette: ThemeOptions["palette"]
+) => ThemeOptions["overrides"];
+
+export const overridesStyles: Overrides = (palette) => {
+  return {
+    MuiContainer: {
+      root: { padding: "0.5rem" },
     },
-    underlineHover: {
-      "&:hover": {
-        cursor: "pointer",
-        textDecoration: "none",
-        color: "#444",
+    MuiLink: {
+      underlineHover: {
+        "&:hover": {
+          cursor: "pointer",
+          textDecoration: "none",
+          color: palette.text.primary,
+        },
       },
     },
-    underlineNone: {
-      color: "#444",
+    MuiIconButton: {
+      root: {
+        padding: "0.25rem",
+        cursor: "pointer",
+        color: palette.text.primary,
+      },
+      sizeSmall: {
+        padding: "0.25rem",
+        fontSize: "1.3rem",
+      },
     },
-  },
-  MuiIconButton: {
-    root: {
-      padding: "0.25rem",
-      color: "#444",
-      cursor: "pointer",
+    MuiTooltip: {
+      tooltip: {
+        fontSize: "0.75rem",
+      },
     },
-    sizeSmall: {
-      padding: "0.25rem",
-      fontSize: "1.3rem",
-    },
-  },
-  MuiTooltip: {
-    tooltip: {
-      fontSize: "0.75rem",
-    },
-  },
+  };
 };

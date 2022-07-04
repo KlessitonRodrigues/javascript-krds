@@ -1,9 +1,15 @@
+import { CSSProperties } from "react";
 import { Box, Breadcrumbs, IconButton, Link, Tooltip } from "@material-ui/core";
 import { BsBrightnessHigh, BsChevronRight, BsGear } from "react-icons/bs";
+
 import useGlobalContext from "../../hooks/useGlobalContext";
 
-import { flexBetweenStyle } from "../../theme/propStyles";
-import If from "../Templates/If";
+export const flexBetweenStyle: CSSProperties = {
+  padding: "0.5rem",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+};
 
 const Navigation = () => {
   const [global, setGlobal] = useGlobalContext();
@@ -16,17 +22,13 @@ const Navigation = () => {
       <Breadcrumbs separator={<BsChevronRight />}>
         <Link>Home</Link>
         <Link>Today</Link>
-        <Link underline="none">Finances</Link>
+        <Link color="inherit">Finances</Link>
       </Breadcrumbs>
 
       <div>
         <Tooltip title="theme">
           <IconButton size="small" onClick={toggleTheme}>
-            <If
-              value={!global.darkTheme}
-              true={<BsBrightnessHigh />}
-              false={<BsBrightnessHigh color="#fff" />}
-            />
+            <BsBrightnessHigh />
           </IconButton>
         </Tooltip>
         <Tooltip title="settigs">

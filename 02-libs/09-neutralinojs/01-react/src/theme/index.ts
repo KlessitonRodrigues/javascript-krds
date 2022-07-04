@@ -1,16 +1,21 @@
 import { createTheme } from "@material-ui/core";
 
-import { overrides } from "./overrides";
-import { palette } from "./palette";
+import { overridesStyles } from "./overrides";
+import { darkPalette, lightPalette } from "./palette";
 import { typography } from "./typography";
 
-const theme = createTheme({
-  palette,
-  overrides,
-  typography,
-  spacing(factor) {
-    return factor * 0.25 + "rem";
-  },
-});
+const theme = (useDark: boolean) => {
+  const palette = useDark ? darkPalette : lightPalette;
+  const overrides = overridesStyles(palette);
 
-export default theme
+  return createTheme({
+    palette,
+    overrides,
+    typography,
+    spacing(factor) {
+      return factor * 0.25 + "rem";
+    },
+  });
+};
+
+export default theme;

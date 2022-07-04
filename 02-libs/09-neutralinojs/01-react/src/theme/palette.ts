@@ -1,11 +1,21 @@
 import { ThemeOptions, colors } from "@material-ui/core";
 
-export const palette: ThemeOptions["palette"] = {
+export const lightPalette: ThemeOptions["palette"] = {
   background: { default: "#fff" },
   primary: colors.blue,
   secondary: colors.purple,
   text: {
-    primary: "#FFF",
-    secondary: "#444",
+    primary: "#444",
+    secondary: "#222",
+  },
+};
+
+export const darkPalette: ThemeOptions["palette"] = {
+  background: { default: "#222" },
+  primary: colors.blue,
+  secondary: colors.purple,
+  text: {
+    primary: "#ddd",
+    secondary: "#ccc",
   },
 };
