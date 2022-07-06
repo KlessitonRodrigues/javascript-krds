@@ -1,4 +1,4 @@
-import { ThemeOptions, colors } from "@material-ui/core";
+import { ThemeOptions, colors } from "@mui/material";
 
 export const lightPalette: ThemeOptions["palette"] = {
   background: { default: "#fff" },

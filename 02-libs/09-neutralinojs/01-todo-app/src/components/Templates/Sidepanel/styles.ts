@@ -1,4 +1,4 @@
-import { CSSProperties } from "@material-ui/core/styles/withStyles";
+import { CSSProperties } from "react";
 
 export const sidepanelOpen: CSSProperties = {
   position: "fixed",
@@ -7,6 +7,7 @@ export const sidepanelOpen: CSSProperties = {
   boxShadow: "0 2px 8px 0 #4444",
   borderRadius: "0.5rem",
   transitionDuration: "0.6s",
+  backdropFilter: "blur(15px)",
 };
 
 export const sidepanelClose: CSSProperties = {

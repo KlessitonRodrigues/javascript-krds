@@ -1,6 +1,6 @@
-import { createTheme } from "@material-ui/core";
+import { createTheme } from "@mui/material";
 
-import { overrides } from "./overrides";
+import { components } from "./components";
 import { darkPalette, lightPalette } from "./palette";
 import { typography } from "./typography";
 
@@ -9,9 +9,9 @@ const theme = (useDark: boolean) => {
 
   return createTheme({
     palette,
-    overrides,
+    components,
     typography,
-    spacing(factor) {
+    spacing(factor: number) {
       return factor * 0.25 + "rem";
     },
   });

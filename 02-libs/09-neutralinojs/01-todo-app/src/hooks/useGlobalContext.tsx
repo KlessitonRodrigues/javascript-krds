@@ -1,8 +1,11 @@
 import React from "react";
 
 const initialState = {
+  sidePanel: {
+    settings: false,
+    tags: false,
+  },
   darkTheme: false,
-  settingsOpen: false,
 };
 
 type InitialState = typeof initialState;

@@ -1,4 +1,4 @@
-import { Box, ThemeProvider } from "@material-ui/core";
+import { Box, ThemeProvider } from "@mui/material";
 import { PropsWithChildren } from "react";
 
 import useGlobalContext from "../../hooks/useGlobalContext";

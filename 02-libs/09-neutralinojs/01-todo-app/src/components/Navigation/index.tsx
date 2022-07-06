@@ -1,17 +1,17 @@
-import { CSSProperties } from "react";
-import { Box, Breadcrumbs, IconButton, Tooltip } from "@material-ui/core";
-import { BsBrightnessHigh, BsGear, BsX } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Box, IconButton, Tab, Tabs, Tooltip } from "@mui/material";
+import {
+  BsBrightnessHigh,
+  BsGear,
+  BsX,
+  BsCalendar3,
+  BsFileText,
+  BsTags,
+} from "react-icons/bs";
+import { useLocation } from "react-router-dom";
 
 import useGlobalContext from "../../hooks/useGlobalContext";
 import If from "../Templates/If";
-
-export const flexBetweenStyle: CSSProperties = {
-  padding: "0.5rem",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-};
+import { flexBetweenStyle } from "./styles";
 
 const Navigation = () => {
   const [global, setGlobal] = useGlobalContext();
@@ -20,21 +20,58 @@ const Navigation = () => {
     setGlobal({ ...global, darkTheme: !global.darkTheme });
 
   const toggleSettingsOpen = () =>
-    setGlobal({ ...global, settingsOpen: !global.settingsOpen });
+    setGlobal({
+      ...global,
+      sidePanel: { ...global.sidePanel, settings: !global.sidePanel.settings },
+    });
+
+  const toggleTagsOpen = () =>
+    setGlobal({
+      ...global,
+      sidePanel: { ...global.sidePanel, tags: !global.sidePanel.tags },
+    });
+
+  const url = useLocation();
 
   return (
     <Box style={flexBetweenStyle}>
-      <Breadcrumbs separator="-"></Breadcrumbs>
+      <Tabs value={url.pathname}>
+        <Tab
+          icon={<BsCalendar3 fontSize="1.25rem" />}
+          iconPosition="start"
+          label="Calendar"
+          value="/"
+        />
+        <Tab
+          icon={<BsFileText fontSize="1.25rem" />}
+          iconPosition="start"
+          label="Notes"
+          value="/folders"
+        />
+      </Tabs>
 
       <div>
         <Tooltip title="theme">
-          <IconButton size="small" onClick={toggleTheme}>
+          <IconButton onClick={toggleTheme}>
             <BsBrightnessHigh />
           </IconButton>
         </Tooltip>
+        <Tooltip title="tags">
+          <IconButton onClick={toggleTagsOpen}>
+            <If
+              value={global.sidePanel.tags}
+              true={<BsX />}
+              false={<BsTags />}
+            />
+          </IconButton>
+        </Tooltip>
         <Tooltip title="settings" onClick={toggleSettingsOpen}>
-          <IconButton size="small">
-            <If value={global.settingsOpen} true={<BsX />} false={<BsGear />} />
+          <IconButton>
+            <If
+              value={global.sidePanel.settings}
+              true={<BsX />}
+              false={<BsGear />}
+            />
           </IconButton>
         </Tooltip>
       </div>

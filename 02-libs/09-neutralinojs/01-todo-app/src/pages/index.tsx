@@ -1,16 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import useGlobalContext from "../hooks/useGlobalContext";
 
-import FolderPage from "./Folders";
+import NotesPage from "./Notes";
 import HomePage from "./Home";
 
 const Router = () => {
+  const [global] = useGlobalContext();
+  const locations = ["/", "/folders"];
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/folders" element={<FolderPage />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/folders" element={<NotesPage />} />
+    </Routes>
   );
 };
 

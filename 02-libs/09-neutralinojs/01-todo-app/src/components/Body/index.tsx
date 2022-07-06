@@ -1,4 +1,4 @@
-import { Box } from "@material-ui/core";
+import { Box } from "@mui/material";
 import { PropsWithChildren } from "react";
 
 const Body = (props: PropsWithChildren) => (

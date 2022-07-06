@@ -1,4 +1,4 @@
-import { ThemeOptions } from "@material-ui/core";
+import { ThemeOptions } from "@mui/material";
 
 export const typography: ThemeOptions["typography"] = {
   h1: { fontSize: "2rem" },
