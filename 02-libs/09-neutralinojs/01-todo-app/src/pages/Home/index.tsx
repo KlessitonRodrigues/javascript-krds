@@ -1,10 +1,14 @@
-import { Box, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Box } from "@mui/material";
 
-const HomePage = () => (
-  <Box>
-    <Link to="/folders">folders</Link>
-  </Box>
-);
+import { homePage } from "./styles";
+import Calendar from "../../components/Calendar";
+
+const HomePage = () => {
+  return (
+    <Box style={homePage}>
+      <Calendar />
+    </Box>
+  );
+};
 
 export default HomePage;

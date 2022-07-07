@@ -5,5 +5,4 @@ export const flexBetweenStyle: CSSProperties = {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  marginBottom: "0.5rem",
 };

@@ -1,12 +1,12 @@
 import { Box, Typography } from "@mui/material";
-import { BsClock } from "react-icons/bs";
+import { BsCalendarDate } from "react-icons/bs";
 import Flex from "../Templates/Flex";
 
 const Header = () => (
-  <Box p={2} bgcolor="primary.600" color="#fff" margin={0}>
+  <Box px={2} py={3} bgcolor="primary.700" color="#fff">
     <Flex x="flex-start">
-      <BsClock fontSize="2rem" />
-      <Typography variant="h1">&nbsp;Todo App</Typography>
+      <BsCalendarDate fontSize="1.75rem" />
+      <Typography variant="h2">&nbsp;Todo App</Typography>
     </Flex>
   </Box>
 );
