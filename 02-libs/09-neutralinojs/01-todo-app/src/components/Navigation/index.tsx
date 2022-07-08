@@ -18,19 +18,17 @@ const Navigation = () => {
 
   const toggleTheme = () =>
     setGlobal({ ...global, darkTheme: !global.darkTheme });
-
   const toggleSettingsOpen = () =>
     setGlobal({
       ...global,
       sidePanel: { ...global.sidePanel, settings: !global.sidePanel.settings },
     });
-
   const toggleTagsOpen = () =>
     setGlobal({
       ...global,
       sidePanel: { ...global.sidePanel, tags: !global.sidePanel.tags },
     });
-
+    
   const url = useLocation();
 
   return (

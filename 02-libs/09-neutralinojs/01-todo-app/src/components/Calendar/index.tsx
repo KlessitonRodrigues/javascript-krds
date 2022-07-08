@@ -1,8 +1,11 @@
-import { Box, Grow } from "@mui/material";
+import { Box } from "@mui/material";
+import { BsClock } from "react-icons/bs";
 
-import { calendarGrid, dayBoxStyles } from "./styles";
+import CalendarItem, { Props as CalendarItemProps } from "./CalendarItem";
+import TagItem from "../Tags/TagItem";
+import { calendarDate, calendarGrid } from "./styles";
 
-const weekdays = ["JULY", "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN", ""];
+const weekdays = ["JULY", "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 const week1 = [
   "WEEK 1",
   "CARD",
@@ -12,24 +15,28 @@ const week1 = [
   "CARD",
   "CARD",
   "CARD",
-  "END",
 ];
 
-const dayBoxes = weekdays.map((dayName) => (
-  <Grow in>
-    <Box style={dayBoxStyles("month")} color="primary.800">
-      {dayName}
-    </Box>
-  </Grow>
-));
+const dayBoxes = weekdays.map((name, i) => {
+  const data: CalendarItemProps["data"] = {
+    name,
+    styleType: i === 0 ? "month" : "header",
+    topLeft: <BsClock />,
+  };
 
-const weekBoxes = week1.map((dayName) => (
-  <Grow in>
-    <Box style={dayBoxStyles("day")} color="primary.800">
-      {dayName}
-    </Box>
-  </Grow>
-));
+  return <CalendarItem data={data} />;
+});
+
+const weekBoxes = week1.map((name, i) => {
+  const data: CalendarItemProps["data"] = {
+    name,
+    styleType: i === 0 ? "weekId" : "day",
+    topLeft: [1],
+    bottomLeft: [<TagItem label="Study" />, <TagItem label="Remider" />],
+  };
+
+  return <CalendarItem data={data} />;
+});
 
 const Calendar = () => {
   return (
