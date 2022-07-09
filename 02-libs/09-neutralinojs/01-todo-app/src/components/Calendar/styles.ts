@@ -1,8 +1,8 @@
 import { CSSProperties } from "react";
-import blue from "@mui/material/colors/blue";
+import usePaletteContext, { PaletteContext } from "../../hooks/usePalette";
 
-export type DayBoxStyles = "base" | "day" | "header" | "month" | "weekId";
-export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
+export type DayBoxStyles = "base" | "day" | "header" | "weekId";
+export const dayBoxStyles = (boxStyle: DayBoxStyles, palette: PaletteContext) => {
   const base: CSSProperties = {
     padding: "0.5rem",
     textAlign: "center",
@@ -10,6 +10,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
     justifyContent: "center",
     alignItems: "center",
     position: "relative",
+    boxShadow: "1px 2px 4px #2222",
   };
 
   const styles: Record<typeof boxStyle, CSSProperties> = {
@@ -17,20 +18,15 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
     header: {
       ...base,
       height: "2rem",
-    },
-    month: {
-      ...base,
-      height: "2rem",
-      borderRadius: "1rem 0",
-      backgroundColor: blue["500"],
+      borderRadius: "0.75rem 0.75rem 0 0",
+      backgroundColor: palette.blue,
       color: "#fff",
-      fontWeight: "bold",
+      boxShadow: "1px 2px 4px #2224",
     },
     day: {
       ...base,
-      border: "1px solid #2222",
+      border: "1px solid" + palette.border,
       borderRadius: "0.5rem",
-      height: "6rem",
     },
     weekId: {
       ...base,
@@ -45,36 +41,51 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
 export const calendarGrid: CSSProperties = {
   display: "grid",
   gridTemplateColumns: "repeat(8, 1fr)",
-  gridTemplateRows: "repeat(6, 1fr)",
+  gridTemplateRows: "0.4fr",
   rowGap: "0.5rem",
   columnGap: "0.5rem",
   justifyItems: "stretch",
-  alignItems: "flex-end",
+  alignItems: "center",
   textAlign: "center",
 };
 
-export const topLeft: CSSProperties = {
-  position: "absolute",
-  top: "0",
-  left: "0",
-  padding: "0.25rem 0.5rem",
-  backgroundColor: blue["300"] + "22",
-  fontSize: "0.9rem",
-  borderRadius: "0 0 0.5rem 0",
-  overflow: "hidden",
-  maxWidth: "80%",
+export const calendarItemFloat = (position: "topLeft" | "bottomLeft"): CSSProperties => {
+  const palette = usePaletteContext();
+  const base: CSSProperties = {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    padding: "0.25rem 0.5rem",
+    backgroundColor: palette.blue + "22",
+    fontSize: "0.9rem",
+    borderRadius: "0 0 0.5rem 0",
+    overflow: "hidden",
+    maxWidth: "80%",
+  };
+
+  if (position === "bottomLeft")
+    return {
+      ...base,
+      top: "unset",
+      bottom: "0",
+      left: "0",
+      borderRadius: "0",
+      backgroundColor: "transparent",
+    };
+  return base;
 };
 
-export const bottomLeft: CSSProperties = {
-  ...topLeft,
-  top: "unset",
-  bottom: "0",
-  left: "0",
-  borderRadius: "0",
-  backgroundColor: "transparent",
+export const calendarTask: CSSProperties = {
+  fontSize: "0.75rem",
+  borderRadius: "0.25rem",
+  padding: "0.1rem 0.2rem",
+  marginBottom: "0.1rem",
 };
 
-export const calendarDate: CSSProperties = {
-  fontSize: "1.75rem",
-  color: blue["500"],
+export const calendarItemContent: CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  width: "100%",
+  padding: "1.5rem 0rem 1rem",
+  textAlign: "left",
 };

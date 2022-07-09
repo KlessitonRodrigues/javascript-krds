@@ -1,3 +1,5 @@
+import { BrowserRouter } from "react-router-dom";
+
 import Hearder from "./components/Header";
 import Body from "./components/Body";
 import View from "./components/View";
@@ -6,21 +8,23 @@ import Settings from "./components/Settings";
 import Tags from "./components/Tags";
 import Router from "./pages";
 import { GlobalProvider } from "./hooks/useGlobalContext";
-import { BrowserRouter } from "react-router-dom";
+import { PaletteProvider } from "./hooks/usePalette";
 
 const App = () => (
   <GlobalProvider>
-    <BrowserRouter>
-      <View>
-        <Hearder />
-        <Navigation />
-        <Settings />
-        <Tags />
-        <Body>
-          <Router />
-        </Body>
-      </View>
-    </BrowserRouter>
+    <PaletteProvider>
+      <BrowserRouter>
+        <View>
+          <Hearder />
+          <Navigation />
+          <Settings />
+          <Tags />
+          <Body>
+            <Router />
+          </Body>
+        </View>
+      </BrowserRouter>
+    </PaletteProvider>
   </GlobalProvider>
 );
 

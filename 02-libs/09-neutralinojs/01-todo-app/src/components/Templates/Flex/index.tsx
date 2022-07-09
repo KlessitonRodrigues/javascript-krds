@@ -1,13 +1,7 @@
 import { CSSProperties, ReactNode } from "react";
 
 type Props = {
-  x?:
-    | "stretch"
-    | "flex-start"
-    | "flex-end"
-    | "center"
-    | "space-around"
-    | "space-between";
+  x?: "stretch" | "flex-start" | "flex-end" | "center" | "space-around" | "space-between";
   y?: "stretch" | "flex-start" | "flex-end" | "center";
   column?: boolean;
   children: ReactNode;

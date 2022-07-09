@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { ReactNode } from "react";
 
-import { sidepanelClose, sidepanelOpen } from "./styles";
+import * as style from "./styles";
 
 type Props = {
   children: ReactNode;
@@ -11,12 +11,7 @@ type Props = {
 
 const Sidepanel = (props: Props) => {
   return (
-    <Box
-      p={2}
-      px={4}
-      width={props.width || '50vw'}
-      style={props.show ? sidepanelOpen : sidepanelClose}
-    >
+    <Box p={2} px={4} width={props.width || "50vw"} style={style.sidepanelOpen(props.show)}>
       {props.children}
     </Box>
   );

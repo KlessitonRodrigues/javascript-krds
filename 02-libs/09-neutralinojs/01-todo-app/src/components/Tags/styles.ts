@@ -1,4 +1,4 @@
-import { blue, red, lime, purple } from "@mui/material/colors";
+import { blue } from "@mui/material/colors";
 import { CSSProperties } from "react";
 
 export const flexCenter: CSSProperties = {
@@ -10,9 +10,9 @@ export const tagItem: CSSProperties = {
   display: "inline",
   padding: "0.1rem 0.2rem",
   color: blue["400"],
-  border: ` 1px solid ${blue["400"]}44`,
   borderRadius: "0.25rem",
-  marginRight: "0.25rem",
-  fontSize: "0.8rem",
-  textTransform: "capitalize",
+  fontSize: "0.7rem",
+  textTransform: "uppercase",
+  fontWeight: "bold",
+  fontFamily: "monospace",
 };
