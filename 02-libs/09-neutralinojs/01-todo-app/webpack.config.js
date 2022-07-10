@@ -10,6 +10,11 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist", "bundle"),
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
   devServer: {
     open: true,
     host: "localhost",

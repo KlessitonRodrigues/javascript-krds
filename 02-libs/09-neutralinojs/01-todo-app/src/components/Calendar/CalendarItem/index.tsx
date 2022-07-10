@@ -1,4 +1,5 @@
-import { Box, Grow } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grow from "@mui/material/Grow";
 import usePaletteContext from "../../../hooks/usePalette";
 
 import * as styles from "../styles";
@@ -9,6 +10,7 @@ export type Props = {
     name?: string;
     topLeft?: any;
     bottomLeft?: any;
+    topRight?: any;
     content?: any;
   };
 };
@@ -22,6 +24,7 @@ const CalendarItem = ({ data }: Props) => {
         <Box style={data.styleType === "day" ? styles.calendarItemContent : {}}>{data.content || data.name}</Box>
         <Box style={styles.calendarItemFloat("topLeft")}>{data.topLeft}</Box>
         <Box style={styles.calendarItemFloat("bottomLeft")}>{data.bottomLeft}</Box>
+        <Box style={styles.calendarItemFloat("topRight")}>{data.topRight}</Box>
       </Box>
     </Grow>
   );

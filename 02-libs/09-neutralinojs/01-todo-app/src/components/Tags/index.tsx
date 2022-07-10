@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import { BsGear } from "react-icons/bs";
 
 import useGlobalContext from "../../hooks/useGlobalContext";

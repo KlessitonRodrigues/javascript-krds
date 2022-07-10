@@ -11,6 +11,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles, palette: PaletteContext) =>
     alignItems: "center",
     position: "relative",
     boxShadow: "1px 2px 4px #2222",
+    overflow: "hidden",
   };
 
   const styles: Record<typeof boxStyle, CSSProperties> = {
@@ -21,6 +22,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles, palette: PaletteContext) =>
       borderRadius: "0.75rem 0.75rem 0 0",
       backgroundColor: palette.blue,
       color: "#fff",
+      fontWeight: "bold",
       boxShadow: "1px 2px 4px #2224",
     },
     day: {
@@ -32,6 +34,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles, palette: PaletteContext) =>
       ...base,
       height: "4rem",
       fontSize: "0.85rem",
+      boxShadow: "none",
     },
   };
 
@@ -49,29 +52,45 @@ export const calendarGrid: CSSProperties = {
   textAlign: "center",
 };
 
-export const calendarItemFloat = (position: "topLeft" | "bottomLeft"): CSSProperties => {
+type CalendarItemFloat = "topLeft" | "bottomLeft" | "topRight";
+export const calendarItemFloat = (position: CalendarItemFloat): CSSProperties => {
   const palette = usePaletteContext();
   const base: CSSProperties = {
     position: "absolute",
-    top: "0",
-    left: "0",
     padding: "0.25rem 0.5rem",
-    backgroundColor: palette.blue + "22",
-    fontSize: "0.9rem",
-    borderRadius: "0 0 0.5rem 0",
+    fontSize: "0.8rem",
     overflow: "hidden",
-    maxWidth: "80%",
   };
+
+  if (position === "topLeft")
+    return {
+      ...base,
+      top: "0",
+      left: "0",
+      fontWeight: "bold",
+      backgroundColor: palette.blue + "bb",
+      color: palette.white,
+      borderRadius: "0 0 0.5rem 0",
+    };
 
   if (position === "bottomLeft")
     return {
       ...base,
-      top: "unset",
       bottom: "0",
       left: "0",
       borderRadius: "0",
-      backgroundColor: "transparent",
+      maxWidth: "80%",
     };
+
+  if (position === "topRight")
+    return {
+      ...base,
+      top: "0",
+      right: "0",
+      borderRadius: "0",
+      color: palette.dark,
+    };
+
   return base;
 };
 

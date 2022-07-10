@@ -1,4 +1,4 @@
-import { blue } from "@mui/material/colors";
+import blue from "@mui/material/colors/blue";
 import { CSSProperties } from "react";
 
 export const flexCenter: CSSProperties = {

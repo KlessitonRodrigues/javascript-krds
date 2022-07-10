@@ -6,7 +6,7 @@ const lightPalette = {
   blue: blue["500"],
   blue2: blue["700"],
   red: red["900"],
-  green: green["800"],
+  green: green["700"],
   white: grey["100"],
   black: grey["900"],
   gray: grey["500"],
@@ -16,19 +16,19 @@ const lightPalette = {
   border: "#2222",
   bgDark: "#222",
   bgLight: "#fcfcfc",
-  dark: "#444",
+  dark: "#555",
   light: "#ddd",
 };
 
 const darkPalette = {
   ...lightPalette,
-  green: green["300"],
+  green: green["400"],
   blue: blue["800"],
   blue2: blue["900"],
   bgDark: "#fcfcfc",
   bgLight: "#222",
   dark: "#ddd",
-  light: "#444",
+  light: "#555",
   border: "#ddd2",
 };
 

@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import { BsSquare, BsCaretRightSquare, BsCheckSquare } from "react-icons/bs";
 import usePaletteContext from "../../../hooks/usePalette";
 
@@ -21,9 +21,9 @@ const CalendarTask = () => {
   const palette = usePaletteContext();
 
   return (
-    <Box style={calendarTask} color={palette.green}>
+    <Box style={calendarTask} color={palette.gray}>
       <Box>
-        {getTaskIcon("done")}
+        {getTaskIcon("todo")}
         &nbsp; Study English
       </Box>
     </Box>

@@ -1,4 +1,8 @@
-import { Box, IconButton, Tab, Tabs, Tooltip } from "@mui/material";
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import Tooltip from "@mui/material/Tooltip";
 import { SyntheticEvent } from "react";
 import { BsBrightnessHigh, BsGear, BsX, BsCalendar3, BsFileText, BsTags, BsClipboardData } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -37,17 +41,17 @@ const Navigation = () => {
       </Tabs>
 
       <div>
-        <Tooltip title="theme">
+        <Tooltip title="Theme">
           <IconButton onClick={toggleTheme}>
             <BsBrightnessHigh />
           </IconButton>
         </Tooltip>
-        <Tooltip title="tags">
+        <Tooltip title="Tags">
           <IconButton onClick={toggleTagsOpen}>
             <If value={global.sidePanel.tags} true={<BsX />} false={<BsTags />} />
           </IconButton>
         </Tooltip>
-        <Tooltip title="settings" onClick={toggleSettingsOpen}>
+        <Tooltip title="Settings" onClick={toggleSettingsOpen}>
           <IconButton>
             <If value={global.sidePanel.settings} true={<BsX />} false={<BsGear />} />
           </IconButton>

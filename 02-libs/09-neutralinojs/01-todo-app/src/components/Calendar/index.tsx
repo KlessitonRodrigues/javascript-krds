@@ -1,5 +1,4 @@
-import { Box } from "@mui/material";
-import { BsClock } from "react-icons/bs";
+import Box from "@mui/material/Box";
 
 import weekdaysNames from "../../assets/json/weekdays.json";
 
@@ -15,7 +14,6 @@ const dayBoxes = weekdays.map((name, i) => {
   const data: CalendarItemProps["data"] = {
     name,
     styleType: "header",
-    topLeft: <BsClock />,
   };
 
   return <CalendarItem data={data} key={"header" + i} />;
@@ -25,12 +23,13 @@ const weekBoxes = week1.map((name, i) => {
   const data: CalendarItemProps["data"] = {
     name,
     styleType: i === 0 ? "weekId" : "day",
-    topLeft: [1],
+    topLeft: 1,
     bottomLeft: [<TagItem label="#study" />, <TagItem label="#remider" />],
+    topRight: "Tasks 3/12",
     content: [<CalendarTask />, <CalendarTask />, <CalendarTask />, <CalendarTask />, <CalendarTask />],
   };
 
-  return <CalendarItem data={data} key={"day" + i} />;
+  return <CalendarItem data={i !== 0 ? data : { name, styleType: "weekId" }} key={"day" + i} />;
 });
 
 const Calendar = () => {
