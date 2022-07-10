@@ -1,30 +1,30 @@
-import { ThemeOptions, colors } from "@mui/material";
+import { ThemeOptions, colors } from '@mui/material'
 
-const basePalette: ThemeOptions["palette"] = {
+const basePalette: ThemeOptions['palette'] = {
   common: {
-    black: "#444",
-    white: "#ddd",
+    black: '#444',
+    white: '#ddd',
   },
-};
+}
 
-export const lightPalette: ThemeOptions["palette"] = {
+export const lightPalette: ThemeOptions['palette'] = {
   ...basePalette,
-  background: { default: "#fff" },
+  background: { default: '#fff' },
   primary: colors.blue,
   secondary: colors.purple,
   text: {
-    primary: "#444",
-    secondary: "#222",
+    primary: '#444',
+    secondary: '#222',
   },
-};
+}
 
-export const darkPalette: ThemeOptions["palette"] = {
+export const darkPalette: ThemeOptions['palette'] = {
   ...basePalette,
-  background: { default: "#222" },
+  background: { default: '#222' },
   primary: colors.blue,
   secondary: colors.purple,
   text: {
-    primary: "#ddd",
-    secondary: "#ccc",
+    primary: '#ddd',
+    secondary: '#ccc',
   },
-};
+}

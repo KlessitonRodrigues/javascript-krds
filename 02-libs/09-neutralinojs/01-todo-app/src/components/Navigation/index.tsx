@@ -1,36 +1,36 @@
-import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
-import Tab from "@mui/material/Tab";
-import Tabs from "@mui/material/Tabs";
-import Tooltip from "@mui/material/Tooltip";
-import { SyntheticEvent } from "react";
-import { BsBrightnessHigh, BsGear, BsX, BsCalendar3, BsFileText, BsTags, BsClipboardData } from "react-icons/bs";
-import { useLocation, useNavigate } from "react-router-dom";
+import Box from '@mui/material/Box'
+import IconButton from '@mui/material/IconButton'
+import Tab from '@mui/material/Tab'
+import Tabs from '@mui/material/Tabs'
+import Tooltip from '@mui/material/Tooltip'
+import { SyntheticEvent } from 'react'
+import { BsBrightnessHigh, BsGear, BsX, BsCalendar3, BsFileText, BsTags, BsClipboardData } from 'react-icons/bs'
+import { useLocation, useNavigate } from 'react-router-dom'
 
-import useGlobalContext from "../../hooks/useGlobalContext";
-import If from "../Templates/If";
-import { flexBetweenStyle } from "./styles";
+import useGlobalContext from '../../hooks/useGlobalContext'
+import If from '../Templates/If'
+import { flexBetweenStyle } from './styles'
 
 const Navigation = () => {
-  const [global, setGlobal] = useGlobalContext();
-  const url = useLocation();
-  const navigate = useNavigate();
+  const [global, setGlobal] = useGlobalContext()
+  const url = useLocation()
+  const navigate = useNavigate()
 
-  const toggleTheme = () => setGlobal({ ...global, darkTheme: !global.darkTheme });
+  const toggleTheme = () => setGlobal({ ...global, darkTheme: !global.darkTheme })
 
   const toggleSettingsOpen = () =>
     setGlobal({
       ...global,
       sidePanel: { ...global.sidePanel, settings: !global.sidePanel.settings },
-    });
+    })
 
   const toggleTagsOpen = () =>
     setGlobal({
       ...global,
       sidePanel: { ...global.sidePanel, tags: !global.sidePanel.tags },
-    });
+    })
 
-  const handleTabsOnChange = (event: SyntheticEvent, path: string) => navigate(path);
+  const handleTabsOnChange = (event: SyntheticEvent, path: string) => navigate(path)
 
   return (
     <Box style={flexBetweenStyle} mb={1}>
@@ -58,7 +58,7 @@ const Navigation = () => {
         </Tooltip>
       </div>
     </Box>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

@@ -1,13 +1,13 @@
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
-import { BsCalendarDate } from "react-icons/bs";
+import Box from '@mui/material/Box'
+import Paper from '@mui/material/Paper'
+import Typography from '@mui/material/Typography'
+import { BsCalendarDate } from 'react-icons/bs'
 
-import usePaletteContext from "../../hooks/usePalette";
-import Flex from "../Templates/Flex";
+import usePaletteContext from '../../hooks/usePalette'
+import Flex from '../Templates/Flex'
 
 const Header = () => {
-  const palette = usePaletteContext();
+  const palette = usePaletteContext()
 
   return (
     <Paper elevation={3}>
@@ -18,7 +18,7 @@ const Header = () => {
         </Flex>
       </Box>
     </Paper>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

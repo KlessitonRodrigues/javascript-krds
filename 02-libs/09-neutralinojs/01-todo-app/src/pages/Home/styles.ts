@@ -1,6 +1,6 @@
-import { CSSProperties } from "react";
+import { CSSProperties } from 'react'
 
 export const homePage: CSSProperties = {
-  width: "100%",
-  height: "100%",
-};
+  width: '100%',
+  height: '100%',
+}

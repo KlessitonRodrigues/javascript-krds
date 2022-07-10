@@ -1,6 +1,6 @@
-import { CSSProperties } from "react";
+import { CSSProperties } from 'react'
 
 export const flexCenter: CSSProperties = {
-  display: "flex",
-  alignItems: "center",
-};
+  display: 'flex',
+  alignItems: 'center',
+}

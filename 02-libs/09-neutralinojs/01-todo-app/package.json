@@ -30,6 +30,7 @@
     "build": "webpack --mode=production --node-env=production && neu build",
     "build:dev": "webpack --mode=development && neu build",
     "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "prettier": "prettier -c -w ./src"
   }
 }
