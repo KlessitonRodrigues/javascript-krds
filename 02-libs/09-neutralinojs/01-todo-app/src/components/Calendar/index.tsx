@@ -3,6 +3,7 @@ import Box from '@mui/material/Box'
 import weekdaysNames from '../../assets/json/weekdays.json'
 
 import CalendarItem, { Props as CalendarItemProps } from './CalendarItem'
+import CalendarHeader from './CalendarHeader'
 import CalendarTask from './CalendarTask'
 import TagItem from '../Tags/TagItem'
 import { calendarGrid } from './styles'
@@ -26,7 +27,7 @@ const weekBoxes = week1.map((name, i) => {
     topLeft: 1,
     bottomLeft: [<TagItem label="#study" />, <TagItem label="#remider" />],
     topRight: 'Tasks 3/12',
-    content: [<CalendarTask />, <CalendarTask />, <CalendarTask />, <CalendarTask />, <CalendarTask />],
+    content: [<CalendarTask />, <CalendarTask />, <CalendarTask />, <CalendarTask />],
   }
 
   return <CalendarItem data={data} key={'day' + i} />
@@ -35,6 +36,7 @@ const weekBoxes = week1.map((name, i) => {
 const Calendar = () => {
   return (
     <Box>
+      <CalendarHeader />
       <Box style={calendarGrid}>
         {dayBoxes}
         {weekBoxes}

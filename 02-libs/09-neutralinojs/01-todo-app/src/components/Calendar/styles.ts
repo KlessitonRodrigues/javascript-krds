@@ -1,8 +1,9 @@
 import { CSSProperties } from 'react'
-import usePaletteContext, { PaletteContext } from '../../hooks/usePalette'
+import usePaletteContext from '../../hooks/usePalette'
 
 export type DayBoxStyles = 'base' | 'day' | 'header' | 'weekId'
-export const dayBoxStyles = (boxStyle: DayBoxStyles, palette: PaletteContext) => {
+export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
+  const palette = usePaletteContext()
   const base: CSSProperties = {
     padding: '0.5rem',
     textAlign: 'center',
@@ -44,7 +45,6 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles, palette: PaletteContext) =>
 export const calendarGrid: CSSProperties = {
   display: 'grid',
   gridTemplateColumns: 'repeat(7, 1fr)',
-  gridTemplateRows: '0.4fr',
   rowGap: '0.5rem',
   columnGap: '0.5rem',
   justifyItems: 'stretch',
@@ -104,4 +104,12 @@ export const calendarItemContent: CSSProperties = {
   width: '100%',
   padding: '1.5rem 0rem 1rem',
   textAlign: 'left',
+}
+
+export const calendarHeader = (): CSSProperties => {
+  const palette = usePaletteContext()
+  return {
+    fontSize: '1.5rem',
+    color: palette.blue,
+  }
 }
