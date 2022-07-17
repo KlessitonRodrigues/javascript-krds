@@ -27,7 +27,7 @@ const darkPalette = {
   blue2: blue['900'],
   bgDark: '#fcfcfc',
   bgLight: '#222',
-  dark: '#ddd',
+  dark: '#ccc',
   light: '#555',
   border: '#ddd2',
 }

@@ -9,7 +9,18 @@ type ISOObj = {
     mm: number
     ss: number
   }
-  week: number
+  dateStr: {
+    yy: string
+    mm: string
+    dd: string
+    weekDay: string
+  }
+  timeStr: {
+    hh: string
+    mm: string
+    ss: string
+  }
+  weekDay: number
   totalTime: number
 }
 
@@ -26,12 +37,23 @@ export const ISOtoObj = (dateStr: string): ISOObj => {
       mm: date.getMinutes(),
       ss: date.getSeconds(),
     },
-    week: date.getDay(),
+    dateStr: {
+      yy: date.toLocaleDateString('pt-br', { year: '2-digit' }),
+      mm: date.toLocaleDateString('pt-br', { month: 'long' }),
+      dd: date.toLocaleDateString('pt-br', { year: '2-digit' }),
+      weekDay: date.toLocaleDateString('pt-br', { weekday: 'long' }),
+    },
+    timeStr: {
+      hh: date.toLocaleDateString('pt-br', { hour: '2-digit', hour12: true }),
+      mm: date.toLocaleDateString('pt-br', { minute: '2-digit' }),
+      ss: date.toLocaleDateString('pt-br', { second: '2-digit' }),
+    },
+    weekDay: date.getDay(),
     totalTime: date.getTime(),
   }
 }
 
-export const ObjToISO = (ISOobj: ISOObj): string => {
+export const ObjToISO = (ISOobj: ISOObj, setTime: boolean): string => {
   const date = new Date()
 
   date.setFullYear(ISOobj.date.yy)
@@ -40,7 +62,7 @@ export const ObjToISO = (ISOobj: ISOObj): string => {
   date.setHours(ISOobj.time.hh)
   date.setMinutes(ISOobj.time.mm)
   date.setSeconds(ISOobj.time.ss)
-  date.setTime(ISOobj.totalTime)
+  setTime && date.setTime(ISOobj.totalTime)
 
   return date.toISOString()
 }

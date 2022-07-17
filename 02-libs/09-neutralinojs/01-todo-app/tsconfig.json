@@ -7,7 +7,8 @@
     "allowJs": true,
     "jsx": "react-jsx",
     "moduleResolution": "Node",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "sourceMap": true
   },
   "files": ["src/index.tsx"]
 }

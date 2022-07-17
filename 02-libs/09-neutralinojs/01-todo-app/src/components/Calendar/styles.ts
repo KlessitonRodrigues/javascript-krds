@@ -96,6 +96,7 @@ export const calendarTask: CSSProperties = {
   borderRadius: '0.25rem',
   padding: '0.1rem 0.2rem',
   marginBottom: '0.1rem',
+  cursor: 'pointer',
 }
 
 export const calendarItemContent: CSSProperties = {

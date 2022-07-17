@@ -10,12 +10,6 @@ import Router from './pages'
 import { GlobalProvider } from './hooks/useGlobalContext'
 import { PaletteProvider } from './hooks/usePalette'
 
-import { ISOtoObj, ObjToISO } from './data/util/formatISOdate'
-
-console.log(new Date().toISOString())
-console.log(ISOtoObj(new Date().toISOString()))
-console.log(ObjToISO(ISOtoObj(new Date().toISOString())))
-
 const App = () => (
   <GlobalProvider>
     <PaletteProvider>
