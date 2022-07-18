@@ -8,8 +8,9 @@ import { BsBrightnessHigh, BsGear, BsX, BsCalendar3, BsFileText, BsTags, BsClipb
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import useGlobalContext from '../../hooks/useGlobalContext'
+import Flex from '../Templates/Flex'
 import If from '../Templates/If'
-import { flexBetweenStyle } from './styles'
+import { navigation } from './styles'
 
 const Navigation = () => {
   const [global, setGlobal] = useGlobalContext()
@@ -33,14 +34,14 @@ const Navigation = () => {
   const handleTabsOnChange = (event: SyntheticEvent, path: string) => navigate(path)
 
   return (
-    <Box style={flexBetweenStyle} mb={1}>
+    <Box style={navigation}>
       <Tabs value={url.pathname} onChange={handleTabsOnChange}>
         <Tab icon={<BsCalendar3 fontSize="1.75rem" />} iconPosition="start" label="Calendar" value="/" />
         <Tab icon={<BsFileText fontSize="1.75rem" />} iconPosition="start" label="Notes" value="/folders" />
         <Tab icon={<BsClipboardData fontSize="1.75rem" />} iconPosition="start" label="Board" value="/board" />
       </Tabs>
 
-      <div>
+      <Flex>
         <Tooltip title="Theme">
           <IconButton onClick={toggleTheme}>
             <BsBrightnessHigh />
@@ -56,7 +57,7 @@ const Navigation = () => {
             <If value={global.sidePanel.settings} true={<BsX />} false={<BsGear />} />
           </IconButton>
         </Tooltip>
-      </div>
+      </Flex>
     </Box>
   )
 }

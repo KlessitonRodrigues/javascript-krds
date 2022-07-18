@@ -11,25 +11,24 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
-    boxShadow: '1px 2px 4px #2222',
+    boxShadow: '1px 2px 4px #2221',
     overflow: 'hidden',
+    borderRadius: '0.4rem',
   }
 
   const styles: Record<typeof boxStyle, CSSProperties> = {
     base,
     header: {
       ...base,
-      height: '2rem',
-      borderRadius: '0.75rem 0.75rem 0 0',
+      height: '1.5rem',
       backgroundColor: palette.blue,
       color: '#fff',
       fontWeight: 'bold',
-      boxShadow: '1px 2px 4px #2224',
+      boxShadow: '1px 2px 4px #2226',
     },
     day: {
       ...base,
       border: '1px solid' + palette.border,
-      borderRadius: '0.5rem',
     },
     weekId: {
       ...base,
@@ -44,6 +43,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
 
 export const calendarGrid: CSSProperties = {
   display: 'grid',
+  alignContent: 'stretch',
   gridTemplateColumns: 'repeat(7, 1fr)',
   rowGap: '0.5rem',
   columnGap: '0.5rem',
@@ -111,6 +111,7 @@ export const calendarHeader = (): CSSProperties => {
   const palette = usePaletteContext()
   return {
     fontSize: '1.5rem',
+    marginBottom: '0.5rem',
     color: palette.blue,
   }
 }

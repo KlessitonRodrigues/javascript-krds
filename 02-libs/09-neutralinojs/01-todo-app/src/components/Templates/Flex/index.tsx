@@ -1,8 +1,10 @@
 import { CSSProperties, ReactNode } from 'react'
 
 type Props = {
-  x?: 'stretch' | 'flex-start' | 'flex-end' | 'center' | 'space-around' | 'space-between'
-  y?: 'stretch' | 'flex-start' | 'flex-end' | 'center'
+  x?: CSSProperties['justifyItems']
+  y?: CSSProperties['alignItems']
+  xContent?: CSSProperties['justifyContent']
+  yContent?: CSSProperties['alignContent']
   column?: boolean
   children: ReactNode
 }
@@ -12,7 +14,9 @@ const Flex = (props: Props) => {
     display: 'flex',
     flexDirection: props.column ? 'column' : 'row',
     alignItems: props.y || 'center',
-    justifyContent: props.x || 'center',
+    alignContent: props.yContent || 'stretch',
+    justifyItems: props.x || 'stretch',
+    justifyContent: props.xContent || 'center',
   }
 
   return <div style={flexStyle}>{props.children}</div>

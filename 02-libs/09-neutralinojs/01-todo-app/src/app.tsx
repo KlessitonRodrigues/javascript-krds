@@ -16,9 +16,9 @@ const App = () => (
       <BrowserRouter>
         <View>
           <Hearder />
-          <Navigation />
           <Settings />
           <Tags />
+          <Navigation />
           <Body>
             <Router />
           </Body>

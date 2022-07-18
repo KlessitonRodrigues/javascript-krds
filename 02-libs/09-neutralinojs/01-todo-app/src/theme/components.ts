@@ -40,6 +40,7 @@ export const components: ThemeOptions['components'] = {
       root: {
         minHeight: '3rem',
         padding: '0 0.5rem',
+        justifyContent: 'flex-start',
       },
     },
   },

@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <Paper elevation={3}>
       <Box px={2} py={3} bgcolor={palette.blue2} color={palette.white}>
-        <Flex x="flex-start">
+        <Flex xContent="flex-start">
           <BsCalendarDate fontSize="1.75rem" />
           <Typography variant="h2">&nbsp;Todo App</Typography>
         </Flex>

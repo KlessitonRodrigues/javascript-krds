@@ -3,14 +3,14 @@ import React from 'react'
 import useGlobalContext from './useGlobalContext'
 
 const lightPalette = {
-  blue: blue['500'],
-  blue2: blue['700'],
-  red: red['900'],
-  green: green['700'],
-  white: grey['100'],
-  black: grey['900'],
-  gray: grey['500'],
-  yellow: yellow['800'],
+  color1A: '#0075A3',
+  color1B: '#00587A',
+  color2: red['900'],
+  color3: green['700'],
+  color4: grey['100'],
+  color6: grey['900'],
+  color7: grey['500'],
+  color8: yellow['800'],
   shadow: '#2222',
   shadow2: '#4444',
   border: '#2222',
@@ -22,9 +22,9 @@ const lightPalette = {
 
 const darkPalette = {
   ...lightPalette,
-  green: green['400'],
-  blue: blue['800'],
-  blue2: blue['900'],
+  color3: green['400'],
+  color1A: '#00587A',
+  color1B: '#00587A',
   bgDark: '#fcfcfc',
   bgLight: '#222',
   dark: '#ccc',
