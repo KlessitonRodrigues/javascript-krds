@@ -8,7 +8,7 @@ import Settings from './components/Settings'
 import Tags from './components/Tags'
 import Router from './pages'
 import { GlobalProvider } from './hooks/useGlobalContext'
-import { PaletteProvider } from './hooks/usePalette'
+import { PaletteProvider } from './hooks/usePaletteContext'
 
 const App = () => (
   <GlobalProvider>

@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box'
 import { BsSquare, BsCaretRightSquare, BsCheckSquare } from 'react-icons/bs'
-import usePaletteContext from '../../../hooks/usePalette'
+import usePaletteContext from '../../../hooks/usePaletteContext'
 
 import { calendarTask } from '../styles'
 
@@ -21,7 +21,7 @@ const CalendarTask = () => {
   const palette = usePaletteContext()
 
   return (
-    <Box style={calendarTask} color={palette.gray}>
+    <Box style={calendarTask} color={palette.color7}>
       <Box>
         {getTaskIcon('todo')}
         &nbsp; Study English

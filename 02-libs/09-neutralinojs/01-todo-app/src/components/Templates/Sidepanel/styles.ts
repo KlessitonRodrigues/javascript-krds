@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react'
-import usePaletteContext from '../../../hooks/usePalette'
+import usePaletteContext from '../../../hooks/usePaletteContext'
 
 export const sidepanelOpen = (isOpen: boolean): CSSProperties => {
   const palette = usePaletteContext()

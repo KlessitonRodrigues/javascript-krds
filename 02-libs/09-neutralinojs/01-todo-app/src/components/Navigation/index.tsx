@@ -17,7 +17,7 @@ const Navigation = () => {
   const url = useLocation()
   const navigate = useNavigate()
 
-  const toggleTheme = () => setGlobal({ ...global, darkTheme: !global.darkTheme })
+  const toggleTheme = () => setGlobal({ ...global, theme: global.theme === 'cian' ? 'cianDark' : 'cian' })
 
   const toggleSettingsOpen = () =>
     setGlobal({

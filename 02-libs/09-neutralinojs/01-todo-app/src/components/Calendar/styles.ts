@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react'
-import usePaletteContext from '../../hooks/usePalette'
+import usePaletteContext from '../../hooks/usePaletteContext'
 
 export type DayBoxStyles = 'base' | 'day' | 'header' | 'weekId'
 export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
@@ -21,7 +21,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
     header: {
       ...base,
       height: '1.5rem',
-      backgroundColor: palette.blue,
+      backgroundColor: palette.color1,
       color: '#fff',
       fontWeight: 'bold',
       boxShadow: '1px 2px 4px #2226',
@@ -75,8 +75,8 @@ export const calendarItemFloat = (position: CalendarItemFloat): CSSProperties =>
       top: '0',
       left: '0',
       fontWeight: 'bold',
-      backgroundColor: palette.blue + 'bb',
-      color: palette.white,
+      backgroundColor: palette.color1 + 'bb',
+      color: palette.color4,
       borderRadius: '0 0 0.5rem 0',
     },
     topRight: {
@@ -112,6 +112,6 @@ export const calendarHeader = (): CSSProperties => {
   return {
     fontSize: '1.5rem',
     marginBottom: '0.5rem',
-    color: palette.blue,
+    color: palette.color1,
   }
 }
