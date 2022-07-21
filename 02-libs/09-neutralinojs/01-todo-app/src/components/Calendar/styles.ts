@@ -115,3 +115,7 @@ export const calendarHeader = (): CSSProperties => {
     color: palette.color1,
   }
 }
+
+export const calendarEvent = (): CSSProperties => {
+  return {}
+}

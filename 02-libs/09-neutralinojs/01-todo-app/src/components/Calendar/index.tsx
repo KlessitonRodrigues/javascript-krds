@@ -5,6 +5,7 @@ import weekdaysNames from '../../assets/json/weekdays.json'
 import CalendarItem, { Props as CalendarItemProps } from './CalendarItem'
 import CalendarHeader from './CalendarHeader'
 import CalendarTask from './CalendarTask'
+import CalendarEvent from './CalendarEvent'
 import TagItem from '../Tags/TagItem'
 import { calendarGrid } from './styles'
 
@@ -37,6 +38,7 @@ const Calendar = () => {
   return (
     <Box>
       <CalendarHeader />
+      <CalendarEvent />
       <Box style={calendarGrid}>
         {dayBoxes}
         {weekBoxes}

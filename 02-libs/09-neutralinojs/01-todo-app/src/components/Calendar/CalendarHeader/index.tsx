@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { BsPlus, BsCaretLeft, BsCaretRight } from 'react-icons/bs'
 
 import { dateStrToObj } from '../../../data/util/formatDate'
+import Flex from '../../Templates/Flex'
 import { calendarHeader } from '../styles'
 
 const CalendarHeader = () => {
@@ -16,17 +17,22 @@ const CalendarHeader = () => {
 
   return (
     <Box style={calendarHeader()}>
-      <Button variant="contained" startIcon={<BsPlus />}>
-        Todo
-      </Button>
-      <IconButton>
-        <BsCaretLeft fontSize="1.5rem" />
-      </IconButton>
-      {date.dateStr.mm.toUpperCase()}&nbsp;
-      {date.dateStr.yy.toUpperCase()}
-      <IconButton>
-        <BsCaretRight fontSize="1.5rem" />
-      </IconButton>
+      <Flex xContent="stretch">
+        <Button variant="contained" startIcon={<BsPlus fontSize="2rem" />}>
+          Todo
+        </Button>
+
+        <Flex>
+          <IconButton>
+            <BsCaretLeft fontSize="1.5rem" />
+          </IconButton>
+          {date.dateStr.mm.toUpperCase()}&nbsp;
+          {date.dateStr.yy.toUpperCase()}
+          <IconButton>
+            <BsCaretRight fontSize="1.5rem" />
+          </IconButton>
+        </Flex>
+      </Flex>
     </Box>
   )
 }

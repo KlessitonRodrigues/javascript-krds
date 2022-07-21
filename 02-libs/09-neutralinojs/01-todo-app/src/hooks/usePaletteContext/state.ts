@@ -31,11 +31,11 @@ export const base: BasePalette = {
   color9: '#6E2594', // VIOLET
   shadow: '#2222',
   shadow2: '#4444',
-  border: '#2222',
-  bgDark: '#222',
+  border: '#22222222',
+  bgDark: '#222222',
   bgLight: '#fcfcfc',
-  dark: '#555',
-  light: '#ddd',
+  dark: '#555555',
+  light: '#dddddd',
 }
 
 export const baseDark = {

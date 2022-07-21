@@ -1,8 +1,4 @@
-import Box from '@mui/material/Box'
-import IconButton from '@mui/material/IconButton'
-import Tab from '@mui/material/Tab'
-import Tabs from '@mui/material/Tabs'
-import Tooltip from '@mui/material/Tooltip'
+import { Box, IconButton, Tab, Tabs, Tooltip } from '@mui/material'
 import { SyntheticEvent } from 'react'
 import { BsBrightnessHigh, BsGear, BsX, BsCalendar3, BsFileText, BsTags, BsClipboardData } from 'react-icons/bs'
 import { useLocation, useNavigate } from 'react-router-dom'
@@ -34,11 +30,11 @@ const Navigation = () => {
   const handleTabsOnChange = (event: SyntheticEvent, path: string) => navigate(path)
 
   return (
-    <Box style={navigation}>
+    <Box style={navigation()}>
       <Tabs value={url.pathname} onChange={handleTabsOnChange}>
-        <Tab icon={<BsCalendar3 fontSize="1.75rem" />} iconPosition="start" label="Calendar" value="/" />
-        <Tab icon={<BsFileText fontSize="1.75rem" />} iconPosition="start" label="Notes" value="/folders" />
-        <Tab icon={<BsClipboardData fontSize="1.75rem" />} iconPosition="start" label="Board" value="/board" />
+        <Tab icon={<BsCalendar3 fontSize="1.5rem" />} iconPosition="start" label="Calendar" value="/" />
+        <Tab icon={<BsFileText fontSize="1.5rem" />} iconPosition="start" label="Notes" value="/folders" />
+        <Tab icon={<BsClipboardData fontSize="1.5rem" />} iconPosition="start" label="Board" value="/board" />
       </Tabs>
 
       <Flex>
