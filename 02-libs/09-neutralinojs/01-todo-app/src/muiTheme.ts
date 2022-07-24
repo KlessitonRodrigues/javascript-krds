@@ -1,4 +1,5 @@
 import { createTheme, ThemeOptions } from '@mui/material'
+import usePaletteContext from './hooks/usePaletteContext'
 import { BasePalette } from './hooks/usePaletteContext/state'
 
 const palette = (palette: BasePalette): ThemeOptions['palette'] => ({
@@ -15,53 +16,73 @@ const palette = (palette: BasePalette): ThemeOptions['palette'] => ({
   },
 })
 
-const components: ThemeOptions['components'] = {
-  MuiContainer: {
-    styleOverrides: { root: { padding: '0.5rem' } },
-  },
-  MuiLink: {
-    styleOverrides: {
-      underlineHover: {
-        '&:hover': {
-          cursor: 'pointer',
-          textDecoration: 'none',
-          color: 'unset',
+const components = (basePalette: BasePalette): ThemeOptions['components'] => {
+  return {
+    MuiContainer: {
+      styleOverrides: { root: { padding: '0.5rem' } },
+    },
+    MuiLink: {
+      styleOverrides: {
+        underlineHover: {
+          '&:hover': {
+            cursor: 'pointer',
+            textDecoration: 'none',
+            color: 'unset',
+          },
         },
       },
     },
-  },
-  MuiIconButton: {
-    styleOverrides: {
-      root: {
-        padding: '0.25rem',
-        cursor: 'pointer',
-        color: 'unset',
-      },
-      sizeSmall: {
-        padding: '0.25rem',
-        fontSize: '1.3rem',
-      },
-    },
-  },
-  MuiTooltip: {
-    styleOverrides: {
-      tooltip: {
-        fontSize: '0.9rem',
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          padding: '0.25rem',
+          cursor: 'pointer',
+          color: 'unset',
+        },
+        sizeSmall: {
+          padding: '0.25rem',
+          fontSize: '1.3rem',
+        },
       },
     },
-  },
-  MuiTab: {
-    styleOverrides: {
-      root: {
-        minHeight: '3rem',
-        padding: '0 0.5rem',
-        justifyContent: 'flex-start',
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          fontSize: '0.9rem',
+        },
       },
     },
-  },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          minHeight: '3rem',
+          padding: '0 0.5rem',
+          justifyContent: 'flex-start',
+        },
+      },
+    },
+    MuiFormControlLabel: {
+      styleOverrides: {
+        label: {
+          color: basePalette.dark,
+          fontSize: '0.9rem',
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: '0.4rem',
+        },
+      },
+    },
+  }
 }
 
 const typography: ThemeOptions['typography'] = {
+  allVariants: {
+    color: 'unset',
+  },
   h1: { fontSize: '1.75rem' },
   h2: { fontSize: '1.5rem' },
   h3: { fontSize: '1.25rem' },
@@ -73,7 +94,7 @@ const typography: ThemeOptions['typography'] = {
 const theme = (basePalette: BasePalette) =>
   createTheme({
     palette: palette(basePalette),
-    components,
+    components: components(basePalette),
     typography,
     spacing(factor: number) {
       return factor * 0.25 + 'rem'

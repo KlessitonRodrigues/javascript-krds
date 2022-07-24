@@ -9,7 +9,7 @@ export const sidepanelOpen = (isOpen: boolean): CSSProperties => {
     position: 'fixed',
     right: '0px',
     bottom: '0px',
-    height: '88vh',
+    height: '85vh',
     boxShadow: '0 2px 8px 0 #4444',
     borderRadius: '0.5rem',
     transitionProperty: 'right',
@@ -24,5 +24,21 @@ export const sidepanelOpen = (isOpen: boolean): CSSProperties => {
     ...base,
     visibility: 'hidden',
     right: '-100%',
+  }
+}
+
+export const sidepanelSection = (): CSSProperties => {
+  const palette = usePaletteContext()
+  return {
+    color: palette.color1Dark,
+  }
+}
+
+export const sidepanelSectionHr = (): CSSProperties => {
+  const palette = usePaletteContext()
+  return {
+    borderStyle: 'solid',
+    borderColor: palette.color1Dark + '44',
+    margin: '0 0 0.25rem',
   }
 }
