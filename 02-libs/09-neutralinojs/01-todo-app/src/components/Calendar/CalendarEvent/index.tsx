@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Input, TextField, Checkbox, FormControlLabel } from '@mui/material'
+import { Box, Input, TextField, Checkbox, FormControlLabel, FormGroup, FormControl } from '@mui/material'
 import { BsCalendarEvent, BsCaretDownFill, BsCaretRight, BsCheckSquare, BsCheckSquareFill } from 'react-icons/bs'
 
 import Flex from '../../Templates/Flex'
@@ -72,24 +72,27 @@ const CalendarEvent = () => {
           </SidepanelSection>
 
           <SidepanelSection title="Repeat">
-            <Flex xContent="start">
-              <FormControlLabel
-                control={<Checkbox icon={<BsCaretRight />} checkedIcon={<BsCaretDownFill />} />}
-                label="Daily"
-              />
-              <FormControlLabel
-                control={<Checkbox icon={<BsCaretRight />} checkedIcon={<BsCaretDownFill />} />}
-                label="Weekely"
-              />
-              <FormControlLabel
-                control={<Checkbox icon={<BsCaretRight />} checkedIcon={<BsCaretDownFill />} />}
-                label="Monthly"
-              />
-              <FormControlLabel
-                control={<Checkbox icon={<BsCaretRight />} checkedIcon={<BsCaretDownFill />} />}
-                label="Yearly"
-              />
-            </Flex>
+            <FormControl>
+              <Flex xContent="start">
+                <FormControlLabel
+                  control={<Checkbox icon={<BsCaretRight />} checkedIcon={<BsCaretDownFill />} />}
+                  id="c"
+                  label="Daily"
+                />
+                <FormControlLabel
+                  control={<Checkbox icon={<BsCaretRight />} checkedIcon={<BsCaretDownFill />} />}
+                  label="Weekely"
+                />
+                <FormControlLabel
+                  control={<Checkbox icon={<BsCaretRight />} checkedIcon={<BsCaretDownFill />} />}
+                  label="Monthly"
+                />
+                <FormControlLabel
+                  control={<Checkbox icon={<BsCaretRight />} checkedIcon={<BsCaretDownFill />} />}
+                  label="Yearly"
+                />
+              </Flex>
+            </FormControl>
             <Input type="time" defaultValue="07:00" />
           </SidepanelSection>
 
