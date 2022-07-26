@@ -21,7 +21,7 @@ const CalendarTask = () => {
   const palette = usePaletteContext()
 
   return (
-    <Box style={calendarTask} color={palette.color7}>
+    <Box className="dark-text-hover" style={calendarTask} color={palette.color7}>
       <Box>
         {getTaskIcon('todo')}
         &nbsp; Study English

@@ -13,10 +13,15 @@ export type Props = {
   }
 }
 
+const classByType = (type: styles.DayBoxStyles) => {
+  if (type === 'header') return 'color1-bg-hover'
+  if (type === 'day') return 'color1-border-hover'
+}
+
 const CalendarItem = ({ data }: Props) => {
   return (
     <Grow in timeout={400}>
-      <Box style={styles.dayBoxStyles(data.styleType)}>
+      <Box style={styles.dayBoxStyles(data.styleType)} className={classByType(data.styleType)}>
         <Box style={data.styleType === 'day' ? styles.calendarItemContent : {}}>{data.content || data.name}</Box>
         <Box style={styles.calendarItemFloat('topLeft')}>{data.topLeft}</Box>
         <Box style={styles.calendarItemFloat('bottomLeft')}>{data.bottomLeft}</Box>

@@ -14,6 +14,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
     boxShadow: '1px 2px 4px #2221',
     overflow: 'hidden',
     borderRadius: '0.4rem',
+    userSelect: 'none',
   }
 
   const styles: Record<typeof boxStyle, CSSProperties> = {
@@ -21,8 +22,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
     header: {
       ...base,
       height: '1.5rem',
-      backgroundColor: palette.color1,
-      color: '#fff',
+      color: palette.color4,
       fontWeight: 'bold',
       boxShadow: '1px 2px 4px #2226',
     },

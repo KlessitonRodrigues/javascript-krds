@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Box, Input, TextField, Checkbox, FormControlLabel, FormGroup, FormControl } from '@mui/material'
-import { BsCalendarEvent, BsCaretDownFill, BsCaretRight, BsCheckSquare, BsCheckSquareFill } from 'react-icons/bs'
+import { Box, Input, TextField, Checkbox, FormControlLabel } from '@mui/material'
+import { BsCalendarEvent, BsCheckCircle, BsCheckSquare, BsCircle, BsSquare } from 'react-icons/bs'
 
 import Flex from '../../Templates/Flex'
 import Sidepanel from '../../Templates/Sidepanel'
@@ -17,7 +17,7 @@ const CalendarEvent = () => {
   const [global] = useGlobalContext()
 
   return (
-    <Sidepanel show={true || global.sidePanel.todo}>
+    <Sidepanel show={global.sidePanel.todo}>
       <Box style={calendarEvent()}>
         <SidepanelTitle title="Todo" icon={<BsCalendarEvent fontSize="1.5rem" />} />
 
@@ -27,7 +27,7 @@ const CalendarEvent = () => {
               variant="standard"
               size="small"
               fullWidth
-              placeholder="Name"
+              placeholder="name"
               value={todoForm.name}
               onChange={ev => setTodoForm(store.handleNameField(ev.target.value, todoForm))}
             />
@@ -36,7 +36,7 @@ const CalendarEvent = () => {
               variant="standard"
               size="small"
               fullWidth
-              placeholder="Description"
+              placeholder="description"
               value={todoForm.description}
               onChange={ev => setTodoForm(store.handleDescriptionField(ev.target.value, todoForm))}
             />
@@ -46,7 +46,6 @@ const CalendarEvent = () => {
             <Flex>
               <Input
                 type="time"
-                defaultValue="07:00"
                 value={todoForm.time}
                 onChange={ev => setTodoForm(store.handleTimeField(ev.target.value, todoForm))}
               />
@@ -72,28 +71,38 @@ const CalendarEvent = () => {
           </SidepanelSection>
 
           <SidepanelSection title="Repeat">
-            <FormControl>
-              <Flex xContent="start">
-                <FormControlLabel
-                  control={<Checkbox icon={<BsCaretRight />} checkedIcon={<BsCaretDownFill />} />}
-                  id="c"
-                  label="Daily"
-                />
-                <FormControlLabel
-                  control={<Checkbox icon={<BsCaretRight />} checkedIcon={<BsCaretDownFill />} />}
-                  label="Weekely"
-                />
-                <FormControlLabel
-                  control={<Checkbox icon={<BsCaretRight />} checkedIcon={<BsCaretDownFill />} />}
-                  label="Monthly"
-                />
-                <FormControlLabel
-                  control={<Checkbox icon={<BsCaretRight />} checkedIcon={<BsCaretDownFill />} />}
-                  label="Yearly"
-                />
-              </Flex>
-            </FormControl>
-            <Input type="time" defaultValue="07:00" />
+            <Flex xContent="start">
+              <FormControlLabel
+                control={<Checkbox icon={<BsCircle />} checkedIcon={<BsCheckCircle />} />}
+                label="Daily"
+                checked={todoForm.repeat === 'daily'}
+                onChange={() => setTodoForm(store.handleRepeatCheckbox('daily', todoForm))}
+              />
+              <FormControlLabel
+                control={<Checkbox icon={<BsCircle />} checkedIcon={<BsCheckCircle />} />}
+                label="Weekely"
+                checked={todoForm.repeat === 'weekly'}
+                onChange={() => setTodoForm(store.handleRepeatCheckbox('weekly', todoForm))}
+              />
+              <FormControlLabel
+                control={<Checkbox icon={<BsCircle />} checkedIcon={<BsCheckCircle />} />}
+                label="Monthly"
+                checked={todoForm.repeat === 'monthly'}
+                onChange={() => setTodoForm(store.handleRepeatCheckbox('monthly', todoForm))}
+              />
+              <FormControlLabel
+                control={<Checkbox icon={<BsCircle />} checkedIcon={<BsCheckCircle />} />}
+                label="Yearly"
+                checked={todoForm.repeat === 'yeartly'}
+                onChange={() => setTodoForm(store.handleRepeatCheckbox('yeartly', todoForm))}
+              />
+            </Flex>
+            <Input
+              type="number"
+              defaultValue="0"
+              value={todoForm.repeatAmount}
+              onChange={() => setTodoForm(store.handleRepeatTime('yeartly', todoForm))}
+            />
           </SidepanelSection>
 
           <SidepanelSection title="Tags">
@@ -102,15 +111,15 @@ const CalendarEvent = () => {
 
           <SidepanelSection title="Options">
             <FormControlLabel
-              control={<Checkbox icon={<BsCheckSquare />} checkedIcon={<BsCheckSquareFill />} />}
+              control={<Checkbox icon={<BsSquare />} checkedIcon={<BsCheckSquare />} />}
               label="Show on calendar"
             />
             <Flex xContent="flex-start">
               <FormControlLabel
-                control={<Checkbox icon={<BsCheckSquare />} checkedIcon={<BsCheckSquareFill />} />}
+                control={<Checkbox icon={<BsSquare />} checkedIcon={<BsCheckSquare />} />}
                 label="Create notes"
               />
-              <TextField variant="standard" size="small" placeholder="Id" />
+              <TextField variant="standard" size="small" placeholder="note Id" />
             </Flex>
           </SidepanelSection>
         </Box>
