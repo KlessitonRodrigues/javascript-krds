@@ -91,14 +91,6 @@ export const calendarItemFloat = (position: CalendarItemFloat): CSSProperties =>
   return styles[position]
 }
 
-export const calendarTask: CSSProperties = {
-  fontSize: '0.75rem',
-  borderRadius: '0.25rem',
-  padding: '0.1rem 0.2rem',
-  marginBottom: '0.1rem',
-  cursor: 'pointer',
-}
-
 export const calendarItemContent: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',

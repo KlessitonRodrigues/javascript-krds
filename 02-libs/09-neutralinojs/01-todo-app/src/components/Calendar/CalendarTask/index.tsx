@@ -1,13 +1,13 @@
 import Box from '@mui/material/Box'
-import { BsSquare, BsCaretRightSquare, BsCheckSquare } from 'react-icons/bs'
+import { BsSquare, BsCaretRightSquare, BsCheckSquare, BsClock } from 'react-icons/bs'
 import usePaletteContext from '../../../hooks/usePaletteContext'
 
-import { calendarTask } from '../styles'
+import { calendarTask } from './styles'
 
 const getTaskIcon = (type?: 'todo' | 'progess' | 'done') => {
   switch (type) {
     case 'todo':
-      return <BsSquare fontSize="0.75rem" />
+      return <BsClock fontSize="0.75rem" />
     case 'progess':
       return <BsCaretRightSquare fontSize="0.75rem" />
     case 'done':

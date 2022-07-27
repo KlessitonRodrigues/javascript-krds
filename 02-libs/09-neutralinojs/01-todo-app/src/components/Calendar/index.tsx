@@ -15,8 +15,8 @@ const weekBoxes = week1.map((name, i) => {
     name,
     styleType: 'day',
     topLeft: 1,
-    // bottomLeft: [<TagItem label="#study" />, <TagItem label="#remider" />],
-    topRight: [<TagItem label="#study" />, <TagItem label="#remider" />],
+    bottomLeft: [<TagItem label="#study" />, <TagItem label="#remider" />],
+    // topRight: [<TagItem label="#study" />, <TagItem label="#remider" />],
     content: [<CalendarTask />, <CalendarTask />, <CalendarTask />, <CalendarTask />],
   }
 
