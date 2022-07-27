@@ -1,6 +1,6 @@
 import { Box, Grow } from '@mui/material'
 
-import * as styles from '../styles'
+import * as styles from './styles'
 
 export type Props = {
   data: {
