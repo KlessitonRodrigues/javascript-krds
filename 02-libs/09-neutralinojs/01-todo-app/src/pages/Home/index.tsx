@@ -1,14 +1,14 @@
-import Box from '@mui/material/Box'
+import Box from '@mui/material/Box';
 
-import { homePage } from './styles'
-import Calendar from '../../components/Calendar'
+import { homePage } from './styles';
+import Calendar from '../../components/Calendar';
 
 const HomePage = () => {
   return (
     <Box style={homePage}>
       <Calendar />
     </Box>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

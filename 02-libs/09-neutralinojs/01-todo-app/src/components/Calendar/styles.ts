@@ -1,5 +1,5 @@
-import { CSSProperties } from 'react'
-import usePaletteContext from '../../hooks/usePaletteContext'
+import { CSSProperties } from 'react';
+import usePaletteContext from '../../hooks/usePaletteContext';
 
 export const calendarGrid: CSSProperties = {
   display: 'grid',
@@ -10,17 +10,17 @@ export const calendarGrid: CSSProperties = {
   justifyItems: 'stretch',
   alignItems: 'center',
   textAlign: 'center',
-}
+};
 
 export const calendarHeader = (): CSSProperties => {
-  const palette = usePaletteContext()
+  const palette = usePaletteContext();
   return {
     fontSize: '1.5rem',
     marginBottom: '0.5rem',
     color: palette.color1,
-  }
-}
+  };
+};
 
 export const calendarEvent = (): CSSProperties => {
-  return {}
-}
+  return {};
+};

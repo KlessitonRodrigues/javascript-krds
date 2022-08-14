@@ -1,11 +1,11 @@
-import { Box } from '@mui/material'
+import { Box } from '@mui/material';
 
-import usePaletteContext from '../../../hooks/usePaletteContext'
-import { calendarTask } from './styles'
-import { getTaskIcon } from './store'
+import usePaletteContext from '../../../hooks/usePaletteContext';
+import { calendarTask } from './styles';
+import { getTaskIcon } from './store';
 
 const CalendarTask = () => {
-  const palette = usePaletteContext()
+  const palette = usePaletteContext();
 
   return (
     <Box className="dark-text-hover" style={calendarTask} color={palette.color7}>
@@ -14,7 +14,7 @@ const CalendarTask = () => {
         &nbsp; Study English
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default CalendarTask
+export default CalendarTask;

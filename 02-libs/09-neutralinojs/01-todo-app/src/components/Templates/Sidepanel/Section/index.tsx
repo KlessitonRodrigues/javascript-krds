@@ -1,12 +1,12 @@
-import { Box, Typography } from '@mui/material'
-import { ReactNode } from 'react'
+import { Box, Typography } from '@mui/material';
+import { ReactNode } from 'react';
 
-import { sidepanelSection, sidepanelSectionHr } from '../styles'
+import { sidepanelSection, sidepanelSectionHr } from '../styles';
 
 type Props = {
-  title: string
-  children: ReactNode
-}
+  title: string;
+  children: ReactNode;
+};
 
 const SidepanelSection = (props: Props) => (
   <Box style={sidepanelSection()} pt={5}>
@@ -16,6 +16,6 @@ const SidepanelSection = (props: Props) => (
     <hr style={sidepanelSectionHr()} />
     {props.children}
   </Box>
-)
+);
 
-export default SidepanelSection
+export default SidepanelSection;

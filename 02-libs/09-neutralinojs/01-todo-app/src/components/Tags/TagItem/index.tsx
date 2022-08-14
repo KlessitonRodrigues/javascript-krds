@@ -1,13 +1,13 @@
-import Box from '@mui/material/Box'
+import Box from '@mui/material/Box';
 
-import { tagItem } from '../styles'
+import { tagItem } from '../styles';
 
 type Props = {
-  label: string
-}
+  label: string;
+};
 
 const TagItem = (props: Props) => {
-  return <Box style={tagItem}>{props.label}</Box>
-}
+  return <Box style={tagItem}>{props.label}</Box>;
+};
 
-export default TagItem
+export default TagItem;

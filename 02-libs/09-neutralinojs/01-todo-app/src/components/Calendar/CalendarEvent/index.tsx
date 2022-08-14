@@ -1,20 +1,20 @@
-import { useState } from 'react'
-import { Box, Input, TextField, Checkbox, FormControlLabel } from '@mui/material'
-import { BsCalendarEvent, BsCheckCircle, BsCheckSquare, BsCircle, BsSquare } from 'react-icons/bs'
+import { useState } from 'react';
+import { Box, Input, TextField, Checkbox, FormControlLabel } from '@mui/material';
+import { BsCalendarEvent, BsCheckCircle, BsCheckSquare, BsCircle, BsSquare } from 'react-icons/bs';
 
-import Flex from '../../Templates/Flex'
-import Sidepanel from '../../Templates/Sidepanel'
-import SidepanelSection from '../../Templates/Sidepanel/Section'
-import SidepanelTitle from '../../Templates/Sidepanel/Title'
-import { calendarEvent } from '../styles'
-import useGlobalContext from '../../../hooks/useGlobalContext'
-import * as store from './store'
+import Flex from '../../Templates/Flex';
+import Sidepanel from '../../Templates/Sidepanel';
+import SidepanelSection from '../../Templates/Sidepanel/Section';
+import SidepanelTitle from '../../Templates/Sidepanel/Title';
+import { calendarEvent } from '../styles';
+import useGlobalContext from '../../../hooks/useGlobalContext';
+import * as store from './store';
 
-const CalendarEventDurationSuffix = () => <Box>minutes</Box>
+const CalendarEventDurationSuffix = () => <Box>minutes</Box>;
 
 const CalendarEvent = () => {
-  const [todoForm, setTodoForm] = useState(store.todoFormState)
-  const [global] = useGlobalContext()
+  const [todoForm, setTodoForm] = useState(store.todoFormState);
+  const [global] = useGlobalContext();
 
   return (
     <Sidepanel show={global.sidePanel.todo}>
@@ -125,7 +125,7 @@ const CalendarEvent = () => {
         </Box>
       </Box>
     </Sidepanel>
-  )
-}
+  );
+};
 
-export default CalendarEvent
+export default CalendarEvent;

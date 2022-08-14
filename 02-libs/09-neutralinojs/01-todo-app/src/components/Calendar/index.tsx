@@ -1,14 +1,14 @@
-import Box from '@mui/material/Box'
+import Box from '@mui/material/Box';
 
-import CalendarItem, { Props as CalendarItemProps } from './CalendarItem'
-import CalendarHeader from './CalendarHeader'
-import CalendarTask from './CalendarTask'
-import CalendarEvent from './CalendarEvent'
-import TagItem from '../Tags/TagItem'
-import { calendarGrid } from './styles'
-import * as store from './store'
+import CalendarItem, { Props as CalendarItemProps } from './CalendarItem';
+import CalendarHeader from './CalendarHeader';
+import CalendarTask from './CalendarTask';
+import CalendarEvent from './CalendarEvent';
+import TagItem from '../Tags/TagItem';
+import { calendarGrid } from './styles';
+import * as store from './store';
 
-const week1 = ['CARD', 'CARD', 'CARD', 'CARD', 'CARD', 'CARD', 'CARD']
+const week1 = ['CARD', 'CARD', 'CARD', 'CARD', 'CARD', 'CARD', 'CARD'];
 
 const weekBoxes = week1.map((name, i) => {
   const data: CalendarItemProps['data'] = {
@@ -18,10 +18,10 @@ const weekBoxes = week1.map((name, i) => {
     bottomLeft: [<TagItem label="#study" />, <TagItem label="#remider" />],
     // topRight: [<TagItem label="#study" />, <TagItem label="#remider" />],
     content: [<CalendarTask />, <CalendarTask />, <CalendarTask />, <CalendarTask />],
-  }
+  };
 
-  return <CalendarItem data={data} key={'day' + i} />
-})
+  return <CalendarItem data={data} key={'day' + i} />;
+});
 
 const Calendar = () => {
   return (
@@ -37,7 +37,7 @@ const Calendar = () => {
         {weekBoxes}
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default Calendar
+export default Calendar;

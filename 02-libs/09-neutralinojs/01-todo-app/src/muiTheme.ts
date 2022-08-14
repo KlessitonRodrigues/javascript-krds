@@ -1,6 +1,6 @@
-import { createTheme, ThemeOptions } from '@mui/material'
-import usePaletteContext from './hooks/usePaletteContext'
-import { BasePalette } from './hooks/usePaletteContext/state'
+import { createTheme, ThemeOptions } from '@mui/material';
+import usePaletteContext from './hooks/usePaletteContext';
+import { BasePalette } from './hooks/usePaletteContext/state';
 
 const palette = (palette: BasePalette): ThemeOptions['palette'] => ({
   common: {
@@ -14,7 +14,7 @@ const palette = (palette: BasePalette): ThemeOptions['palette'] => ({
     primary: palette.dark,
     secondary: palette.dark,
   },
-})
+});
 
 const components = (basePalette: BasePalette): ThemeOptions['components'] => {
   return {
@@ -76,8 +76,8 @@ const components = (basePalette: BasePalette): ThemeOptions['components'] => {
         },
       },
     },
-  }
-}
+  };
+};
 
 const typography: ThemeOptions['typography'] = {
   allVariants: {
@@ -89,7 +89,7 @@ const typography: ThemeOptions['typography'] = {
   h4: { fontSize: '1rem' },
   h5: { fontSize: '0.9rem' },
   h6: { fontSize: '0.8rem' },
-}
+};
 
 const theme = (basePalette: BasePalette) =>
   createTheme({
@@ -97,8 +97,8 @@ const theme = (basePalette: BasePalette) =>
     components: components(basePalette),
     typography,
     spacing(factor: number) {
-      return factor * 0.25 + 'rem'
+      return factor * 0.25 + 'rem';
     },
-  })
+  });
 
-export default theme
+export default theme;

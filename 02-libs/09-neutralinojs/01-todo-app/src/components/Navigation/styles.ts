@@ -1,12 +1,12 @@
-import { CSSProperties } from 'react'
-import usePaletteContext from '../../hooks/usePaletteContext'
+import { CSSProperties } from 'react';
+import usePaletteContext from '../../hooks/usePaletteContext';
 
 export const navigation = (): CSSProperties => {
-  const palette = usePaletteContext()
+  const palette = usePaletteContext();
   return {
     paddingRight: '0.5rem',
     display: 'flex',
     justifyContent: 'space-between',
-    boxShadow: `1px 1px 4px ${palette.dark}44`,
-  }
-}
+    boxShadow: `1px 1px 4px ${palette.dark}22`,
+  };
+};

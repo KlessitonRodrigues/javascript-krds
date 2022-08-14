@@ -1,9 +1,9 @@
-import Box  from "@mui/material/Box"
+import { Box } from '@mui/material';
 
-type Props = {}
+type Props = {};
 
 const CalendarWeekView = (props: Props) => {
-  return <Box>o</Box>
-}
+  return <Box>o</Box>;
+};
 
-export default CalendarWeekView
+export default CalendarWeekView;

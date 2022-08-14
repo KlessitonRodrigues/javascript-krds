@@ -1,23 +1,23 @@
-import { Box, Button, IconButton } from '@mui/material'
-import { useEffect, useState } from 'react'
-import { BsPlus, BsCaretLeft, BsCaretRight } from 'react-icons/bs'
+import { Box, Button, IconButton } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { BsPlus, BsCaretLeft, BsCaretRight } from 'react-icons/bs';
 
-import { dateStrToObj } from '../../../data/util/formatDate'
-import useGlobalContext from '../../../hooks/useGlobalContext'
-import Flex from '../../Templates/Flex'
-import { calendarHeader } from '../styles'
-import * as store from './store'
+import { dateStrToObj } from '../../../data/util/formatDate';
+import useGlobalContext from '../../../hooks/useGlobalContext';
+import Flex from '../../Templates/Flex';
+import { calendarHeader } from '../styles';
+import * as store from './store';
 
 const CalendarHeader = () => {
-  const [currentDate, setCurrentDate] = useState(new Date())
-  const [global, setGlobal] = useGlobalContext()
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [global, setGlobal] = useGlobalContext();
 
   useEffect(() => {
-    const timer = setTimeout(() => setCurrentDate(new Date()), 1000)
-    return () => clearTimeout(timer)
-  }, [])
+    const timer = setTimeout(() => setCurrentDate(new Date()), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
-  const date = dateStrToObj(currentDate.toString())
+  const date = dateStrToObj(currentDate.toString());
 
   return (
     <Box style={calendarHeader()}>
@@ -42,7 +42,7 @@ const CalendarHeader = () => {
         </Flex>
       </Flex>
     </Box>
-  )
-}
+  );
+};
 
-export default CalendarHeader
+export default CalendarHeader;

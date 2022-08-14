@@ -1,34 +1,34 @@
 type DateObj = {
   date: {
-    yy: number
-    mm: number
-    dd: number
-    weekDay: number
-  }
+    yy: number;
+    mm: number;
+    dd: number;
+    weekDay: number;
+  };
   time: {
-    hh: number
-    mm: number
-    ss: number
-    tzOffset: number
-  }
+    hh: number;
+    mm: number;
+    ss: number;
+    tzOffset: number;
+  };
   dateStr: {
-    yy: string
-    mm: string
-    dd: string
-    weekDay: string
-    fullDate: string
-  }
+    yy: string;
+    mm: string;
+    dd: string;
+    weekDay: string;
+    fullDate: string;
+  };
   timeStr: {
-    hh: string
-    mm: string
-    ss: string
-    fullTime: string
-  }
-  totalTime: number
-}
+    hh: string;
+    mm: string;
+    ss: string;
+    fullTime: string;
+  };
+  totalTime: number;
+};
 
 export const dateStrToObj = (dateStr: string): DateObj => {
-  const date = new Date(dateStr)
+  const date = new Date(dateStr);
   return {
     date: {
       yy: date.getFullYear(),
@@ -56,19 +56,19 @@ export const dateStrToObj = (dateStr: string): DateObj => {
       fullTime: date.toLocaleTimeString('pt-br'),
     },
     totalTime: date.getTime(),
-  }
-}
+  };
+};
 
 export const objToDateStr = (ISOobj: DateObj, setTime?: boolean): string => {
-  const date = new Date()
+  const date = new Date();
 
-  date.setFullYear(ISOobj.date.yy)
-  date.setMonth(ISOobj.date.mm)
-  date.setDate(ISOobj.date.dd)
-  date.setHours(ISOobj.time.hh)
-  date.setMinutes(ISOobj.time.mm)
-  date.setSeconds(ISOobj.time.ss)
-  setTime && date.setTime(ISOobj.totalTime)
+  date.setFullYear(ISOobj.date.yy);
+  date.setMonth(ISOobj.date.mm);
+  date.setDate(ISOobj.date.dd);
+  date.setHours(ISOobj.time.hh);
+  date.setMinutes(ISOobj.time.mm);
+  date.setSeconds(ISOobj.time.ss);
+  setTime && date.setTime(ISOobj.totalTime);
 
-  return date.toISOString()
-}
+  return date.toISOString();
+};

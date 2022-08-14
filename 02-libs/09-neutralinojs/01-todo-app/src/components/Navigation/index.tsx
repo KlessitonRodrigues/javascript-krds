@@ -1,33 +1,33 @@
-import { Box, IconButton, Tab, Tabs, Tooltip } from '@mui/material'
-import { SyntheticEvent } from 'react'
-import { BsBrightnessHigh, BsGear, BsX, BsCalendar3, BsFileText, BsTags, BsClipboardData } from 'react-icons/bs'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Box, IconButton, Tab, Tabs, Tooltip } from '@mui/material';
+import { SyntheticEvent } from 'react';
+import { BsBrightnessHigh, BsGear, BsX, BsCalendar3, BsFileText, BsTags, BsClipboardData } from 'react-icons/bs';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-import useGlobalContext from '../../hooks/useGlobalContext'
-import Flex from '../Templates/Flex'
-import If from '../Templates/If'
-import { navigation } from './styles'
+import useGlobalContext from '../../hooks/useGlobalContext';
+import Flex from '../Templates/Flex';
+import If from '../Templates/If';
+import { navigation } from './styles';
 
 const Navigation = () => {
-  const [global, setGlobal] = useGlobalContext()
-  const url = useLocation()
-  const navigate = useNavigate()
+  const [global, setGlobal] = useGlobalContext();
+  const url = useLocation();
+  const navigate = useNavigate();
 
-  const toggleTheme = () => setGlobal({ ...global, theme: global.theme === 'cian' ? 'cianDark' : 'cian' })
+  const toggleTheme = () => setGlobal({ ...global, theme: global.theme === 'cian' ? 'cianDark' : 'cian' });
 
   const toggleSettingsOpen = () =>
     setGlobal({
       ...global,
       sidePanel: { ...global.sidePanel, settings: !global.sidePanel.settings },
-    })
+    });
 
   const toggleTagsOpen = () =>
     setGlobal({
       ...global,
       sidePanel: { ...global.sidePanel, tags: !global.sidePanel.tags },
-    })
+    });
 
-  const handleTabsOnChange = (event: SyntheticEvent, path: string) => navigate(path)
+  const handleTabsOnChange = (event: SyntheticEvent, path: string) => navigate(path);
 
   return (
     <Box style={navigation()}>
@@ -55,7 +55,7 @@ const Navigation = () => {
         </Tooltip>
       </Flex>
     </Box>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

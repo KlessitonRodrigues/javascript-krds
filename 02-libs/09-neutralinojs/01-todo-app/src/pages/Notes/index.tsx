@@ -1,5 +1,5 @@
-import Box from '@mui/material/Box'
+import Box from '@mui/material/Box';
 
-const NotesPage = () => <Box>FOLDER PAGES</Box>
+const NotesPage = () => <Box>FOLDER PAGES</Box>;
 
-export default NotesPage
+export default NotesPage;

@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react'
+import { CSSProperties } from 'react';
 
 export const viewStyles: CSSProperties = {
   height: '100vh',
@@ -7,4 +7,4 @@ export const viewStyles: CSSProperties = {
   padding: 0,
   overflow: 'hidden',
   transition: '0.2s background-color linear',
-}
+};
