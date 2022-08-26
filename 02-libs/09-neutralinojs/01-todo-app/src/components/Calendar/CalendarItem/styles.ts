@@ -24,7 +24,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
       height: '1.5rem',
       color: palette.color4,
       fontWeight: 'bold',
-      boxShadow: '1px 2px 4px #2226',
+      boxShadow: '1px 1px 2px #2226',
     },
     day: {
       ...base,

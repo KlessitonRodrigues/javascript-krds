@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Input, TextField, Checkbox, FormControlLabel } from '@mui/material';
+import { Box, Input, TextField, Checkbox, FormControlLabel, Button } from '@mui/material';
 import { BsCalendarEvent, BsCheckCircle, BsCheckSquare, BsCircle, BsSquare } from 'react-icons/bs';
 
 import Flex from '../../Templates/Flex';
@@ -121,6 +121,13 @@ const CalendarEvent = () => {
               />
               <TextField variant="standard" size="small" placeholder="note Id" />
             </Flex>
+          </SidepanelSection>
+          <SidepanelSection title="">
+            <Box mt={4}>
+              <Button variant="contained">Save</Button>
+              &nbsp;
+              <Button variant="contained">Clean</Button>
+            </Box>
           </SidepanelSection>
         </Box>
       </Box>

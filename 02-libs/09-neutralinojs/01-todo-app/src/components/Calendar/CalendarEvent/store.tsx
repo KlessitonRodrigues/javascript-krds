@@ -1,3 +1,6 @@
+import { CalendarEvent } from '../../../data/api/event/types';
+import { addCalendarEvent } from '../../../data/api/event/index';
+
 export type TodoFormState = {
   name: string;
   description: string;
@@ -45,4 +48,8 @@ export const handleRepeatCheckbox = (value: TodoFormState['repeat'], state: Todo
 
 export const handleRepeatTime: HandleTodoForm = (value, state) => {
   return { ...state, repeatAmount: value };
+};
+
+export const HandleSaveEvent = (event: CalendarEvent) => {
+  return addCalendarEvent(event);
 };
