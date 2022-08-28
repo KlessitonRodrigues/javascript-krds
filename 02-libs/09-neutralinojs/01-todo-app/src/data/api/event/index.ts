@@ -1,31 +1,27 @@
 import { CalendarEvent } from './types';
+import { localStorageSave, localStorageRead } from '../../util/localStorage';
 
 const storageName = 'CalendarEvent';
 
-const saveOnLocal = (data: CalendarEvent[]) => {
-  localStorage.setItem(storageName, JSON.stringify(data));
+const listCalendarEvents = () => {
+  return localStorageRead<CalendarEvent[]>(storageName);
 };
 
-const readLocal = (): CalendarEvent[] | null => {
-  const local = localStorage.getItem(storageName);
-  if (local === null) return [];
-  return JSON.parse(local);
+const addCalendarEvent = (event: CalendarEvent) => {
+  let saved = localStorageRead<CalendarEvent[]>(storageName);
+  
+  if (!saved) saved = [];
+  saved.push(event);
+  localStorageSave(storageName, saved);
 };
 
-export const calendarEvents = () => {
-  return readLocal();
+const removeCalendarEvent = () => {};
+
+const updateCalendarEvent = () => {};
+
+export const CalendarEventApi = {
+  list: listCalendarEvents,
+  add: addCalendarEvent,
+  remove: removeCalendarEvent,
+  update: updateCalendarEvent,
 };
-
-export const addCalendarEvent = (event: CalendarEvent) => {
-  const data = readLocal();
-
-  if (!data) return saveOnLocal([event]);
-
-  data.push(event);
-
-  saveOnLocal(data);
-};
-
-export const removeCalendarEvent = () => {};
-
-export const updateCalendarEvent = () => {};

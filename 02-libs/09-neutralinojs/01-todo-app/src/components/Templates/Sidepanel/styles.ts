@@ -10,18 +10,20 @@ export const sidepanelOpen = (isOpen: boolean): CSSProperties => {
     right: '0px',
     bottom: '0px',
     height: '85vh',
-    boxShadow: '0 2px 8px 0 #4444',
-    borderRadius: '0.5rem',
-    transitionProperty: 'right',
-    transitionDuration: '0.6s',
+    boxShadow: '0 0 6px 100vw #4443',
+    //transitionProperty: 'right',
+    transitionDuration: '0.3s',
     zIndex: 10,
     border: '1px solid ' + palette.border,
+    opacity: '1',
+    borderRadius: '0.5rem',
   };
 
   if (isOpen) return base;
 
   return {
     ...base,
+    opacity: '0',
     visibility: 'hidden',
     right: '-100%',
   };

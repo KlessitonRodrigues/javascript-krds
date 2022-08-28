@@ -11,8 +11,8 @@ type Props = {
 
 const Sidepanel = (props: Props) => {
   return (
-    <Box p={2} px={4} width={props.width || '50vw'} style={style.sidepanelOpen(props.show)}>
-      {props.children}
+    <Box p={2} px={4} width={props.width || '35vw'} style={style.sidepanelOpen(props.show)}>
+      <Box>{props.children}</Box>
     </Box>
   );
 };

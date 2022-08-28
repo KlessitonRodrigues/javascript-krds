@@ -1,17 +1,7 @@
-import { CalendarEvent } from '../../../data/api/event/types';
-import { addCalendarEvent } from '../../../data/api/event/index';
+import { CalendarEventApi } from '../../../data/api/event/index';
+import { repeatedDates } from '../../../data/util/nextDate';
 
-export type TodoFormState = {
-  name: string;
-  description: string;
-  time: string;
-  date: string;
-  duration: string;
-  repeat?: 'daily' | 'weekly' | 'monthly' | 'yeartly';
-  repeatAmount?: string;
-};
-
-export type HandleTodoForm = (value: string, state: TodoFormState) => TodoFormState;
+import { TodoFormState, HandleTodoForm } from './types';
 
 export const todoFormState: TodoFormState = {
   name: '',
@@ -50,6 +40,14 @@ export const handleRepeatTime: HandleTodoForm = (value, state) => {
   return { ...state, repeatAmount: value };
 };
 
-export const HandleSaveEvent = (event: CalendarEvent) => {
-  return addCalendarEvent(event);
+export const handleSaveEvent = (event: TodoFormState) => {
+  return CalendarEventApi.add({
+    ...event,
+    id: Date.now().toString(),
+    status: [],
+    duration: Number(event.duration),
+    repeatAmount: Number(event.repeatAmount),
+    tags: [],
+    repeatDates: repeatedDates(event.date, event.repeat, Number(event.repeatAmount)),
+  });
 };

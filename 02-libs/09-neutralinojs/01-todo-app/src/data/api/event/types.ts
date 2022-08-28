@@ -1,14 +1,18 @@
+export type CalendarEventStatus = {
+  index: number;
+  status: 'todo' | 'doing' | 'done';
+};
+
 export type CalendarEvent = {
   id: string;
-  nome: string;
-  status: 'todo' | 'doing' | 'done';
-  tags: string[];
-  time: {
-    startDate: string;
-    endDate: string;
-  };
-  repeat?: {
-    timeRule: 'minute' | 'hour' | 'day' | 'month' | 'year';
-    time: number;
-  };
+  name: string;
+  description: string;
+  time: string;
+  date: string;
+  duration: number;
+  repeat?: 'day' | 'week' | 'month' | 'year';
+  repeatAmount?: number;
+  repeatDates?: string[];
+  status: CalendarEventStatus[];
+  tags: [];
 };
