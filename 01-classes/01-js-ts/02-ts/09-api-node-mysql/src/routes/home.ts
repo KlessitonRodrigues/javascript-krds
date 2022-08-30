@@ -4,6 +4,6 @@ import homeController from "../controllers/home";
 
 const homeRouter = Router();
 
-homeRouter.get("/", homeController.index);
+homeRouter.get("/", homeController.getList);
 
 export default homeRouter;

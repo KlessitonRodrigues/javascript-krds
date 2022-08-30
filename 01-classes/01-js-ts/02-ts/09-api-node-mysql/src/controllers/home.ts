@@ -1,12 +1,9 @@
 import { Request, Response } from "express";
+import { REST } from "../util/rest";
 
 class HomeController {
-    index(req: Request, res: Response<RestRes>) {
-        return res.json({
-            success: true,
-            msg: "testing response data",
-            data: "test",
-        });
+    getList(req: Request, res: Response<RestRes>) {
+        return REST.success(res, "list loaded successfully", { res: true });
     }
 }
 
