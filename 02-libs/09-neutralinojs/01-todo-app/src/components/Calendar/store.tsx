@@ -2,6 +2,7 @@ import CalendarItem, { Props as CalendarItemProps } from './CalendarItem';
 import CalendarTask from './CalendarTask';
 import TagItem from '../Tags/TagItem';
 import { CalendarEventApi } from '../../data/api/event';
+import { getCalendarDates, getCalendarGap } from '../../data/util/getMonthDates';
 
 const weekdays = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 
@@ -16,18 +17,19 @@ export const renderWeekHeaders = () => {
 };
 
 export const renderCalendarItems = () => {
-  const arr = new Array(36).fill(0, 0, -1);
-  const eventList = CalendarEventApi.list();
+  // const arr = new Array(36).fill(0, 0, -1);
+  // const eventList = CalendarEventApi.list();
 
-  console.log(eventList);
+  const dates = getCalendarDates(new Date().toString());
+  const dateList = getCalendarGap(dates.fillFirstWeek.toString(), dates.fillLastWeek.toString());
 
-  const calendarGrid = arr.map((name, i) => {
+  const calendarGrid = dateList.map((dateStr, i) => {
+    const date = new Date(dateStr);
     const data: CalendarItemProps['data'] = {
-      name,
       styleType: 'day',
-      topLeft: 1,
+      topLeft: date.getDate(),
       bottomLeft: [<TagItem label="#study" />],
-      content: [<CalendarTask />, <CalendarTask />, <CalendarTask />, <CalendarTask />],
+      content: [<CalendarTask />, <CalendarTask />],
     };
 
     return <CalendarItem data={data} key={'day' + i} />;
