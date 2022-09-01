@@ -5,6 +5,7 @@ export const getMonthDates = (dateStr: string) => {
   };
 
   const getLastMonthDay = (targetDate: Date) => {
+    targetDate.setDate(1);
     targetDate.setMonth(targetDate.getMonth() + 1);
     targetDate.setDate(0);
     return targetDate;
@@ -21,6 +22,8 @@ export const getCalendarDates = (dateStr: string) => {
   const weekEndDay = 0; // Sunday
 
   const monthDays = getMonthDates(dateStr);
+
+  console.log('monthDays', monthDays);
 
   const fillFirstWeek = (targetDate: Date) => {
     while (targetDate.getDay() !== weekStartDay) {
@@ -47,6 +50,8 @@ export const getCalendarGap = (startDate: string, endDate: string) => {
   const dates: string[] = [];
   const startTime = new Date(startDate);
   const endTime = new Date(endDate);
+
+  console.log('startTime', startTime, endTime);
 
   if (startTime.getTime() >= endTime.getTime()) return [];
 

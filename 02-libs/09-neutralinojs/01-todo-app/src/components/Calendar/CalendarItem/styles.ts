@@ -15,6 +15,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
     overflow: 'hidden',
     borderRadius: '0.4rem',
     userSelect: 'none',
+    height: '7rem',
   };
 
   const styles: Record<typeof boxStyle, CSSProperties> = {
