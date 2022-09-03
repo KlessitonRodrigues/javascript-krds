@@ -16,11 +16,11 @@ export const renderWeekHeaders = () => {
   });
 };
 
-export const renderCalendarItems = () => {
+export const renderCalendarItems = (selectedDate: Date) => {
   // const arr = new Array(36).fill(0, 0, -1);
   // const eventList = CalendarEventApi.list();
 
-  const dates = getCalendarDates(new Date().toString());
+  const dates = getCalendarDates(selectedDate.toString());
   const dateList = getCalendarGap(dates.fillFirstWeek.toString(), dates.fillLastWeek.toString());
 
   const calendarGrid = dateList.map((dateStr, i) => {

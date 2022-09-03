@@ -1,22 +1,24 @@
-import Box from '@mui/material/Box';
+import { Box, Slide } from '@mui/material';
 
-import CalendarItem, { Props as CalendarItemProps } from './CalendarItem';
 import CalendarHeader from './CalendarHeader';
-import CalendarTask from './CalendarTask';
 import CalendarEvent from './CalendarEvent';
 import { calendarGrid } from './styles';
 import * as store from './store';
+import useGlobalContext from '../../hooks/useGlobalContext';
 
 const Calendar = () => {
+  const [global] = useGlobalContext();
   return (
-    <Box>
-      <CalendarHeader />
-      <CalendarEvent />
-      <Box style={calendarGrid}>
-        {store.renderWeekHeaders()}
-        {store.renderCalendarItems()}
+    <Slide in direction="up" timeout={350}>
+      <Box>
+        <CalendarHeader />
+        <CalendarEvent />
+        <Box style={calendarGrid}>
+          {store.renderWeekHeaders()}
+          {store.renderCalendarItems(global.currentMonth)}
+        </Box>
       </Box>
-    </Box>
+    </Slide>
   );
 };
 

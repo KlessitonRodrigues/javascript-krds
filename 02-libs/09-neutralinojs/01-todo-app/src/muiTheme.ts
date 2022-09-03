@@ -58,6 +58,8 @@ const components = (basePalette: BasePalette): ThemeOptions['components'] => {
           minHeight: '3rem',
           padding: '0 0.5rem',
           justifyContent: 'flex-start',
+          textTransform: 'none',
+          fontSize: '1rem',
         },
       },
     },

@@ -9,15 +9,8 @@ import { calendarHeader } from '../styles';
 import * as store from './store';
 
 const CalendarHeader = () => {
-  const [currentDate, setCurrentDate] = useState(new Date());
   const [global, setGlobal] = useGlobalContext();
-
-  useEffect(() => {
-    const timer = setTimeout(() => setCurrentDate(new Date()), 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const date = dateStrToObj(currentDate.toString());
+  const date = dateStrToObj(global.currentMonth.toISOString());
 
   return (
     <Box style={calendarHeader()}>
@@ -31,14 +24,18 @@ const CalendarHeader = () => {
         </Button>
 
         <Flex>
-          <IconButton>
+          &nbsp;
+          <IconButton onClick={() => setGlobal(store.handlePreviousMonthClick(global))}>
             <BsCaretLeft fontSize="1.5rem" />
           </IconButton>
-          {date.dateStr.mm.toUpperCase()}&nbsp;
-          {date.dateStr.yy.toUpperCase()}
-          <IconButton>
+          <Box width={220} textAlign="center">
+            {date.dateStr.mm.toUpperCase()}&nbsp;
+            {date.dateStr.yy.toUpperCase()}
+          </Box>
+          <IconButton onClick={() => setGlobal(store.handleNextMonthClick(global))}>
             <BsCaretRight fontSize="1.5rem" />
           </IconButton>
+          &nbsp;
         </Flex>
       </Flex>
     </Box>

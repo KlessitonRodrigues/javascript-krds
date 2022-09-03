@@ -31,7 +31,7 @@ export const base: BasePalette = {
   color9: '#6E2594', // VIOLET
   shadow: '#2222',
   shadow2: '#4444',
-  border: '#22222222',
+  border: '#22222200',
   bgDark: '#111111',
   bgLight: '#fcfcfc',
   dark: '#222222',

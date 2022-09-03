@@ -11,7 +11,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
-    boxShadow: '1px 2px 4px #2221',
+    boxShadow: '1px 1px 6px 1px #4442',
     overflow: 'hidden',
     borderRadius: '0.4rem',
     userSelect: 'none',
@@ -25,7 +25,6 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
       height: '1.5rem',
       color: palette.color4,
       fontWeight: 'bold',
-      boxShadow: '1px 1px 2px #2226',
     },
     day: {
       ...base,

@@ -32,9 +32,9 @@ const Navigation = () => {
   return (
     <Box style={navigation()}>
       <Tabs value={url.pathname} onChange={handleTabsOnChange}>
-        <Tab icon={<BsCalendar3 fontSize="1.5rem" />} iconPosition="start" label="Calendar" value="/" />
-        <Tab icon={<BsFileText fontSize="1.5rem" />} iconPosition="start" label="Notes" value="/folders" />
-        <Tab icon={<BsClipboardData fontSize="1.5rem" />} iconPosition="start" label="Board" value="/board" />
+        <Tab icon={<BsCalendar3 fontSize="1.25rem" />} iconPosition="start" label="Calendar" value="/" />
+        <Tab icon={<BsFileText fontSize="1.25rem" />} iconPosition="start" label="Notes" value="/folders" />
+        <Tab icon={<BsClipboardData fontSize="1.25rem" />} iconPosition="start" label="Board" value="/board" />
       </Tabs>
 
       <Flex>

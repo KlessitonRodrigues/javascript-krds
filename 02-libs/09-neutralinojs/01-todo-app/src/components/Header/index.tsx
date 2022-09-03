@@ -9,7 +9,7 @@ const Header = () => {
   const palette = usePaletteContext();
 
   return (
-    <Box px={2} py={2} bgcolor={palette.color1Dark} color={palette.color4}>
+    <Box px={1.5} py={1.5} bgcolor={palette.color1Dark} color={palette.color4}>
       <Flex xContent="flex-start">
         <BsCalendarDate fontSize="1.75rem" />
         <Typography variant="h2">&nbsp;Todo App</Typography>

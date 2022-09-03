@@ -1,4 +1,5 @@
 export type GlobalState = {
+  currentMonth: Date;
   sidePanel: {
     settings: boolean;
     tags: boolean;
@@ -8,6 +9,7 @@ export type GlobalState = {
 };
 
 export const globalState: GlobalState = {
+  currentMonth: new Date(),
   sidePanel: {
     settings: false,
     tags: false,
