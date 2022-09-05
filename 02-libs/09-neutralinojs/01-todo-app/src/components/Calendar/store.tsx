@@ -2,7 +2,7 @@ import CalendarItem, { Props as CalendarItemProps } from './CalendarItem';
 import CalendarTask from './CalendarTask';
 import TagItem from '../Tags/TagItem';
 import { CalendarEventApi } from '../../data/api/event';
-import { getCalendarDates, getCalendarGap } from '../../data/util/getMonthDates';
+import { getCalendarDates, getCalendarGap, isSameMonth } from '../../data/util/getMonthDates';
 
 const weekdays = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 
@@ -25,8 +25,10 @@ export const renderCalendarItems = (selectedDate: Date) => {
 
   const calendarGrid = dateList.map((dateStr, i) => {
     const date = new Date(dateStr);
+    const isCurrentMonth = isSameMonth(date, dates.firstMonthDay);
+
     const data: CalendarItemProps['data'] = {
-      styleType: 'day',
+      styleType: isCurrentMonth ? 'day' : 'day-out-of-month',
       topLeft: date.getDate(),
       bottomLeft: [<TagItem label="#study" />],
       content: [<CalendarTask />, <CalendarTask />],

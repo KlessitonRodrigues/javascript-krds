@@ -1,5 +1,4 @@
 import { createTheme, ThemeOptions } from '@mui/material';
-import usePaletteContext from './hooks/usePaletteContext';
 import { BasePalette } from './hooks/usePaletteContext/state';
 
 const palette = (palette: BasePalette): ThemeOptions['palette'] => ({
@@ -60,7 +59,11 @@ const components = (basePalette: BasePalette): ThemeOptions['components'] => {
           justifyContent: 'flex-start',
           textTransform: 'none',
           fontSize: '1rem',
+          lineHeight: 0
         },
+        selected: {
+          fontSize: '1.5rem',
+        }
       },
     },
     MuiFormControlLabel: {

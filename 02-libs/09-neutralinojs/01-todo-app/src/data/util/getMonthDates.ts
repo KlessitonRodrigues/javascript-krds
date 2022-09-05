@@ -23,8 +23,6 @@ export const getCalendarDates = (dateStr: string) => {
 
   const monthDays = getMonthDates(dateStr);
 
-  console.log('monthDays', monthDays);
-
   const fillFirstWeek = (targetDate: Date) => {
     while (targetDate.getDay() !== weekStartDay) {
       targetDate.setDate(targetDate.getDate() - 1);
@@ -51,8 +49,6 @@ export const getCalendarGap = (startDate: string, endDate: string) => {
   const startTime = new Date(startDate);
   const endTime = new Date(endDate);
 
-  console.log('startTime', startTime, endTime);
-
   if (startTime.getTime() >= endTime.getTime()) return [];
 
   while (startTime.getTime() <= endTime.getTime()) {
@@ -61,4 +57,8 @@ export const getCalendarGap = (startDate: string, endDate: string) => {
   }
 
   return dates;
+};
+
+export const isSameMonth = (targetDate: Date, month: Date) => {
+  return targetDate.getMonth() === month.getMonth();
 };

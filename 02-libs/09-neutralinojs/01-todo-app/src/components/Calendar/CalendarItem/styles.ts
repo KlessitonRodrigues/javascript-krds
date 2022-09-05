@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 import usePaletteContext from '../../../hooks/usePaletteContext';
 
-export type DayBoxStyles = 'base' | 'day' | 'header' | 'weekId';
+export type DayBoxStyles = 'base' | 'day' | 'day-out-of-month' | 'header';
 export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
   const palette = usePaletteContext();
   const base: CSSProperties = {
@@ -13,9 +13,8 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
     position: 'relative',
     boxShadow: '1px 1px 6px 1px #4442',
     overflow: 'hidden',
-    borderRadius: '0.4rem',
+    borderRadius: '0.45rem',
     userSelect: 'none',
-    height: '7rem',
   };
 
   const styles: Record<typeof boxStyle, CSSProperties> = {
@@ -29,12 +28,12 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
     day: {
       ...base,
       border: '1px solid' + palette.border,
+      minHeight: '6rem',
     },
-    weekId: {
+    'day-out-of-month': {
       ...base,
-      height: '4rem',
-      fontSize: '0.85rem',
-      boxShadow: 'none',
+      border: '1px solid' + palette.border,
+      minHeight: '6rem',
     },
   };
 
@@ -42,7 +41,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
 };
 
 type CalendarItemFloat = 'topLeft' | 'bottomLeft' | 'topRight';
-export const calendarItemFloat = (position: CalendarItemFloat): CSSProperties => {
+export const calendarItemFloat = (position: CalendarItemFloat, dayStyle: DayBoxStyles): CSSProperties => {
   const palette = usePaletteContext();
   const base: CSSProperties = {
     position: 'absolute',
@@ -64,7 +63,7 @@ export const calendarItemFloat = (position: CalendarItemFloat): CSSProperties =>
       top: '0',
       left: '0',
       fontWeight: 'bold',
-      backgroundColor: palette.color1 + 'bb',
+      backgroundColor: dayStyle === 'day' ? palette.color1 + 'bb' : palette.color6 + '66',
       color: palette.color4,
       borderRadius: '0 0 0.5rem 0',
     },
