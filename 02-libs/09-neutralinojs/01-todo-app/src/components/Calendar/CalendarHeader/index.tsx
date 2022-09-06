@@ -8,7 +8,12 @@ import Flex from '../../Templates/Flex';
 import { calendarHeader } from '../styles';
 import * as store from './store';
 
-const CalendarHeader = () => {
+type Props = {
+  onNextMonth?: () => void;
+  onPreviousMonth?: () => void;
+};
+
+const CalendarHeader = (props: Props) => {
   const [global, setGlobal] = useGlobalContext();
   const date = dateStrToObj(global.currentMonth.toISOString());
 
@@ -25,14 +30,24 @@ const CalendarHeader = () => {
 
         <Flex>
           &nbsp;
-          <IconButton onClick={() => setGlobal(store.handlePreviousMonthClick(global))}>
+          <IconButton
+            onClick={() => {
+              props.onNextMonth && props.onNextMonth();
+              setGlobal(store.handlePreviousMonthClick(global));
+            }}
+          >
             <BsCaretLeft fontSize="1.5rem" />
           </IconButton>
           <Box width={220} textAlign="center">
             {date.dateStr.mm.toUpperCase()}&nbsp;
             {date.dateStr.yy.toUpperCase()}
           </Box>
-          <IconButton onClick={() => setGlobal(store.handleNextMonthClick(global))}>
+          <IconButton
+            onClick={() => {
+              props.onPreviousMonth && props.onPreviousMonth();
+              setGlobal(store.handleNextMonthClick(global));
+            }}
+          >
             <BsCaretRight fontSize="1.5rem" />
           </IconButton>
           &nbsp;

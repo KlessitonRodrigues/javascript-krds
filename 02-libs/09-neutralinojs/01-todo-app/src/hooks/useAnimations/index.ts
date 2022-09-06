@@ -1,27 +1,31 @@
 import { useRef } from 'react';
 
-export const useAnimations = (animationList: string[]) => {
-  const elRef = useRef<HTMLDivElement>();
+type AnimationConfig = {
+  duration?: string;
+  delay?: string;
+  interation?: string;
+  direction?: 'normal' | 'reverse' | 'alternate' | 'alternate-reverse';
+  fill?: 'none' | 'forwards' | 'backwards' | 'both';
+};
 
-  const cleanAnimations = () => {
-    elRef.current.onanimationend = () => {
-      animationList.forEach((animationClass) => {
-        elRef.current.className = elRef.current.className.replace(
-          animationClass,
-          ''
-        );
-      });
-    };
-  };
+const useAnimations = (animationList: string[]) => {
+  const elRef = useRef<HTMLElement>();
 
-  const play = (animationIndex: number) => {
+  const play = (animationIndex: number, config?: AnimationConfig) => {
+    if (!elRef.current) return;
+
+    if (config?.delay) elRef.current.style.animationDelay = config.delay;
+    if (config?.duration) elRef.current.style.animationIterationCount = config.duration;
+    if (config?.interation) elRef.current.style.animationIterationCount = config.interation;
+    if (config?.fill) elRef.current.style.animationFillMode = config.fill;
+    if (config?.direction) elRef.current.style.animationDirection = config.direction;
+
+    if (!elRef.current) return;
     elRef.current.classList.add(animationList[animationIndex]);
-    console.log(elRef.current.className);
-
-    elRef.current.classList.remove(animationList[animationIndex]);
-    console.log(elRef.current.className);
-
-    //cleanAnimations();
+    console.log(elRef.current.classList);
+    elRef.current.onanimationend = () => {
+      elRef.current && elRef.current.classList.remove(animationList[animationIndex]);
+    };
   };
 
   return {
@@ -29,3 +33,5 @@ export const useAnimations = (animationList: string[]) => {
     play,
   };
 };
+
+export default useAnimations;
