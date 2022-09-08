@@ -1,7 +1,7 @@
-import CalendarItem, { Props as CalendarItemProps } from './CalendarItem';
+import CalendarItem from './CalendarItem';
+import { Props as CalendarItemProps } from './CalendarItem/types';
 import CalendarTask from './CalendarTask';
 import TagItem from '../Tags/TagItem';
-import { CalendarEventApi } from '../../data/api/event';
 import { getCalendarDates, getCalendarGap, isSameMonth } from '../../data/util/getMonthDates';
 
 const weekdays = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
@@ -17,9 +17,6 @@ export const renderWeekHeaders = () => {
 };
 
 export const renderCalendarItems = (selectedDate: Date) => {
-  // const arr = new Array(36).fill(0, 0, -1);
-  // const eventList = CalendarEventApi.list();
-
   const dates = getCalendarDates(selectedDate.toString());
   const dateList = getCalendarGap(dates.fillFirstWeek.toString(), dates.fillLastWeek.toString());
 
@@ -32,7 +29,9 @@ export const renderCalendarItems = (selectedDate: Date) => {
       topLeft: date.getDate(),
       bottomLeft: [<TagItem label="#study" />],
       content: [<CalendarTask />, <CalendarTask />],
+      animationDelay: `0.${i < 10 ? '0' + i : i}s`,
     };
+    console.log(data.animationDelay);
 
     return <CalendarItem data={data} key={'day' + i} />;
   });

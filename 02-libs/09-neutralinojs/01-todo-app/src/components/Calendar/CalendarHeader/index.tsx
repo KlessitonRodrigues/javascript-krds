@@ -1,6 +1,5 @@
 import { Box, Button, IconButton } from '@mui/material';
-import { useEffect, useState } from 'react';
-import { BsPlus, BsCaretLeft, BsCaretRight } from 'react-icons/bs';
+import { BsPlus, BsCaretLeft, BsCaretRight, BsCalendar2Date } from 'react-icons/bs';
 
 import { dateStrToObj } from '../../../data/util/formatDate';
 import useGlobalContext from '../../../hooks/useGlobalContext';
@@ -42,6 +41,14 @@ const CalendarHeader = (props: Props) => {
             {date.dateStr.mm.toUpperCase()}&nbsp;
             {date.dateStr.yy.toUpperCase()}
           </Box>
+          <IconButton
+            onClick={() => {
+              props.onPreviousMonth && props.onPreviousMonth();
+              setGlobal(store.handleNextMonthClick(global));
+            }}
+          >
+            <BsCalendar2Date fontSize="1.5rem" />
+          </IconButton>
           <IconButton
             onClick={() => {
               props.onPreviousMonth && props.onPreviousMonth();

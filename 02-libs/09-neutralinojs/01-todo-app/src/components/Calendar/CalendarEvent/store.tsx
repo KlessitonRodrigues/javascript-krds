@@ -1,6 +1,6 @@
 import { CalendarEventApi } from '../../../data/api/event/index';
 import { repeatedDates } from '../../../data/util/nextDate';
-
+import { GlobalState } from '../../../hooks/useGlobalContext/state';
 import { TodoFormState, HandleTodoForm } from './types';
 
 export const todoFormState: TodoFormState = {
@@ -50,4 +50,8 @@ export const handleSaveEvent = (event: TodoFormState) => {
     tags: [],
     repeatDates: repeatedDates(event.date, event.repeat, Number(event.repeatAmount)),
   });
+};
+
+export const handleCloseButton = (global: GlobalState): GlobalState => {
+  return { ...global, sidePanel: { ...global.sidePanel, todo: !global.sidePanel.todo } };
 };

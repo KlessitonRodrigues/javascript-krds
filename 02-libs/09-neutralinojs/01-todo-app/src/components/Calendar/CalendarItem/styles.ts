@@ -1,8 +1,9 @@
 import { CSSProperties } from 'react';
+
+import * as types from './types';
 import usePaletteContext from '../../../hooks/usePaletteContext';
 
-export type DayBoxStyles = 'base' | 'day' | 'day-out-of-month' | 'header';
-export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
+export const dayBoxStyles = (boxStyle: types.DayBoxStyles) => {
   const palette = usePaletteContext();
   const base: CSSProperties = {
     padding: '0.5rem',
@@ -40,8 +41,7 @@ export const dayBoxStyles = (boxStyle: DayBoxStyles) => {
   return styles[boxStyle];
 };
 
-type CalendarItemFloat = 'topLeft' | 'bottomLeft' | 'topRight';
-export const calendarItemFloat = (position: CalendarItemFloat, dayStyle: DayBoxStyles): CSSProperties => {
+export const calendarItemFloat = (position: types.CalendarItemFloat, dayStyle: types.DayBoxStyles): CSSProperties => {
   const palette = usePaletteContext();
   const base: CSSProperties = {
     position: 'absolute',
@@ -50,7 +50,7 @@ export const calendarItemFloat = (position: CalendarItemFloat, dayStyle: DayBoxS
     overflow: 'hidden',
   };
 
-  const styles: Record<CalendarItemFloat, CSSProperties> = {
+  const styles: Record<types.CalendarItemFloat, CSSProperties> = {
     bottomLeft: {
       ...base,
       bottom: '0',

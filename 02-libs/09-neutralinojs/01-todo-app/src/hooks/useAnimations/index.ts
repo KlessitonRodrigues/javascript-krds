@@ -15,15 +15,14 @@ const useAnimations = (animationList: string[]) => {
     if (!elRef.current) return;
 
     if (config?.delay) elRef.current.style.animationDelay = config.delay;
-    if (config?.duration) elRef.current.style.animationIterationCount = config.duration;
     if (config?.interation) elRef.current.style.animationIterationCount = config.interation;
     if (config?.fill) elRef.current.style.animationFillMode = config.fill;
     if (config?.direction) elRef.current.style.animationDirection = config.direction;
+    if (config?.duration) elRef.current.style.animationDuration = config.duration;
 
-    if (!elRef.current) return;
     elRef.current.classList.add(animationList[animationIndex]);
-    console.log(elRef.current.classList);
     elRef.current.onanimationend = () => {
+      if (!elRef.current) return;
       elRef.current && elRef.current.classList.remove(animationList[animationIndex]);
     };
   };

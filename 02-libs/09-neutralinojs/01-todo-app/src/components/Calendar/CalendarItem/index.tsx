@@ -1,26 +1,25 @@
-import { Box, Grow } from '@mui/material';
+import { Box } from '@mui/material';
 
 import * as styles from './styles';
+import * as store from './store';
+import * as types from './types';
 
-export type Props = {
-  data: {
-    styleType: styles.DayBoxStyles;
-    name?: string;
-    topLeft?: any;
-    bottomLeft?: any;
-    topRight?: any;
-    content?: any;
-  };
-};
+import useAnimations from '../../../hooks/useAnimations';
+import { useEffect } from 'react';
 
-const classByType = (type: styles.DayBoxStyles) => {
-  if (type === 'header') return 'color1-bg-hover';
-  if (type === 'day' || type === 'day-out-of-month') return 'color1-border-hover color1-shadow-hover';
-};
+const CalendarItem = ({ data }: types.Props) => {
+  const itemAnimation = useAnimations(['fadeInLeft']);
 
-const CalendarItem = ({ data }: Props) => {
+  useEffect(() => {
+    itemAnimation.play(0, { duration: '0.5s', delay: data.animationDelay, fill: 'backwards' });
+  }, [data]);
+
   return (
-    <Box style={styles.dayBoxStyles(data.styleType)} className={classByType(data.styleType)}>
+    <Box
+      ref={itemAnimation.elRef}
+      style={styles.dayBoxStyles(data.styleType)}
+      className={store.classByType(data.styleType)}
+    >
       <Box style={styles.calendarItemContent}>{data.content || data.name}</Box>
       <Box style={styles.calendarItemFloat('topLeft', data.styleType)}>{data.topLeft}</Box>
       <Box style={styles.calendarItemFloat('bottomLeft', data.styleType)}>{data.bottomLeft}</Box>

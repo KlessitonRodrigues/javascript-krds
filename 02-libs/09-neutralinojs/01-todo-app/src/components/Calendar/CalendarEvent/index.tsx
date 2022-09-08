@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Input, TextField, Checkbox, FormControlLabel, Button } from '@mui/material';
+import { Box, Input, TextField, Checkbox, FormControlLabel, Button, Typography } from '@mui/material';
 import * as icon from 'react-icons/bs';
 
 import Flex from '../../Templates/Flex';
@@ -17,23 +17,30 @@ const calendarCheckboxIcon = {
 
 const CalendarEvent = () => {
   const [todoForm, setTodoForm] = useState(store.todoFormState);
-  const [global] = useGlobalContext();
+  const [global, setGlobal] = useGlobalContext();
 
   return (
     <Sidepanel show={global.sidePanel.todo}>
       <Box style={calendarEvent()}>
-        <SidepanelTitle title="Todo" icon={<icon.BsCalendarEvent fontSize="1.5rem" />} />
+        <SidepanelTitle
+          title="Todo"
+          icon={<icon.BsCalendarEvent fontSize="1.5rem" />}
+          onClose={() => setGlobal(store.handleCloseButton(global))}
+        />
 
         <Box>
           <SidepanelSection title="Todo">
-            <TextField
-              variant="standard"
-              size="small"
-              fullWidth
-              placeholder="name"
-              value={todoForm.name}
-              onChange={ev => setTodoForm(store.handleNameField(ev.target.value, todoForm))}
-            />
+            <Flex yContent="flex-end">
+              <Typography variant='h6'>name &nbsp;</Typography>
+              <TextField
+                variant="standard"
+                size="small"
+                fullWidth
+                placeholder="name"
+                value={todoForm.name}
+                onChange={ev => setTodoForm(store.handleNameField(ev.target.value, todoForm))}
+              />
+            </Flex>
             &nbsp;
             <TextField
               variant="standard"
