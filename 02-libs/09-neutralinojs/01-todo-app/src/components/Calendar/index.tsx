@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box } from '@mui/material';
 
 import CalendarHeader from './CalendarHeader';
@@ -8,14 +9,19 @@ import useGlobalContext from '../../hooks/useGlobalContext';
 
 const Calendar = () => {
   const [global] = useGlobalContext();
+  const calendarHeaders = React.useMemo(() => store.renderWeekHeaders(), []);
+  const calendarItems = React.useMemo(
+    () => store.renderCalendarItems(global.currentMonth),
+    [global.currentMonth]
+  );
 
   return (
     <Box>
       <CalendarHeader />
       <CalendarEvent />
       <Box style={calendarGrid}>
-        {store.renderWeekHeaders()}
-        {store.renderCalendarItems(global.currentMonth)}
+        {calendarHeaders}
+        {calendarItems}
       </Box>
     </Box>
   );

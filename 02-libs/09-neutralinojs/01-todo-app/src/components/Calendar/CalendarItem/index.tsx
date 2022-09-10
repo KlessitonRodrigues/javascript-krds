@@ -6,12 +6,19 @@ import * as types from './types';
 
 import useAnimations from '../../../hooks/useAnimations';
 import { useEffect } from 'react';
+import useGlobalContext from '../../../hooks/useGlobalContext';
 
 const CalendarItem = ({ data }: types.Props) => {
-  const itemAnimation = useAnimations(['fadeInLeft']);
+  const itemAnimation = useAnimations(['fadeInLeft', 'fadeInRight']);
+  const [global] = useGlobalContext();
 
   useEffect(() => {
-    itemAnimation.play(0, { duration: '0.5s', delay: data.animationDelay, fill: 'backwards' });
+    const direction = ['right', 'left'].indexOf(global.AnimationDirection);
+    itemAnimation.play(direction, {
+      duration: '0.3s',
+      delay: data.animationDelay,
+      fill: 'forwards',
+    });
   }, [data]);
 
   return (

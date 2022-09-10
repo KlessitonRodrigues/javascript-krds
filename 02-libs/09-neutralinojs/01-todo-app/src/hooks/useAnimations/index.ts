@@ -11,7 +11,7 @@ type AnimationConfig = {
 const useAnimations = (animationList: string[]) => {
   const elRef = useRef<HTMLElement>();
 
-  const play = (animationIndex: number, config?: AnimationConfig) => {
+  const play = (animationIndex: number, config?: AnimationConfig, afterAnimation?: () => any) => {
     if (!elRef.current) return;
 
     if (config?.delay) elRef.current.style.animationDelay = config.delay;
@@ -24,6 +24,7 @@ const useAnimations = (animationList: string[]) => {
     elRef.current.onanimationend = () => {
       if (!elRef.current) return;
       elRef.current && elRef.current.classList.remove(animationList[animationIndex]);
+      afterAnimation && afterAnimation();
     };
   };
 

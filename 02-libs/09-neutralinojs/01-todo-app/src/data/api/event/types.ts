@@ -9,6 +9,7 @@ export type CalendarEvent = {
   description: string;
   time: string;
   date: string;
+  iso: string;
   duration: number;
   repeat?: 'day' | 'week' | 'month' | 'year';
   repeatAmount?: number;

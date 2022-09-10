@@ -22,14 +22,25 @@ export default () => {
       color: ${palette.color1} !important;
     }`,
     `@keyframes fadeInRight {
-      from { opacity: 0; transform: translate3d(100%, 0, 0); }
-      to { opacity: 1; transform: translate3d(0, 0, 0); }
+        0% { opacity: 1; }
+        29% { opacity: 0.5; transform: translate3d( 0, 0, 0); }
+        30% { opacity: 0; transform: translate3d(50%, 0, 0); }
+        100% { opacity: 1; transform: translate3d(0, 0, 0); } 
     }
     .fadeInRight { animation-name: fadeInRight; }`,
-    `@keyframes fadeInLeft { 
-      from { opacity: 0; transform: translate3d(-100%, 0, 0); }
-      to { opacity: 1; transform: translate3d(0, 0, 0); } 
-      }
-     .fadeInLeft { animation-name: fadeInLeft; }`
+    `@keyframes fadeInLeft {
+        0% { opacity: 1; }
+        29% { opacity: 0.5; transform: translate3d( 0, 0, 0); }
+        30% { opacity: 0; transform: translate3d(-50%, 0, 0); }
+        100% { opacity: 1; transform: translate3d(0, 0, 0); } 
+    }
+     .fadeInLeft { animation-name: fadeInLeft; }`,
+    `@keyframes fadeInUp {
+        0% { opacity: 1; }
+        29% { opacity: 0.5; transform: translate3d( 0, 0, 0); }
+        30% { opacity: 0; transform: translate3d(0, 50%, 0); }
+        100% { opacity: 1; transform: translate3d(0, 0, 0); } 
+    }
+    .fadeInUp { animation-name: fadeInUp; }`,
   ].join('\n');
 };

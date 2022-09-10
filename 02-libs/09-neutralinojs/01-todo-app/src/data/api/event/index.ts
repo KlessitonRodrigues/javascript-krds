@@ -1,5 +1,6 @@
 import { CalendarEvent } from './types';
 import { localStorageSave, localStorageRead } from '../../util/localStorage';
+import { isSameDate } from '../../util/compareDates';
 
 const storageName = 'CalendarEvent';
 
@@ -8,6 +9,7 @@ const listCalendarEvents = () => {
 };
 
 const addCalendarEvent = (event: CalendarEvent) => {
+  console.log(event);
   let saved = localStorageRead<CalendarEvent[]>(storageName);
 
   if (!saved) saved = [];
@@ -15,14 +17,22 @@ const addCalendarEvent = (event: CalendarEvent) => {
   localStorageSave(storageName, saved);
 };
 
-const listCalendarEventsByMonth = (dateStr: string): CalendarEvent[] => {
-  const date = new Date();
-  const month = date.getMonth();
-  const year = date.getFullYear();
-  const day = date.getDate();
+const listCalendarEventFromArray = (datesArr: string[]) => {
+  const events = localStorageRead<CalendarEvent[]>(storageName);
 
-  const dates = localStorageRead<CalendarEvent[]>(storageName);
-  if (!dates) return [];
+  if (!events) return [];
+
+  const eventsByDate = datesArr.map(dateStr => {
+    const date = new Date(dateStr);
+    const monthEvents = events.filter(event => isSameDate(new Date(event.iso), date));
+
+    return {
+      date: date.toISOString(),
+      events: monthEvents,
+    };
+  });
+
+  return eventsByDate;
 };
 
 const removeCalendarEvent = () => {};
@@ -31,7 +41,7 @@ const updateCalendarEvent = () => {};
 
 export const CalendarEventApi = {
   list: listCalendarEvents,
-  listByMonth: listCalendarEventsByMonth,
+  listFromArray: listCalendarEventFromArray,
   add: addCalendarEvent,
   remove: removeCalendarEvent,
   update: updateCalendarEvent,

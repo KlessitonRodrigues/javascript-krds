@@ -32,7 +32,10 @@ export const handleDurationField: HandleTodoForm = (value, state) => {
   return { ...state, duration: value };
 };
 
-export const handleRepeatCheckbox = (value: TodoFormState['repeat'], state: TodoFormState): TodoFormState => {
+export const handleRepeatCheckbox = (
+  value: TodoFormState['repeat'],
+  state: TodoFormState
+): TodoFormState => {
   return { ...state, repeat: value };
 };
 
@@ -49,6 +52,7 @@ export const handleSaveEvent = (event: TodoFormState) => {
     repeatAmount: Number(event.repeatAmount),
     tags: [],
     repeatDates: repeatedDates(event.date, event.repeat, Number(event.repeatAmount)),
+    iso: new Date(`${event.date} ${event.time}`).toISOString(),
   });
 };
 
