@@ -76,7 +76,9 @@ var Neutralino = (function (e) {
                       '<code>NE_RT_INVTOKN</code>: Neutralinojs application configuration prevents accepting native calls from this client.'
                     )))
                 : (null === (r = s.data) || void 0 === r ? void 0 : r.success) &&
-                  o[s.id].resolve(s.data.hasOwnProperty('returnValue') ? s.data.returnValue : s.data),
+                  o[s.id].resolve(
+                    s.data.hasOwnProperty('returnValue') ? s.data.returnValue : s.data
+                  ),
               delete o[s.id])
             : s.event && n(s.event, s.data);
         }),
@@ -104,7 +106,8 @@ var Neutralino = (function (e) {
           (e ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (e / 4)))).toString(16)
         ),
         u = window.NL_TOKEN || sessionStorage.getItem('NL_TOKEN') || '';
-      (o[c] = { resolve: n, reject: s }), i.send(JSON.stringify({ id: c, method: e, data: t, accessToken: u }));
+      (o[c] = { resolve: n, reject: s }),
+        i.send(JSON.stringify({ id: c, method: e, data: t, accessToken: u }));
     });
   }
   function u(e) {
@@ -350,7 +353,10 @@ var Neutralino = (function (e) {
           s = 0;
         if (!o) return i({ code: 'NE_WD_DOMNOTF', message: 'Unable to find DOM element' });
         if (h.has(o))
-          return i({ code: 'NE_WD_ALRDREL', message: 'This DOM element is already an active draggable region' });
+          return i({
+            code: 'NE_WD_ALRDREL',
+            message: 'This DOM element is already an active draggable region',
+          });
         function a(e) {
           return t(this, void 0, void 0, function* () {
             yield Neutralino.window.move(e.screenX - r, e.screenY - s);
@@ -358,7 +364,10 @@ var Neutralino = (function (e) {
         }
         function c(e) {
           0 === e.button &&
-            ((r = e.clientX), (s = e.clientY), o.addEventListener('pointermove', a), o.setPointerCapture(e.pointerId));
+            ((r = e.clientX),
+            (s = e.clientY),
+            o.addEventListener('pointermove', a),
+            o.setPointerCapture(e.pointerId));
         }
         function u(e) {
           o.removeEventListener('pointermove', a), o.releasePointerCapture(e.pointerId);
@@ -373,7 +382,11 @@ var Neutralino = (function (e) {
       return new Promise((t, n) => {
         const i = e instanceof Element ? e : document.getElementById(e);
         if (!i) return n({ code: 'NE_WD_DOMNOTF', message: 'Unable to find DOM element' });
-        if (!h.has(i)) return n({ code: 'NE_WD_NOTDRRE', message: 'DOM element is not an active draggable region' });
+        if (!h.has(i))
+          return n({
+            code: 'NE_WD_NOTDRRE',
+            message: 'DOM element is not an active draggable region',
+          });
         const { pointerdown: o, pointerup: r } = h.get(i);
         i.removeEventListener('pointerdown', o),
           i.removeEventListener('pointerup', r),
@@ -411,7 +424,10 @@ var Neutralino = (function (e) {
         }
         let r = window.NL_ARGS.reduce(
           (e, t, n) => (
-            (t.includes('--path=') || t.includes('--debug-mode') || t.includes('--load-dir-res') || 0 == n) &&
+            (t.includes('--path=') ||
+              t.includes('--debug-mode') ||
+              t.includes('--load-dir-res') ||
+              0 == n) &&
               (e += ' ' + o(t)),
             e
           ),
@@ -440,10 +456,16 @@ var Neutralino = (function (e) {
       return c('events.broadcast', { event: e, data: t });
     },
     on: function (e, t) {
-      return window.addEventListener(e, t), Promise.resolve({ success: !0, message: 'Event listener added' });
+      return (
+        window.addEventListener(e, t),
+        Promise.resolve({ success: !0, message: 'Event listener added' })
+      );
     },
     off: function (e, t) {
-      return window.removeEventListener(e, t), Promise.resolve({ success: !0, message: 'Event listener removed' });
+      return (
+        window.removeEventListener(e, t),
+        Promise.resolve({ success: !0, message: 'Event listener removed' })
+      );
     },
     dispatch: n,
   });
@@ -492,9 +514,17 @@ var Neutralino = (function (e) {
             let t = yield fetch(e);
             (R = JSON.parse(yield t.text())),
               !(function (e) {
-                return !!(e.applicationId && e.applicationId == window.NL_APPID && e.version && e.resourcesURL);
+                return !!(
+                  e.applicationId &&
+                  e.applicationId == window.NL_APPID &&
+                  e.version &&
+                  e.resourcesURL
+                );
               })(R)
-                ? i({ code: 'NE_UP_CUPDMER', message: 'Invalid update manifest or mismatching applicationId' })
+                ? i({
+                    code: 'NE_UP_CUPDMER',
+                    message: 'Invalid update manifest or mismatching applicationId',
+                  })
                 : n(R);
           } catch (e) {
             i({ code: 'NE_UP_CUPDERR', message: 'Unable to fetch update manifest' });

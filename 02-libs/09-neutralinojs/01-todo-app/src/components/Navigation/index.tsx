@@ -1,6 +1,14 @@
 import { Box, IconButton, Tab, Tabs, Tooltip } from '@mui/material';
 import { SyntheticEvent } from 'react';
-import { BsBrightnessHigh, BsGear, BsX, BsCalendar3, BsFileText, BsTags, BsClipboardData } from 'react-icons/bs';
+import {
+  BsBrightnessHigh,
+  BsGear,
+  BsX,
+  BsCalendar3,
+  BsFileText,
+  BsTags,
+  BsClipboardData,
+} from 'react-icons/bs';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import useGlobalContext from '../../hooks/useGlobalContext';
@@ -13,7 +21,8 @@ const Navigation = () => {
   const url = useLocation();
   const navigate = useNavigate();
 
-  const toggleTheme = () => setGlobal({ ...global, theme: global.theme === 'cian' ? 'cianDark' : 'cian' });
+  const toggleTheme = () =>
+    setGlobal({ ...global, theme: global.theme === 'cian' ? 'cianDark' : 'cian' });
 
   const toggleSettingsOpen = () =>
     setGlobal({
@@ -32,9 +41,24 @@ const Navigation = () => {
   return (
     <Box style={navigation()}>
       <Tabs value={url.pathname} onChange={handleTabsOnChange}>
-        <Tab icon={<BsCalendar3 fontSize="1.25rem" />} iconPosition="start" label="Calendar" value="/" />
-        <Tab icon={<BsFileText fontSize="1.25rem" />} iconPosition="start" label="Notes" value="/folders" />
-        <Tab icon={<BsClipboardData fontSize="1.25rem" />} iconPosition="start" label="Board" value="/board" />
+        <Tab
+          icon={<BsCalendar3 fontSize="1.25rem" />}
+          iconPosition="start"
+          label="Calendar"
+          value="/"
+        />
+        <Tab
+          icon={<BsFileText fontSize="1.25rem" />}
+          iconPosition="start"
+          label="Notes"
+          value="/folders"
+        />
+        <Tab
+          icon={<BsClipboardData fontSize="1.25rem" />}
+          iconPosition="start"
+          label="Board"
+          value="/board"
+        />
       </Tabs>
 
       <Flex>

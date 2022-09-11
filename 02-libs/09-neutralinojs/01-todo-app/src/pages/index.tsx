@@ -10,10 +10,10 @@ const Router = () => {
   const locations = ['/', '/folders'];
 
   return (
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/folders" element={<NotesPage />} />
-      </Routes>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/folders" element={<NotesPage />} />
+    </Routes>
   );
 };
 

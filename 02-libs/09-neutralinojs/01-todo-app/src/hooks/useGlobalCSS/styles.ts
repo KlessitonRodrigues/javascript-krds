@@ -70,6 +70,6 @@ export default () => {
     
     .fadeOutUp {
       animation-name: fadeOutUp;
-    }`
+    }`,
   ].join('\n');
 };

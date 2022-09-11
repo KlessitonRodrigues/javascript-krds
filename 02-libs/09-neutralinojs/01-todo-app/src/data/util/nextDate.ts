@@ -4,7 +4,7 @@ export const nextDate = (dateStr: string, period: Periods, amount: number) => {
   const date = new Date(dateStr);
   const setTime = {
     day: (num: number) => date.setDate(date.getDate() + num),
-    week: (num: number) => date.setDate(date.getDate() + (7 * num)),
+    week: (num: number) => date.setDate(date.getDate() + 7 * num),
     month: (num: number) => date.setMonth(date.getMonth() + num),
     year: (num: number) => date.setFullYear(date.getFullYear() + num),
   };
