@@ -1,7 +1,8 @@
 import React from 'react';
 import useGlobalContext from '../useGlobalContext';
 
-import { BasePalette, base, baseDark } from './state';
+import { base, baseDark } from './state';
+import { BasePalette } from './types';
 
 export type PaletteContext = BasePalette;
 

@@ -8,11 +8,11 @@ export const handleNewTodoClick = (globalState: GlobalState): GlobalState => ({
 export const handlePreviousMonthClick = (globalState: GlobalState): GlobalState => {
   const date = new Date(globalState.currentMonth);
   date.setMonth(date.getMonth() - 1);
-  return { ...globalState, currentMonth: date };
+  return { ...globalState, currentMonth: date, AnimationDirection: 'right' };
 };
 
 export const handleNextMonthClick = (globalState: GlobalState): GlobalState => {
   const date = new Date(globalState.currentMonth);
   date.setMonth(date.getMonth() + 1);
-  return { ...globalState, currentMonth: date };
+  return { ...globalState, currentMonth: date, AnimationDirection: 'left' };
 };

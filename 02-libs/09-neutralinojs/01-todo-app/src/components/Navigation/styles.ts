@@ -4,6 +4,7 @@ import usePaletteContext from '../../hooks/usePaletteContext';
 export const navigation = (): CSSProperties => {
   const palette = usePaletteContext();
   return {
+    paddingLeft: '3.25rem',
     paddingRight: '0.5rem',
     display: 'flex',
     justifyContent: 'space-between',

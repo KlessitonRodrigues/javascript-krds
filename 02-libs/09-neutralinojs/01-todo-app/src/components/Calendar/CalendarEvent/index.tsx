@@ -1,5 +1,13 @@
 import { useState } from 'react';
-import { Box, Input, TextField, Checkbox, FormControlLabel, Button, Typography } from '@mui/material';
+import {
+  Box,
+  Input,
+  TextField,
+  Checkbox,
+  FormControlLabel,
+  Button,
+  Typography,
+} from '@mui/material';
 import * as icon from 'react-icons/bs';
 
 import Flex from '../../Templates/Flex';
@@ -30,23 +38,18 @@ const CalendarEvent = () => {
 
         <Box>
           <SidepanelSection title="Todo">
-            <Flex yContent="flex-end">
-              <Typography variant='h6'>name &nbsp;</Typography>
-              <TextField
-                variant="standard"
-                size="small"
-                fullWidth
-                placeholder="name"
-                value={todoForm.name}
-                onChange={ev => setTodoForm(store.handleNameField(ev.target.value, todoForm))}
-              />
-            </Flex>
-            &nbsp;
             <TextField
               variant="standard"
-              size="small"
               fullWidth
-              placeholder="description"
+              label="Name"
+              value={todoForm.name}
+              onChange={ev => setTodoForm(store.handleNameField(ev.target.value, todoForm))}
+            />
+            &nbsp;
+            <TextField
+              fullWidth
+              variant="standard"
+              label="Description"
               value={todoForm.description}
               onChange={ev => setTodoForm(store.handleDescriptionField(ev.target.value, todoForm))}
             />
@@ -176,17 +179,19 @@ const CalendarEvent = () => {
               <TextField variant="standard" size="small" placeholder="note Id" />
             </Flex>
           </SidepanelSection>
-          <SidepanelSection title="">
-            <Box mt={4}>
-              <Button variant="contained" size="small" onClick={() => store.handleSaveEvent(todoForm)}>
-                Save
-              </Button>
-              &nbsp;
-              <Button variant="contained" size="small" color="error">
-                Clean
-              </Button>
-            </Box>
-          </SidepanelSection>
+          <Box mt={4}>
+            <Button
+              variant="contained"
+              size="small"
+              onClick={() => store.handleSaveEvent(todoForm)}
+            >
+              Save
+            </Button>
+            &nbsp;
+            <Button variant="contained" size="small" color="error">
+              Clean
+            </Button>
+          </Box>
         </Box>
       </Box>
     </Sidepanel>

@@ -1,19 +1,29 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import { useState } from 'react';
 import { BsCalendarDate } from 'react-icons/bs';
+import useAnimations from '../../hooks/useAnimations';
 
-import usePaletteContext from '../../hooks/usePaletteContext';
-import Flex from '../Templates/Flex';
+import { headerExpanded, headerStyle } from './styles';
 
 const Header = () => {
-  const palette = usePaletteContext();
+  const [expanded, setExpanded] = useState(false);
+  const headerAnimation = useAnimations(['fadeInDown']);
+
+  const headerEvents = {
+    onMouseEnter: () => {
+      headerAnimation.play(0, { duration: '0.5s' });
+      setExpanded(!expanded);
+    },
+    onMouseLeave: () => setExpanded(!expanded),
+  };
 
   return (
-    <Box px={1.5} py={1.5} bgcolor={palette.color1Dark} color={palette.color4}>
-      <Flex xContent="flex-start">
-        <BsCalendarDate fontSize="1.75rem" />
+    <Box {...headerEvents} style={headerStyle(expanded)}>
+      <BsCalendarDate fontSize="1.75rem" />
+      <Box style={headerExpanded(expanded)} ref={headerAnimation.elRef}>
         <Typography variant="h2">&nbsp;Todo App</Typography>
-      </Flex>
+      </Box>
     </Box>
   );
 };

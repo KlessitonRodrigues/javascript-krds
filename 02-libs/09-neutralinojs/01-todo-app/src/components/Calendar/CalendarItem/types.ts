@@ -1,10 +1,10 @@
-export type DayBoxStyles = 'base' | 'day' | 'day-out-of-month' | 'header';
+export type BoxStyles = 'base' | 'day' | 'day-out-of-month' | 'header';
 
-export type CalendarItemFloat = 'topLeft' | 'bottomLeft' | 'topRight';
+export type ItemFloat = 'topLeft' | 'bottomLeft' | 'topRight';
 
 export type Props = {
   data: {
-    styleType: DayBoxStyles;
+    styleType: BoxStyles;
     name?: string;
     topLeft?: any;
     bottomLeft?: any;

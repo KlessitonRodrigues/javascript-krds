@@ -1,5 +1,5 @@
 import { createTheme, ThemeOptions } from '@mui/material';
-import { BasePalette } from './hooks/usePaletteContext/state';
+import { BasePalette } from './hooks/usePaletteContext/types';
 
 const palette = (palette: BasePalette): ThemeOptions['palette'] => ({
   common: {
@@ -7,8 +7,8 @@ const palette = (palette: BasePalette): ThemeOptions['palette'] => ({
     white: palette.light,
   },
   background: { default: palette.bgLight },
-  primary: { main: palette.color1 },
-  secondary: { main: palette.color9 },
+  primary: { main: palette.colorA },
+  secondary: { main: palette.colorB },
   text: {
     primary: palette.dark,
     secondary: palette.dark,
@@ -58,12 +58,9 @@ const components = (basePalette: BasePalette): ThemeOptions['components'] => {
           padding: '0 0.5rem',
           justifyContent: 'flex-start',
           textTransform: 'none',
-          fontSize: '1rem',
-          lineHeight: 0
+          fontSize: '1.1rem',
+          lineHeight: 0,
         },
-        selected: {
-          fontSize: '1.5rem',
-        }
       },
     },
     MuiFormControlLabel: {

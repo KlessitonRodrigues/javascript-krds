@@ -1,34 +1,18 @@
-import { green, grey, red, yellow } from '@mui/material/colors';
-
-export type BasePalette = {
-  color1: string;
-  color1Dark: string;
-  color2: string;
-  color3: string;
-  color4: string;
-  color6: string;
-  color7: string;
-  color8: string;
-  color9: string;
-  shadow: string;
-  shadow2: string;
-  border: string;
-  bgDark: string;
-  bgLight: string;
-  dark: string;
-  light: string;
-};
+import { BasePalette } from './types';
 
 export const base: BasePalette = {
-  color1: '#0075A3', // CIAN
-  color1Dark: '#00587A', // CIAN DARK
-  color2: red['900'], // RED
-  color3: green['700'], // GREEN
-  color4: grey['100'], // WHITE
-  color6: grey['900'], // BLACK
-  color7: grey['500'], // GRAY
-  color8: yellow['800'], // YELLOW
-  color9: '#6E2594', // VIOLET
+  colorA: '#7B1E7A',
+  colorADark: '#631861',
+  colorB: '#7B1E7A',
+  colorBDark: '#631861',
+  blue: '#00587A',
+  red: '#CF5C36',
+  green: '#4DA167',
+  white: '#FBF6EF',
+  black: '#241909',
+  gray: '#99B0C2',
+  yellow: '#EFC88B',
+  violet: '#6E2594',
   shadow: '#2222',
   shadow2: '#4444',
   border: '#22222200',
@@ -38,14 +22,21 @@ export const base: BasePalette = {
   light: '#cccccc',
 };
 
-export const baseDark = {
+export const baseDark: BasePalette = {
   ...base,
-  color3: green['400'],
-  color1: '#0075A3',
-  color1Dark: '#00587A',
+  colorA: '#0075A3',
+  colorADark: '#00587A',
   bgDark: '#fcfcfc',
   bgLight: '#1A1A1A',
   dark: '#CCCCCC',
   light: '#222222',
   border: '#DDDDDD22',
+};
+
+export const blue: BasePalette = {
+  ...base,
+  colorA: '#20A4F3',
+  colorADark: '#20A4F3',
+  colorB: '#20A4F3',
+  colorBDark: '#20A4F3',
 };

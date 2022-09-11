@@ -9,7 +9,7 @@ const CalendarTask = (props: type.Props) => {
   const palette = usePaletteContext();
 
   return (
-    <Box className="dark-text-hover" style={calendarTask} color={palette.color7}>
+    <Box className="dark-text-hover" style={calendarTask} color={palette.black}>
       <Box>
         {getTaskIcon('todo')}
         &nbsp; {props.name}

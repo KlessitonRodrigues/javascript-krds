@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import { ReactNode } from 'react';
 
-import { sidepanelSection, sidepanelSectionHr } from '../styles';
+import { section, title } from '../styles';
 
 type Props = {
   title: string;
@@ -9,12 +9,13 @@ type Props = {
 };
 
 const SidepanelSection = (props: Props) => (
-  <Box style={sidepanelSection()} pt={5}>
-    <Typography variant="h6" fontWeight="normal">
-      {props.title}
-    </Typography>
-    <hr style={sidepanelSectionHr()} />
-    {props.children}
+  <Box style={section()} pt={4}>
+    <Box style={title()}>
+      <Typography variant="h5" fontWeight="normal">
+        {props.title}
+      </Typography>
+    </Box>
+    <Box px={2}>{props.children}</Box>
   </Box>
 );
 

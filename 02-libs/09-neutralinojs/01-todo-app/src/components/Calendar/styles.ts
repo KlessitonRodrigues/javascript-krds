@@ -18,7 +18,7 @@ export const calendarHeader = (): CSSProperties => {
     userSelect: 'none',
     fontSize: '1.5rem',
     marginBottom: '0.5rem',
-    color: palette.color1,
+    color: palette.colorADark,
   };
 };
 

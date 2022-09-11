@@ -1,0 +1,21 @@
+export type BasePalette = {
+  colorA: string;
+  colorADark: string;
+  colorB: string;
+  colorBDark: string;
+  red: string;
+  green: string;
+  white: string;
+  black: string;
+  gray: string;
+  yellow: string;
+  blue: string;
+  violet: string;
+  shadow: string;
+  shadow2: string;
+  border: string;
+  bgDark: string;
+  bgLight: string;
+  dark: string;
+  light: string;
+};

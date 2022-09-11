@@ -9,7 +9,7 @@ export const sidepanelOpen = (isOpen: boolean): CSSProperties => {
     position: 'fixed',
     right: '0px',
     bottom: '0px',
-    height: '85vh',
+    height: '55rem',
     boxShadow: '0 0 6px 100vw #4443',
     //transitionProperty: 'right',
     transitionDuration: '0.3s',
@@ -29,18 +29,19 @@ export const sidepanelOpen = (isOpen: boolean): CSSProperties => {
   };
 };
 
-export const sidepanelSection = (): CSSProperties => {
+export const section = (): CSSProperties => {
   const palette = usePaletteContext();
   return {
-    color: palette.color1Dark,
+    color: palette.colorADark,
   };
 };
 
-export const sidepanelSectionHr = (): CSSProperties => {
+export const title = (): CSSProperties => {
   const palette = usePaletteContext();
   return {
-    borderStyle: 'solid',
-    borderColor: palette.color1Dark + '44',
-    margin: '0 0 0.25rem',
+    backgroundColor: palette.colorA + '19',
+    color: palette.dark,
+    borderRadius: '0.25rem',
+    padding: '0.25rem 0.5rem',
   };
 };
