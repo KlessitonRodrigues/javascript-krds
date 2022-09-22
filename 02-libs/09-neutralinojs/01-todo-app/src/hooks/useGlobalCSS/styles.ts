@@ -71,5 +71,23 @@ export default () => {
     .fadeOutUp {
       animation-name: fadeOutUp;
     }`,
+    `
+    /* width */
+    div::-webkit-scrollbar {
+      width: 5px;
+    }
+    /* Track */
+    div::-webkit-scrollbar-track {
+      background: #0000;
+    }
+    /* Handle */
+    div::-webkit-scrollbar-thumb {
+      background: ${palette.colorA + '66'};
+      border-radius: 5px;
+    }
+    /* Handle on hover */
+    div::-webkit-scrollbar-thumb:hover {
+      background: ${palette.colorA};
+    }`,
   ].join('\n');
 };

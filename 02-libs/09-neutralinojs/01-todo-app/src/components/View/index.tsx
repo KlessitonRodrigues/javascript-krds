@@ -12,7 +12,7 @@ const View = (props: PropsWithChildren) => {
   useGlobalCSS();
 
   return (
-    <Box style={viewStyles} color={palette.dark} bgcolor={palette.bgLight}>
+    <Box style={viewStyles()}>
       <ThemeProvider theme={theme(palette)}>{props.children}</ThemeProvider>
     </Box>
   );

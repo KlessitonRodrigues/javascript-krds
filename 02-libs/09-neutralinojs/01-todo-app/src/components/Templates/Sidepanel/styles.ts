@@ -39,9 +39,10 @@ export const section = (): CSSProperties => {
 export const title = (): CSSProperties => {
   const palette = usePaletteContext();
   return {
-    backgroundColor: palette.colorA + '19',
+    backgroundColor: palette.colorA + '11',
     color: palette.dark,
     borderRadius: '0.25rem',
     padding: '0.25rem 0.5rem',
+    marginBottom: '0.5rem',
   };
 };

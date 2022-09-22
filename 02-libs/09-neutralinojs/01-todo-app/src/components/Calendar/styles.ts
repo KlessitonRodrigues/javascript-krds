@@ -8,7 +8,7 @@ export const calendarGrid: CSSProperties = {
   rowGap: '0.5rem',
   columnGap: '0.5rem',
   justifyItems: 'stretch',
-  alignItems: 'center',
+  alignItems: 'stretch',
   textAlign: 'center',
 };
 

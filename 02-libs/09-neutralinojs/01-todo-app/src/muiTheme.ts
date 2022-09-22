@@ -37,6 +37,7 @@ const components = (basePalette: BasePalette): ThemeOptions['components'] => {
           padding: '0.25rem',
           cursor: 'pointer',
           color: 'unset',
+          borderRadius: '1rem',
         },
         sizeSmall: {
           padding: '0.25rem',

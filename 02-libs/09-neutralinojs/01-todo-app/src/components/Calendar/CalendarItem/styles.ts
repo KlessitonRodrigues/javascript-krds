@@ -85,4 +85,7 @@ export const calendarItemContent: CSSProperties = {
   width: '100%',
   padding: '1.25rem 0 0.75rem 0',
   textAlign: 'left',
+  maxHeight: '5rem',
+  overflowY: 'auto',
+  margin: '0 0 1rem',
 };

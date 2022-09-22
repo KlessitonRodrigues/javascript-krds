@@ -1,13 +1,5 @@
 import { useState } from 'react';
-import {
-  Box,
-  Input,
-  TextField,
-  Checkbox,
-  FormControlLabel,
-  Button,
-  Typography,
-} from '@mui/material';
+import { Box, Input, TextField, Checkbox, FormControlLabel, Button } from '@mui/material';
 import * as icon from 'react-icons/bs';
 
 import Flex from '../../Templates/Flex';
@@ -58,17 +50,17 @@ const CalendarEvent = () => {
           <SidepanelSection title="Time">
             <Flex>
               <Input
-                type="time"
-                value={todoForm.time}
-                onChange={ev => setTodoForm(store.handleTimeField(ev.target.value, todoForm))}
-              />
-              &nbsp; &nbsp;
-              <Input
                 type="date"
                 fullWidth
                 defaultValue={'2022-07-28'}
                 value={todoForm.date}
                 onChange={ev => setTodoForm(store.handleDateField(ev.target.value, todoForm))}
+              />
+              &nbsp; &nbsp;
+              <Input
+                type="time"
+                value={todoForm.time}
+                onChange={ev => setTodoForm(store.handleTimeField(ev.target.value, todoForm))}
               />
             </Flex>
           </SidepanelSection>

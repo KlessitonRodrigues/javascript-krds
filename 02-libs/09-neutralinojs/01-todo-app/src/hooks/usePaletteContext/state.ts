@@ -24,8 +24,8 @@ export const base: BasePalette = {
 
 export const baseDark: BasePalette = {
   ...base,
-  colorA: '#0075A3',
-  colorADark: '#00587A',
+  colorA: '#7B1E7A',
+  colorADark: '#631861',
   bgDark: '#fcfcfc',
   bgLight: '#1A1A1A',
   dark: '#CCCCCC',
