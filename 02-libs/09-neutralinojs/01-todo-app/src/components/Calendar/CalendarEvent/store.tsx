@@ -3,59 +3,69 @@ import { repeatedDates } from '../../../data/util/nextDate';
 import { GlobalState } from '../../../hooks/useGlobalContext/state';
 import { TodoFormState, HandleTodoForm } from './types';
 
-export const todoFormState: TodoFormState = {
-  name: '',
-  description: '',
-  time: '07:00:00',
-  date: '',
-  duration: '60',
-  repeatAmount: '1',
+const dateInputFormat = (dateStr: string) => {
+  const date = new Date(dateStr);
+  const zeroLeft = (n: number) => (n < 10 ? '0' + n : n.toString());
+  return `${date.getFullYear()}-${zeroLeft(date.getMonth())}-${zeroLeft(date.getDate())}`;
 };
 
-export const handleNameField: HandleTodoForm = (value, state) => {
-  return { ...state, name: value };
-};
+class Store {
+  todoFormState: TodoFormState = {
+    name: '',
+    description: '',
+    time: '07:00:00',
+    date: dateInputFormat(new Date().toISOString()),
+    duration: '60',
+    repeatAmount: '1',
+  };
 
-export const handleDescriptionField: HandleTodoForm = (value, state) => {
-  return { ...state, description: value };
-};
+  handleNameField: HandleTodoForm = (value, state) => {
+    return { ...state, name: value };
+  };
 
-export const handleTimeField: HandleTodoForm = (value, state) => {
-  return { ...state, time: value };
-};
+  handleDescriptionField: HandleTodoForm = (value, state) => {
+    return { ...state, description: value };
+  };
 
-export const handleDateField: HandleTodoForm = (value, state) => {
-  return { ...state, date: value };
-};
+  handleTimeField: HandleTodoForm = (value, state) => {
+    return { ...state, time: value };
+  };
 
-export const handleDurationField: HandleTodoForm = (value, state) => {
-  return { ...state, duration: value };
-};
+  handleDateField: HandleTodoForm = (value, state) => {
+    return { ...state, date: value };
+  };
 
-export const handleRepeatCheckbox = (
-  value: TodoFormState['repeat'],
-  state: TodoFormState
-): TodoFormState => {
-  return { ...state, repeat: value };
-};
+  handleDurationField: HandleTodoForm = (value, state) => {
+    return { ...state, duration: value };
+  };
 
-export const handleRepeatTime: HandleTodoForm = (value, state) => {
-  return { ...state, repeatAmount: value };
-};
+  handleRepeatCheckbox = (value: TodoFormState['repeat'], state: TodoFormState): TodoFormState => {
+    return { ...state, repeat: value };
+  };
 
-export const handleSaveEvent = (event: TodoFormState) => {
-  return CalendarEventApi.add({
-    ...event,
-    id: Date.now().toString(),
-    status: [],
-    duration: Number(event.duration),
-    repeatAmount: Number(event.repeatAmount),
-    tags: [],
-    repeatDates: repeatedDates(event.date, event.repeat, Number(event.repeatAmount)),
-    iso: new Date(`${event.date} ${event.time}`).toISOString(),
-  });
-};
+  handleRepeatTime: HandleTodoForm = (value, state) => {
+    return { ...state, repeatAmount: value };
+  };
 
-export const handleCloseButton = (global: GlobalState): GlobalState => {
-  return { ...global, sidePanel: { ...global.sidePanel, todo: !global.sidePanel.todo } };
-};
+  handleSaveEvent = (event: TodoFormState) => {
+    const dateISO = new Date(`${event.date} ${event.time}`).toISOString();
+    const id = Date.now().toString(20);
+    const todos = repeatedDates(dateISO, event.repeat, Number(event.repeatAmount), id);
+    return CalendarEventApi.add({
+      ...event,
+      id,
+      duration: Number(event.duration),
+      repeatAmount: Number(event.repeatAmount),
+      tags: [],
+      repeatDates: todos,
+      dateISO: dateISO,
+      dateISOEnd: todos[todos.length - 1].date,
+    });
+  };
+
+  handleCloseButton = (global: GlobalState): GlobalState => {
+    return { ...global, sidePanel: { ...global.sidePanel, todo: !global.sidePanel.todo } };
+  };
+}
+
+export default new Store();

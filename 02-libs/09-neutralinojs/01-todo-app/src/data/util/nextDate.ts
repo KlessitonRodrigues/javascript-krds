@@ -1,3 +1,5 @@
+import { CalendarTodo } from '../api/event/types';
+
 type Periods = 'day' | 'week' | 'month' | 'year';
 
 export const nextDate = (dateStr: string, period: Periods, amount: number) => {
@@ -9,12 +11,22 @@ export const nextDate = (dateStr: string, period: Periods, amount: number) => {
     year: (num: number) => date.setFullYear(date.getFullYear() + num),
   };
 
-  console.log(date);
   setTime[period](amount);
-  console.log(date);
   return date.toISOString();
 };
 
-export const repeatedDates = (date: string, period: Periods, amount: number) => {
-  return new Array(amount).fill(1).map((item, i) => nextDate(date, period, amount * (i + 1)));
+export const repeatedDates = (date: string, period: Periods, amount: number, parentId: string) => {
+  const events: CalendarTodo[] = [];
+  const arr = new Array(amount).fill(1);
+
+  arr.forEach((item, i) => {
+    events.push({
+      id: parentId,
+      index: i,
+      date: nextDate(date, period, i),
+      status: 'todo',
+    });
+  });
+
+  return events;
 };

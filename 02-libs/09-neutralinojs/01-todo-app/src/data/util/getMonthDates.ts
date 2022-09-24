@@ -51,7 +51,7 @@ export const getCalendarGap = (startDate: string, endDate: string) => {
 
   if (startTime.getTime() >= endTime.getTime()) return [];
 
-  while (startTime.getTime() <= endTime.getTime()) {
+  while (startTime.getTime() <= endTime.getTime() || dates.length < 42) {
     dates.push(startTime.toISOString());
     startTime.setDate(startTime.getDate() + 1);
   }

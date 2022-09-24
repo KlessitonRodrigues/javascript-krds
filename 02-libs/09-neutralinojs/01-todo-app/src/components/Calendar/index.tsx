@@ -3,8 +3,8 @@ import { Box } from '@mui/material';
 
 import CalendarHeader from './CalendarHeader';
 import CalendarEvent from './CalendarEvent';
-import { calendarGrid } from './styles';
-import * as store from './store';
+import styles from './styles';
+import store from './store';
 import useGlobalContext from '../../hooks/useGlobalContext';
 
 const Calendar = () => {
@@ -19,7 +19,7 @@ const Calendar = () => {
     <Box>
       <CalendarHeader />
       <CalendarEvent />
-      <Box style={calendarGrid}>
+      <Box style={styles.calendarGrid}>
         {calendarHeaders}
         {calendarItems}
       </Box>

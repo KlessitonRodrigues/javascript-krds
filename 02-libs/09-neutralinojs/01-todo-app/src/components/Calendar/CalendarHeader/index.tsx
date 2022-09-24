@@ -4,7 +4,7 @@ import { BsPlus, BsCaretLeft, BsCaretRight, BsCalendar2Date } from 'react-icons/
 import { dateStrToObj } from '../../../data/util/formatDate';
 import useGlobalContext from '../../../hooks/useGlobalContext';
 import Flex from '../../Templates/Flex';
-import { calendarHeader } from '../styles';
+import styles from './styles';
 import * as store from './store';
 
 type Props = {
@@ -17,7 +17,7 @@ const CalendarHeader = (props: Props) => {
   const date = dateStrToObj(global.currentMonth.toISOString());
 
   return (
-    <Box style={calendarHeader()}>
+    <Box style={styles.calendarHeader()}>
       <Flex xContent="stretch">
         <Button
           variant="contained"

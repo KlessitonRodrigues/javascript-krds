@@ -1,6 +1,10 @@
-export type CalendarEventStatus = {
+export type CalendarTodo = {
+  id: string;
   index: number;
-  status: 'todo' | 'doing' | 'done';
+  date: string;
+  status: 'todo' | 'doing' | 'done' | 'canceled';
+  started?: string;
+  ended?: string;
 };
 
 export type CalendarEvent = {
@@ -9,11 +13,11 @@ export type CalendarEvent = {
   description: string;
   time: string;
   date: string;
-  iso: string;
+  dateISOEnd: string;
+  dateISO: string;
   duration: number;
   repeat?: 'day' | 'week' | 'month' | 'year';
   repeatAmount?: number;
-  repeatDates?: string[];
-  status: CalendarEventStatus[];
+  repeatDates?: CalendarTodo[];
   tags: [];
 };

@@ -6,9 +6,9 @@ import Flex from '../../Templates/Flex';
 import Sidepanel from '../../Templates/Sidepanel';
 import SidepanelSection from '../../Templates/Sidepanel/Section';
 import SidepanelTitle from '../../Templates/Sidepanel/Title';
-import { calendarEvent } from '../styles';
+import styles from './styles';
 import useGlobalContext from '../../../hooks/useGlobalContext';
-import * as store from './store';
+import store from './store';
 
 const calendarCheckboxIcon = {
   icon: <icon.BsCalendarEvent />,
@@ -21,7 +21,7 @@ const CalendarEvent = () => {
 
   return (
     <Sidepanel show={global.sidePanel.todo}>
-      <Box style={calendarEvent()}>
+      <Box style={styles.calendarEvent()}>
         <SidepanelTitle
           title="Todo"
           icon={<icon.BsCalendarEvent fontSize="1.5rem" />}
@@ -52,7 +52,6 @@ const CalendarEvent = () => {
               <Input
                 type="date"
                 fullWidth
-                defaultValue={'2022-07-28'}
                 value={todoForm.date}
                 onChange={ev => setTodoForm(store.handleDateField(ev.target.value, todoForm))}
               />

@@ -19,16 +19,15 @@ const addCalendarEvent = (event: CalendarEvent) => {
 
 const listCalendarEventFromArray = (datesArr: string[]) => {
   const events = localStorageRead<CalendarEvent[]>(storageName);
-
   if (!events) return [];
 
-  const eventsByDate = datesArr.map(dateStr => {
-    const date = new Date(dateStr);
-    const monthEvents = events.filter(event => isSameDate(new Date(event.iso), date));
+  const allEventsDates = events.map(event => event.repeatDates).flat();
 
+  const eventsByDate = datesArr.map(date => {
+    const dateEvents = allEventsDates.filter(event => isSameDate(event.date, date));
     return {
-      date: date.toISOString(),
-      events: monthEvents,
+      date,
+      dateEvents,
     };
   });
 
@@ -41,7 +40,7 @@ const updateCalendarEvent = () => {};
 
 export const CalendarEventApi = {
   list: listCalendarEvents,
-  listFromArray: listCalendarEventFromArray,
+  listEventsFromArray: listCalendarEventFromArray,
   add: addCalendarEvent,
   remove: removeCalendarEvent,
   update: updateCalendarEvent,

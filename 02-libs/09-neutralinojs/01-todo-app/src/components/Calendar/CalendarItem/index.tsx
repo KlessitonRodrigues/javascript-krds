@@ -1,10 +1,10 @@
+import { useEffect } from 'react';
 import { Box } from '@mui/material';
 
 import * as styles from './styles';
 import * as store from './store';
 import * as types from './types';
 import useAnimations from '../../../hooks/useAnimations';
-import { useEffect } from 'react';
 import useGlobalContext from '../../../hooks/useGlobalContext';
 import If from '../../Templates/If';
 

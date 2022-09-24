@@ -7,6 +7,7 @@ type Props = {
   yContent?: CSSProperties['alignContent'];
   column?: boolean;
   children: ReactNode;
+  styles?: CSSProperties;
 };
 
 const Flex = (props: Props) => {
@@ -19,7 +20,7 @@ const Flex = (props: Props) => {
     justifyContent: props.xContent || 'center',
   };
 
-  return <div style={flexStyle}>{props.children}</div>;
+  return <div style={{ ...props.styles, ...flexStyle }}>{props.children}</div>;
 };
 
 export default Flex;
