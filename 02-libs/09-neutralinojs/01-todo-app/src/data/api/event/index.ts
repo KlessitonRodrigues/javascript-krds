@@ -1,4 +1,4 @@
-import { CalendarEvent } from './types';
+import { CalendarEvent, CalendarTodo } from './types';
 import { localStorageSave, localStorageRead } from '../../util/localStorage';
 import { isSameDate } from '../../util/compareDates';
 
@@ -19,15 +19,23 @@ const addCalendarEvent = (event: CalendarEvent) => {
 
 const listCalendarEventFromArray = (datesArr: string[]) => {
   const events = localStorageRead<CalendarEvent[]>(storageName);
-  if (!events) return [];
+  if (!events?.length) return [];
 
-  const allEventsDates = events.map(event => event.repeatDates).flat();
+  const flatedEvents = events
+    .map(event => {
+      return event.repeatDates?.map(repeatEvent => ({
+        ...repeatEvent,
+        name: event.name,
+        description: event.description,
+        tags: event.tags,
+      }));
+    })
+    .flat();
 
   const eventsByDate = datesArr.map(date => {
-    const dateEvents = allEventsDates.filter(event => isSameDate(event.date, date));
     return {
       date,
-      dateEvents,
+      dateEvents: flatedEvents.filter(event => isSameDate(event.date, date)),
     };
   });
 
@@ -36,7 +44,20 @@ const listCalendarEventFromArray = (datesArr: string[]) => {
 
 const removeCalendarEvent = () => {};
 
-const updateCalendarEvent = () => {};
+const updateCalendarEvent = (id: string, index: number, status: CalendarTodo['status']) => {
+  const events = localStorageRead<CalendarEvent[]>(storageName);
+
+  console.log(id, index, status);
+
+  for (const event of events) {
+    if (event.id === id) {
+      event.repeatDates[index].status = status;
+      break;
+    }
+  }
+
+  localStorageSave<CalendarEvent[]>(storageName, events);
+};
 
 export const CalendarEventApi = {
   list: listCalendarEvents,

@@ -23,29 +23,19 @@ class Store {
     const dateList = getCalendarGap(dates.fillFirstWeek.toString(), dates.fillLastWeek.toString());
     const eventList = CalendarEventApi.listEventsFromArray(dateList);
 
-    console.log(dates, dateList, eventList)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     const calendarGrid = eventList.map((calendar, i) => {
       const currentDate = new Date(calendar.date);
       const isCurrentMonth = isSameMonth(currentDate, dates.firstMonthDay);
       const currentDay = currentDate.getDate();
 
-      const TaskList = calendar.dateEvents.map(event => {
-        return <CalendarTask name={event.status} key={event.id} />;
-      });
+      const TaskList = calendar.dateEvents.map(({ name, id, index, status }) => (
+        <CalendarTask
+          name={name}
+          key={id + index}
+          status={status}
+          onClick={() => CalendarEventApi.update(id, index, 'doing')}
+        />
+      ));
 
       const data: CalendarItemProps['data'] = {
         styleType: isCurrentMonth ? 'day' : 'day-out-of-month',

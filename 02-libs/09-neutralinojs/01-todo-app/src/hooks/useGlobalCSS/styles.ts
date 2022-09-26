@@ -43,38 +43,19 @@ export default () => {
     }
     .fadeInUp { animation-name: fadeInUp; }`,
     `@keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translate3d(0, -100%, 0);
-      }
-    
-      to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-      }
+      from { opacity: 0; transform: translate3d(0, -100%, 0); }
+      to { opacity: 1; transform: translate3d(0, 0, 0); }
     }
-    
-    .fadeInDown {
-      animation-name: fadeInDown;
-    }`,
+    .fadeInDown { animation-name: fadeInDown; }`,
     `@keyframes fadeOutUp {
-      from {
-        opacity: 1;
-      }
-    
-      to {
-        opacity: 0;
-        transform: translate3d(0, -100%, 0);
-      }
+      from { opacity: 1; }
+      to { opacity: 0; transform: translate3d(0, -100%, 0); }
     }
-    
-    .fadeOutUp {
-      animation-name: fadeOutUp;
-    }`,
+    .fadeOutUp { animation-name: fadeOutUp; }`,
     `
     /* width */
     div::-webkit-scrollbar {
-      width: 5px;
+      width: 3px;
     }
     /* Track */
     div::-webkit-scrollbar-track {

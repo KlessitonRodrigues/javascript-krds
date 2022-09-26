@@ -1,14 +1,17 @@
-import { BsSquare, BsCaretRightSquare, BsCheckSquare, BsClock } from 'react-icons/bs';
+import { BsFillPlayFill, BsPlay, BsCheck, BsX } from 'react-icons/bs';
+import { CalendarTodo } from '../../../data/api/event/types';
 
-export const getTaskIcon = (type?: 'todo' | 'progess' | 'done') => {
+export const getTaskIcon = (type?: CalendarTodo['status']) => {
   switch (type) {
     case 'todo':
-      return <BsClock fontSize="0.75rem" />;
-    case 'progess':
-      return <BsCaretRightSquare fontSize="0.75rem" />;
+      return <BsPlay fontSize="1.2rem" />;
+    case 'doing':
+      return <BsFillPlayFill fontSize="1.2rem" />;
     case 'done':
-      return <BsCheckSquare fontSize="0.75rem" />;
+      return <BsCheck fontSize="1.5rem" />;
+    case 'canceled':
+      return <BsX fontSize="1.3rem" />;
     default:
-      return <BsSquare fontSize="0.75rem" />;
+      return <BsPlay fontSize="1.1rem" />;
   }
 };
