@@ -70,5 +70,12 @@ export default () => {
     div::-webkit-scrollbar-thumb:hover {
       background: ${palette.colorA};
     }`,
+    ` .show-items-onhover .show-onhover{
+      opacity: 0 !important;
+    }
+      .show-items-onhover:hover .show-onhover{
+      opacity: 1 !important;
+    }
+    `,
   ].join('\n');
 };

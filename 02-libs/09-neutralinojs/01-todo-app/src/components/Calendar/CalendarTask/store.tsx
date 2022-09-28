@@ -8,10 +8,10 @@ export const getTaskIcon = (type?: CalendarTodo['status']) => {
     case 'doing':
       return <BsFillPlayFill fontSize="1.2rem" />;
     case 'done':
-      return <BsCheck fontSize="1.5rem" />;
+      return <BsCheck fontSize="1.2rem" />;
     case 'canceled':
-      return <BsX fontSize="1.3rem" />;
+      return <BsX fontSize="1.2rem" />;
     default:
-      return <BsPlay fontSize="1.1rem" />;
+      return <BsPlay fontSize="1.2rem" />;
   }
 };

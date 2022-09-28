@@ -6,24 +6,23 @@ class Styles {
   calendarTask = (status: CalendarTodo['status']): CSSProperties => {
     const palette = usePaletteContext();
     const styles = {
-      fontSize: '0.75rem',
+      fontSize: '0.85rem',
       borderRadius: '0.25rem',
-      padding: '0.2rem',
-      marginBottom: '0.15rem',
+      padding: '0 0.2rem',
       cursor: 'pointer',
     };
 
     if (status === 'canceled') {
       return {
         ...styles,
-        color: palette.dark + '99',
+        color: palette.dark + '66',
       };
     }
 
     if (status === 'todo') {
       return {
         ...styles,
-        color: palette.dark,
+        color: palette.dark + 'AA',
       };
     }
     if (status === 'doing') {
