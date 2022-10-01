@@ -6,7 +6,7 @@ import usePaletteContext from '../../../hooks/usePaletteContext';
 export const dayBoxStyles = (boxStyle: BoxStyles) => {
   const palette = usePaletteContext();
   const base: CSSProperties = {
-    padding: '0.5rem',
+    padding: '0.25rem',
     textAlign: 'center',
     display: 'flex',
     justifyContent: 'center',
@@ -83,9 +83,9 @@ export const calendarItemContent: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
-  padding: '1.25rem 0 0.75rem 0',
+  padding: '1rem 0',
   textAlign: 'left',
   maxHeight: '5rem',
   overflowY: 'auto',
-  margin: '0 0 1rem',
+  margin: '0.5rem 0 1rem',
 };

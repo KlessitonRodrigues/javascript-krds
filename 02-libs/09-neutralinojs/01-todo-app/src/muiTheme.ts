@@ -49,6 +49,8 @@ const components = (basePalette: BasePalette): ThemeOptions['components'] => {
       styleOverrides: {
         tooltip: {
           fontSize: '0.9rem',
+          backgroundColor: basePalette.colorA,
+          color: basePalette.white,
         },
       },
     },

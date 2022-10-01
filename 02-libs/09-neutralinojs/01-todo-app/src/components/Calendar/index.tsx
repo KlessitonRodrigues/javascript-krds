@@ -10,10 +10,10 @@ import useGlobalContext from '../../hooks/useGlobalContext';
 const Calendar = () => {
   const [global] = useGlobalContext();
   const calendarHeaders = React.useMemo(() => store.renderWeekHeaders(), []);
-  const calendarItems = React.useMemo(
-    () => store.renderCalendarItems(global.currentMonth),
-    [global.currentMonth]
-  );
+  const calendarItems = React.useMemo(() => {
+    console.log('CALENDAR_RENDER');
+    return store.renderCalendarItems(global.currentMonth);
+  }, [global.currentMonth]);
 
   return (
     <Box>

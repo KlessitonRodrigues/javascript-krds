@@ -44,14 +44,16 @@ const listCalendarEventFromArray = (datesArr: string[]) => {
 
 const removeCalendarEvent = () => {};
 
-const updateCalendarEvent = (id: string, index: number, status: CalendarTodo['status']) => {
+const updateCalendarEvent = (id: string, index: number, op: 'nextStatus' | 'prevStatus') => {
   const events = localStorageRead<CalendarEvent[]>(storageName);
-
-  console.log(id, index, status);
+  const statusFlow: CalendarTodo['status'][] = ['canceled', 'todo', 'doing', 'done'];
 
   for (const event of events) {
     if (event.id === id) {
-      event.repeatDates[index].status = status;
+      const statusIndex = statusFlow.indexOf(event.repeatDates[index].status);
+      if (op === 'nextStatus')
+        event.repeatDates[index].status = statusFlow[statusIndex >= 3 ? 3 : statusIndex + 1];
+      else event.repeatDates[index].status = statusFlow[statusIndex <= 0 ? 0 : statusIndex - 1];
       break;
     }
   }

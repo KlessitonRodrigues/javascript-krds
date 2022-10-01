@@ -33,7 +33,8 @@ class Store {
           name={name}
           key={id + index}
           status={status}
-          onClick={() => CalendarEventApi.update(id, index, 'doing')}
+          onNextStatusClick={() => CalendarEventApi.update(id, index, 'nextStatus')}
+          onPreviousStatusClick={() => CalendarEventApi.update(id, index, 'prevStatus')}
         />
       ));
 
