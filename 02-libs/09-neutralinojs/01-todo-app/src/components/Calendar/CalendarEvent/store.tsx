@@ -1,4 +1,4 @@
-import { CalendarEventApi } from '../../../data/api/event/index';
+import { calendarAPI } from '../../../data/api/event/index';
 import { repeatedDates } from '../../../data/util/nextDate';
 import { GlobalState } from '../../../hooks/useGlobalContext/state';
 import { TodoFormState, HandleTodoForm } from './types';
@@ -51,7 +51,7 @@ class Store {
     const dateISO = new Date(`${event.date} ${event.time}`).toISOString();
     const id = Date.now().toString(20);
     const todos = repeatedDates(dateISO, event.repeat, Number(event.repeatAmount), id);
-    return CalendarEventApi.add({
+    return calendarAPI.addCalendarEvent({
       ...event,
       id,
       duration: Number(event.duration),

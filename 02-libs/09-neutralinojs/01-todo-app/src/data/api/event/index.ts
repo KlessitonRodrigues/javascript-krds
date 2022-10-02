@@ -1,70 +1,66 @@
 import { CalendarEvent, CalendarTodo } from './types';
-import { localStorageSave, localStorageRead } from '../../util/localStorage';
+import { localStorageAPI } from '../../util/localStorage';
 import { isSameDate } from '../../util/compareDates';
 
-const storageName = 'CalendarEvent';
+class CalendarAPI {
+  storageName = 'CalendarEvent';
 
-const listCalendarEvents = () => {
-  return localStorageRead<CalendarEvent[]>(storageName);
-};
+  listCalendarEvents = () => {
+    return localStorageAPI.read<CalendarEvent[]>(this.storageName);
+  };
 
-const addCalendarEvent = (event: CalendarEvent) => {
-  console.log(event);
-  let saved = localStorageRead<CalendarEvent[]>(storageName);
+  addCalendarEvent = (event: CalendarEvent) => {
+    console.log(event);
+    let saved = localStorageAPI.read<CalendarEvent[]>(this.storageName);
 
-  if (!saved) saved = [];
-  saved.push(event);
-  localStorageSave(storageName, saved);
-};
+    if (!saved) saved = [];
+    saved.push(event);
+    localStorageAPI.save(this.storageName, saved);
+  };
 
-const listCalendarEventFromArray = (datesArr: string[]) => {
-  const events = localStorageRead<CalendarEvent[]>(storageName);
-  if (!events?.length) return [];
+  listCalendarEventFromArray = (datesArr: string[]) => {
+    const events = localStorageAPI.read<CalendarEvent[]>(this.storageName);
+    if (!events?.length) return [];
 
-  const flatedEvents = events
-    .map(event => {
-      return event.repeatDates?.map(repeatEvent => ({
-        ...repeatEvent,
-        name: event.name,
-        description: event.description,
-        tags: event.tags,
-      }));
-    })
-    .flat();
+    const flatedEvents = events
+      .map(event => {
+        return event.repeatDates?.map(repeatEvent => ({
+          ...repeatEvent,
+          name: event.name,
+          description: event.description,
+          tags: event.tags,
+        }));
+      })
+      .flat();
 
-  const eventsByDate = datesArr.map(date => {
-    return {
-      date,
-      dateEvents: flatedEvents.filter(event => isSameDate(event.date, date)),
-    };
-  });
+    const eventsByDate = datesArr.map(date => {
+      return {
+        date,
+        dateEvents: flatedEvents.filter(event => isSameDate(event.date, date)),
+      };
+    });
 
-  return eventsByDate;
-};
+    return eventsByDate;
+  };
 
-const removeCalendarEvent = () => {};
+  removeCalendarEvent = () => {};
 
-const updateCalendarEvent = (id: string, index: number, op: 'nextStatus' | 'prevStatus') => {
-  const events = localStorageRead<CalendarEvent[]>(storageName);
-  const statusFlow: CalendarTodo['status'][] = ['canceled', 'todo', 'doing', 'done'];
+  updateCalendarEvent = (id: string, index: number, op: 'nextStatus' | 'prevStatus') => {
+    const events = localStorageAPI.read<CalendarEvent[]>(this.storageName);
+    const statusFlow: CalendarTodo['status'][] = ['canceled', 'todo', 'doing', 'done'];
 
-  for (const event of events) {
-    if (event.id === id) {
-      const statusIndex = statusFlow.indexOf(event.repeatDates[index].status);
-      if (op === 'nextStatus')
-        event.repeatDates[index].status = statusFlow[statusIndex >= 3 ? 3 : statusIndex + 1];
-      else event.repeatDates[index].status = statusFlow[statusIndex <= 0 ? 0 : statusIndex - 1];
-      break;
+    for (const event of events) {
+      if (event.id === id) {
+        const statusIndex = statusFlow.indexOf(event.repeatDates[index].status);
+        if (op === 'nextStatus')
+          event.repeatDates[index].status = statusFlow[statusIndex >= 3 ? 3 : statusIndex + 1];
+        else event.repeatDates[index].status = statusFlow[statusIndex <= 0 ? 0 : statusIndex - 1];
+        break;
+      }
     }
-  }
 
-  localStorageSave<CalendarEvent[]>(storageName, events);
-};
+    localStorageAPI.save<CalendarEvent[]>(this.storageName, events);
+  };
+}
 
-export const CalendarEventApi = {
-  list: listCalendarEvents,
-  listEventsFromArray: listCalendarEventFromArray,
-  add: addCalendarEvent,
-  remove: removeCalendarEvent,
-  update: updateCalendarEvent,
-};
+export const calendarAPI = new CalendarAPI();

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box } from '@mui/material';
 
 import CalendarHeader from './CalendarHeader';
@@ -8,11 +8,12 @@ import store from './store';
 import useGlobalContext from '../../hooks/useGlobalContext';
 
 const Calendar = () => {
+  const [events, setEvents] = useState<React.ReactElement[]>();
   const [global] = useGlobalContext();
   const calendarHeaders = React.useMemo(() => store.renderWeekHeaders(), []);
-  const calendarItems = React.useMemo(() => {
-    console.log('CALENDAR_RENDER');
-    return store.renderCalendarItems(global.currentMonth);
+
+  useEffect(() => {
+    setEvents(store.renderCalendarItems(global.currentMonth, setEvents));
   }, [global.currentMonth]);
 
   return (
@@ -21,7 +22,7 @@ const Calendar = () => {
       <CalendarEvent />
       <Box style={styles.calendarGrid}>
         {calendarHeaders}
-        {calendarItems}
+        {events}
       </Box>
     </Box>
   );

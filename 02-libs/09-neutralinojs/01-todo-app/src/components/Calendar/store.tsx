@@ -1,12 +1,15 @@
+import { Dispatch, ReactElement } from 'react';
+
 import CalendarItem from './CalendarItem';
 import { Props as CalendarItemProps } from './CalendarItem/types';
 import CalendarTask from './CalendarTask';
 import TagItem from '../Tags/TagItem';
 import { getCalendarDates, getCalendarGap, isSameMonth } from '../../data/util/getMonthDates';
-import { CalendarEventApi } from '../../data/api/event';
+import { calendarAPI } from '../../data/api/event';
 
 class Store {
   weekdays = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+  renderCache: { date: string; data: any }[] = [];
 
   renderWeekHeaders = () => {
     return this.weekdays.map((name, i) => {
@@ -18,10 +21,14 @@ class Store {
     });
   };
 
-  renderCalendarItems = (selectedDate: Date) => {
-    const dates = getCalendarDates(selectedDate.toString());
+  renderCalendarItemsCache = (selectedDate: Date) => {
+    const cache = this.renderCache.find(cache => cache.date === selectedDate.toDateString());
+  };
+
+  renderCalendarItems = (selectedDate: Date, updateEvents: Dispatch<ReactElement[]>) => {
+    const dates = getCalendarDates(selectedDate.toISOString());
     const dateList = getCalendarGap(dates.fillFirstWeek.toString(), dates.fillLastWeek.toString());
-    const eventList = CalendarEventApi.listEventsFromArray(dateList);
+    const eventList = calendarAPI.listCalendarEventFromArray(dateList);
 
     const calendarGrid = eventList.map((calendar, i) => {
       const currentDate = new Date(calendar.date);
@@ -33,8 +40,14 @@ class Store {
           name={name}
           key={id + index}
           status={status}
-          onNextStatusClick={() => CalendarEventApi.update(id, index, 'nextStatus')}
-          onPreviousStatusClick={() => CalendarEventApi.update(id, index, 'prevStatus')}
+          onNextStatusClick={() => {
+            calendarAPI.updateCalendarEvent(id, index, 'nextStatus');
+            updateEvents(this.renderCalendarItems(selectedDate, updateEvents));
+          }}
+          onPreviousStatusClick={() => {
+            calendarAPI.updateCalendarEvent(id, index, 'prevStatus');
+            updateEvents(this.renderCalendarItems(selectedDate, updateEvents));
+          }}
         />
       ));
 

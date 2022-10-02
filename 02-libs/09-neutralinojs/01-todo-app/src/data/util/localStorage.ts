@@ -1,12 +1,21 @@
 type LocalStorageSave = <T>(name: string, data: T) => void;
 type LocalStorageRead = <T>(name: string) => T | null;
 
-export const localStorageSave: LocalStorageSave = (name, data) => {
-  localStorage.setItem(name, JSON.stringify(data));
-};
+class LocalStorageAPI {
+  hasChanged = (name: string, value: string) => {
+    const localValue = localStorage.getItem(name);
+    return JSON.stringify(localValue) === JSON.stringify(value);
+  };
 
-export const localStorageRead: LocalStorageRead = name => {
-  const local = localStorage.getItem(name);
-  if (local === null) return null;
-  return JSON.parse(local);
-};
+  save: LocalStorageSave = (name, data) => {
+    localStorage.setItem(name, JSON.stringify(data));
+  };
+
+  read: LocalStorageRead = name => {
+    const local = localStorage.getItem(name);
+    if (local === null) return null;
+    return JSON.parse(local);
+  };
+}
+
+export const localStorageAPI = new LocalStorageAPI();
