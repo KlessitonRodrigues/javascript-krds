@@ -27,6 +27,7 @@ class CalendarAPI {
         return event.repeatDates?.map(repeatEvent => ({
           ...repeatEvent,
           name: event.name,
+          dateISO: event.dateISO,
           description: event.description,
           tags: event.tags,
         }));

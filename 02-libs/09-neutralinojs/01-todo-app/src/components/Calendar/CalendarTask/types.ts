@@ -1,4 +1,4 @@
-import { CalendarTodo } from "../../../data/api/event/types";
+import { CalendarTodo } from '../../../data/api/event/types';
 
 export type Props = {
   name: string;

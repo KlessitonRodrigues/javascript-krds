@@ -35,11 +35,12 @@ class Store {
       const isCurrentMonth = isSameMonth(currentDate, dates.firstMonthDay);
       const currentDay = currentDate.getDate();
 
-      const TaskList = calendar.dateEvents.map(({ name, id, index, status }) => (
+      const TaskList = calendar.dateEvents.map(({ name, dateISO, id, index, status }) => (
         <CalendarTask
           name={name}
-          key={id + index}
+          time={dateISO}
           status={status}
+          key={id + index}
           onNextStatusClick={() => {
             calendarAPI.updateCalendarEvent(id, index, 'nextStatus');
             updateEvents(this.renderCalendarItems(selectedDate, updateEvents));
