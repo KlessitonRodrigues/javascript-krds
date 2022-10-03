@@ -56,7 +56,6 @@ class Store {
         topLeft: currentDay < 10 ? '0' + currentDay : currentDay,
         bottomLeft: [<TagItem label="#study" />],
         content: TaskList,
-        animationDelay: `0.${i < 10 ? '0' + i : i}s`,
       };
 
       return <CalendarItem data={data} key={'day' + i} />;

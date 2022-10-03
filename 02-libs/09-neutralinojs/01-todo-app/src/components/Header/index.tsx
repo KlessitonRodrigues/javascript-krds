@@ -12,7 +12,7 @@ const Header = () => {
 
   const headerEvents = {
     onMouseEnter: () => {
-      headerAnimation.play(0, { duration: '0.5s' });
+      headerAnimation.play({ duration: '0.5s' });
       setExpanded(!expanded);
     },
     onMouseLeave: () => setExpanded(!expanded),

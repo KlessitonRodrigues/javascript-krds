@@ -2,9 +2,9 @@ import { Box, Tooltip, IconButton } from '@mui/material';
 import { BsArrowLeftShort } from 'react-icons/bs';
 
 import styles from './styles';
-import { getTaskIcon } from './store';
 import * as type from './types';
 import Flex from '../../Templates/Flex';
+import { getTaskIcon } from './store';
 
 const CalendarTask = (props: type.Props) => {
   return (

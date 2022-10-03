@@ -10,6 +10,5 @@ export type Props = {
     bottomLeft?: any;
     topRight?: any;
     content?: any;
-    animationDelay?: string;
   };
 };

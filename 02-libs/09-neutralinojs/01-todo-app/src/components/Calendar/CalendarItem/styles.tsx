@@ -7,7 +7,6 @@ export const dayBoxStyles = (boxStyle: BoxStyles) => {
   const palette = usePaletteContext();
   const base: CSSProperties = {
     padding: '0.25rem',
-    textAlign: 'center',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -16,15 +15,16 @@ export const dayBoxStyles = (boxStyle: BoxStyles) => {
     overflow: 'hidden',
     borderRadius: '0.45rem',
     userSelect: 'none',
+    opacity: '0',
   };
 
   const styles: Record<typeof boxStyle, CSSProperties> = {
     base,
     header: {
       ...base,
-      height: '1.5rem',
       color: palette.white,
       fontWeight: 'bold',
+      height: '1.5rem',
     },
     day: {
       ...base,

@@ -1,17 +1,21 @@
-import { useRef } from 'react';
+import { CSSProperties, useRef } from 'react';
 
 type AnimationConfig = {
+  animationIndex?: number;
   duration?: string;
   delay?: string;
   interation?: string;
   direction?: 'normal' | 'reverse' | 'alternate' | 'alternate-reverse';
   fill?: 'none' | 'forwards' | 'backwards' | 'both';
+  playState?: 'paused' | 'running';
+  afterAnimation?: (el: HTMLElement) => void;
+  afterAnimationStyles?: CSSProperties;
 };
 
 const useAnimations = (animationList: string[]) => {
   const elRef = useRef<HTMLElement>();
 
-  const play = (animationIndex: number, config?: AnimationConfig, afterAnimation?: () => any) => {
+  const play = (config?: AnimationConfig) => {
     if (!elRef.current) return;
 
     if (config?.delay) elRef.current.style.animationDelay = config.delay;
@@ -19,12 +23,19 @@ const useAnimations = (animationList: string[]) => {
     if (config?.fill) elRef.current.style.animationFillMode = config.fill;
     if (config?.direction) elRef.current.style.animationDirection = config.direction;
     if (config?.duration) elRef.current.style.animationDuration = config.duration;
+    if (config?.playState) elRef.current.style.animationPlayState = config.playState;
 
-    elRef.current.classList.add(animationList[animationIndex]);
+    elRef.current?.classList?.add(animationList[config.animationIndex || 0]);
     elRef.current.onanimationend = () => {
       if (!elRef.current) return;
-      elRef.current && elRef.current.classList.remove(animationList[animationIndex]);
-      afterAnimation && afterAnimation();
+      elRef.current?.classList?.remove(animationList[config.animationIndex || 0]);
+
+      config.afterAnimation && config.afterAnimation(elRef.current);
+
+      Object.entries(config.afterAnimationStyles).forEach(([key, value]: string[]) => {
+        // @ts-ignore
+        elRef.current.style[key] = value;
+      });
     };
   };
 

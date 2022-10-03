@@ -22,9 +22,7 @@ export default () => {
       color: ${palette.colorA} !important;
     }`,
     `@keyframes fadeIn {
-        0% { opacity: 1; }
-        29% { opacity: 0.5; transform: translate3d( 0, 0, 0); }
-        30% { opacity: 0; transform: translate3d(50%, 0, 0); }
+        0% { opacity: 0; transform: translate3d(0, 50%, 0); }
         100% { opacity: 1; transform: translate3d(0, 0, 0); } 
     }
     .fadeIn { animation-name: fadeIn; }`,
