@@ -29,12 +29,11 @@ export const dayBoxStyles = (boxStyle: BoxStyles) => {
     day: {
       ...base,
       border: '1px solid' + palette.border,
-      minHeight: '6rem',
+      display: 'block',
     },
     'day-out-of-month': {
       ...base,
       border: '1px solid' + palette.border,
-      minHeight: '6rem',
     },
   };
 
@@ -82,10 +81,9 @@ export const calendarItemFloat = (position: ItemFloat, dayStyle: BoxStyles): CSS
 export const calendarItemContent: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
-  width: '100%',
-  padding: '1rem 0',
   textAlign: 'left',
-  maxHeight: '5rem',
+  width: '100%',
   overflowY: 'auto',
-  margin: '0.5rem 0 1rem',
+  maxHeight: '20rem',
+  margin: '1.5rem 0 1rem',
 };

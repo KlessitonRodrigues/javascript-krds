@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Box } from '@mui/material';
 
 import * as styles from './styles';
@@ -5,9 +6,8 @@ import * as store from './store';
 import * as types from './types';
 import If from '../../Templates/If';
 import useAnimations from '../../../hooks/useAnimations';
-import { useEffect } from 'react';
 
-const CalendarItem = ({ data }: types.Props) => {
+const CalendarItem = ({ data, expanded }: types.Props) => {
   const animations = useAnimations(['fadeIn']);
 
   useEffect(() => {
@@ -25,7 +25,9 @@ const CalendarItem = ({ data }: types.Props) => {
       className={store.classByType(data.styleType)}
       ref={animations.elRef}
     >
-      <Box style={styles.calendarItemContent}>{data.content || data.name}</Box>
+      <Box style={styles.calendarItemContent}>
+        <If value={expanded} true={data.content || data.name} />
+      </Box>
       <If
         value={data.topLeft}
         true={<Box style={styles.calendarItemFloat('topLeft', data.styleType)}>{data.topLeft}</Box>}

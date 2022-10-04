@@ -51,7 +51,7 @@ class Actions {
 
   formatISODate = (dateStr: string) => {
     const date = new Date(dateStr);
-    return date.toLocaleTimeString('pt', { hour12: true, second: "2-digit" });
+    return date.toLocaleTimeString('en', { hour: 'numeric', minute: '2-digit' });
   };
 }
 

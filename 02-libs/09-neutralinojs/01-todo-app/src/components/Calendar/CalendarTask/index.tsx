@@ -1,4 +1,4 @@
-import { Box, Tooltip, IconButton } from '@mui/material';
+import { Box, Tooltip, IconButton, Typography } from '@mui/material';
 import { BsArrowLeftShort } from 'react-icons/bs';
 
 import styles from './styles';
@@ -12,18 +12,17 @@ const CalendarTask = (props: Props) => {
       <Box>
         <Flex xContent="space-between">
           <Box onClick={() => props.onNextStatusClick && props.onNextStatusClick()}>
-            <Flex xContent="start">
-              {actions.getTaskIcon(props.status)}
-              &nbsp;{actions.formatISODate(props.time)}
-              &nbsp;{props.name.toLocaleLowerCase()}
-            </Flex>
+            &nbsp;{actions.formatISODate(props.time)}
+            <Flex xContent="start">&nbsp;{props.name}</Flex>
           </Box>
-          <Box onClick={() => props.onPreviousStatusClick && props.onPreviousStatusClick()}>
-            <Tooltip title="back" placement="left">
-              <IconButton style={{ padding: '0' }}>
-                <BsArrowLeftShort className="show-onhover" fontSize="1.2rem" opacity="0.6" />
-              </IconButton>
-            </Tooltip>
+          <Box>
+            <Box onClick={() => props.onPreviousStatusClick && props.onPreviousStatusClick()}>
+              <Tooltip title="back" placement="left">
+                <IconButton style={{ padding: '0' }}>
+                  <BsArrowLeftShort className="show-onhover" fontSize="1.2rem" opacity="0.6" />
+                </IconButton>
+              </Tooltip>
+            </Box>
           </Box>
         </Flex>
       </Box>

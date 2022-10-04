@@ -5,11 +5,11 @@ import usePaletteContext from '../../../hooks/usePaletteContext';
 class Styles {
   calendarTask = (status: CalendarTodo['status']): CSSProperties => {
     const palette = usePaletteContext();
-    const styles = {
-      fontSize: '0.85rem',
-      borderRadius: '0.25rem',
-      padding: '0 0.2rem',
+    const styles: CSSProperties = {
+      fontSize: '0.8rem',
       cursor: 'pointer',
+      borderBottom: '1px solid #2221',
+      padding: '0.25rem 0',
     };
 
     if (status === 'canceled') {
