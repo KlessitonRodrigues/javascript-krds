@@ -17,7 +17,7 @@ class Store {
         name,
         styleType: 'header',
       };
-      return <CalendarItem data={data} key={'header' + i} />;
+      return <CalendarItem data={data} key={'header' + i} expanded />;
     });
   };
 
@@ -62,7 +62,7 @@ class Store {
       return <CalendarItem data={data} key={'day' + i} />;
     });
 
-    return calendarGrid;
+    return calendarGrid
   };
 }
 
