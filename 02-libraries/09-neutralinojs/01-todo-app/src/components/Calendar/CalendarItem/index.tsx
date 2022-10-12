@@ -30,7 +30,7 @@ const CalendarItem = ({ data, expanded, weekOfMonth }: types.Props) => {
         },
       });
     }
-  }, [isWeekSelected, data]);
+  }, [isWeekSelected, data.topLeft]);
 
   return (
     <Box
