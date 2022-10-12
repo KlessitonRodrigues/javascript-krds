@@ -4,6 +4,7 @@ export type ItemFloat = 'topLeft' | 'bottomLeft' | 'topRight';
 
 export type Props = {
   expanded?: boolean;
+  weekOfMonth?: number;
   data: {
     styleType: BoxStyles;
     name?: string;

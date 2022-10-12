@@ -13,7 +13,7 @@ const Calendar = () => {
   const calendarHeaders = React.useMemo(() => store.renderWeekHeaders(), []);
 
   useEffect(() => {
-    setEvents(store.renderCalendarItems(global.currentMonth, setEvents));
+    setEvents(store.renderCalendarItems(global.currentMonth, setEvents, global.currentWeek));
   }, [global.currentMonth]);
 
   return (

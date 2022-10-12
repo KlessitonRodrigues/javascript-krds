@@ -25,7 +25,11 @@ class Store {
     const cache = this.renderCache.find(cache => cache.date === selectedDate.toDateString());
   };
 
-  renderCalendarItems = (selectedDate: Date, updateEvents: Dispatch<ReactElement[]>) => {
+  renderCalendarItems = (
+    selectedDate: Date,
+    updateEvents: Dispatch<ReactElement[]>,
+    selectedWeek: number
+  ) => {
     const dates = getCalendarDates(selectedDate.toISOString());
     const dateList = getCalendarGap(dates.fillFirstWeek.toString(), dates.fillLastWeek.toString());
     const eventList = calendarAPI.listCalendarEventFromArray(dateList);
@@ -34,23 +38,26 @@ class Store {
       const currentDate = new Date(calendar.date);
       const isCurrentMonth = isSameMonth(currentDate, dates.firstMonthDay);
       const currentDay = currentDate.getDate();
+      const currentWeekOfMonth = Math.floor(i / 7);
 
-      const TaskList = calendar.dateEvents.map(({ name, dateISO, id, index, status }) => (
-        <CalendarTask
-          name={name}
-          time={dateISO}
-          status={status}
-          key={id + index}
-          onNextStatusClick={() => {
-            calendarAPI.updateCalendarEvent(id, index, 'nextStatus');
-            updateEvents(this.renderCalendarItems(selectedDate, updateEvents));
-          }}
-          onPreviousStatusClick={() => {
-            calendarAPI.updateCalendarEvent(id, index, 'prevStatus');
-            updateEvents(this.renderCalendarItems(selectedDate, updateEvents));
-          }}
-        />
-      ));
+      const TaskList = calendar.dateEvents.map(({ name, dateISO, id, index, status }) => {
+        return (
+          <CalendarTask
+            name={name}
+            time={dateISO}
+            status={status}
+            key={id + index}
+            onNextStatusClick={() => {
+              calendarAPI.updateCalendarEvent(id, index, 'nextStatus');
+              updateEvents(this.renderCalendarItems(selectedDate, updateEvents, selectedWeek));
+            }}
+            onPreviousStatusClick={() => {
+              calendarAPI.updateCalendarEvent(id, index, 'prevStatus');
+              updateEvents(this.renderCalendarItems(selectedDate, updateEvents, selectedWeek));
+            }}
+          />
+        );
+      });
 
       const data: CalendarItemProps['data'] = {
         styleType: isCurrentMonth ? 'day' : 'day-out-of-month',
@@ -58,11 +65,10 @@ class Store {
         bottomLeft: [<TagItem label="#study" />],
         content: TaskList,
       };
-
-      return <CalendarItem data={data} key={'day' + i} />;
+      return <CalendarItem data={data} key={'day' + i} weekOfMonth={currentWeekOfMonth} />;
     });
 
-    return calendarGrid
+    return calendarGrid;
   };
 }
 

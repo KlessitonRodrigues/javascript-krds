@@ -1,5 +1,6 @@
 export type GlobalState = {
   currentMonth: Date;
+  currentWeek: number;
   AnimationDirection: 'left' | 'right';
   sidePanel: {
     settings: boolean;
@@ -11,6 +12,7 @@ export type GlobalState = {
 
 export const globalState: GlobalState = {
   currentMonth: new Date(),
+  currentWeek: 0,
   AnimationDirection: 'right',
   sidePanel: {
     settings: false,

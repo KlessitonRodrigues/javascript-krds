@@ -21,11 +21,11 @@ export default () => {
     `.color1-text-hover:hover {
       color: ${palette.colorA} !important;
     }`,
-    `@keyframes fadeIn {
+    `@keyframes fadeUp {
         0% { opacity: 0; transform: translate3d(0, 50%, 0); }
         100% { opacity: 1; transform: translate3d(0, 0, 0); } 
     }
-    .fadeIn { animation-name: fadeIn; }`,
+    .fadeUp { animation-name: fadeUp; }`,
     `
     /* width */
     div::-webkit-scrollbar {
@@ -49,6 +49,16 @@ export default () => {
     }
       .show-items-onhover:hover .show-onhover{
       opacity: 1 !important;
+    }
+    `,
+    `
+    @keyframes fadeIn {
+      0% { opacity: 0.5; }
+      100% {opacity: 1; }
+    }
+    
+    .fadeIn {
+      animation-name: fadeIn;
     }
     `,
   ].join('\n');
