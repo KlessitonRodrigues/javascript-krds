@@ -1,6 +1,7 @@
-import { Sequelize, Model, DataTypes, Dialect } from "sequelize";
+import { Model, DataTypes, Sequelize } from "sequelize";
 
 export interface Car {
+  id?: number;
   name: string;
   brand: string;
   weight: number;
@@ -8,21 +9,23 @@ export interface Car {
   stillInProduction: boolean;
 }
 
-const sequelize = new Sequelize({
-  host: "localhost",
-  database: "sql_api",
-  password: "12345",
-  port: 3306,
-  username: "dev_user",
-  dialect: "mariadb",
-});
+export default (sequelize: Sequelize) => {
+  const Cars = sequelize.define<Model<Car>>("Cars", {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      allowNull: false,
+      primaryKey: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    brand: { type: DataTypes.STRING },
+    weight: { type: DataTypes.NUMBER },
+    releaseDate: { type: DataTypes.DATE },
+    stillInProduction: { type: DataTypes.BOOLEAN },
+  });
 
-const Cars = sequelize.define<Model<Car>>("Cars", {
-  name: DataTypes.STRING,
-  brand: DataTypes.STRING,
-  weight: DataTypes.NUMBER,
-  releaseDate: DataTypes.DATE,
-  stillInProduction: DataTypes.BOOLEAN,
-});
-
-export default Cars;
+  return Cars;
+};

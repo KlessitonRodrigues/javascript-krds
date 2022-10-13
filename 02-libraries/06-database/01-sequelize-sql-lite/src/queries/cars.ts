@@ -1,10 +1,11 @@
-import CarsModel, { Car } from "../models/cars";
+import models, { Car } from "../models";
 
 const createCar = async (car: Car) => {
-  await CarsModel.create(car);
+  await models.carModel.create(car);
 };
 
 createCar({
+  id: 1,
   name: "Compass",
   brand: "Jeep",
   weight: 2120,
@@ -12,7 +13,7 @@ createCar({
   stillInProduction: true,
 })
   .then(() => {
-    console.log(CarsModel.findAll());
+    console.log(models.carModel.findAll());
   })
   .catch((err) => {
     console.log(err);

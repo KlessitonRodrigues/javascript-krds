@@ -1,1 +1,1 @@
-import "./query/cars";
+import "./queries/cars";

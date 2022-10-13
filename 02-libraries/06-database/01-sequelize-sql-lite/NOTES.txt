@@ -1,0 +1,10 @@
+ORM - OBJECT-RELATIONAL MAPPERS
+    Create mappers of tables to code
+    like INSERT (SQL) to add/save (JS Function)
+
+    Automatic (Entity from Microsoft)
+    Manual (Hibernate from RedHat)
+
+SEQUELIZE
+    ORM based on promisses
+    works with PostgreSQL, MySQL, MariaDB, SQLite e MS SQL Server
