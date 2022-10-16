@@ -1,9 +1,10 @@
-import sequelize from "../config/database";
+import { Sequelize } from "sequelize";
+import carModel, { Car } from "./CarModel";
 
-import carModel, { Car } from "./cars";
-
-export default {
-  carModel: carModel(sequelize),
+export default (sequelize: Sequelize) => {
+  return {
+    cars: carModel(sequelize),
+  };
 };
 
 export type { Car };

@@ -10,6 +10,12 @@ class Styles {
     justifyItems: 'stretch',
     alignItems: 'stretch',
     textAlign: 'center',
+    height: '100%',
+  };
+
+  calendarGridContainer: CSSProperties = {
+    maxHeight: '90vh',
+    padding: '1rem 0',
   };
 }
 

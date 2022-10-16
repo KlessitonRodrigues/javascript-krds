@@ -20,9 +20,11 @@ const Calendar = () => {
     <Box>
       <CalendarHeader />
       <CalendarEvent />
-      <Box style={styles.calendarGrid}>
-        {calendarHeaders}
-        {events}
+      <Box style={styles.calendarGridContainer}>
+        <Box style={styles.calendarGrid}>
+          {calendarHeaders}
+          {events}
+        </Box>
       </Box>
     </Box>
   );
