@@ -52,3 +52,18 @@ export const RotateSquare3D = styled(Square)`
 export const RotateSquareX50andZ360 = styled(Square)`
   animation: ${RotateX50andZ360} 3s alternate infinite;
 `;
+
+export const RevelSquareLabel = styled.span`
+  transition: color 0.8s;
+  :hover {
+    color: #fff;
+    ~ div {
+      transform: rotateX(0deg);
+    }
+  }
+`;
+
+export const RevelSquare = styled(Square)`
+  transform: rotateX(90deg);
+  transition: transform 0.8s;
+`;

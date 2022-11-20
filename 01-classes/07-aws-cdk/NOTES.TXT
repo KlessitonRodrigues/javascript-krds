@@ -1,0 +1,73 @@
+#02 MAIN SERVICES
+- ECS (Elastic Cointainer Service)
+	crate applications using containers
+- Fargate
+	create containers serveless
+- ALB (Application load Balancer)
+	manages requests to ECS applications
+- VPC (Virtual Private Cloud)
+	create a private network on AWS
+- RDS (Relational Database Servece)
+	create relational databases
+- DynamoDB
+	create nosql databases
+- SNS (Simple Notification Service)
+	application message service
+- SQS (Simple Queue Service)
+	create asyncronously messages for applications
+- S3 (Simple Storage Service)
+	store objects on AWS
+- CloudWatch
+	watch applications running on AWS
+- API Gateway
+	protect and validade runnig apis
+- Lambda
+	run serviless functions
+- Cognito
+	manage authentication process
+
+#06 CLOUD FORMATION
+	Create automatized processes using templates
+	Allow store tenplates into containers
+	Allow the versionament of theses containers
+
+- Step by step
+	Create a template using JSON or YAML
+	Send the template to CloudFormation
+	New stacks are created to handle the resources needed
+	New resources are created under the stack
+
+- Template
+	Define the resource, properties, metadata, settings
+
+#07 Stacks
+	Used to organize resources
+	Stacks can be created, updated, and deleted
+	Stack changes reflect in its resources
+	Stacks can be ccreated by resources or for the whole project
+	When a stacks fails to deploy all its changes are ignored
+
+- Stack events
+	It's like a checkpoint that indicates the running procress status
+	It indicates the point of fails and issues
+
+- Stack Resources
+	Resources related to stack
+
+- Stack Parameters
+	The creation of stack and resources can be customized by parameters
+	These parameters can define properties like the amount of physical hardware allocated
+
+- Deleting Stacks
+	When deleting a stack all resources are deleted
+
+
+#09 AWS Cloud Development Kit
+	AWS Construct library
+	Framework for the AWS Cloud Development
+	Can be used with Jenkins or AWS CodePipeline
+
+- Step by step
+	Install AWS CDK.
+	Create a resource using a programming language
+	These resources will be transformed into CloudFormation templates

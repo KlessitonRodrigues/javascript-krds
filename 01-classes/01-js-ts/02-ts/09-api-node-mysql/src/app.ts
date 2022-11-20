@@ -1,6 +1,6 @@
+import "./env/public";
 import Express from "express";
-
-import homeRouter from "./routes/home";
+import routes from "./routes";
 
 export class App {
     private app;
@@ -10,7 +10,7 @@ export class App {
         this.app = Express();
         this.port = port;
         this.middlewares();
-        this.routes()
+        this.routes();
         this.app.listen(this.port, () => console.log("port", this.port));
     }
 
@@ -20,6 +20,10 @@ export class App {
     }
 
     routes() {
-        this.app.use("/", homeRouter);
+        this.app.use(routes);
     }
 }
+
+const app = new App();
+app.middlewares();
+app.routes();

@@ -1,6 +1,8 @@
 import {
   Card,
   Container,
+  RevelSquare,
+  RevelSquareLabel,
   RotateSquare2D,
   RotateSquare3D,
   RotateSquareX50andZ360,
@@ -20,6 +22,10 @@ const Basic = () => (
     <Card>
       <RotateSquareX50andZ360>3D</RotateSquareX50andZ360>
       rotate Z (360) + X (40%)
+    </Card>
+    <Card>
+      <RevelSquareLabel>hover revel</RevelSquareLabel>
+      <RevelSquare>3D</RevelSquare>
     </Card>
   </Container>
 );

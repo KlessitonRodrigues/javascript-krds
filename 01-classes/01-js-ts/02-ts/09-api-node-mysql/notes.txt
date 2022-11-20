@@ -1,0 +1,13 @@
+- Sequelize (ORM - Object-Relational Mapper)
+
+- create a config.json
+    yarn sequelize init
+    
+- craate a table migration for users
+    yarn sequelize migration:crete --name=users
+
+- crate table fields on DB
+    yarn sequelize db:migrate 
+
+- create a table model
+    yarn sequelize model:create --name=user
