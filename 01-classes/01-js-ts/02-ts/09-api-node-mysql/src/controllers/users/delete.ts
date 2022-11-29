@@ -1,8 +1,8 @@
-import { Request, Response } from "express";
-import { models } from "../../models";
-import { REST } from "../../util/rest";
+import { models } from "src/models";
+import { ExpressRoute } from "src/types/external";
+import { REST } from "src/util/rest";
 
-export const deleteUser = async (req: Request, res: Response) => {
+export const deleteUser: ExpressRoute = async (req, res) => {
     const body = req.body as User;
 
     try {

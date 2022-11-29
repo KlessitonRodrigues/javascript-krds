@@ -1,14 +1,14 @@
-import { Request, Response } from "express";
-import { models } from "../../models";
-import { REST } from "../../util/rest";
+import { models } from "src/models";
+import { ExpressRoute } from "src/types/external";
+import { REST } from "src/util/rest";
 
-export const createUser = async (req: Request, res: Response) => {
-    const body = req.body;
+export const createUser: ExpressRoute = async (req, res) => {
+    const body = req.body as User;
 
     try {
         const result = await models.userModel.create(body);
         return REST.success(res, "user created", result);
     } catch (err) {
-        return REST.systemError(res, "cannot create an user", err);
+        return REST.badRequest(res, "cannot create an user", err);
     }
 };

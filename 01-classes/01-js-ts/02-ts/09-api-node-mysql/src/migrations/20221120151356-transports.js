@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
     async up(queryInterface, Sequelize) {
-        queryInterface.createTable("users", {
+        queryInterface.createTable("transports", {
             id: {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
@@ -14,28 +14,20 @@ module.exports = {
                 type: Sequelize.STRING,
                 allowNull: false,
             },
-            email: {
+            color: {
                 type: Sequelize.STRING,
                 allowNull: false,
             },
-            password_hash: {
-                type: Sequelize.STRING,
-                allowNull: false,
-            },
-            password: {
-                type: Sequelize.STRING,
-                allowNull: false,
-            },
-            age: {
+            categoryId: {
                 type: Sequelize.INTEGER,
                 allowNull: false,
             },
-            weight: {
+            brandId: {
                 type: Sequelize.INTEGER,
                 allowNull: false,
             },
-            height: {
-                type: Sequelize.FLOAT,
+            numberOfWhells: {
+                type: Sequelize.INTEGER,
                 allowNull: false,
             },
             createdAt: {

@@ -4,10 +4,13 @@
     yarn sequelize init
     
 - craate a table migration for users
-    yarn sequelize migration:crete --name=users
+    yarn sequelize migration:create --name=users
 
 - crate table fields on DB
-    yarn sequelize db:migrate 
+    yarn sequelize db:migrate
+
+- undo the migration changes
+    yarn sequelize db:migrate:undo
 
 - create a table model
     yarn sequelize model:create --name=user

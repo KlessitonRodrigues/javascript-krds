@@ -9,4 +9,9 @@ type User = {
     updatedAt: string;
 };
 
-type RESTResponse = { success: boolean; message: string; data?: any };
+type RESTResponse = {
+    success: boolean;
+    message: string;
+    data?: any;
+    error?: any;
+};

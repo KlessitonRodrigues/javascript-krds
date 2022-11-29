@@ -71,3 +71,41 @@
 	Install AWS CDK.
 	Create a resource using a programming language
 	These resources will be transformed into CloudFormation templates
+
+#14 E-comerce app
+- Start a new project
+	cdk init --language typescript
+
+- Structure
+	.bin/	create an instance of a stack
+	.lib/	define new stacks and resources
+
+- New Libs
+	npm i aws-sdk @types/aws-lambda @types/uuid -D
+
+- CDK commands
+	cdk list
+	show stacks instances (./bin)
+
+	cdk deploy --all
+	create resources and deploy stacks
+
+	cdk diff
+	compare AWS stacks with Local stacks
+
+	cdk destroy --all
+	remove all stacks
+
+#15 AWS Lambda
+	Trigger functions called by events
+	More that one funtion can run at the same time
+	The cust is calculated based on the execution time and resource used
+	CloudWatch: show logs from lambda functions
+	X-Ray: show the execution time for each piece of the lambda function
+
+	
+
+
+
+
+

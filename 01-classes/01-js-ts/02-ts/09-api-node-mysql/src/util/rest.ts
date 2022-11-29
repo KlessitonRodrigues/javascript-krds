@@ -18,22 +18,6 @@ export const REST = {
         });
     },
 
-    resourceCreated(res: Response, msg: string, data?: any) {
-        res.status(201).json({
-            success: true,
-            message: msg,
-            data,
-        });
-    },
-
-    reloadClient(res: Response, msg: string, data?: any) {
-        res.status(205).json({
-            success: true,
-            message: msg,
-            data,
-        });
-    },
-
     badRequest(res: Response, msg: string, error?: any) {
         res.status(400).json({
             success: false,
@@ -52,14 +36,6 @@ export const REST = {
 
     notFound(res: Response, msg: string, error?: any) {
         res.status(404).json({
-            success: false,
-            message: msg,
-            error: returnErrorsOnRoutes ? error : null,
-        });
-    },
-
-    notSupportedMediaType(res: Response, msg: string, error?: any) {
-        res.status(415).json({
             success: false,
             message: msg,
             error: returnErrorsOnRoutes ? error : null,
@@ -104,22 +80,6 @@ export const REST = {
 
     serviceUnavailable(res: Response, msg: string, error?: any) {
         res.status(503).json({
-            success: false,
-            message: msg,
-            error: returnErrorsOnRoutes ? error : null,
-        });
-    },
-
-    gatewayTimeOut(res: Response, msg: string, error?: any) {
-        res.status(504).json({
-            success: false,
-            message: msg,
-            error: returnErrorsOnRoutes ? error : null,
-        });
-    },
-
-    networkAuthenticationRequired(res: Response, msg: string, error?: any) {
-        res.status(511).json({
             success: false,
             message: msg,
             error: returnErrorsOnRoutes ? error : null,
