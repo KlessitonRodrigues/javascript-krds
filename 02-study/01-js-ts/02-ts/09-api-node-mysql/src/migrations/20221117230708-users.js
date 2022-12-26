@@ -18,14 +18,14 @@ module.exports = {
                 type: Sequelize.STRING,
                 allowNull: false,
             },
-            password_hash: {
+            /*password_hash: {
                 type: Sequelize.STRING,
                 allowNull: false,
             },
             password: {
                 type: Sequelize.STRING,
                 allowNull: false,
-            },
+            },*/
             age: {
                 type: Sequelize.INTEGER,
                 allowNull: false,

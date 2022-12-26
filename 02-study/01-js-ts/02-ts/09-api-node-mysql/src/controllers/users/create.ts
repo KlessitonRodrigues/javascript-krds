@@ -9,6 +9,7 @@ export const createUser: ExpressRoute = async (req, res) => {
         const result = await models.userModel.create(body);
         return REST.success(res, "user created", result);
     } catch (err) {
+        // @ts-ignore
         return REST.badRequest(res, "cannot create an user", err);
     }
 };
