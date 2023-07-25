@@ -1,8 +1,6 @@
 import fs from "node:fs";
-import path from "node:path";
 
 type GameInfo = {
-  id: string;
   Game: string;
   GameLink: string;
   Year: number;
@@ -10,13 +8,30 @@ type GameInfo = {
   DevLink: string;
   Publisher: string;
   PublisherLink: string;
-  Platform: string[];
+  Platform: string;
 };
 
 type GameInfoByName = Record<string, GameInfo[]>;
 
-const jsonFolder = path.join(__dirname, "./data/GamesDB/");
-const json = fs.readFileSync(jsonFolder + "out5.json").toString();
-const gameInfo = JSON.parse(json) as GameInfoByName;
+const outDir = "./data/GamesDB/";
+const json = fs.readFileSync(outDir + "WindowsGames.json").toString();
+const gameInfoArr = JSON.parse(json) as GameInfo[];
 
-console.log(gameInfo["a"]);
+console.log("start length", gameInfoArr.length);
+
+const newArr = gameInfoArr
+  .filter((gi) => {
+    if (gi.Year < 2008) return false;
+    return true;
+  })
+  .map((gi) => ({
+    name: gi.Game,
+    year: Number(gi.Year) || undefined,
+    publisher: gi.Publisher || undefined,
+    development: gi.Publisher === gi.Dev ? undefined : gi.Dev,
+  }));
+
+console.log("end length", newArr.length);
+console.log(newArr[0]);
+
+fs.writeFileSync(outDir + "out1.json", JSON.stringify(newArr));
