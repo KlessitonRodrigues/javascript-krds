@@ -1,9 +1,10 @@
 type GameInfo = {
-  companies: { id: number; name: string; title_id: number }[];
+  companies: { name: string; title_id: number }[];
   critic_score: number;
-  genres: [{ id: number; name: string }];
+  genres: { name: string }[];
   release_date: string;
   title: string;
+  platforms: { id: number }[];
 };
 
 export type NewGameInfo = {
@@ -11,14 +12,26 @@ export type NewGameInfo = {
   c: string; // company
   s: number; // score
   g: string; // gender
+  p: string; // platforms
   r: string; // release
+};
+
+const platforms = {
+  "3": "PC",
+  "7": "PS2",
+  "81": "PS3",
+  "141": "PS4",
+  "228": "PS5",
+  "69": "X360",
+  "142": "XOne",
+  "289": "XSeries",
 };
 
 export const fetchGameList = (page: number) => {
   return new Promise<GameInfo[]>((resolve, reject) => {
     const body = {
       title: null,
-      platform: [3],
+      platform: [3, 7, 81, 141, 228, 69, 142, 289],
       genres: [],
       attributes: [],
       company: null,
@@ -65,14 +78,18 @@ export const fetchAllGames = async (pages: number) => {
 
   for (let i = 1; i <= pages; i++) {
     const list = await fetchGameList(i).catch((err) => []);
-    console.log(`page ${i} ${list.length}`);
+    console.log(`page: ${i} page items: ${list.length}`);
 
     list.forEach((game) => {
+      const genres = game.genres.map((ge) => ge.name).join(",");
+      const platforms = game.platforms.map((pl) => String(pl.id)).join(",");
+
       gameList.push({
         t: game.title,
         r: game.release_date,
         s: game.critic_score,
-        g: game.genres[0].name,
+        g: genres,
+        p: platforms,
         c: formatCompanyName(
           game.companies.find((co) => co.title_id === 1)?.name ||
             game.companies[0].name
@@ -81,6 +98,6 @@ export const fetchAllGames = async (pages: number) => {
     });
   }
 
-  console.log(`Total ${gameList.length}`);
+  console.log(`List length ${gameList.length}`);
   return gameList;
 };
