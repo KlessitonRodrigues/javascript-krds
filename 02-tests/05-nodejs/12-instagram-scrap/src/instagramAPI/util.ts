@@ -1,3 +1,6 @@
+export const instagramAPIIndentity =
+  "av=17841462491818246&__d=www&__user=0&__a=1&__req=u&__hs=19660.HYP%3Ainstagram_web_pkg.2.1..0.1&dpr=1&__ccg=UNKNOWN&__rev=1009558901&__s=0mzqr4%3A29op64%3Am6xglw&__hsi=7295727609778605204&__dyn=7xeUmwlEnwn8K2WnFw9-2i5U4e1ZyUW3qi2K360CEbotw50x609vCwjE1xoswIwuo2awlU-cw5Mx62G3i1ywOwv89k2C1Fwc60AEC7U2czXwae4UaEW2G1NwwwNwKwHw8Xxm16wUwtEvU1aUbpEbUGdG1QwTwFwIw8O321LwTwKG1pg661pwr86C1mwraCgoK68&__csr=grN5FYlfQyRvndh3_rqQPkSj-9RKJ4X9nLF4SaykQAucyGBiybJ3oE-AQVeqqmfvLXRCAmm4F-KmH_h8gAyFXKqEB1ebUbHDypogBAyo014aAm0cVz60BE8U6meSbg5C05U80lxoEi8ghAN04i0zoy0A60Ay08J035E2JwgE4e6ywb5160bLOwdy00Bgo&__comet_req=7&fb_dtsg=NAcObOxNRgzYWwD-eNgl44Xy1LD-gKvd-bnxXwD-lMVvDS3u0s-rj0A%3A17865553615041151%3A1698149837&jazoest=26222&lsd=ZHrQI19VXKLVRBM7HN6TeL&__spin_r=1009558901&__spin_b=trunk&__spin_t=1698668955&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=PolarisSearchBoxRefetchableQuery";
+
 export const instagramAPIHeaders = {
   accept: "*/*",
   "accept-language": "pt-BR,pt;q=0.9",
@@ -36,4 +39,18 @@ export const mediaAPIHeaders = {
   "sec-fetch-site": "cross-site",
   Referer: "https://www.instagram.com/",
   "Referrer-Policy": "strict-origin-when-cross-origin",
+};
+
+const InstagramIndentityListener = () => {
+  // @ts-ignore
+  XMLHttpRequest.prototype.oldSend = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function (data) {
+    if (data?.toString().includes("&variables=")) {
+      const str = data.toString();
+      console.log("API INDENTITY");
+      console.log(str.split("&variables=")[0]);
+    }
+    // @ts-ignore
+    this.oldSend.call(this, data);
+  };
 };

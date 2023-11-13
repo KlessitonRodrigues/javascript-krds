@@ -1,8 +1,7 @@
-// Appointments_2022-5-16_1031.csv
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-const run = () => {
+export const importCSVSs = () => {
   const clearString = (str: string) =>
     str.replace(/\W|\"|\'|\ /g, "").replace(" ", "");
 
@@ -14,7 +13,7 @@ const run = () => {
       const rowData = row.split(",");
       return csvHeaders.reduce((obj, header, i) => {
         /* @ts-ignore */
-        obj[clearString(header)] = rowData[i];
+        obj[clearString(header) || `field_${i}`] = rowData[i];
         return obj;
       }, {});
     });
@@ -30,11 +29,9 @@ const run = () => {
     }, {});
   };
 
-  const csvData = convertAllCsvsToJSObject(
-    resolve("csvs", "YorkshireSkinCentre")
-  );
+  const csvData = convertAllCsvsToJSObject(resolve("src", "csv"));
 
-  writeFileSync(resolve("YorkshireSkinCentre.json"), JSON.stringify(csvData));
+  writeFileSync(resolve("src", "json", "out.json"), JSON.stringify(csvData));
 };
 
-run();
+importCSVSs();

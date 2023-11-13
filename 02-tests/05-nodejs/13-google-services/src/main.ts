@@ -1,21 +1,17 @@
-import { google } from "googleapis";
+import { getJWTClient, getTokens, refreshTokens } from "./Auth/handleTokens";
+import { getTreading } from "./Youtube/trendings";
 
-const uploadToDriver = async () => {
-  console.log("HELLO");
+const main = async () => {
+  const creds = {
+    email: "",
+    key: "",
+    scopes: ["https://www.googleapis.com/auth/youtube.readonly"],
+  };
 
-  const auth = new google.auth.GoogleAuth({
-    credentials: {},
-    scopes: ["https://www.googleapis.com/auth/drive.file"],
-  });
-
-  const driver = google.drive({ version: "v2", auth });
-
-  driver.files.insert({
-    media: {
-      mimeType: "application/octet-stream",
-      body: JSON.stringify({ test: 123 }),
-    },
-  });
+  const jwt = getJWTClient(creds);
+  // getTokens(jwt);
+  // refreshTokens(jwt);
+  getTreading(jwt);
 };
 
-uploadToDriver().catch(console.error);
+main().catch(console.error);
