@@ -9,6 +9,5 @@ export const getTreading = async (jwt: Auth.JWT) => {
     part: "snippet,contentDetails,statistics",
   } as any);
 
-  console.log("Treading", list);
   return list;
 };
