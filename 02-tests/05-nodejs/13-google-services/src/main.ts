@@ -5,6 +5,7 @@ import { getVideoChunk } from "./Youtube/videoChunk";
 import { fetchYTVideo } from "./YTLD";
 import { queryToObj } from "./util/queryToObj";
 import { getAudioChunk } from "./Youtube/audioChunk";
+import { getYtShorts } from "./Youtube/shorts";
 
 const main = async () => {
   const creds = {
@@ -41,11 +42,14 @@ const main = async () => {
       writeFileSync("audio.mp4a", bin);
       console.log(data);
     });
-  */
 
   const fileName = await fetchYTVideo(
     "https://www.youtube.com/watch?v=9r0KVQvmYU4"
   );
+  */
+
+  const shorts = await getYtShorts("spiderman");
+  console.log(shorts);
 };
 
 main().catch(console.error);
