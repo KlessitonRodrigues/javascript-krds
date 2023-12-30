@@ -1,6 +1,3 @@
-import { writeFileSync } from "fs";
-import { fetchAllGames } from "./fetchPage";
+import { getGamesFormAPI } from "./API/games";
 
-fetchAllGames(3000).then((gameList) => {
-  writeFileSync("./data/GameList1.json", JSON.stringify(gameList));
-});
+getGamesFormAPI().catch(console.log);

@@ -18,6 +18,16 @@ type NewGameInfo = {
   p: number[]; // platforms
 };
 
+export type ListData = {
+  genders: string[];
+  platforms: string[];
+  companies: string[];
+  games: NewGameInfo[];
+};
+
+// gixek42306@watrf.com
+// Pass@12345
+
 export const fetchGameList = (page: number) => {
   return new Promise<GameInfo[]>((resolve, reject) => {
     const body = {
@@ -55,7 +65,10 @@ export const fetchGameList = (page: number) => {
       },
     })
       .then((res) => res.json())
-      .then((json) => resolve(json.data.games))
+      .then((json) => {
+        console.log(json);
+        resolve(json.data.games);
+      })
       .catch(reject);
   });
 };
@@ -97,3 +110,11 @@ export const fetchAllGames = async (pages: number) => {
   console.log(`List length ${games.length}`);
   return { genders, platforms, companies, games };
 };
+
+/*
+
+Game Space
+https://github.com/KlessitonRodrigues/game-station
+Uses the API to auto fill up title and descriptions of new games  in a 
+
+*/
