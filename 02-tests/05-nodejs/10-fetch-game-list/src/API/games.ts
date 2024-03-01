@@ -3,7 +3,7 @@ import * as fs from "fs";
 const fileName = "data/game_list.json";
 
 export const getGamesFormAPI = async () => {
-  const apiKey = "";
+  const apiKey = "moby_sswl52j8U91ow1oqyNOppHee0XP";
   const apiUrl = "https://api.mobygames.com/v1/games?";
   const platforms = [
     141, 288, 81, 7, 3, 13, 69, 142, 289, 203, 46, 12, 91, 86, 1, 64,
@@ -17,7 +17,7 @@ export const getGamesFormAPI = async () => {
   query.append("limit", "100");
   query.append("format", "normal");
 
-  for (let page = gameList.length / 100; page <= 20; page++) {
+  for (let page = gameList.length / 100; page <= 600; page++) {
     query.set("offset", String(gameList.length || 0));
 
     const res = await fetch(apiUrl + query.toString());
