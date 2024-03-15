@@ -1,0 +1,93 @@
+@import "./theme.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: $fontMedium;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: $bg1;
+  color: $text1;
+  font-weight: 500;
+}
+h1 {
+  font-size: $fontH1;
+}
+
+h2 {
+  font-size: $fontH1;
+}
+
+h3 {
+  font-size: $fontH1;
+}
+
+h4 {
+  font-size: $fontH1;
+}
+
+h5 {
+  font-size: $fontH1;
+}
+
+h6 {
+  font-size: $fontH1;
+}
+
+p {
+  font-size: $fontH1;
+  max-width: 10rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: unset;
+  text-decoration: underline;
+}
+
+button {
+  // font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: $radiusMedium;
+  cursor: pointer;
+}
+
+div::-webkit-scrollbar {
+  width: 1rem;
+}
+
+div::-webkit-scrollbar-track {
+  background: #0000;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: $blue;
+  border-radius: 2px;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  background: $blue;
+}
