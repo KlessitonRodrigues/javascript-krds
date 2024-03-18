@@ -27,28 +27,23 @@ h1 {
 }
 
 h2 {
-  font-size: $fontH1;
+  font-size: $fontH2;
 }
 
 h3 {
-  font-size: $fontH1;
+  font-size: $fontH3;
 }
 
 h4 {
-  font-size: $fontH1;
+  font-size: $fontH4;
 }
 
 h5 {
-  font-size: $fontH1;
+  font-size: $fontH5;
 }
 
 h6 {
-  font-size: $fontH1;
-}
-
-p {
-  font-size: $fontH1;
-  max-width: 10rem;
+  font-size: $fontH6;
 }
 
 ul {
@@ -56,22 +51,22 @@ ul {
 }
 
 a {
-  color: unset;
+  color: $main;
   text-decoration: underline;
 }
 
 button {
-  // font-family: 'Quicksand', sans-serif;
+  font-size: $fontMedium;
   font-weight: 600;
-  min-height: 2rem;
+  min-height: size(12);
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0 1rem;
+  padding: 0 size(8);
   background-color: transparent;
   outline: none;
   border: none;
-  border-radius: $radiusMedium;
+  border-radius: $radiusSmall;
   cursor: pointer;
 }
 

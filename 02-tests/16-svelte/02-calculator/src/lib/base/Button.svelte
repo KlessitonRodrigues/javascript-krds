@@ -5,5 +5,7 @@
 <style lang="scss">
   .button {
     background-color: $mainBg;
+    color: $mainText;
+    border: $borderMedium;
   }
 </style>

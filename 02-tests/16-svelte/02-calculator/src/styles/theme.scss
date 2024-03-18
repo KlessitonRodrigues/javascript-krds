@@ -1,8 +1,8 @@
 @import "./colors.scss";
 
 /* Colors */
-$main: color($blue, 400);
-$mainBg: color($blue, 600);
+$main: color($green, 400);
+$mainBg: color($green, 600);
 $mainText: color($grey, 200);
 $mainBorder: color($grey, 300);
 $bg1: color($grey, 50);
@@ -21,12 +21,12 @@ $white: color($grey, 50);
 $black: color($grey, 800);
 
 /* Font size */
-$fontH1: 1.6rem;
-$fontH2: 1.5rem;
-$fontH3: 1.4rem;
-$fontH4: 1.3rem;
+$fontH1: 1.4rem;
+$fontH2: 1.35rem;
+$fontH3: 1.3rem;
+$fontH4: 1.25rem;
 $fontH5: 1.2rem;
-$fontH6: 1.1rem;
+$fontH6: 1.15rem;
 $fontLarge: 1.1rem;
 $fontMedium: 1rem;
 $fontSmall: 0.9rem;
@@ -35,14 +35,19 @@ $fontLabel: 0.9rem;
 
 /* Radius */
 $radiusLarge: 0.8rem;
-$radiusMedium: 0.5rem;
-$radiusSmall: 0.3rem;
+$radiusMedium: 0.6rem;
+$radiusSmall: 0.4rem;
 $radiusVerySmall: 0.2rem;
 
 /* Shadow */
-$shadowLarge: 1px 2px 2px 0 #0007;
-$shadowMedium: 1px 1px 2px 0 #0009;
-$shadowSmall: 1px 1px 2px 0 #0004;
+$shadowLarge: 1px 1px 4px 0 #000a;
+$shadowMedium: 1px 1px 4px 0 #0007;
+$shadowSmall: 1px 1px 4px 0 #0004;
+
+/* Border */
+$borderLarge: solid 2px color($grey, 500);
+$borderMedium: solid 1px color($grey, 500);
+$borderSmall: solid 1px color($grey, 300);
 
 /* Scale */
 @function size($size) {
