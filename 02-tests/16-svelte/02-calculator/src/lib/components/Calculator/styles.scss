@@ -1,0 +1,58 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: size(2);
+  width: size(80);
+  height: size(110);
+  margin: size(10) auto;
+  border: 4px solid $mainBg;
+  background-color: $mainBg;
+  color: $mainText;
+  border-radius: $radiusLarge;
+  box-shadow: $shadowLarge;
+
+  .display {
+    width: 100%;
+    height: size(30);
+    padding: size(2);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $bg1;
+    color: $text2;
+    border-radius: $radiusMedium;
+    font-size: size(14);
+  }
+
+  .keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: size(1);
+    height: 100%;
+
+    div {
+      display: flex;
+      align-items: stretch;
+      gap: size(1);
+      height: 100%;
+    }
+
+    div div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: size(10);
+      border-radius: $radiusMedium;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $main;
+      }
+    }
+  }
+}

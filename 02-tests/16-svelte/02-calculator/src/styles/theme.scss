@@ -1,8 +1,13 @@
 @import "./colors.scss";
 
+/* Scale */
+@function size($size) {
+  @return #{($size * 0.2)}rem;
+}
+
 /* Colors */
-$main: color($green, 400);
-$mainBg: color($green, 600);
+$main: color($purple, 400);
+$mainBg: color($purple, 700);
 $mainText: color($grey, 200);
 $mainBorder: color($grey, 300);
 $bg1: color($grey, 50);
@@ -20,7 +25,7 @@ $green: color($green, 500);
 $white: color($grey, 50);
 $black: color($grey, 800);
 
-/* Font size */
+/* Font sizes */
 $fontH1: 1.4rem;
 $fontH2: 1.35rem;
 $fontH3: 1.3rem;
@@ -34,22 +39,17 @@ $fontVerySmall: 0.85rem;
 $fontLabel: 0.9rem;
 
 /* Radius */
-$radiusLarge: 0.8rem;
-$radiusMedium: 0.6rem;
-$radiusSmall: 0.4rem;
-$radiusVerySmall: 0.2rem;
+$radiusLarge: size(4);
+$radiusMedium: size(3);
+$radiusSmall: size(2);
+$radiusVerySmall: size(1);
 
-/* Shadow */
+/* Shadows */
 $shadowLarge: 1px 1px 4px 0 #000a;
 $shadowMedium: 1px 1px 4px 0 #0007;
 $shadowSmall: 1px 1px 4px 0 #0004;
 
-/* Border */
+/* Borders */
 $borderLarge: solid 2px color($grey, 500);
 $borderMedium: solid 1px color($grey, 500);
 $borderSmall: solid 1px color($grey, 300);
-
-/* Scale */
-@function size($size) {
-  @return #{($size * 0.2)}rem;
-}

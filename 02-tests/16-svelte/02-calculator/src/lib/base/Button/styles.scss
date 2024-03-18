@@ -1,0 +1,33 @@
+.button {
+  display: flex;
+  align-items: center;
+  padding: 0 size(10);
+  min-height: size(12);
+  background-color: $mainBg;
+  color: $mainText;
+  border-radius: $radiusSmall;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  font-weight: bold;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: $main;
+    transition: all 0.3s ease-out;
+  }
+
+  &:hover::before {
+    width: 175%;
+  }
+
+  span {
+    z-index: 1;
+  }
+}

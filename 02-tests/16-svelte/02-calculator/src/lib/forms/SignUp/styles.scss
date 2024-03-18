@@ -1,0 +1,17 @@
+.form {
+  h1 {
+    color: $main;
+    font-size: size(10);
+  }
+
+  .password {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: size(1);
+    a {
+      font-size: $fontVerySmall;
+    }
+  }
+}

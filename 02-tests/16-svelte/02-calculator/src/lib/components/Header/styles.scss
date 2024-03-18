@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: size(3) size(8);
+  background-color: $mainBg;
+  color: $mainText;
+}

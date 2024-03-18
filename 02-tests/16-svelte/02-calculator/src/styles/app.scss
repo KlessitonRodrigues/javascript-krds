@@ -1,4 +1,6 @@
 @import "./theme.scss";
+@import "./animations.scss";
+@import "./commom.scss";
 
 * {
   margin: 0;
@@ -53,17 +55,13 @@ ul {
 a {
   color: $main;
   text-decoration: underline;
+  &:hover {
+    color: $text1;
+  }
 }
 
 button {
   font-size: $fontMedium;
-  font-weight: 600;
-  min-height: size(12);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0 size(8);
-  background-color: transparent;
   outline: none;
   border: none;
   border-radius: $radiusSmall;

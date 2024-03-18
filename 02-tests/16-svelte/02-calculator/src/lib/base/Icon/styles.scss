@@ -1,0 +1,9 @@
+.icon {
+  width: size(8);
+  color: $text1;
+  cursor: pointer;
+
+  &.icon-white {
+    color: $white;
+  }
+}

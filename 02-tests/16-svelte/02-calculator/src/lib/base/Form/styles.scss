@@ -1,0 +1,13 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: size(6);
+  width: 100%;
+  max-width: size(120);
+  margin: size(10) auto;
+  padding: size(12);
+  border-radius: $radiusLarge;
+  box-shadow: $shadowMedium;
+  animation: fadeUp 0.5s ease-out;
+}
