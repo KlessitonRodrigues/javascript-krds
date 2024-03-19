@@ -6,6 +6,11 @@
   const width = size ? `width: ${size * 0.2 + "rem"};` : "";
 </script>
 
-<div class={`icon ${white && "icon-white"}`} style={width} on:click={onClick}>
+<div
+  class={`icon ${white && "icon-white"}`}
+  style={width}
+  aria-hidden="true"
+  on:click={onClick}
+>
   <slot />
 </div>
