@@ -4,7 +4,7 @@
   export let label = "Input field";
   export let placeholder = "...";
   export let type = "text";
-  export let onchange = (value: string) => {};
+  export let onChange = (value: string) => {};
 </script>
 
 <div class="custom-input">
@@ -14,6 +14,6 @@
     {type}
     {placeholder}
     {value}
-    on:change={(ev) => onchange(ev.currentTarget.value)}
+    on:change={(ev) => onChange(ev.currentTarget.value)}
   />
 </div>

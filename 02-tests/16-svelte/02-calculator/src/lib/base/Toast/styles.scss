@@ -1,0 +1,41 @@
+.toast {
+  display: flex;
+  align-items: center;
+  gap: size(4);
+  position: absolute;
+  top: size(4);
+  right: size(4);
+  width: 100%;
+  max-width: size(140);
+  padding: size(4);
+  background-color: transparent;
+  border-radius: $radiusSmall;
+  box-shadow: $shadowMedium;
+  opacity: 0;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &.visible {
+    animation: fadeUp 0.3s ease-out;
+    opacity: 1;
+  }
+
+  &.error {
+    background-color: $red;
+    color: $white;
+  }
+
+  &.success {
+    background-color: $green;
+    color: $white;
+  }
+
+  &.info {
+    background-color: $blue;
+    color: $white;
+  }
+}

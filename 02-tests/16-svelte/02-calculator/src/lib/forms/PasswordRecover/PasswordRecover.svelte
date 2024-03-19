@@ -16,7 +16,7 @@
     label="Email"
     placeholder="digite o email"
     value={form.email}
-    onchange={(value) => (form.email = value)}
+    onChange={(value) => (form.email = value)}
   />
 
   <Button type="submit">Enviar email</Button>

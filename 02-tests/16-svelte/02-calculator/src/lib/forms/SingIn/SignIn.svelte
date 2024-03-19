@@ -16,7 +16,7 @@
     label="Email"
     placeholder="digite o email"
     value={form.email}
-    onchange={(value) => (form.email = value)}
+    onChange={(value) => (form.email = value)}
   />
 
   <div class="password">
@@ -25,7 +25,7 @@
       label="Senha"
       placeholder="digite a senha"
       value={form.password}
-      onchange={(value) => (form.password = value)}
+      onChange={(value) => (form.password = value)}
     />
     <a href="/auth/recover">Recuperar senha</a>
   </div>

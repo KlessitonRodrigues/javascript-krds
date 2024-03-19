@@ -9,11 +9,18 @@
 
 @keyframes fadeUp {
   from {
-    transform: translateY(5rem);
+    transform: translateY(8rem);
     opacity: 0.5;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOutRight {
+  to {
+    transform: translateX(8rem);
+    opacity: 0;
   }
 }
 
