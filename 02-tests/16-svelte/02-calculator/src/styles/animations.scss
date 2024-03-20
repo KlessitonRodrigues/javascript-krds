@@ -9,7 +9,7 @@
 
 @keyframes fadeUp {
   from {
-    transform: translateY(8rem);
+    transform: translateY(4rem);
     opacity: 0;
   }
   to {
@@ -19,14 +19,14 @@
 
 @keyframes fadeOutRight {
   to {
-    transform: translateX(8rem);
+    transform: translateX(4rem);
     opacity: 0;
   }
 }
 
 @keyframes slideUp {
   from {
-    transform: translateY(15rem);
+    transform: translateY(8rem);
     opacity: 0;
   }
   to {

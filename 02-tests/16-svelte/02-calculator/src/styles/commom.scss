@@ -27,5 +27,7 @@
   padding: size(12);
   border-radius: $radiusLarge;
   box-shadow: $shadowMedium;
-  animation: fadeUp 0.3s ease-out;
+  & > * {
+    animation: fadeUp 0.3s ease-out;
+  }
 }

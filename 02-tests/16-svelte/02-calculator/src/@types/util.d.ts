@@ -1,3 +1,3 @@
 declare namespace Utils {
-  type i18n = Record<string, string>;
+  type TranslationFile = Record<string, string>;
 }
