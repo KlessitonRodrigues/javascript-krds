@@ -1,7 +1,19 @@
 .row {
   display: flex;
   align-items: center;
-  gap: size(4);
+  gap: size(2);
+
+  &.gap-1 {
+    gap: size(1);
+  }
+
+  &.gap-4 {
+    gap: size(4);
+  }
+
+  &.gap-6 {
+    gap: size(6);
+  }
 }
 
 .form {

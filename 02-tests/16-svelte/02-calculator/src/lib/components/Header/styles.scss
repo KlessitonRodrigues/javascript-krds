@@ -5,4 +5,11 @@
   padding: size(3) size(8);
   background-color: $mainBg;
   color: $mainText;
+
+  .lang-btn {
+    cursor: pointer;
+    :hover {
+      text-decoration: underline;
+    }
+  }
 }
