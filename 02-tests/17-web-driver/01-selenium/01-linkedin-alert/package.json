@@ -1,0 +1,21 @@
+{
+  "name": "01-linkedin-alert",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ./src/main.ts",
+    "build": "tsc ./src/main.ts"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.12.5",
+    "@types/selenium-webdriver": "^4.1.22",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
+  },
+  "dependencies": {
+    "mocha": "^10.4.0",
+    "selenium-webdriver": "^4.19.0"
+  }
+}
