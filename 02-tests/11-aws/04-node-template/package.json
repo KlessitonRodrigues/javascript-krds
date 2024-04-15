@@ -1,0 +1,23 @@
+{
+  "name": "04-node-template",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "cdk:synt": "cdk synthesize",
+    "cdk:deploy": "cdk deploy"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "20.11.30",
+    "aws-cdk": "2.137.0",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.4.3"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.137.0",
+    "constructs": "^10.3.0"
+  }
+}
