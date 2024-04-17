@@ -3,8 +3,8 @@ import * as gateway from 'aws-cdk-lib/aws-apigateway';
 
 import { Lambdas } from '../@types/lambdas';
 import { TestApiGateway } from '../lib/gateway/testApi/index';
-import { CreateUsersLambda } from '../lib/lambdas/users/createUsers';
-import { ListUsersLambda } from '../lib/lambdas/users/listUsers';
+import { CreateUsersLambda } from '../lib/lambdas/users/createUsers/lambda';
+import { ListUsersLambda } from '../lib/lambdas/users/listUsers/lambda';
 
 export class NodeTemplateStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {

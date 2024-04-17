@@ -1,5 +1,5 @@
 {
-  "app": "npx tsc && npx ts-node --prefer-ts-exts src/stacks/index.ts",
+  "app": "npx ts-node --prefer-ts-exts src/stacks/index.ts",
   "watch": {
     "include": ["**"],
     "exclude": [
