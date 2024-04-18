@@ -5,7 +5,6 @@ import '../config/dotenv';
 import { handler as createUser } from '../lib/lambdas/users/createUsers';
 import { handler as listUsers } from '../lib/lambdas/users/listUsers';
 import { createLambdaEvent } from '../utils/api/localApi';
-import { databaseConnect } from './mongoDB';
 
 const localRoutes = () => {
   const router = express.Router();
@@ -26,7 +25,6 @@ const localApi = async () => {
   const routes = localRoutes();
   const port = 3000;
 
-  await databaseConnect();
   app.use(bodyparser.urlencoded({ extended: false }));
   app.use(bodyparser.json());
   app.use(routes);

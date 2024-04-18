@@ -1,5 +1,5 @@
 import { Lambdas } from '../../../../@types/lambdas';
-import { databaseConnect } from '../../../../config/mongoDB';
+import { dbConnect, dbDisconnect } from '../../../../config/mongoDB';
 import { createResponse } from '../../../../utils/api/createResponse';
 import { toJSObject } from '../../../../utils/mongo/convertObj';
 import { UserService } from '../../../services/user.service';
@@ -7,7 +7,7 @@ import { UserService } from '../../../services/user.service';
 export const handler: Lambdas.APIHandler = async event => {
   try {
     const { pathParameters } = event;
-    await databaseConnect();
+    await dbConnect();
 
     const userService = new UserService();
 
@@ -21,5 +21,7 @@ export const handler: Lambdas.APIHandler = async event => {
     return createResponse(200, users);
   } catch (err: any) {
     return createResponse(500, err.message);
+  } finally {
+    await dbDisconnect();
   }
 };

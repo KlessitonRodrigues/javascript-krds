@@ -1,19 +1,23 @@
 import { Lambdas } from '../../../../@types/lambdas';
-import { databaseConnect } from '../../../../config/mongoDB';
+import { dbConnect, dbDisconnect } from '../../../../config/mongoDB';
 import { createResponse } from '../../../../utils/api/createResponse';
+import { errorCodes } from '../../../../utils/constants/codes';
 import { toJSObject } from '../../../../utils/mongo/convertObj';
 import { UserService } from '../../../services/user.service';
 
 export const handler: Lambdas.APIHandler = async event => {
   try {
-    const body = JSON.parse(event.body);
-    await databaseConnect();
+    if (!event.body) throw new Error(errorCodes.invalidReqBody);
 
+    const body = JSON.parse(event.body || '');
+    await dbConnect();
     const userService = new UserService();
     const user = await userService.create(body);
 
     return createResponse(200, toJSObject(user));
   } catch (err: any) {
     return createResponse(500, err.message);
+  } finally {
+    await dbDisconnect();
   }
 };
