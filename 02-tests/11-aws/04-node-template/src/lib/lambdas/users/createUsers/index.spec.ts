@@ -5,8 +5,8 @@ import { handler as createUser } from './index';
 describe('Create user lambda', () => {
   test('Should create an user on database', async () => {
     const user = {
-      name: 'testUser',
-      email: 'test@email.com',
+      name: 'testCreateUser',
+      email: 'testCreateUser@email.com',
     };
 
     const result = await createUser({ body: JSON.stringify(user) });
