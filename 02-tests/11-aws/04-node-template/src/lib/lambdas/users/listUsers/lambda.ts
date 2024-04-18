@@ -6,7 +6,7 @@ import { Lambdas } from '../../../../@types/lambdas';
 
 export class ListUsersLambda extends nodeLambda.NodejsFunction {
   constructor(scope: cdk.Stack, props: Lambdas.LambdasProps) {
-    if (!props?.bucketName) throw new Error('Missing bucket name');
+    if (!props?.MONGODB) throw new Error('Missing mongo uri');
 
     const params: nodeLambda.NodejsFunctionProps = {
       runtime: lambda.Runtime.NODEJS_18_X,
@@ -14,8 +14,9 @@ export class ListUsersLambda extends nodeLambda.NodejsFunction {
       handler: 'handler',
       entry: __dirname + '/index.ts',
       environment: {
-        BUCKET_NAME: props?.bucketName,
+        MONGODB: props.MONGODB,
       },
+      logRetention: cdk.aws_logs.RetentionDays.THREE_DAYS,
     };
 
     super(scope, 'ListUsersLambda', params);
