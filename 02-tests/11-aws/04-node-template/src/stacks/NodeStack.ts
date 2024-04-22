@@ -8,8 +8,8 @@ import { CreateUsersLambda } from '../lib/lambdas/users/createUsers/lambda';
 import { ListUsersLambda } from '../lib/lambdas/users/listUsers/lambda';
 
 export class NodeTemplateStack extends cdk.Stack {
-  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
-    super(scope, id, props);
+  constructor(scope: cdk.App, props?: cdk.StackProps) {
+    super(scope, 'NodeTemplateStack', props);
 
     const lambdaProps: Lambdas.LambdasProps = {
       MONGODB: env.MONGODB,
@@ -30,7 +30,5 @@ export class NodeTemplateStack extends cdk.Stack {
     // ...users/{id}
     const userApi = usersApi.addResource('{id}');
     userApi.addMethod('GET', new gateway.LambdaIntegration(listUsers));
-    userApi.addMethod('PATCH', new gateway.LambdaIntegration(createUsers));
-    userApi.addMethod('DELETE', new gateway.LambdaIntegration(createUsers));
   }
 }

@@ -5,10 +5,12 @@
     "start": "nodemon src/config/localApi.ts",
     "cdk": "cdk",
     "cdk:synt": "cdk synthesize",
-    "cdk:deploy": "cdk deploy",
+    "cdk:deploy-web": "cdk deploy WebAppStack",
+    "cdk:deploy-node": "cdk deploy NodeTemplateStack",
     "test": "jest",
     "test-w": "jest --watch",
-    "test-cover": "jest --coverage"
+    "test-cover": "jest --coverage",
+    "format": "prettier -c -w ./src"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
