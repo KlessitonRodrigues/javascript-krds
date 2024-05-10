@@ -1,0 +1,78 @@
+@import './colors.scss';
+
+// Scale
+@function size($size) {
+  @return #{($size * 0.2)}rem;
+}
+
+// Sizes
+@mixin size-list {
+  @for $i from 1 through 200 {
+    .gap-#{$i} {
+      gap: size($i) !important;
+    }
+  }
+}
+
+@include size-list;
+
+// Screen Sizes
+$mobileS: 320px;
+$mobileM: 425px;
+$mobileL: 480px;
+$tablet: 768px;
+$laptopS: 900px;
+$laptopM: 1024px;
+$laptopL: 1280px;
+$desktopS: 1440px;
+$desktopM: 1980px;
+$desktopL: 2560px;
+
+/* Colors */
+$main: color($purple, 400);
+$mainBg: color($purple, 700);
+$mainText: color($grey, 200);
+$mainBorder: color($grey, 300);
+$bg1: color($grey, 50);
+$bg2: color($grey, 100);
+$bg3: color($grey, 200);
+$bg4: color($grey, 300);
+$text1: color($grey, 800);
+$text2: color($grey, 700);
+$text3: color($grey, 600);
+$text4: color($grey, 500);
+$yellow: color($yellow, 700);
+$red: color($red, 800);
+$blue: color($blue, 800);
+$green: color($green, 800);
+$white: color($grey, 50);
+$black: color($grey, 800);
+
+/* Font sizes */
+$fontH1: 1.4rem;
+$fontH2: 1.35rem;
+$fontH3: 1.3rem;
+$fontH4: 1.25rem;
+$fontH5: 1.2rem;
+$fontH6: 1.15rem;
+$fontLarge: 1.1rem;
+$fontMedium: 1rem;
+$fontSmall: 0.9rem;
+$fontVerySmall: 0.85rem;
+$fontLabel: 0.9rem;
+
+/* Radius */
+$radiusLarge: size(5);
+$radiusMedium: size(4);
+$radiusSmall: size(3);
+$radiusVerySmall: size(2);
+
+/* Shadows */
+$shadowLarge: 1px 1px 4px 0 #000a;
+$shadowMedium: 1px 1px 4px 0 #0007;
+$shadowSmall: 1px 1px 4px 0 #0004;
+
+/* Borders */
+$borderLarge: solid 2px color($grey, 500);
+$borderMedium: solid 1px color($grey, 500);
+$borderSmall: solid 1px color($grey, 400);

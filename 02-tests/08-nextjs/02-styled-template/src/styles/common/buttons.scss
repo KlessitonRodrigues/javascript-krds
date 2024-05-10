@@ -1,0 +1,27 @@
+button {
+  margin: auto;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: $fontLabel;
+  border-radius: $radiusVerySmall;
+  color: $text1;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.main-btn {
+  background-color: $mainBg;
+  color: $mainText;
+  padding: size(3) size(6);
+  box-shadow: $shadowSmall;
+}
+
+.outline-btn {
+  border: $borderMedium;
+  padding: size(3) size(6);
+  box-shadow: $shadowSmall;
+}

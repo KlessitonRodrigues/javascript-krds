@@ -1,0 +1,78 @@
+@import './theme.scss';
+@import './animations.scss';
+@import './common/index.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: $fontMedium;
+}
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $bg3;
+  color: $text2;
+  font-weight: normal;
+}
+h1 {
+  font-size: $fontH1;
+}
+
+h2 {
+  font-size: $fontH2;
+}
+
+h3 {
+  font-size: $fontH3;
+}
+
+h4 {
+  font-size: $fontH4;
+}
+
+h5 {
+  font-size: $fontH5;
+}
+
+h6 {
+  font-size: $fontH6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: $main;
+  text-decoration: underline;
+  &:hover {
+    color: $text1;
+  }
+}
+
+div::-webkit-scrollbar {
+  width: 1rem;
+}
+
+div::-webkit-scrollbar-track {
+  background: #0000;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: $blue;
+  border-radius: 2px;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  background: $blue;
+}

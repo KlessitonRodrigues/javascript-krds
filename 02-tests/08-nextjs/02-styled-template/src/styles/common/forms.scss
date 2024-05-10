@@ -1,0 +1,10 @@
+form {
+  width: 100%;
+  max-width: size(140);
+  margin: auto;
+  background-color: $bg1;
+  color: $text2;
+  box-shadow: $shadowSmall;
+  padding: size(16) size(10);
+  border-radius: $radiusLarge;
+}

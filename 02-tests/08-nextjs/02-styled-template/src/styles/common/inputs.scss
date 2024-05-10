@@ -1,0 +1,19 @@
+label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  b {
+    font-size: $fontLabel;
+    color: $main;
+    font-weight: normal;
+  }
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: $borderSmall;
+  padding: size(2);
+  font-size: $fontMedium;
+}
