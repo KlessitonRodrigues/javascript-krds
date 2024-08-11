@@ -5,8 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-dev": "cordova build --debug",
-    "build-prod": "cordova build --release",
+    "build-android-dev": "cordova build android --debug",
+    "build-android-prod": "cordova build android --release",
+    "build-electron-dev": "cordova build electron --debug",
+    "build-electron-prod": "cordova build electron --release",
     "run-android": "cordova run android",
     "run-electron": "cordova run electron",
     "run-web": "cordova serve"
