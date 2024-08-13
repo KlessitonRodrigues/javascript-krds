@@ -5,7 +5,13 @@
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
         Apache Cordova Team
     </author>
+
     <content src="index.html" />
+
+    <!-- Security Related Settings -->
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+
+    <!-- Platform Configs & Platform Overriding Configs -->
+    <platform name="android"></platform>
 </widget>
