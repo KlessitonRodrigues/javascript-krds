@@ -13,5 +13,11 @@
     <allow-intent href="https://*/*" />
 
     <!-- Platform Configs & Platform Overriding Configs -->
-    <platform name="android"></platform>
+    <platform name="android">
+        <hook type="before_build" src="scripts/beforeBuild.js" />
+    </platform>
+
+    <platform name="electron">
+        <hook type="before_build" src="scripts/beforeBuild.js" />
+    </platform>
 </widget>
