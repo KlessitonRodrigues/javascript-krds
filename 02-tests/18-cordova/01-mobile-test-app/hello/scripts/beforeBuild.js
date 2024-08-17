@@ -1,9 +1,10 @@
 const cp = require("child_process");
 
-const outDir = "./www";
 const distDir = "./dist";
+const outDir = "./www";
 const copyAssets = `cp -rv ${distDir}/. ${outDir}`;
 
 module.exports = function (context) {
+  console.log(`Copying ${distDir} to ${outDir}`);
   console.log(cp.execSync(copyAssets).toString());
 };
