@@ -6,18 +6,25 @@
         Apache Cordova Team
     </author>
 
-    <content src="index.html" />
+    <content src="./app/index.html" />
+    <icon src="./www/resources/icon.png" />
 
+    <!-- Android Resources -->
+    <platform name="android">
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="./www/resources/icon.png" />
+        <preference name="AndroidWindowSplashScreenBackground" value="#ffffff" />
+        <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#ffffff" />
+    </platform>
+    
     <!-- Security Related Settings -->
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
 
-    <!-- Platform Configs & Platform Overriding Configs -->
+    <!-- Platform Configs -->
     <platform name="android">
         <hook type="before_build" src="scripts/beforeBuild.js" />
         <hook type="before_run" src="scripts/beforeBuild.js" />
     </platform>
-
     <platform name="electron">
         <hook type="before_build" src="scripts/beforeBuild.js" />
         <hook type="before_run" src="scripts/beforeBuild.js" />
