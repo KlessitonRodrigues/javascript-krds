@@ -10,11 +10,22 @@ initialize function of NestJS
 
 ### 11. Modules
 
+handles controllers, services, or other modules
+
 ### 12. Controllers
+
+handles services
 
 ### 13. Services
 
+handles all application logic
+
 ### 14. CRUD and REST protocols
+
+Create (POST /users)
+Read (GET /users/, GET /users/:id)
+Update (PUT /users/:id, PATCH /users/:id)
+Delete (DELETE /users/:id)
 
 ### 15. CREATE method
 
