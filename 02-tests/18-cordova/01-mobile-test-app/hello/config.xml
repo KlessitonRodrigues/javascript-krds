@@ -11,16 +11,12 @@
 
     <!-- Android Resources -->
     <platform name="android">
-        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="./www/resources/icon.png" />
-        <preference name="AndroidWindowSplashScreenBackground" value="#ffffff" />
         <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#ffffff" />
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="./www/resources/splash.png" />
+        <preference name="AndroidWindowSplashScreenBackground" value="#ffffff" />
     </platform>
-    
-    <!-- Security Related Settings -->
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
 
-    <!-- Platform Configs -->
+    <!-- Hooks -->
     <platform name="android">
         <hook type="before_build" src="scripts/beforeBuild.js" />
         <hook type="before_run" src="scripts/beforeBuild.js" />
@@ -29,4 +25,8 @@
         <hook type="before_build" src="scripts/beforeBuild.js" />
         <hook type="before_run" src="scripts/beforeBuild.js" />
     </platform>
+
+    <!-- Security Related Settings -->
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
 </widget>

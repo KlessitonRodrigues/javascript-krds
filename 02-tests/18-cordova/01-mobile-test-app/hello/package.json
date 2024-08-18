@@ -23,6 +23,7 @@
     "platforms": [
       "android",
       "electron"
-    ]
+    ],
+    "plugins": {}
   }
 }
