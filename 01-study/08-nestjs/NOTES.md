@@ -30,3 +30,17 @@ Delete (DELETE /users/:id)
 ### 15. CREATE method
 
 ### 16. READ method
+
+### 17. UPDATE method
+
+### 18. DELETE method
+
+### 19. DTO (Data Transfer Object)
+
+npm i class-validator class-transformer
+
+### 20. Use global Validation Pipe
+
+### 21. Create a validation Class
+
+### 22.

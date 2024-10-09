@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "CommonJS",
+    "target": "ES6",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "outDir": "dist/",
+    "declaration": true,
+    "declarationDir": "dist/",
+    "lib": ["es5", "dom"],
+    "types": ["cypress", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "cy/*": ["./cypress/*"]
+    }
+  },
+  "include": ["**/*.ts"]
+}

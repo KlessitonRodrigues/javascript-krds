@@ -1,11 +1,13 @@
 import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
 import codes from 'src/constants/codes';
+import { CreateUserDTO } from 'src/dto/user.dto';
 
 @Controller('users')
 export class UserController {
-  private users = [
-    { id: '1', name: 'user1' },
-    { id: '2', name: 'user2' },
+  private users: CreateUserDTO[] = [
+    { id: '1', name: 'user1', email: 'user1@gmail.com', password: '123' },
+    { id: '2', name: 'user2', email: 'user2@gmail.com', password: '123' },
+    { id: '3', name: 'user3', email: 'user3@gmail.com', password: '123' },
   ];
 
   @Get()
@@ -20,7 +22,7 @@ export class UserController {
   }
 
   @Post()
-  async create(@Body() body) {
+  async create(@Body() body: CreateUserDTO) {
     this.users.push(body);
     return this.users;
   }
