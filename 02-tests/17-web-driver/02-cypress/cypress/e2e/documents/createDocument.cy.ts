@@ -15,6 +15,8 @@ const createDocumentSteps = () => {
   cy.get('#term_in_months input').type('12');
   cy.get('#property_start_rent_value input').type('250000');
   cy.get('#reajust_frequency input').type('12');
+  cy.get('#starts_at').click();
+  cy.get('button').contains('1').click();
 };
 
 // TEST
