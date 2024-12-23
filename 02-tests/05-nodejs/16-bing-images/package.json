@@ -1,0 +1,12 @@
+{
+  "name": "16-bing-images",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.2"
+  },
+  "scripts": {
+    "run-ts": "npx ts-node index.ts"
+  }
+}
