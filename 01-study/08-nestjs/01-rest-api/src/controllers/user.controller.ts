@@ -23,6 +23,9 @@ export class UserController {
 
   @Post()
   async create(@Body() body: CreateUserDTO) {
+    console.log(body);
+
+    body.id = Math.random().toString(16).slice(2);
     this.users.push(body);
     return this.users;
   }
@@ -31,7 +34,7 @@ export class UserController {
   async update(@Body() body) {
     const { id } = body;
     const index = this.users.findIndex((user) => user.id === String(id));
-    if (index < 0) throw new Error(codes.userNotFound);
+    if (index < 0) throw new Error(codes.idNotFound);
     this.users[index] = body;
     return this.users;
   }

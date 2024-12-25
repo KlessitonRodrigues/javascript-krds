@@ -1,22 +1,23 @@
-import {
-  IsEmail,
-  IsOptional,
-  IsString,
-  IsStrongPassword,
-} from 'class-validator';
+import { IsEmail, IsEmpty, IsString, IsStrongPassword } from 'class-validator';
+import codes from 'src/constants/codes';
 
 export class UserDTO {
   @IsString()
   id: string;
-  @IsString()
+
+  @IsString({ message: codes.nameIsInvalid })
   name: string;
-  @IsEmail()
+
+  @IsEmail({}, { message: codes.emailIsInvalid })
   email: string;
-  @IsStrongPassword({ minLength: 6 })
+
+  @IsStrongPassword({ minLength: 8 }, { message: codes.passwordtooShort })
+  @IsStrongPassword({ minNumbers: 1 }, { message: codes.passwordMinNumbers })
+  @IsStrongPassword({ minUppercase: 1 }, { message: codes.passwordMinUppercase })
   password: string;
 }
 
 export class CreateUserDTO extends UserDTO {
-  @IsOptional()
+  @IsEmpty({ message: codes.idIsInvalid })
   id: string;
 }
