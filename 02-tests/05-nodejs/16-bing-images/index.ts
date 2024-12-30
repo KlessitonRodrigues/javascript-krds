@@ -17,6 +17,7 @@ const fetchHTML = (url: string) => {
     }
   });
 };
+
 // http://www.bing.com/images/async?q=${query}
 // http://www.bing.com/images/search?q=${query}
 
@@ -65,7 +66,7 @@ const downloadImage = async (imageUrl: string) => {
   }
 };
 
-featGameImages("chevrolet Forza").then(async (images: string[]) => {
+featGameImages("nfs heat").then(async (images: string[]) => {
   const dowloadingImages = images.map((url) => downloadImage(url));
   await Promise.all(dowloadingImages);
 });
