@@ -1,4 +1,4 @@
-import http from "http";
+import https from "https";
 import * as fs from "fs";
 import * as path from "path";
 
@@ -7,7 +7,7 @@ const getID = () => Math.random().toString(16).slice(2);
 const fetchHTML = (url: string) => {
   return new Promise<string>((resolve, reject) => {
     try {
-      http.get(url, (res: any) => {
+      https.get(url, (res: any) => {
         let rawHtml = "";
         res.on("data", (chunk: any) => (rawHtml += chunk));
         res.on("end", () => resolve(rawHtml));
@@ -23,7 +23,7 @@ const fetchHTML = (url: string) => {
 
 const fetchUrls = async (search: string, index?: number, width?: number) => {
   const query = search.split(" ").join("+");
-  let url = `http://www.bing.com/images/async?q=${query}`;
+  let url = `https://www.bing.com/images/async?q=${query}`;
   if (index) url += `&first=${index}`;
   if (width) url += `&cw=${width}&ch=1080`;
 
@@ -66,7 +66,7 @@ const downloadImage = async (imageUrl: string) => {
   }
 };
 
-featGameImages("nfs heat").then(async (images: string[]) => {
+featGameImages("flamengo").then(async (images: string[]) => {
   const dowloadingImages = images.map((url) => downloadImage(url));
   await Promise.all(dowloadingImages);
 });

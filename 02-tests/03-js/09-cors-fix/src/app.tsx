@@ -7,7 +7,19 @@ const App = () => {
   const [urlList, setUrlList] = useState([]);
 
   useEffect(() => {
-    fetchImages("nfs payback wallpaper").then(setUrlList);
+    // fetchImages("flamengo minimal").then(setUrlList);
+    const load = async () => {
+      const constraints: MediaStreamConstraints = {
+        audio: true,
+        video: { width: 1280, height: 720 },
+      };
+
+      navigator.geolocation.watchPosition((pos) => {
+        console.log(pos);
+      });
+    };
+
+    load();
   }, []);
 
   console.log(urlList);

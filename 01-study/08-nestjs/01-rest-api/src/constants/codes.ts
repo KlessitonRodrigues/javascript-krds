@@ -1,4 +1,4 @@
-// [where] + [message]
+// Rule: [where]_[message]
 export default {
   serverInternalError: 'SERVER_INTERNAL_ERROR',
   emailAlreadyExists: 'EMAIL_ALREADY_EXISTS',
