@@ -66,7 +66,7 @@ const downloadImage = async (imageUrl: string) => {
   }
 };
 
-featGameImages("flamengo").then(async (images: string[]) => {
+featGameImages("nfs heat").then(async (images: string[]) => {
   const dowloadingImages = images.map((url) => downloadImage(url));
   await Promise.all(dowloadingImages);
 });
