@@ -22,6 +22,10 @@ handles all application logic
 
 ### 14. CRUD and REST protocols
 
+REST - Representational State Transfer
+URI - Uniform Resource Idetifier
+URL - Uniform Resource Location
+
 Create (POST /users)
 Read (GET /users/, GET /users/:id)
 Update (PUT /users/:id, PATCH /users/:id)
